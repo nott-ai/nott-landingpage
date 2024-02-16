@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div className={styles.wrapper}>
-      <video src="/videos/video-bg.mp4" autoPlay loop muted />
+      <video src="/videos/video-bg.mp4?v=1" autoPlay loop muted />
       <div className={styles.content}>
         <div className={styles.container}>
           <div className={styles.leftBlock}>
@@ -16,10 +16,17 @@ const Hero = () => {
               className={styles.highlight}
               dangerouslySetInnerHTML={createMarkup(trans.homepage.heroTitle)}
             />
-            <div className={styles.description}>
-              {trans.homepage.heroDescription}
-            </div>
-            <ComingSoon />
+            <div
+              dangerouslySetInnerHTML={createMarkup(
+                trans.homepage.heroDescription
+              )}
+              className={styles.description}
+            />
+            <img
+              className={styles.comingSoon}
+              src="/images/coming-soon.svg"
+              alt="coming-soon"
+            />
           </div>
           <img className={styles.heroImg} src="/images/hero.png" alt="hero" />
         </div>

@@ -30,6 +30,10 @@
       max-width: $max-width-container;
       width: 100%;
       margin: 0 auto;
+      .logo {
+        height: 40px;
+        width: auto;
+      }
       .desktop {
         display: block;
         @include space-between;
@@ -83,6 +87,10 @@
     .container {
       .content {
         padding: 0 18px;
+        .logo {
+          height: 30px;
+          width: auto;
+        }
         .desktop {
           display: none !important;
         }

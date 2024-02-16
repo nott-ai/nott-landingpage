@@ -34,7 +34,7 @@ const Header = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <Logo />
+          <img className={styles.logo} src="/images/logo.svg" alt="logo" />
           <div className={styles.desktop}>
             <div className={styles.navigation}>
               {NAVIGATIONS.map((item) => (
@@ -88,9 +88,9 @@ const Header = () => {
           {/* <PrimaryButton fontWeight={400} className={styles.preOrderBtn}>
               <ProfileIcon /> {trans.header.joinTheWaitList}
             </PrimaryButton> */}
-          {/* <div className={styles.mobile}>
+          <div className={styles.mobile}>
             <MenuIcon />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
