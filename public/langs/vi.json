@@ -1,0 +1,39 @@
+{
+  "header": {
+    "Home": "Home",
+    "Campaigns": "Campaigns",
+    "Features & Benefits": "Features & Benefits",
+    "Product Showcase": "Product Showcase",
+    "NOTT Market": "NOTT Market",
+    "About NOTT": "About NOTT",
+    "joinTheWaitList": "Join The Waitlist",
+    "commingSoon": "Comming Soon",
+    "Blog": "Blog"
+  },
+  "footer": {
+    "company": "Company",
+    "careers": "Careers",
+    "blog": "Blog",
+    "communinites": "Communities",
+    "services": "Services",
+    "about": "About",
+    "help": "Help & Support",
+    "contact": "Contact Us",
+    "copyRight": "© Copyright 2024 - NOTT • All rights reserved.",
+    "token": "NOTT Token",
+    "healthCare": "Health Care",
+    "purchaseProducts": "Purchase Products",
+    "faqs": "FAQs",
+    "social": "Social",
+    "term": "Terms of Service",
+    "privacyPolicy": "Privacy policy",
+    "legalDisclaimer": "Legal disclaimer",
+    "callUs": "Call Us",
+    "productShowcase": "Product Showcase",
+    "documents": "Documents"
+  },
+  "homepage": {
+    "heroTitle": "Your Gateway<br/><span style=\"color: #346AF\">to a Healthier</span><br/>Tomorrow",
+    "heroDescription": "Join the Revolutionary AI-Powered Wellness DePIN Platform"
+  }
+}

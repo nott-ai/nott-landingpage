@@ -1,0 +1,64 @@
+@import "../variables.scss";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  min-height: fit-content;
+  video {
+    max-height: calc(100vh - 80px);
+    width: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+  .content {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .container {
+      max-width: $max-width-container;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 19px;
+      .leftBlock {
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .highlight {
+          font-family: "Orbitron";
+          font-size: 64px;
+          font-weight: 600;
+        }
+        .description {
+          color: #768298;
+          font-size: 24px;
+          line-height: 36px;
+          font-weight: 500;
+        }
+      }
+      .heroImg {
+        animation: hero-moving 3s infinite;
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+@keyframes hero-moving {
+  0% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
