@@ -1,0 +1,72 @@
+@import "../variables.scss";
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper {
+  background-color: #1c1c1c;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  height: 563px;
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    @include column-start();
+    gap: 120px;
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+      .topBlock {
+        @include space-between;
+      }
+      .centerBlock {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .column {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 24px;
+          .subColumn {
+            @include column-start();
+            gap: 16px;
+            color: #fff;
+            a {
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+          .title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 26px;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .bottomBlock {
+      @include space-between;
+      color: #fff;
+
+      .rightBlock {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
