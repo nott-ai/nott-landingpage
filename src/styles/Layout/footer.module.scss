@@ -27,6 +27,10 @@
 
       .topBlock {
         @include space-between;
+        .logo {
+          height: 56px;
+          width: auto;
+        }
       }
       .centerBlock {
         display: grid;
@@ -71,6 +75,52 @@
       color: #fff;
       font-size: 16px;
       font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 0 18px;
+    .container {
+      .info {
+        .centerBlock {
+          .column {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    height: 481px;
+    .container {
+      gap: 30px;
+      height: 100%;
+      box-sizing: border-box;
+      .info {
+        gap: 30px;
+        .topBlock {
+          justify-content: center;
+          .logo {
+            height: 46px;
+            width: auto;
+          }
+        }
+        .centerBlock {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+          .column {
+            &:nth-child(2) {
+              text-align: right;
+            }
+            .subColumn {
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -17,7 +17,11 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.info}>
           <div className={styles.topBlock}>
-            <FooterLogo />
+            <img
+              className={styles.logo}
+              src="/images/footer-logo.svg"
+              alt="logo"
+            />
           </div>
           <div className={styles.centerBlock}>
             <div className={styles.column}>
