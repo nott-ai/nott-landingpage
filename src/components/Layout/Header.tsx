@@ -16,7 +16,7 @@ import { ProfileIcon } from "@/assets/index";
 import Modal from "react-modal";
 type Language = "en" | "vi";
 
-const customStyles = {
+const customStyles: any = {
   content: {
     top: "80px",
     left: "0",
