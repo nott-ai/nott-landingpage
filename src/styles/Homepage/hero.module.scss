@@ -4,11 +4,14 @@
   width: 100%;
   position: relative;
   min-height: fit-content;
-  video {
+  .videoDesktop {
     height: 100vh;
     width: 100%;
     object-fit: cover;
     object-position: center bottom;
+  }
+  .videoMobile {
+    display: none;
   }
   .content {
     position: absolute;
@@ -61,8 +64,7 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     height: fit-content;
-    // margin-top: 100px;
-    video {
+    .videoDesktop {
       height: 100vh;
     }
     .content {
@@ -105,8 +107,19 @@
   .wrapper {
     height: fit-content;
     margin-top: 30px;
-    video {
-      height: 100vh;
+    .videoDesktop {
+      display: none;
+    }
+    .videoMobile {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+    }
+    .content {
+      .container {
+        height: fit-content;
+      }
     }
   }
 }

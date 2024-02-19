@@ -24,7 +24,7 @@ const Footer = () => {
             />
           </div>
           <div className={styles.centerBlock}>
-            <div className={styles.column}>
+            <div className={`${styles.column} ${styles.contact}`}>
               <div className={styles.title}>{trans.footer.contact}</div>
               <div className={styles.subColumn}>
                 <div className={styles.socialNetwork}>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.bottomBlock}>
-          <div>{trans.footer.copyRight}</div>
+          <div className={styles.copyRight}>{trans.footer.copyRight}</div>
         </div>
       </div>
     </div>

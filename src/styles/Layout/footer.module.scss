@@ -73,8 +73,11 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
+      .copyRight {
+        text-align: center;
+      }
     }
   }
 }
@@ -82,20 +85,14 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     padding: 0 18px;
-    .container {
-      .info {
-        .centerBlock {
-          .column {
-          }
-        }
-      }
-    }
   }
 }
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    height: 481px;
+    min-height: 481px;
+    padding: 30px 18px;
+    box-sizing: content-box;
     .container {
       gap: 30px;
       height: 100%;
@@ -112,14 +109,24 @@
         .centerBlock {
           grid-template-columns: repeat(2, 1fr);
           gap: 30px;
+          .contact {
+          }
           .column {
+            &.contact {
+              gap: 12px;
+              .subColumn {
+                gap: 0px;
+              }
+            }
             &:nth-child(2) {
               text-align: right;
             }
-            .subColumn {
-            }
           }
         }
+      }
+      .bottomBlock {
+        max-width: 260px;
+        margin: auto;
       }
     }
   }
