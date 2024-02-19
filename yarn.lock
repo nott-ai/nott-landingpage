@@ -1397,6 +1397,17 @@
     "@firebase/util" "1.9.4"
     tslib "^2.1.0"
 
+"@firebase/app@^0.9.27":
+  version "0.9.27"
+  resolved "https://registry.npmjs.org/@firebase/app/-/app-0.9.27.tgz#d50d1f99b88fb6c1358bed9703d204dc81185eb9"
+  integrity sha512-p2Dvl1ge4kRsyK5+wWcmdAIE9MSwZ0pDKAYB51LZgZuz6wciUZk4E1yAEdkfQlRxuHehn+Ol9WP5Qk2XQZiHGg==
+  dependencies:
+    "@firebase/component" "0.6.5"
+    "@firebase/logger" "0.4.0"
+    "@firebase/util" "1.9.4"
+    idb "7.1.1"
+    tslib "^2.1.0"
+
 "@firebase/component@0.6.5":
   version "0.6.5"
   resolved "https://registry.npmjs.org/@firebase/component/-/component-0.6.5.tgz#8cc7334f2081d700f2769caaa8dae3ac4c1fe37e"
