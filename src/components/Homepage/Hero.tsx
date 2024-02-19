@@ -8,7 +8,20 @@ const Hero = () => {
 
   return (
     <div className={styles.wrapper}>
-      <video src="/videos/video-bg.mp4?v=1" autoPlay loop muted />
+      <video
+        className={styles.videoDesktop}
+        src="/videos/video-bg.mp4?v=1"
+        autoPlay
+        loop
+        muted
+      />
+      <video
+        className={styles.videoMobile}
+        src="/videos/video-bg-mobile.mp4?v=1"
+        autoPlay
+        loop
+        muted
+      />
       <div className={styles.content}>
         <div className={styles.container}>
           <div className={styles.leftBlock}>
