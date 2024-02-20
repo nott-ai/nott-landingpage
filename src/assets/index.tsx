@@ -15,7 +15,10 @@ import FooterLogo from "./footer-logo.svg";
 import TelegramIcon from "./telegram.svg";
 import TwitterIcon from "./twitter.svg";
 import DiscordIcon from "./discord.svg";
-import ComingSoon from "./coming-soon.svg";
+import MdiTargetIcon from "./mdi-target.svg";
+import NimbusEcosystemIcon from "./nimbus-ecosystem.svg";
+import SolarHealthOutlineIcon from "./solar-health-outline.svg";
+import SystemSumIcon from "./system-sum.svg";
 
 export {
   ShieldIcon,
@@ -35,5 +38,8 @@ export {
   TelegramIcon,
   TwitterIcon,
   DiscordIcon,
-  ComingSoon,
+  MdiTargetIcon,
+  NimbusEcosystemIcon,
+  SolarHealthOutlineIcon,
+  SystemSumIcon,
 };

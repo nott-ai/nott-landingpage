@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import Hero from "@/components/Homepage/Hero";
+import AboutNOTT from "@/components/Homepage/AboutNOTT";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
+        <AboutNOTT />
         <Footer />
       </main>
     </>
