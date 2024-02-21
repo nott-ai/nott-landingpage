@@ -8,6 +8,8 @@
     display: none;
   }
   .aboutNott {
+    padding: 100px 0;
+
     .container {
       max-width: $max-width-container;
       margin: auto;
@@ -15,7 +17,6 @@
       align-items: center;
       gap: 50px;
       flex-direction: column;
-      padding: 60px 0;
       .header {
         display: flex;
         flex-direction: column;
@@ -110,6 +111,26 @@
   }
 }
 
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .aboutNott {
+      .container {
+        .header {
+          padding: 0 16px;
+        }
+        .content {
+          .overviewItem {
+            padding: 30px 16px;
+            gap: 22px;
+            &:hover {
+              padding: 24px 16px 30px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: $sm) {
   .wrapper {
     .bannerDesktop {
@@ -121,10 +142,11 @@
       height: auto;
     }
     .aboutNott {
+      padding: 56px 0;
+
       .container {
         gap: 32px;
         .header {
-          padding: 0 16px;
           gap: 24px;
           .title {
             font-size: 14px;

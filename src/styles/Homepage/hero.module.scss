@@ -86,9 +86,11 @@
         flex-direction: column;
         .leftBlock {
           width: 100%;
+          gap: 20px;
           .highlight {
             font-family: "Orbitron";
             font-size: 30px;
+            line-height: 42px;
             font-weight: 600;
             text-align: center;
           }

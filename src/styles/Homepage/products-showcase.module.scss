@@ -1,0 +1,160 @@
+@import "../variables.scss";
+
+.wrapper {
+  padding: 100px 0;
+  background-image: url("/images/products-showcase-bg.png");
+  .container {
+    margin: auto;
+    .header {
+      max-width: $max-width-container;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .title {
+        font-family: "Orbitron";
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 2%;
+        color: #292930;
+        .highlight {
+          color: #2563eb;
+        }
+      }
+      .description {
+        font-size: 20px;
+        line-height: 28px;
+        color: #768298;
+        font-weight: 500;
+      }
+    }
+    .products {
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 60px;
+      overflow-x: auto;
+      .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #e3e6e9;
+        border-radius: 32px;
+        overflow: hidden;
+        gap: 24px;
+        height: 564px;
+        width: 424px;
+        min-width: 424px;
+        max-width: 424px;
+        padding: 24px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        .imageSlider {
+          width: 362px;
+          height: 362px;
+          box-sizing: border-box;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-top: 30px;
+          width: 100%;
+          .comingSoon {
+            color: #2563eb;
+            font-size: 16px;
+            font-weight: 500;
+            height: 19px;
+          }
+          .name {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 60px 0;
+    .container {
+      margin: auto;
+      .header {
+        padding: 0 16px;
+      }
+      .products {
+        padding-left: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    padding: 56px 0;
+    .container {
+      margin: auto;
+      .header {
+        padding: 0 16px;
+        gap: 24px;
+        .title {
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 34px;
+        }
+        .description {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .products {
+        padding-left: 16px;
+        margin-top: 32px;
+        .product {
+          width: 293px;
+          min-width: 293px;
+          max-width: 293px;
+          height: 355px;
+          padding: 16px;
+          gap: 16px;
+          .imageSlider {
+            width: 261px;
+            height: 250px;
+          }
+          .info {
+            margin-top: 12px;
+            gap: 4px;
+            .comingSoon {
+              font-size: 12px;
+              line-height: 15px;
+            }
+            .name {
+              font-size: 16px;
+              line-height: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 2400px) {
+  .wrapper {
+    .container {
+      .products {
+        justify-content: center;
+      }
+    }
+  }
+}

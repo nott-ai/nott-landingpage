@@ -66,8 +66,7 @@ const AboutNOTT = () => {
               <div className={styles.overviewItem} key={item.title}>
                 <div className={styles.leftBlock}>{item.icon}</div>
                 <div className={styles.iconMobile}>
-                  {" "}
-                  <img src={item.iconUrl} />{" "}
+                  <img src={item.iconUrl} />
                 </div>
                 <div className={styles.rightBlock}>
                   <div className={styles.title}>{item.title}</div>
