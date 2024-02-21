@@ -33,11 +33,13 @@
         width: 520px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         .highlight {
           font-family: "Orbitron";
           font-size: 64px;
           font-weight: 600;
+          color: #102123;
+          line-height: 80px;
         }
         .description {
           color: #768298;
@@ -45,9 +47,18 @@
           line-height: 36px;
           font-weight: 500;
         }
-        .comingSoon {
-          width: 355px;
-          height: auto;
+        .joinWaitlistBtn {
+          height: 62px;
+          width: 305px;
+          border-radius: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #346af7;
+          font-weight: bold;
+          font-size: 24px;
+          letter-spacing: 0.5px;
+          color: #fff;
         }
       }
       .heroImg {
@@ -75,9 +86,11 @@
         flex-direction: column;
         .leftBlock {
           width: 100%;
+          gap: 20px;
           .highlight {
             font-family: "Orbitron";
             font-size: 30px;
+            line-height: 42px;
             font-weight: 600;
             text-align: center;
           }
@@ -86,9 +99,7 @@
             line-height: 24px;
             text-align: center;
           }
-          .comingSoon {
-            width: 208px;
-            height: auto;
+          .joinWaitlistBtn {
             margin: auto;
           }
         }
@@ -119,6 +130,19 @@
     .content {
       .container {
         height: fit-content;
+        .leftBlock {
+          gap: 16px;
+          .highlight {
+            font-size: 32px;
+            line-height: 38px;
+          }
+          .joinWaitlistBtn {
+            height: 40px;
+            font-size: 16px;
+            padding: 0 24px;
+            width: fit-content;
+          }
+        }
       }
     }
   }

@@ -4,6 +4,8 @@ import Footer from "@/components/Layout/Footer";
 import Hero from "@/components/Homepage/Hero";
 import Faqs from "@/components/Homepage/Faqs";
 import Campaign from "@/components/Homepage/Campaign";
+import AboutNOTT from "@/components/Homepage/AboutNOTT";
+import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
 
 export default function Home() {
   return (
@@ -37,6 +39,8 @@ export default function Home() {
         <Hero />
         <Campaign />
         <Faqs />
+        <AboutNOTT />
+        <ProductsShowcase />
         <Footer />
       </main>
     </>
