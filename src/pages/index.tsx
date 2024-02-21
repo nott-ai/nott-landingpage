@@ -2,6 +2,8 @@ import Head from "next/head";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import Hero from "@/components/Homepage/Hero";
+import AboutNOTT from "@/components/Homepage/AboutNOTT";
+import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
 
 export default function Home() {
   return (
@@ -33,6 +35,8 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
+        <AboutNOTT />
+        <ProductsShowcase />
         <Footer />
       </main>
     </>
