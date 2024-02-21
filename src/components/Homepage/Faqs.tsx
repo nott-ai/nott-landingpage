@@ -18,9 +18,9 @@ const Faqs = () => {
       <div className={styles.contentSecond}>
         {dataFaqs.map((faq, index) => (
           <div key={index} style={openIndex === index ? { backgroundColor: '#E9F8FF', borderRadius: '24px' } : {}}>
-            <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question}>
+            <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
               {faq.question}
-              <img src={openIndex === index ? "../images/arrow-down-right.svg" : "../images/arrow-right.svg"} alt="Toggle Icon" onClick={() => setOpenIndex(openIndex === index ? null : index)} />
+              <img src={openIndex === index ? "../images/arrow-down-right.svg" : "../images/arrow-right.svg"} alt="Toggle Icon" />
             </div>
             <Collapse isOpened={openIndex === index}>
               <div className={styles.answers}>
