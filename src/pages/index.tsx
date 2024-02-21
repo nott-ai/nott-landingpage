@@ -39,8 +39,8 @@ export default function Home() {
         <Hero />
         <Campaign />
         <AboutNOTT />
-        <Faqs />
         <ProductsShowcase />
+        <Faqs />
         <Footer />
       </main>
     </>

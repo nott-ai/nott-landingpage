@@ -19,7 +19,6 @@ const Campaign = () => {
           </div>
           <PrimaryButton className={styles.mobileJoinCampaign}>
             Join Campaigns
-            <img className={styles.rightArrow} src='../images/arrow-right-white.svg' alt='graphic' />
           </PrimaryButton>
         </div>
         <div className={styles.leftBlock}>
@@ -34,17 +33,16 @@ const Campaign = () => {
           </div>
           <PrimaryButton className={styles.joinCampaign}>
             Join Campaigns
-            <img className={styles.rightArrow} src='../images/arrow-right-white.svg' alt='graphic' />
           </PrimaryButton>
           <div className={styles.contentSecond}>
             {regularCampaigns.map((faq, index) => (
-              <div key={index} style={{ background: 'white', borderRadius: '24px' }}>
-                <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question}>
+              <div key={index} style={{ background: ' #f0f5ff', borderRadius: '24px' }}>
+                <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
                   <div className={styles.leftQuestion}>
                     <img className={styles.leftImage} src={faq.image} alt='graphic' />
                     {faq.title}
                   </div>
-                  <img src={openIndex === index ? "../images/minus.svg" : "../images/plus.svg"} alt="Toggle Icon" onClick={() => setOpenIndex(openIndex === index ? null : index)} />
+                  <img src={openIndex === index ? "../images/minus.svg" : "../images/plus.svg"} alt="Toggle Icon" />
                 </div>
                 <Collapse isOpened={openIndex === index}>
                   <div className={styles.answers}>
