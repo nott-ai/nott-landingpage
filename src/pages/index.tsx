@@ -38,8 +38,8 @@ export default function Home() {
         <Header />
         <Hero />
         <Campaign />
-        <Faqs />
         <AboutNOTT />
+        <Faqs />
         <ProductsShowcase />
         <Footer />
       </main>

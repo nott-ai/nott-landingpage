@@ -23,7 +23,7 @@ const Campaign = () => {
           </PrimaryButton>
         </div>
         <div className={styles.leftBlock}>
-          <img src='../images/kgz2.svg' alt='graphic' />
+          <img src='../images/banner-campaign.svg' alt='graphic' />
         </div>
         <div className={styles.right}>
           <div className={styles.title}>
