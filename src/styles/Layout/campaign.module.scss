@@ -1,0 +1,190 @@
+@import "../variables.scss";
+.wrapper {
+  height: 1025px;
+  position: relative;
+  background-color: white;
+  margin: auto;
+  background-image: url("/images/background-campaign.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    gap: 24px;
+    .leftBlock {
+      margin-top: 100px 0;
+      img {
+        object-fit: contain;
+      }
+    }
+    .rightBlock {
+      margin-top: 100px 0;
+      display: flex;
+      justify-content: space-between;
+      height: 825px;
+      max-width: 708px;
+    }
+    .joinCampaign {
+      margin: 30px 0 62px 0;
+      width: 209px;
+      display: flex;
+      position: relative;
+    }
+    .rightArrow {
+      position: absolute;
+      right: 7%;
+    }
+    .mobileJoinCampaign {
+      display: none;
+    }
+    .mobileTitle {
+      display: none;
+    }
+    .mobileDescription {
+      display: none;
+    }
+    .title {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33.6px;
+      letter-spacing: 2%;
+      .highlightText {
+        color: #2563eb;
+      }
+    }
+    .description {
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 30px;
+      color: #768298;
+    }
+    .contentSecond {
+      height: 419px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .question {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: "Inter";
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 26.4px;
+        padding: 30px 12px 24px 12px;
+        border-radius: 24px;
+      }
+      .leftQuestion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 16px;
+      }
+      .activeQuestion {
+        color: #2563eb;
+      }
+      .leftImage {
+        width: 56px;
+        height: 56px;
+        margin-right: 13px;
+      }
+      .answers {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25.2px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    background-image: none;
+    height: fit-content;
+    .container {
+      padding-top: 0px;
+      gap: 0px;
+      display: flex;
+      flex-direction: column;
+      .leftBlock {
+        img {
+          width: 90vw;
+          height: 473px;
+          object-fit: contain;
+        }
+      }
+      .title {
+        display: none;
+      }
+      .joinCampaign {
+        display: none;
+      }
+      .description {
+        display: none;
+      }
+      .mobileJoinCampaign {
+        margin: 30px 0 62px 0;
+        width: 209px;
+        display: flex;
+        position: relative;
+      }
+      .mobileTitle {
+        display: block;
+        max-width: 260px;
+        font-family: "Orbitron";
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33.6px;
+        text-align: left;
+        .highlightText {
+          color: #2563eb;
+        }
+      }
+      .mobileDescription {
+        display: flex;
+        font-family: "Inter";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18.2px;
+        margin-top: 30px;
+        color: #768298;
+      }
+      .contentSecond {
+        margin: 0 auto;
+        top: 86%;
+        height: fit-content;
+        margin-bottom: 56px;
+        .question {
+          backdrop-filter: blur(10px);
+          font-size: 16px;
+          padding: 20px 12px 20px 12px;
+          border-radius: 24px;
+          background-color: #f0f5ff;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+        .answers {
+          font-size: 14px;
+          background-color: #f0f5ff;
+          border-bottom-left-radius: 24px;
+          border-bottom-right-radius: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "../variables.scss";
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 506px;
+  position: relative;
+  background-color: #001633;
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: $max-width-container;
+    margin: auto;
+    justify-content: space-between;
+    .leftBlock {
+      padding-top: 114px;
+      padding-bottom: 114px;
+      width: 698px;
+      height: 278px;
+      background-color: #001633;
+      color: #ffffff;
+      font-weight: 500;
+      .title {
+        font-family: "Orbitron", sans-serif;
+        font-size: 80px;
+        line-height: 96px;
+        letter-spacing: 2%;
+      }
+      .contentList {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .rightBlock {
+      position: absolute;
+      bottom: 130px;
+      right: 15%;
+      .contactForm {
+        width: 459px;
+        border-radius: 24px;
+        min-height: 459px;
+        height: fit-content;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 50px 40px;
+      }
+    }
+  }
+  input {
+    width: 100%;
+    background-color: #f2f9ff;
+    border: none;
+    height: 70px;
+    border-radius: 12px;
+  }
+  .action {
+    margin-top: 12px;
+    width: 154px;
+    height: 48px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+  }
+}
