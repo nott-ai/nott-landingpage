@@ -1,0 +1,64 @@
+@import "../variables.scss";
+.wrapper {
+  height: 1544px;
+  background-image: url("/images/background-benefit.png");
+  max-width: $max-width-container;
+  margin: auto;
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    .containerFirst {
+      height: 145px;
+      display: flex;
+      max-width: 90vw;
+      img {
+        width: 228px;
+        height: 145px;
+        object-fit: contain;
+      }
+      .graphicImage {
+        width: 228px;
+        height: 145px;
+      }
+      .graphicMobileImage {
+        display: block;
+      }
+      .contentTitle {
+        font-size: 28px;
+        line-height: 48px;
+        font-weight: 700;
+        position: relative;
+        z-index: 11;
+        .title {
+          margin-top: 89px;
+        }
+        .yellowCircle {
+          width: 46px;
+          height: 46px;
+          position: absolute;
+          left: 43%;
+          top: 5%;
+          z-index: -1;
+        }
+      }
+    }
+    .contentSecond {
+      .question {
+        font-size: 16px;
+        padding: 27px 16px;
+      }
+      .answers {
+        font-size: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+}

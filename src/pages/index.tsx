@@ -6,6 +6,7 @@ import Faqs from "@/components/Homepage/Faqs";
 import Campaign from "@/components/Homepage/Campaign";
 import AboutNOTT from "@/components/Homepage/AboutNOTT";
 import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
+import Benefit from "@/components/Homepage/Benefit";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
         <Hero />
         <Campaign />
         <AboutNOTT />
+        <Benefit />
         <ProductsShowcase />
         <Faqs />
         <Footer />
