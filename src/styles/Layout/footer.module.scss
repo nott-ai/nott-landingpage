@@ -5,23 +5,62 @@
   align-items: center;
 }
 
-@mixin column-start {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .wrapper {
-  background-color: #1c1c1c;
-  height: 470px;
+  background-color: #001633;
+  background-image: url("/images/footer-bg.png");
   display: flex;
   align-items: center;
   justify-content: center;
   .container {
+    padding: 100px 0;
     width: $max-width-container;
     margin: auto;
-    @include column-start();
-    gap: 40px;
+    @include flex-column();
+    gap: 100px;
+    .topBlock {
+      @include flex-column();
+      gap: 44px;
+      .joinNOTT {
+        margin: auto;
+        text-align: center;
+        @include flex-column();
+        gap: 44px;
+        .title {
+          font-family: "Orbitron";
+          font-weight: 500;
+          font-size: 46px;
+          line-height: 55px;
+          letter-spacing: 2%;
+          color: #fff;
+        }
+        .description {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          color: rgba($color: #fff, $alpha: 0.7);
+          margin-top: 12px;
+        }
+        .joinBtn {
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          line-height: 24px;
+          color: #ffffff;
+          height: 48px;
+          width: 191px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $primary-color;
+          border-radius: 71px;
+          margin: auto;
+        }
+      }
+    }
     .info {
       display: flex;
       flex-direction: column;
@@ -45,7 +84,7 @@
             text-align: right;
           }
           .subColumn {
-            @include column-start();
+            @include flex-column();
             gap: 16px;
             color: rgba($color: #fff, $alpha: 0.7);
             font-weight: 500;

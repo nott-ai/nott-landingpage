@@ -29,12 +29,13 @@
           font-weight: 600;
           line-height: 55px;
           letter-spacing: 2%;
+          color: $header-text-color;
         }
         .description {
           font-size: 20px;
           font-weight: 500;
           line-height: 28px;
-          color: #4c5e80;
+          color: $subtitle-text-color;
         }
       }
       .content {
@@ -95,10 +96,10 @@
               font-size: 24px;
               line-height: 26px;
               font-weight: 600;
-              color: #0f244d;
+              color: $header-text-color;
             }
             .description {
-              color: #4c5e80;
+              color: $subtitle-text-color;
               font-size: 18px;
               line-height: 24px;
               font-weight: 500;
@@ -146,7 +147,7 @@
       .container {
         gap: 32px;
         .header {
-          gap: 24px;
+          gap: 16px;
           .title {
             font-size: 14px;
             font-weight: bold;
@@ -159,8 +160,8 @@
           }
           .description {
             font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
+            font-weight: 400;
+            line-height: 22px;
             max-width: 100%;
           }
         }
@@ -222,14 +223,13 @@
               gap: 12px;
               .title {
                 font-family: "Orbitron";
-                font-size: 16px;
+                font-size: 20px;
                 line-height: 22px;
-                font-weight: 700;
-                letter-spacing: 2%;
+                font-weight: 500;
               }
               .description {
                 font-size: 14px;
-                line-height: 24px;
+                line-height: 20px;
                 width: 269px;
               }
             }

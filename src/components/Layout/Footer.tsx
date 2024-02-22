@@ -1,9 +1,4 @@
-import {
-  DiscordIcon,
-  FooterLogo,
-  TelegramIcon,
-  TwitterIcon,
-} from "@/assets/index";
+import { DiscordIcon, TelegramIcon, TwitterIcon } from "@/assets/index";
 import { INFO } from "@/constants/metas";
 import useTrans from "@/hooks/useTrans";
 import styles from "@/styles/Layout/footer.module.scss";
@@ -15,34 +10,25 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.info}>
-          <div className={styles.topBlock}>
-            <img
-              className={styles.logo}
-              src="/images/footer-logo.svg"
-              alt="logo"
-            />
+        <div className={styles.topBlock}>
+          <div className={styles.joinNOTT}>
+            <div>
+              <div className={styles.title}>Joining The Waitlist now!</div>
+              <div className={styles.description}>
+                {`Be the first to receive the latest updates on NOTT's innovative products and offerings`}
+              </div>
+            </div>
+            <div className={styles.joinBtn}>Join The Waitlist</div>
           </div>
+        </div>
+        <div className={styles.info}>
           <div className={styles.centerBlock}>
             <div className={`${styles.column} ${styles.contact}`}>
-              <div className={styles.title}>{trans.footer.contact}</div>
+              <img src="/images/footer-logo.svg" alt="logo" />
               <div className={styles.subColumn}>
-                <div className={styles.socialNetwork}>
-                  <Link href="#">
-                    <TelegramIcon />
-                  </Link>
-                  <Link href="#">
-                    <DiscordIcon />
-                  </Link>
-                  <Link href={INFO.TWITTER} target="_blank">
-                    <TwitterIcon />
-                  </Link>
-                </div>
-                {/* <div dangerouslySetInnerHTML={createMarkup(INFO.ADDRESS)} />
                 <div>
-                  {trans.footer.callUs}{" "}
-                  <a href={`tel:${INFO.PHONE}`}>{INFO.PHONE}</a>
-                </div> */}
+                  Your Gateway <br /> to a Healthier Tomorrow
+                </div>
                 <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
               </div>
             </div>
@@ -75,7 +61,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.bottomBlock}>
-          <div className={styles.copyRight}>{trans.footer.copyRight}</div>
+          <div className={styles.copyRight}>
+            © 2018-2024 Healthy And Happy Life JSC. All rights reserved
+          </div>
         </div>
       </div>
     </div>
