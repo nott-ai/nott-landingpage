@@ -18,11 +18,10 @@
     "@types/react-collapse": "^5.0.4",
     "next": "14.1.0",
     "react": "^18",
-    "react-collapse": "^5.1.1",
+    "react-collapsed": "^4.1.2",
     "react-dom": "^18",
     "react-modal": "^3.16.1",
     "react-slick": "^0.30.2",
-    "react-spring": "^9.7.3",
     "sass": "^1.70.0",
     "slick-carousel": "^1.8.1"
   },

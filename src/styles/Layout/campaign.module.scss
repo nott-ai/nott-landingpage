@@ -4,7 +4,7 @@
   min-height: 869px;
   position: relative;
   background-color: white;
-  margin: auto;
+  margin: 0 auto;
   background-image: url("/images/background-campaign.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +20,10 @@
       img {
         object-fit: contain;
       }
+      margin-bottom: 60px;
+    }
+    .cubeImage {
+      display: none;
     }
     .rightBlock {
       margin-top: 100px 0;
@@ -113,6 +117,7 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     padding: 20px;
+    height: 978px;
     background-image: none;
     height: fit-content;
     .container {
@@ -122,7 +127,7 @@
       flex-direction: column;
       .leftBlock {
         img {
-          width: 90vw;
+          width: 95vw;
           height: 473px;
           object-fit: contain;
         }
@@ -164,14 +169,14 @@
         color: #768298;
       }
       .contentSecond {
-        margin: 0 auto;
+        margin: auto;
         top: 86%;
         height: fit-content;
         margin-bottom: 56px;
+        width: 90vw;
         .question {
           backdrop-filter: blur(10px);
           font-size: 16px;
-          padding: 20px 12px 20px 12px;
           border-radius: 24px;
           background-color: #f0f5ff;
         }
@@ -188,17 +193,20 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    background-image: none;
+    margin-bottom: 107px;
     height: fit-content;
+    max-height: 978px;
     .container {
       padding-top: 0px;
       gap: 0px;
       display: flex;
       flex-direction: column;
       .leftBlock {
+        margin: auto;
         img {
-          width: 90vw;
-          height: 473px;
+          width: 70vw;
+          height: 332px;
+          padding-bottom: 29px;
           object-fit: contain;
         }
       }
@@ -218,16 +226,26 @@
         position: relative;
       }
       .mobileTitle {
+        position: relative;
         display: block;
-        max-width: 260px;
+        max-width: 500px;
         font-family: "Orbitron";
         font-weight: 700;
         font-size: 28px;
         line-height: 33.6px;
         text-align: left;
+        z-index: 11;
         .highlightText {
           color: #2563eb;
         }
+      }
+      .cubeImage {
+        position: absolute;
+        display: block;
+        width: 65px;
+        height: 62px;
+        left: 80%;
+        top: 10%;
       }
       .mobileDescription {
         display: flex;
@@ -239,16 +257,20 @@
         color: #768298;
       }
       .contentSecond {
-        margin: 0 auto;
+        margin: auto;
         top: 86%;
         height: fit-content;
         margin-bottom: 56px;
         .question {
           backdrop-filter: blur(10px);
           font-size: 16px;
-          padding: 20px 12px 20px 12px;
+          padding: 12px 32px 12px 12px;
           border-radius: 24px;
           background-color: #f0f5ff;
+        }
+        .leftImage {
+          width: 44px;
+          height: 44px;
         }
         .answers {
           font-size: 14px;

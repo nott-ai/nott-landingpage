@@ -1,23 +1,15 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import styles from "@/styles/Layout/campaign.module.scss";
 import { regularCampaigns } from '@/constants/faqs';
-import { Collapse } from 'react-collapse';
 import PrimaryButton from '../common/PrimaryButton';
-import { useTransition, animated } from '@react-spring/web';
+import Collapse from '../common/Collapse';
 
 const Campaign = () => {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const transitions = useTransition(openIndex, {
-    from: { opacity: 0, transform: 'translateY(50%)' },
-    enter: { opacity: 1, transform: 'translateY(0%)' },
-    leave: { opacity: 0, transform: 'translateY(50%)' },
-    keys: null,
-    config: {
-      duration: 500,
-      delay: openIndex === null ? 500 : 0,
-    },
-  });
+  const toggleIsExpanded = useCallback((index: number) => {
+    setOpenIndex(prevIndex => prevIndex === index ? null : index);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -26,6 +18,7 @@ const Campaign = () => {
           <div className={styles.mobileTitle}>
             NOTT’s <span className={styles.highlightText}>Device Drop</span> Campaigns
           </div>
+          <img className={styles.cubeImage} src='../images/cube.svg' alt='cube' />
           <div className={styles.mobileDescription}>
             Discover the ongoing revolution in health tracking through NOTT&#39;s Device Drop Campaigns. These periodic initiatives are our commitment to making advanced health monitoring accessible to all
           </div>
@@ -49,20 +42,18 @@ const Campaign = () => {
           <div className={styles.contentSecond}>
             {regularCampaigns.map((faq, index) => (
               <div key={index} style={{ background: ' #f0f5ff', borderRadius: '24px' }}>
-                <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+                <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question} onClick={() => toggleIsExpanded(index)}>
                   <div className={styles.leftQuestion}>
                     <img className={styles.leftImage} src={faq.image} alt='graphic' />
                     {faq.title}
                   </div>
                   <img src={openIndex === index ? "../images/minus.svg" : "../images/plus.svg"} alt="Toggle Icon" />
                 </div>
-                {transitions((style, item) =>
-                  item === index && (
-                    <animated.div style={style} className={styles.answers}>
-                      {faq.subtitle}
-                    </animated.div>
-                  )
-                )}
+                <Collapse isActive={openIndex === index} >
+                  <div className={styles.answers}>
+                    {faq.subtitle}
+                  </div>
+                </Collapse>
               </div>
             ))}
           </div>
@@ -72,4 +63,4 @@ const Campaign = () => {
   )
 }
 
-export default Campaign
+export default Campaign;
