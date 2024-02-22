@@ -39,6 +39,8 @@ const Header = () => {
     setIsOpen(!modalIsOpen);
   }
 
+
+
   function closeModal() {
     setIsOpen(false);
   }

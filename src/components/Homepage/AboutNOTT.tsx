@@ -16,7 +16,7 @@ const AboutNOTT = () => {
         "Harnessing the power of AI, NOTT offers personalized health insights and recommendations, transforming data into actionable wisdom for your wellness journey",
     },
     {
-      icon: <SolarHealthOutlineIcon />,
+      icon: <SolarHealthOutlineIcon style={{ width: '116px', height: '116px', paddingLeft: '10px' }} />,
       iconUrl: "/images/solar-health-outline.svg",
       title: "Decentralized Wellness",
       description:

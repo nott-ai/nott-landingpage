@@ -10,7 +10,7 @@ const Faqs = () => {
     <div className={styles.wrapper}>
       <div className={styles.containerFirst}>
         <div className={styles.contentTitle}>
-          Frequently Asked Questions.
+          Frequently Asked Questions
           <img className={styles.yellowCircle} src='../images/yellow-circle.svg' alt='graphic' />
         </div>
         <img className={styles.graphicImage} src='../images/graphic.svg' alt='graphic' />
@@ -27,9 +27,12 @@ const Faqs = () => {
             </div>
             <Collapse isActive={openIndex === index}>
               <div className={styles.answers}>
-                {faq.answers}
+                {faq.answers.split('\n').map((line, lineIndex) => (
+                  <div key={lineIndex}>{line}</div>
+                ))}
               </div>
             </Collapse>
+
           </div>
         ))}
       </div>
