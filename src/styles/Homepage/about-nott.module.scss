@@ -1,11 +1,42 @@
 @import "../variables.scss";
 .wrapper {
-    .bannerDesktop {
-        width: 100%;
-        height: auto;
-    }
-    .bannerMobile {
-        display: none;
+    .banner {
+        position: relative;
+        margin: auto;
+        .bannerMobile {
+            display: none;
+        }
+        .character {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            .message {
+                position: relative;
+                width: fit-content;
+                .messageContent {
+                    padding: 34px 30px 34px 60px;
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    position: absolute;
+                    top: 0;
+                    .title {
+                        font-size: 28px;
+                        font-weight: 600;
+                    }
+                    .content {
+                        font-size: 15px;
+                        line-height: 21px;
+                        letter-spacing: 0.3px;
+                    }
+                }
+            }
+        }
     }
     .aboutNott {
         margin: 100px 0;
@@ -20,21 +51,22 @@
             flex-direction: column;
             .header {
                 display: flex;
-                width: 1320px;
                 flex-direction: column;
                 gap: 16px;
+                width: $max-width-container;
                 .overview {
                     font-family: "Orbitron";
                     font-size: 46px;
                     font-weight: 600;
                     line-height: 55px;
                     letter-spacing: 2%;
+                    color: $header-text-color;
                 }
                 .description {
                     font-size: 20px;
                     font-weight: 500;
                     line-height: 28px;
-                    color: #4c5e80;
+                    color: $subtitle-text-color;
                 }
             }
             .content {
@@ -94,10 +126,10 @@
                             font-size: 24px;
                             line-height: 26px;
                             font-weight: 600;
-                            color: #0f244d;
+                            color: $header-text-color;
                         }
                         .description {
-                            color: #4c5e80;
+                            color: $subtitle-text-color;
                             font-size: 18px;
                             line-height: 24px;
                             font-weight: 500;
@@ -111,6 +143,26 @@
 
 @media screen and (max-width: $lg) {
     .wrapper {
+        .banner {
+            .character {
+                margin: auto;
+                display: flex;
+                align-items: flex-end;
+                width: fit-content;
+                .robo {
+                    width: 35%;
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .message {
+                    margin-bottom: 80px;
+                }
+            }
+        }
         .aboutNott {
             .container {
                 .header {
@@ -133,13 +185,40 @@
 
 @media screen and (max-width: $sm) {
     .wrapper {
-        .bannerDesktop {
-            display: none;
-        }
-        .bannerMobile {
-            display: block;
-            width: 100%;
-            height: auto;
+        .banner {
+            .bannerDesktop {
+                display: none;
+            }
+            .bannerMobile {
+                display: block;
+            }
+            .character {
+                margin-bottom: -3px;
+                .robo {
+                    width: 30%;
+                    height: auto;
+                }
+                .message {
+                    margin-bottom: 35px;
+                    img {
+                        width: 256px;
+                        height: auto;
+                    }
+                    .messageContent {
+                        gap: 4px;
+                        padding: 16px 16px 16px 20px;
+                        .title {
+                            font-size: 12px;
+                            letter-spacing: -0.42px;
+                        }
+                        .content {
+                            font-size: 10px;
+                            font-weight: 400;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
         }
         .aboutNott {
             margin: 64px 0;
@@ -147,7 +226,7 @@
                 gap: 32px;
                 .header {
                     width: 95vw;
-                    gap: 24px;
+                    gap: 16px;
                     .title {
                         font-size: 14px;
                         font-weight: bold;
@@ -160,8 +239,8 @@
                     }
                     .description {
                         font-size: 14px;
-                        font-weight: 500;
-                        line-height: 20px;
+                        font-weight: 400;
+                        line-height: 22px;
                         max-width: 100%;
                     }
                 }
@@ -222,14 +301,13 @@
                             gap: 12px;
                             .title {
                                 font-family: "Orbitron";
-                                font-size: 16px;
+                                font-size: 20px;
                                 line-height: 22px;
-                                font-weight: 700;
-                                letter-spacing: 2%;
+                                font-weight: 500;
                             }
                             .description {
                                 font-size: 14px;
-                                line-height: 24px;
+                                line-height: 20px;
                                 width: 269px;
                             }
                         }
