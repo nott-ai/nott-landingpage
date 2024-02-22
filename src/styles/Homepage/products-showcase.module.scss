@@ -25,7 +25,7 @@
       .description {
         font-size: 20px;
         line-height: 28px;
-        color: #4c5e80;
+        color: $subtitle-text-color;
         font-weight: 500;
         max-width: 560px;
       }
@@ -108,7 +108,7 @@
       margin: auto;
       .header {
         padding: 0 16px;
-        gap: 24px;
+        gap: 16px;
         .title {
           font-weight: bold;
           font-size: 28px;
@@ -117,6 +117,7 @@
         .description {
           font-size: 14px;
           line-height: 20px;
+          font-weight: 400;
         }
       }
       .products {

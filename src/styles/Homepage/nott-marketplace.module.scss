@@ -50,7 +50,11 @@
       &.card-2 {
         background-color: #dbdeff;
       }
-
+      .icon {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: contain;
+      }
       .info {
         background-color: rgba($color: #fff, $alpha: 0.8);
         padding: 24px;
@@ -95,7 +99,6 @@
 @media screen and (max-width: $sm) {
   .container {
     gap: 32px;
-    padding: 0 16px;
     .header {
       .title {
         font-size: 28px;
@@ -104,16 +107,18 @@
       .description {
         font-size: 16px;
         line-height: 22px;
+        font-weight: 400;
       }
     }
     .features {
+      padding: 0 16px;
       grid-template-columns: repeat(1, 1fr);
       overflow: hidden;
       .card {
         height: 376px;
         width: 100%;
         padding: 24px 16px;
-        img {
+        .icon {
           width: 220px;
           height: 220px;
         }

@@ -47,6 +47,7 @@
   .contentSecond {
     margin-top: 100px;
     height: 487px;
+    padding-top: 15px;
     .question {
       cursor: pointer;
       display: flex;
@@ -62,7 +63,7 @@
     }
     .answers {
       font-family: "Inter";
-      font-weight: 400;
+      font-weight: 500;
       font-size: 18px;
       line-height: 25.2px;
       padding-left: 16px;
@@ -84,8 +85,8 @@
     .containerFirst {
       background-image: url("/images/background-faq-mobile.png");
       display: flex;
-      width: 95vw;
       margin: auto;
+      padding: 0 16px;
       .graphicImage {
         display: none;
       }
@@ -117,7 +118,7 @@
       height: 662px;
       max-height: 662px;
       margin-bottom: 84px;
-      width: 95vw;
+      width: 90vw;
       margin: auto;
       .question {
         font-size: 16px;

@@ -69,7 +69,8 @@ const ProductsShowcase = () => {
             <span className={styles.highlight}>Products</span> Showcase
           </div>
           <div className={styles.description}>
-            {`Discover the innovation of NOTT's smart devices and app, <br />
+            {`Discover the innovation of NOTT's smart devices and app,
+            
             designed to kickstart your journey towards better health`}
           </div>
         </div>
@@ -83,6 +84,7 @@ const ProductsShowcase = () => {
                       key={product.name + index}
                       src={image}
                       alt={product.name}
+                      loading="lazy"
                     />
                   ))}
                 </Slider>

@@ -15,11 +15,19 @@ import "@fontsource/orbitron/700.css";
 import { initializeApp } from "@firebase/app";
 import { firebaseConfig } from "@/constants/firebase-config";
 import { getAnalytics } from "@firebase/analytics";
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
   getAnalytics(app);
 }
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
 }
