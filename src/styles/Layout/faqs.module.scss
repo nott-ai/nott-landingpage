@@ -1,28 +1,32 @@
 @import "../variables.scss";
 .wrapper {
-  height: 1069px;
+  height: 693px;
   position: relative;
   background-color: white;
   max-width: $max-width-container;
   margin: auto;
+  margin-bottom: 160px;
   .containerFirst {
-    height: 273px;
+    height: 137px;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
     position: relative;
     .graphicImage {
-      width: 608px;
-      height: 356px;
+      width: 424px;
+      height: 137px;
       object-fit: contain;
+      position: absolute;
+      left: 25%;
     }
     .graphicMobileImage {
       display: none;
     }
     .contentTitle {
+      max-width: 500px;
       font-weight: 600;
-      font-size: 56px;
-      line-height: 67.2px;
+      font-size: 46px;
+      line-height: 55.2px;
       letter-spacing: 2%;
       font-family: "Orbitron";
       position: relative;
@@ -31,10 +35,10 @@
         margin-top: 178px;
       }
       .yellowCircle {
-        width: 120px;
-        height: 120px;
+        width: 59px;
+        height: 59px;
         position: absolute;
-        left: 63%;
+        left: 5%;
         top: -15%;
         z-index: -1;
       }
@@ -70,26 +74,23 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 0 18px;
   }
 }
 
 @media screen and (max-width: $sm) {
   .wrapper {
+    height: fit-content;
+    max-height: 662px;
     .containerFirst {
-      height: 145px;
+      background-image: url("/images/background-faq-mobile.png");
       display: flex;
-      max-width: 90vw;
-      img {
-        width: 228px;
-        height: 145px;
-        object-fit: contain;
-      }
+      width: 95vw;
+      margin: auto;
       .graphicImage {
-        width: 228px;
-        height: 145px;
+        display: none;
       }
       .graphicMobileImage {
+        position: absolute;
         display: block;
       }
       .contentTitle {
@@ -108,13 +109,18 @@
           left: 43%;
           top: 5%;
           z-index: -1;
+          display: none;
         }
       }
     }
     .contentSecond {
+      height: 662px;
+      max-height: 662px;
+      margin-bottom: 84px;
+      width: 95vw;
+      margin: auto;
       .question {
         font-size: 16px;
-        padding: 27px 16px;
       }
       .answers {
         font-size: 12px;

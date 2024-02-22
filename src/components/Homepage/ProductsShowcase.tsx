@@ -52,6 +52,7 @@ const ProductsShowcase = () => {
             margin: "0px",
             marginBlockStart: 0,
             marginBlockEnd: 0,
+            paddingInlineStart: 0,
           }}
         >
           {dots}
@@ -68,8 +69,8 @@ const ProductsShowcase = () => {
             <span className={styles.highlight}>Products</span> Showcase
           </div>
           <div className={styles.description}>
-            Discover the innovation of NOTT's smart devices and app, <br />
-            designed to kickstart your journey towards better health
+            {`Discover the innovation of NOTT's smart devices and app, <br />
+            designed to kickstart your journey towards better health`}
           </div>
         </div>
         <div className={styles.products}>

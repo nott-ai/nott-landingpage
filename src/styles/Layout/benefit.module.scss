@@ -1,9 +1,38 @@
 @import "../variables.scss";
 .wrapper {
   height: 1544px;
-  background-image: url("/images/background-benefit.png");
-  max-width: $max-width-container;
-  margin: auto;
+  background-color: #001633;
+  .container {
+    padding: 160px 0;
+    max-width: $max-width-container;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    .topBlock {
+      max-height: 594px;
+      .titleBlock {
+        height: 110px;
+        color: white;
+        flex-direction: row;
+        align-items: flex-end;
+        .title {
+          max-width: 312px;
+          font-weight: 600;
+          font-family: "Orbitron";
+          line-height: 55.2px;
+          letter-spacing: 2%;
+        }
+        .titleDescription {
+        }
+      }
+      .featureBlock {
+      }
+    }
+    .bottomBlock {
+      max-height: 650px;
+    }
+  }
 }
 
 @media screen and (max-width: $lg) {

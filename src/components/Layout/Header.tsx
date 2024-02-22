@@ -2,10 +2,12 @@ import { MenuIcon } from "@/assets";
 import { NAVIGATIONS } from "@/constants/header";
 import styles from "@/styles/Layout/header.module.scss";
 import Link from "next/link";
-
+import { Link as LinkScroll } from "react-scroll";
 import { useState } from "react";
 import useTrans from "@/hooks/useTrans";
 import Modal from "react-modal";
+import { it } from "node:test";
+import useDeviceDetect from "../common/DeviceDetect";
 
 const customStyles: any = {
   content: {
@@ -19,7 +21,6 @@ const customStyles: any = {
     borderRadius: "0",
   },
 };
-
 // const LANGUAGES = [
 //   {
 //     id: "en",
@@ -33,7 +34,7 @@ const customStyles: any = {
 const Header = () => {
   const trans: any = useTrans();
   const [modalIsOpen, setIsOpen] = useState(false);
-
+  const { isDesktop } = useDeviceDetect();
   function openModal() {
     setIsOpen(!modalIsOpen);
   }
@@ -52,9 +53,32 @@ const Header = () => {
             <div className={styles.desktop}>
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
-                  <Link key={item.id} href={item.link}>
-                    <div>{trans.header[item.name]}</div>
-                  </Link>
+                  <div key={item.id}>
+                    {item.scroll ? (
+                      <LinkScroll
+                        activeClass="active"
+                        style={{ cursor: "pointer" }}
+                        target={item.link}
+                        to={item.link}
+                        smooth={true}
+                        spy={true}
+                        offset={isDesktop ? -80 : -44}
+                        duration={500}
+                        key={item.id}
+                      >
+                        <div>{trans.header[item.name]}</div>
+                      </LinkScroll>
+                    ) : (
+                      <Link
+                        key={item.id}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div>{trans.header[item.name]}</div>
+                      </Link>
+                    )}
+                  </div>
                 ))}
                 {/* <DropdownMenu<HTMLButtonElement>
                 trigger={({
@@ -110,12 +134,25 @@ const Header = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
+        appElement={typeof window !== "undefined" ? document.body : undefined}
       >
         <div className={styles.navigationMobile}>
           {NAVIGATIONS.map((item) => (
-            <Link onClick={closeModal} key={item.id} href={item.link}>
+            <LinkScroll
+              activeClass="active"
+              style={{ cursor: "pointer" }}
+              target={item.link}
+              to={item.link}
+              smooth={true}
+              spy={true}
+              offset={isDesktop ? -80 : -44}
+              duration={500}
+              key={item.id}
+              onClick={closeModal}
+              href={item.link}
+            >
               <div>{trans.header[item.name]}</div>
-            </Link>
+            </LinkScroll>
           ))}
         </div>
       </Modal>

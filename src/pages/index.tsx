@@ -7,6 +7,8 @@ import Campaign from "@/components/Homepage/Campaign";
 import AboutNOTT from "@/components/Homepage/AboutNOTT";
 import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
 import Benefit from "@/components/Homepage/Benefit";
+import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
+import { Element } from "react-scroll";
 
 export default function Home() {
   return (
@@ -42,6 +44,25 @@ export default function Home() {
         <AboutNOTT />
         <Benefit />
         <ProductsShowcase />
+        <Element name="home">
+          <Hero />
+        </Element>
+
+        <Element name="campaigns">
+          <Campaign />
+        </Element>
+
+        <Element name="about-NOTT">
+          <AboutNOTT />
+        </Element>
+
+        <Element name="nott-market">
+          <NOTTMarketplace />
+        </Element>
+
+        <Element name="product-showcase">
+          <ProductsShowcase />
+        </Element>
         <Faqs />
         <Footer />
       </main>

@@ -43,22 +43,24 @@ const AboutNOTT = () => {
         <img
           className={styles.bannerDesktop}
           src="/images/about-nott-banner.png"
+          alt="about-nott-banner"
         />
         <img
           className={styles.bannerMobile}
           src="/images/about-nott-banner-mobile.png"
+          alt="about-nott-banner-mobile"
         />
       </div>
       <div className={styles.aboutNott}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.title}>About NOTT</div>
             <div className={styles.overview}>
-              Overview of NOTT as an AI-powered Wellness DePIN platform
+              Overview of NOTT
+              <br /> as an AI-powered Wellness DePIN platform
             </div>
             <div className={styles.description}>
               Join us in redefining wellness with technology, where your health
-              journey is personalized, secure, and forward-thinking.
+              journey <br /> is personalized, secure, and forward-thinking.
             </div>
           </div>
           <div className={styles.content}>
@@ -66,7 +68,7 @@ const AboutNOTT = () => {
               <div className={styles.overviewItem} key={item.title}>
                 <div className={styles.leftBlock}>{item.icon}</div>
                 <div className={styles.iconMobile}>
-                  <img src={item.iconUrl} />
+                  <img src={item.iconUrl} alt="icon" />
                 </div>
                 <div className={styles.rightBlock}>
                   <div className={styles.title}>{item.title}</div>
