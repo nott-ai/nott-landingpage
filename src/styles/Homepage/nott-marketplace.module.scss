@@ -1,0 +1,136 @@
+@import "../variables.scss";
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: $max-width-container;
+  margin: auto;
+  margin-bottom: 100px;
+  @include flex-column;
+  gap: 60px;
+  .header {
+    @include flex-column;
+    gap: 16px;
+    .title {
+      font-size: 46px;
+      font-weight: 600;
+      color: $header-text-color;
+      font-family: "Orbitron";
+      span {
+        color: $primary-color;
+      }
+    }
+    .description {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      color: $subtitle-text-color;
+    }
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    .card {
+      @include flex-column;
+      align-items: center;
+      border-radius: 32px;
+      padding: 44px 62px 24px 62px;
+      box-sizing: border-box;
+      height: 500px;
+
+      &.card-0 {
+        background-color: #ffeddc;
+      }
+      &.card-1 {
+        background-color: #dbf8ff;
+      }
+      &.card-2 {
+        background-color: #dbdeff;
+      }
+
+      .info {
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        padding: 24px;
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        width: 100%;
+        border-radius: 16px;
+        .title {
+          font-size: 24px;
+          font-weight: 600;
+          color: $title-text-color;
+          line-height: 26px;
+          font-family: "Orbitron";
+        }
+        .explore {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: #5956e9;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $lg) {
+  .container {
+    .header {
+      padding: 0 16px;
+    }
+    .features {
+      overflow-x: auto;
+      padding-left: 16px;
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+  .container {
+    gap: 32px;
+    padding: 0 16px;
+    .header {
+      .title {
+        font-size: 28px;
+        line-height: 34px;
+      }
+      .description {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+      overflow: hidden;
+      .card {
+        height: 376px;
+        width: 100%;
+        padding: 24px 16px;
+        img {
+          width: 220px;
+          height: 220px;
+        }
+        .info {
+          gap: 12px;
+          width: auto;
+
+          .title {
+            font-size: 20px;
+            line-height: 22px;
+          }
+          .explore {
+            font-size: 14px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}

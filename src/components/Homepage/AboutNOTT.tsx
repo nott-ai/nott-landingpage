@@ -52,13 +52,13 @@ const AboutNOTT = () => {
       <div className={styles.aboutNott}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.title}>About NOTT</div>
             <div className={styles.overview}>
-              Overview of NOTT as an AI-powered Wellness DePIN platform
+              Overview of NOTT
+              <br /> as an AI-powered Wellness DePIN platform
             </div>
             <div className={styles.description}>
               Join us in redefining wellness with technology, where your health
-              journey is personalized, secure, and forward-thinking.
+              journey <br /> is personalized, secure, and forward-thinking.
             </div>
           </div>
           <div className={styles.content}>
