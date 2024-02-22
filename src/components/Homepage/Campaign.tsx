@@ -3,9 +3,21 @@ import styles from "@/styles/Layout/campaign.module.scss";
 import { regularCampaigns } from '@/constants/faqs';
 import { Collapse } from 'react-collapse';
 import PrimaryButton from '../common/PrimaryButton';
+import { useTransition, animated } from '@react-spring/web';
 
 const Campaign = () => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+
+  const transitions = useTransition(openIndex, {
+    from: { opacity: 0, transform: 'translateY(50%)' },
+    enter: { opacity: 1, transform: 'translateY(0%)' },
+    leave: { opacity: 0, transform: 'translateY(50%)' },
+    keys: null,
+    config: {
+      duration: 500,
+      delay: openIndex === null ? 500 : 0,
+    },
+  });
 
   return (
     <div className={styles.wrapper}>
@@ -22,7 +34,7 @@ const Campaign = () => {
           </PrimaryButton>
         </div>
         <div className={styles.leftBlock}>
-          <img src='../images/banner-campaign.svg' alt='graphic' />
+          <img src='../images/logo-campaign.svg' alt='graphic' />
         </div>
         <div className={styles.right}>
           <div className={styles.title}>
@@ -44,11 +56,13 @@ const Campaign = () => {
                   </div>
                   <img src={openIndex === index ? "../images/minus.svg" : "../images/plus.svg"} alt="Toggle Icon" />
                 </div>
-                <Collapse isOpened={openIndex === index}>
-                  <div className={styles.answers}>
-                    {faq.subtitle}
-                  </div>
-                </Collapse>
+                {transitions((style, item) =>
+                  item === index && (
+                    <animated.div style={style} className={styles.answers}>
+                      {faq.subtitle}
+                    </animated.div>
+                  )
+                )}
               </div>
             ))}
           </div>
