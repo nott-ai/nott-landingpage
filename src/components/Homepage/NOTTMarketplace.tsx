@@ -35,7 +35,7 @@ const NOTTMarketplace = () => {
             key={index}
             className={`${styles.card} ${styles[`card-${index}`]}`}
           >
-            <img src={advantage.icon} alt="marketplace-card" />
+            <img src={advantage.icon} alt="marketplace-card" loading="lazy" />
 
             <div className={styles.info}>
               <div className={styles.title}>{advantage.title}</div>

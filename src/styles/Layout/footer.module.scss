@@ -13,6 +13,7 @@
 .wrapper {
   background-color: #001633;
   background-image: url("/images/footer-bg.png");
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +48,7 @@
         }
         .joinBtn {
           font-size: 16px;
+          font-weight: 500;
           letter-spacing: 0.5px;
           line-height: 24px;
           color: #ffffff;
@@ -73,36 +75,67 @@
         }
       }
       .centerBlock {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .rightBlock {
+          width: 872px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
         .column {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           gap: 24px;
-          &:last-child {
-            text-align: right;
+          .socialNetwork {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-left: -9px;
+            width: fit-content;
+          }
+          .footerLogo {
+            height: 56px;
+            width: fit-content;
           }
           .subColumn {
             @include flex-column();
             gap: 16px;
-            color: rgba($color: #fff, $alpha: 0.7);
+            color: #f4f8ff;
+
             font-weight: 500;
+            &.logo {
+              gap: 12px;
+              .description {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+              }
+            }
             a {
               text-decoration: none;
-              color: rgba($color: #fff, $alpha: 0.7);
               font-weight: 500;
+              color: #fff;
+              font-size: 16px;
             }
-            .socialNetwork {
-              width: fit-content;
-              margin-left: -9px;
+            .email {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: #c0d2f5;
+              font-size: 16px;
+              font-weight: 500;
+              a {
+                color: #c0d2f5;
+              }
             }
           }
           .title {
-            font-weight: bold;
+            font-weight: 600;
             font-size: 24px;
-            line-height: 26px;
-            color: #fff;
+            line-height: 29px;
+            color: #f4f8ff;
           }
         }
       }
@@ -111,9 +144,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-size: 14px;
+      color: #c0d2f5;
+      font-size: 16px;
       font-weight: 500;
+      line-height: 19px;
       .copyRight {
         text-align: center;
       }
@@ -123,49 +157,80 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 0 18px;
+    padding: 0 16px;
   }
 }
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    min-height: 481px;
-    padding: 30px 18px;
-    box-sizing: content-box;
+    padding: 0 16px;
     .container {
-      gap: 30px;
-      height: 100%;
-      box-sizing: border-box;
-      .info {
-        gap: 30px;
-        .topBlock {
-          justify-content: center;
-          .logo {
-            height: 46px;
-            width: auto;
+      padding: 65px 0 24px 0;
+      width: 100%;
+      gap: 64px;
+      .topBlock {
+        .joinNOTT {
+          gap: 24px;
+          .title {
+            font-size: 28px;
+            line-height: 34px;
+          }
+          .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          .joinBtn {
+            font-size: 14px;
+            height: 40px;
+            width: 153px;
+            letter-spacing: 0.5px;
           }
         }
+      }
+      .info {
+        gap: 32px;
+        margin-top: 64px;
         .centerBlock {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 30px;
+          flex-wrap: wrap;
+          gap: 32px;
           .contact {
+            gap: 16px;
+            .subColumn {
+              gap: 12px;
+            }
           }
           .column {
-            &.contact {
-              gap: 12px;
-              .subColumn {
-                gap: 0px;
+            .title {
+              font-size: 20px;
+            }
+          }
+          .rightBlock {
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 32px;
+            .networkColumn {
+              order: 1;
+              width: 100%;
+              .socialNetwork {
+                grid-template-columns: repeat(3, 1fr);
               }
             }
-            &:nth-child(2) {
-              text-align: right;
+            .learn {
+              order: 2;
+            }
+            .document {
+              order: 3;
+            }
+            .column {
+              gap: 16px;
             }
           }
         }
       }
       .bottomBlock {
-        max-width: 260px;
-        margin: auto;
+        margin: 24px auto 0 auto;
+        font-size: 12px;
       }
     }
   }

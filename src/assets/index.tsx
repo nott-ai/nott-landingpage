@@ -20,6 +20,10 @@ import NimbusEcosystemIcon from "./nimbus-ecosystem.svg";
 import SolarHealthOutlineIcon from "./solar-health-outline.svg";
 import SystemSumIcon from "./system-sum.svg";
 import ArrowRightIcon from "./arrow-right.svg";
+import EmailIcon from "./email.svg";
+import FacebookIcon from "./facebook.svg";
+import GithubIcon from "./github.svg";
+import LinkedinIcon from "./linkedin.svg";
 
 export {
   ShieldIcon,
@@ -44,4 +48,8 @@ export {
   SolarHealthOutlineIcon,
   SystemSumIcon,
   ArrowRightIcon,
+  EmailIcon,
+  FacebookIcon,
+  GithubIcon,
+  LinkedinIcon,
 };
