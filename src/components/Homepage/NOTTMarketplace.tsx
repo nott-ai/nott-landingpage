@@ -5,15 +5,15 @@ const NOTTMarketplace = () => {
   const advantages = [
     {
       title: "Benefits for users and merchants",
-      icon: "/images/marketplace-card-1.svg",
+      icon: "/images/marketplace-card-1.png",
     },
     {
       title: "Open marketplace concept",
-      icon: "/images/marketplace-card-2.svg",
+      icon: "/images/marketplace-card-2.png",
     },
     {
       title: "Featured products and services",
-      icon: "/images/marketplace-card-3.svg",
+      icon: "/images/marketplace-card-3.png",
     },
   ];
 
@@ -35,7 +35,12 @@ const NOTTMarketplace = () => {
             key={index}
             className={`${styles.card} ${styles[`card-${index}`]}`}
           >
-            <img src={advantage.icon} alt="marketplace-card" loading="lazy" />
+            <img
+              className={styles.icon}
+              src={advantage.icon}
+              alt="marketplace-card"
+              loading="lazy"
+            />
 
             <div className={styles.info}>
               <div className={styles.title}>{advantage.title}</div>

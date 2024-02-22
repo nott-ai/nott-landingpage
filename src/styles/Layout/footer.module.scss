@@ -66,6 +66,7 @@
     .info {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       gap: 40px;
       .topBlock {
         @include space-between;
@@ -158,6 +159,90 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     padding: 0 16px;
+    .container {
+      .info {
+        .centerBlock {
+          flex-wrap: wrap;
+          gap: 32px;
+          .contact {
+            width: 100%;
+            justify-content: center;
+          }
+          .rightBlock {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 24px;
+            .socialNetwork {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              margin-left: -9px;
+              width: fit-content;
+            }
+            .footerLogo {
+              height: 56px;
+              width: fit-content;
+            }
+            .subColumn {
+              @include flex-column();
+              gap: 16px;
+              color: #f4f8ff;
+
+              font-weight: 500;
+              &.logo {
+                gap: 12px;
+                .description {
+                  font-size: 20px;
+                  font-weight: 600;
+                  line-height: 30px;
+                }
+              }
+              a {
+                text-decoration: none;
+                font-weight: 500;
+                color: #fff;
+                font-size: 16px;
+              }
+              .email {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #c0d2f5;
+                font-size: 16px;
+                font-weight: 500;
+                a {
+                  color: #c0d2f5;
+                }
+              }
+            }
+            .title {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 29px;
+              color: #f4f8ff;
+            }
+          }
+        }
+      }
+      .bottomBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #c0d2f5;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        .copyRight {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
