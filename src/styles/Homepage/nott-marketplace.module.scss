@@ -95,7 +95,6 @@
 @media screen and (max-width: $sm) {
   .container {
     gap: 32px;
-    padding: 0 16px;
     .header {
       .title {
         font-size: 28px;
@@ -104,9 +103,11 @@
       .description {
         font-size: 16px;
         line-height: 22px;
+        font-weight: 400;
       }
     }
     .features {
+      padding: 0 16px;
       grid-template-columns: repeat(1, 1fr);
       overflow: hidden;
       .card {
