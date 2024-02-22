@@ -52,6 +52,7 @@ const ProductsShowcase = () => {
             margin: "0px",
             marginBlockStart: 0,
             marginBlockEnd: 0,
+            paddingInlineStart: 0,
           }}
         >
           {dots}
