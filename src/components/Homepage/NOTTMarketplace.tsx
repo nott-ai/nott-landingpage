@@ -1,11 +1,5 @@
 import styles from "@/styles/Homepage/nott-marketplace.module.scss";
-import {
-  ArrowRightIcon,
-  MarketplaceCard1,
-  MarketplaceCard2,
-  MarketplaceCard3,
-} from "../../assets";
-import Icon from "../common/Icon";
+import { ArrowRightIcon } from "../../assets";
 
 const NOTTMarketplace = () => {
   const advantages = [
@@ -30,9 +24,9 @@ const NOTTMarketplace = () => {
           NOTT <span>Marketplace</span>
         </div>
         <div className={styles.description}>
-          Explore NOTT's marketplace, connecting users to a wide range of health
+          {`Explore NOTT's marketplace, connecting users to a wide range of health
           and wellness offerings. Join a dynamic community of health enthusiasts
-          and businesses, enhancing your well-being journey with ease
+          and businesses, enhancing your well-being journey with ease`}
         </div>
       </div>
       <div className={styles.features}>
