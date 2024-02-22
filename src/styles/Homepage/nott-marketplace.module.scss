@@ -50,7 +50,11 @@
       &.card-2 {
         background-color: #dbdeff;
       }
-
+      .icon {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: contain;
+      }
       .info {
         background-color: rgba($color: #fff, $alpha: 0.8);
         padding: 24px;
@@ -114,7 +118,7 @@
         height: 376px;
         width: 100%;
         padding: 24px 16px;
-        img {
+        .icon {
           width: 220px;
           height: 220px;
         }
