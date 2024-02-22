@@ -1,23 +1,29 @@
 @import "../variables.scss";
 .wrapper {
-  height: 1025px;
+  height: fit-content;
+  min-height: 869px;
   position: relative;
   background-color: white;
-  margin: auto;
-  background-image: url("/images/background-campaign.png");
+  margin: 0 auto;
+  background-image: url("/images/background-campaign.svg");
   background-size: cover;
   background-repeat: no-repeat;
   .container {
     max-width: $max-width-container;
     margin: auto;
-    padding-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 60px;
     display: flex;
-    gap: 24px;
+    gap: 57px;
     .leftBlock {
       margin-top: 100px 0;
       img {
         object-fit: contain;
       }
+      margin-bottom: 60px;
+    }
+    .cubeImage {
+      display: none;
     }
     .rightBlock {
       margin-top: 100px 0;
@@ -27,7 +33,7 @@
       max-width: 708px;
     }
     .joinCampaign {
-      margin: 30px 0 62px 0;
+      margin: 30px 0 32px 0;
       width: 185px;
       height: 48px;
       display: flex;
@@ -49,8 +55,8 @@
     .title {
       font-family: "Orbitron";
       font-weight: 700;
-      font-size: 28px;
-      line-height: 33.6px;
+      font-size: 46px;
+      line-height: 55.2px;
       letter-spacing: 2%;
       .highlightText {
         color: #2563eb;
@@ -60,15 +66,15 @@
       font-family: "Inter";
       font-weight: 500;
       font-size: 20px;
-      line-height: 30px;
-      margin-top: 30px;
+      line-height: 28px;
+      margin-top: 16px;
       color: #768298;
     }
     .contentSecond {
-      height: 419px;
+      max-height: 395px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
       .question {
         cursor: pointer;
         display: flex;
@@ -78,14 +84,13 @@
         font-size: 24px;
         font-weight: 500;
         line-height: 26.4px;
-        padding: 30px 12px 24px 12px;
-        border-radius: 24px;
+        padding: 12px 28px 12px 12px;
+        border-radius: 16px;
       }
       .leftQuestion {
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-size: 16px;
       }
       .activeQuestion {
         cursor: pointer;
@@ -111,12 +116,8 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 0 18px;
-  }
-}
-
-@media screen and (max-width: $sm) {
-  .wrapper {
+    padding: 20px;
+    height: 978px;
     background-image: none;
     height: fit-content;
     .container {
@@ -126,7 +127,7 @@
       flex-direction: column;
       .leftBlock {
         img {
-          width: 90vw;
+          width: 95vw;
           height: 473px;
           object-fit: contain;
         }
@@ -168,16 +169,108 @@
         color: #768298;
       }
       .contentSecond {
-        margin: 0 auto;
+        margin: auto;
+        top: 86%;
+        height: fit-content;
+        margin-bottom: 56px;
+        width: 90vw;
+        .question {
+          backdrop-filter: blur(10px);
+          font-size: 16px;
+          border-radius: 24px;
+          background-color: #f0f5ff;
+        }
+        .answers {
+          font-size: 14px;
+          background-color: #f0f5ff;
+          border-bottom-left-radius: 24px;
+          border-bottom-right-radius: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    margin-bottom: 107px;
+    height: fit-content;
+    max-height: 978px;
+    .container {
+      padding-top: 0px;
+      gap: 0px;
+      display: flex;
+      flex-direction: column;
+      .leftBlock {
+        margin: auto;
+        img {
+          width: 70vw;
+          height: 332px;
+          padding-bottom: 29px;
+          object-fit: contain;
+        }
+      }
+      .title {
+        display: none;
+      }
+      .joinCampaign {
+        display: none;
+      }
+      .description {
+        display: none;
+      }
+      .mobileJoinCampaign {
+        margin: 30px 0 62px 0;
+        width: 148px;
+        display: flex;
+        position: relative;
+      }
+      .mobileTitle {
+        position: relative;
+        display: block;
+        max-width: 500px;
+        font-family: "Orbitron";
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33.6px;
+        text-align: left;
+        z-index: 11;
+        .highlightText {
+          color: #2563eb;
+        }
+      }
+      .cubeImage {
+        position: absolute;
+        display: block;
+        width: 65px;
+        height: 62px;
+        right: 5%;
+        top: 10%;
+      }
+      .mobileDescription {
+        display: flex;
+        font-family: "Inter";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18.2px;
+        margin-top: 30px;
+        color: #768298;
+      }
+      .contentSecond {
+        margin: auto;
         top: 86%;
         height: fit-content;
         margin-bottom: 56px;
         .question {
           backdrop-filter: blur(10px);
           font-size: 16px;
-          padding: 20px 12px 20px 12px;
+          padding: 12px 32px 12px 12px;
           border-radius: 24px;
           background-color: #f0f5ff;
+        }
+        .leftImage {
+          width: 44px;
+          height: 44px;
         }
         .answers {
           font-size: 14px;

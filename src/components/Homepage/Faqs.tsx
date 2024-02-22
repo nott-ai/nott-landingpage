@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from "@/styles/Layout/faqs.module.scss";
-import { Collapse } from 'react-collapse';
 import { dataFaqs } from '@/constants/faqs';
+import Collapse from '../common/Collapse';
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -18,11 +18,14 @@ const Faqs = () => {
       <div className={styles.contentSecond}>
         {dataFaqs.map((faq, index) => (
           <div key={index} style={openIndex === index ? { backgroundColor: '#E9F8FF', borderRadius: '24px' } : {}}>
-            <div className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+            <div
+              className={openIndex === index ? `${styles.question} ${styles.activeQuestion}` : styles.question}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            >
               {faq.question}
               <img src={openIndex === index ? "../images/arrow-down-right.svg" : "../images/arrow-right.svg"} alt="Toggle Icon" />
             </div>
-            <Collapse isOpened={openIndex === index}>
+            <Collapse isActive={openIndex === index}>
               <div className={styles.answers}>
                 {faq.answers}
               </div>
@@ -31,7 +34,7 @@ const Faqs = () => {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Faqs
+export default Faqs;
