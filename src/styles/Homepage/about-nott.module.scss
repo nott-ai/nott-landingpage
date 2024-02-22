@@ -8,8 +8,9 @@
     display: none;
   }
   .aboutNott {
-    padding: 100px 0;
-
+    margin: 100px 0;
+    background-image: url("/images/about-nott-bg.png");
+    background-repeat: no-repeat;
     .container {
       max-width: $max-width-container;
       margin: auto;
@@ -20,24 +21,20 @@
       .header {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        .title {
-          color: #346af7;
-          font-size: 20px;
-          font-weight: 600;
-        }
+        gap: 16px;
+
         .overview {
           font-family: "Orbitron";
-          font-size: 50px;
+          font-size: 46px;
           font-weight: 600;
-          line-height: 65px;
+          line-height: 55px;
+          letter-spacing: 2%;
         }
         .description {
           font-size: 20px;
           font-weight: 500;
           line-height: 28px;
-          color: #768298;
-          max-width: 713px;
+          color: #4c5e80;
         }
       }
       .content {
@@ -46,7 +43,7 @@
         .overviewItem {
           display: flex;
           align-items: flex-start;
-          padding: 100px 83px;
+          padding: 64px 100px;
           gap: 44px;
           cursor: pointer;
           box-sizing: border-box;
@@ -63,7 +60,7 @@
 
           &:hover {
             border-top: 6px solid #2563eb;
-            padding: 94px 83px 100px 83px;
+            padding: 58px 100px 64px 100px;
             .leftBlock {
               svg {
                 path {
@@ -98,11 +95,13 @@
               font-size: 24px;
               line-height: 26px;
               font-weight: 600;
+              color: #0f244d;
             }
             .description {
               color: #4c5e80;
               font-size: 18px;
               line-height: 24px;
+              font-weight: 500;
             }
           }
         }
@@ -142,7 +141,7 @@
       height: auto;
     }
     .aboutNott {
-      padding: 56px 0;
+      margin: 64px 0;
 
       .container {
         gap: 32px;

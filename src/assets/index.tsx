@@ -19,6 +19,7 @@ import MdiTargetIcon from "./mdi-target.svg";
 import NimbusEcosystemIcon from "./nimbus-ecosystem.svg";
 import SolarHealthOutlineIcon from "./solar-health-outline.svg";
 import SystemSumIcon from "./system-sum.svg";
+import ArrowRightIcon from "./arrow-right.svg";
 
 export {
   ShieldIcon,
@@ -42,4 +43,5 @@ export {
   NimbusEcosystemIcon,
   SolarHealthOutlineIcon,
   SystemSumIcon,
+  ArrowRightIcon,
 };

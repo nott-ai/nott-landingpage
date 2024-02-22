@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .wrapper {
-  padding: 100px 0;
+  margin: 160px 0 102px 0;
   background-image: url("/images/products-showcase-bg.png");
   .container {
     margin: auto;
@@ -10,13 +10,14 @@
       margin: auto;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 12px;
       .title {
         font-family: "Orbitron";
-        font-size: 60px;
+        font-size: 46px;
         font-weight: 600;
         letter-spacing: 2%;
-        color: #292930;
+        line-height: 55px;
+        color: #0f244d;
         .highlight {
           color: #2563eb;
         }
@@ -24,8 +25,9 @@
       .description {
         font-size: 20px;
         line-height: 28px;
-        color: #768298;
+        color: #4c5e80;
         font-weight: 500;
+        max-width: 560px;
       }
     }
     .products {
@@ -44,16 +46,16 @@
         border-radius: 32px;
         overflow: hidden;
         gap: 24px;
-        height: 564px;
-        width: 424px;
-        min-width: 424px;
-        max-width: 424px;
+        height: 414px;
+        width: 312px;
+        min-width: 312px;
+        max-width: 312px;
         padding: 24px;
         box-sizing: border-box;
         background-color: #ffffff;
         .imageSlider {
-          width: 362px;
-          height: 362px;
+          width: 264px;
+          height: 264px;
           box-sizing: border-box;
           img {
             width: 100%;
@@ -65,7 +67,7 @@
           display: flex;
           flex-direction: column;
           gap: 8px;
-          margin-top: 30px;
+          margin-top: 24px;
           width: 100%;
           .comingSoon {
             color: #2563eb;
@@ -149,7 +151,7 @@
     }
   }
 }
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 1920px) {
   .wrapper {
     .container {
       .products {
