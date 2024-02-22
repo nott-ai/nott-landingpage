@@ -18,7 +18,7 @@ export const dataFaqs = [
   {
     question: "What are the key features of NOTT ?",
     answers:
-      "The NOTT platform features the following characteristics: - Integration of DePin the NOTT Ecosystem - Open Marketplace - Innovative Health Tracking Devices - Dual Token System - AI-Powered Health Improvement Plans & Coaching",
+      "The NOTT platform features the following characteristics: \n- Integration of DePin the NOTT Ecosystem \n- Open Marketplace \n- Innovative Health Tracking Devices \n- Dual Token System \n- AI-Powered Health Improvement Plans & Coaching",
   },
   {
     question: "Who can I contact for help with NOTT devices or the platform?",
