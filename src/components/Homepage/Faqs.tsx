@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from "@/styles/Layout/faqs.module.scss";
-import { useTransition, animated } from '@react-spring/web';
 import { dataFaqs } from '@/constants/faqs';
 import Collapse from '../common/Collapse';
 
