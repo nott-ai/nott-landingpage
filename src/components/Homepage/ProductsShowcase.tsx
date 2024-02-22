@@ -84,6 +84,7 @@ const ProductsShowcase = () => {
                       key={product.name + index}
                       src={image}
                       alt={product.name}
+                      loading="lazy"
                     />
                   ))}
                 </Slider>

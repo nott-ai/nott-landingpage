@@ -44,11 +44,13 @@ const AboutNOTT = () => {
           className={styles.bannerDesktop}
           src="/images/about-nott-banner.png"
           alt="about-nott-banner"
+          loading="lazy"
         />
         <img
           className={styles.bannerMobile}
           src="/images/about-nott-banner-mobile.png"
           alt="about-nott-banner-mobile"
+          loading="lazy"
         />
       </div>
       <div className={styles.aboutNott}>
@@ -68,7 +70,7 @@ const AboutNOTT = () => {
               <div className={styles.overviewItem} key={item.title}>
                 <div className={styles.leftBlock}>{item.icon}</div>
                 <div className={styles.iconMobile}>
-                  <img src={item.iconUrl} alt="icon" />
+                  <img src={item.iconUrl} alt="icon" loading="lazy" />
                 </div>
                 <div className={styles.rightBlock}>
                   <div className={styles.title}>{item.title}</div>
