@@ -44,6 +44,6 @@ export const regularCampaigns = [
     image: "../images/campaign3.svg",
     title: "Be Part of a Health Revolution",
     subtitle:
-      " Joining our Device Drop Campaigns means more than just receiving a device; it's about becoming part of a community that values proactive health management and technological innovation.",
+      " Joining our Device Drop Campaigns means more than just receiving a device. It's about becoming part of a community that values proactive health management and technological innovation.",
   },
 ];
