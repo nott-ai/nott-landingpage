@@ -80,7 +80,7 @@ const AboutNOTT = () => {
             </div>
             <div className={styles.description}>
               Join us in redefining wellness with technology, where your health
-              journey <br /> is personalized, secure, and forward-thinking.
+              journey is personalized, secure, and forward-thinking.
             </div>
           </div>
           <div className={styles.content}>
