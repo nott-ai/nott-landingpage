@@ -36,7 +36,7 @@ const Campaign = () => {
           </PrimaryButton>
         </div>
         <div className={styles.leftBlock}>
-          <img src="../images/logo-campaign.png" alt="graphic" />
+          <img src="../images/logo-campaign.png" alt="graphic" loading="lazy" />
         </div>
         <div className={styles.right}>
           <div className={`${styles.title} ${orbitron.className}`}>
@@ -70,6 +70,7 @@ const Campaign = () => {
                       className={styles.leftImage}
                       src={faq.image}
                       alt="graphic"
+                      loading="lazy"
                     />
                     {faq.title}
                   </div>
@@ -80,6 +81,7 @@ const Campaign = () => {
                         : "../images/plus.svg"
                     }
                     alt="Toggle Icon"
+                    loading="lazy"
                   />
                 </div>
                 <Collapse isActive={openIndex === index}>

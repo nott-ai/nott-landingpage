@@ -16,12 +16,14 @@ const Faqs = () => {
             className={styles.yellowCircle}
             src="../images/yellow-circle.svg"
             alt="graphic"
+            loading="lazy"
           />
         </div>
         <img
           className={styles.graphicImage}
           src="../images/graphic.png"
           alt="graphic"
+          loading="lazy"
         />
       </div>
       <div className={styles.contentSecond}>
@@ -49,6 +51,7 @@ const Faqs = () => {
                     ? "../images/arrow-down-right.svg"
                     : "../images/arrow-right.svg"
                 }
+                loading="lazy"
                 alt="Toggle Icon"
               />
             </div>

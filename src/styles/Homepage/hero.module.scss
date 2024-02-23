@@ -1,159 +1,178 @@
 @import "../variables.scss";
 .wrapper {
-  width: 100%;
-  position: relative;
-  min-height: fit-content;
-  .videoDesktop {
-    height: 100vh;
     width: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-  }
-  .videoMobile {
-    display: none;
-  }
-  .content {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    .container {
-      max-width: $max-width-container;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 61px;
-      .leftBlock {
-        width: 520px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        .highlight {
-          //   font-family: "Orbitron";
-          font-size: 64px;
-          font-weight: 600;
-          color: #102123;
-          line-height: 80px;
-        }
-        .description {
-          color: #768298;
-          font-size: 24px;
-          line-height: 36px;
-          font-weight: 500;
-        }
-        .joinWaitlistBtn {
-          height: 62px;
-          width: 305px;
-          border-radius: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #346af7;
-          font-weight: bold;
-          font-size: 24px;
-          letter-spacing: 0.5px;
-          color: #fff;
-        }
-      }
-      .heroImg {
-        animation: hero-moving 3s infinite;
-        height: auto;
-        width: auto;
-        max-height: 100%;
-        object-fit: contain;
-      }
+    position: relative;
+    min-height: fit-content;
+    .videoDesktop {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center bottom;
     }
-  }
+    .videoMobile {
+        display: none;
+    }
+    .content {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        .container {
+            max-width: $max-width-container;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 61px;
+            .leftBlock {
+                width: 520px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .highlight {
+                    //   font-family: "Orbitron";
+                    font-size: 64px;
+                    font-weight: 600;
+                    color: #102123;
+                    line-height: 80px;
+                }
+                .description {
+                    color: #768298;
+                    font-size: 24px;
+                    line-height: 36px;
+                    font-weight: 500;
+                }
+                .joinWaitlistBtn {
+                    cursor: pointer;
+                    height: 62px;
+                    width: 305px;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #346af7;
+                    font-weight: bold;
+                    font-size: 24px;
+                    letter-spacing: 0.5px;
+                    color: #fff;
+                    &:hover {
+                        filter: brightness(1.3);
+                    }
+                }
+            }
+            .heroImg {
+                animation: hero-moving 3s infinite;
+                height: auto;
+                width: auto;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $lg) {
-  .wrapper {
-    height: fit-content;
-    .videoDesktop {
-      height: 100vh;
-    }
-    .content {
-      height: fit-content;
-      .container {
-        height: 100vh;
-        gap: 40px;
-        flex-direction: column;
-        .leftBlock {
-          width: 100%;
-          gap: 20px;
-          .highlight {
-            font-size: 30px;
-            line-height: 42px;
-            font-weight: 600;
-            text-align: center;
-          }
-          .description {
-            font-size: 16px;
-            line-height: 24px;
-            text-align: center;
-          }
-          .joinWaitlistBtn {
-            margin: auto;
-          }
+    .wrapper {
+        height: fit-content;
+        .videoDesktop {
+            height: 100vh;
         }
-        .heroImg {
-          height: auto;
-          max-height: 80vh;
-          width: 100%;
-          max-width: 700px;
-          object-fit: contain;
+        .content {
+            height: fit-content;
+            .container {
+                height: 100vh;
+                gap: 40px;
+                flex-direction: column;
+                .leftBlock {
+                    width: 100%;
+                    gap: 20px;
+                    .highlight {
+                        font-size: 30px;
+                        line-height: 42px;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    .description {
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                    .joinWaitlistBtn {
+                        margin: auto;
+                    }
+                }
+                .heroImg {
+                    height: auto;
+                    max-height: 80vh;
+                    width: 100%;
+                    max-width: 700px;
+                    object-fit: contain;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @media screen and (max-width: $sm) {
-  .wrapper {
-    height: 100vh;
-    margin-top: 30px;
-    .videoDesktop {
-      display: none;
-    }
-    .videoMobile {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-      object-position: center bottom;
-    }
-    .content {
-      .container {
-        height: fit-content;
-        .leftBlock {
-          gap: 16px;
-          .highlight {
-            font-size: 32px;
-            line-height: 38px;
-          }
-          .joinWaitlistBtn {
-            height: 40px;
-            font-size: 16px;
-            padding: 0 24px;
-            width: fit-content;
-          }
+    .wrapper {
+        height: 100vh;
+        margin-top: 30px;
+        .videoDesktop {
+            display: none;
         }
-      }
+        .videoMobile {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+        }
+        .content {
+            .container {
+                height: fit-content;
+                margin-top: 30px;
+                .videoDesktop {
+                    display: none;
+                }
+                .videoMobile {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                }
+                .content {
+                    .container {
+                        height: fit-content;
+                        .leftBlock {
+                            gap: 16px;
+                            .highlight {
+                                font-size: 32px;
+                                line-height: 38px;
+                            }
+                            .joinWaitlistBtn {
+                                height: 40px;
+                                font-size: 16px;
+                                padding: 0 24px;
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
 @keyframes hero-moving {
-  0% {
-    transform: translateY(30px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(30px);
-  }
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(30px);
+    }
 }
