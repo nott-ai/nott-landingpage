@@ -1,93 +1,115 @@
 @import "../variables.scss";
 .wrapper {
-  height: 1544px;
-  background-color: #001633;
-  .container {
-    padding: 160px 0;
-    max-width: $max-width-container;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 160px;
-    .topBlock {
-      max-height: 594px;
-      .titleBlock {
-        height: 110px;
-        color: white;
-        flex-direction: row;
-        align-items: flex-end;
-        .title {
-          max-width: 312px;
-          font-weight: 600;
-          font-family: "Orbitron";
-          line-height: 55.2px;
-          letter-spacing: 2%;
+    height: 1544px;
+    background-color: #001633;
+    .container {
+        padding: 160px 0;
+        max-width: $max-width-container;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+        .topBlock {
+            max-height: 594px;
+            .titleBlock {
+                height: 110px;
+                color: white;
+                flex-direction: row;
+                align-items: flex-end;
+                .title {
+                    max-width: 312px;
+                    font-weight: 600;
+                    font-family: "Orbitron";
+                    line-height: 55.2px;
+                    letter-spacing: 2%;
+                }
+                .titleDescription {}
+            }
+            .featureBlock {}
         }
-        .titleDescription {
+        .bottomBlock {
+            max-height: 650px;
+            display: flex;
+            flex-direction: row;
+            gap: 126px;
+            .benefitContent {
+                padding: 52px 0;
+                .title {
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 500;
+                    color: #7890c0;
+                }
+                .description {
+                    flex-direction: column;
+                    color: #e0ebff;
+                    gap: 16px;
+                }
+                .mainTitle {
+                    color: #ffdc60;
+                    font-size: 32px;
+                    line-height: 44.8px;
+                    font-weight: 600;
+                    margin-bottom: 60px;
+                }
+            }
         }
-      }
-      .featureBlock {
-      }
     }
-    .bottomBlock {
-      max-height: 650px;
-    }
-  }
 }
 
 @media screen and (max-width: $lg) {
-  .wrapper {
-    padding: 0 18px;
-  }
+    .wrapper {
+        padding: 0 18px;
+    }
 }
 
 @media screen and (max-width: $sm) {
-  .wrapper {
-    .containerFirst {
-      height: 145px;
-      display: flex;
-      max-width: 90vw;
-      img {
-        width: 228px;
-        height: 145px;
-        object-fit: contain;
-      }
-      .graphicImage {
-        width: 228px;
-        height: 145px;
-      }
-      .graphicMobileImage {
-        display: block;
-      }
-      .contentTitle {
-        font-size: 28px;
-        line-height: 48px;
-        font-weight: 700;
-        position: relative;
-        z-index: 11;
-        .title {
-          margin-top: 89px;
+    .wrapper {
+        .containerFirst {
+            height: 145px;
+            display: flex;
+            max-width: 90vw;
+            img {
+                width: 228px;
+                height: 145px;
+                object-fit: contain;
+            }
+            .graphicImage {
+                width: 228px;
+                height: 145px;
+            }
+            .graphicMobileImage {
+                display: block;
+            }
+            .contentTitle {
+                font-size: 28px;
+                line-height: 48px;
+                font-weight: 700;
+                position: relative;
+                z-index: 11;
+                .title {
+                    margin-top: 89px;
+                }
+                .yellowCircle {
+                    width: 46px;
+                    height: 46px;
+                    position: absolute;
+                    left: 43%;
+                    top: 5%;
+                    z-index: -1;
+                }
+            }
         }
-        .yellowCircle {
-          width: 46px;
-          height: 46px;
-          position: absolute;
-          left: 43%;
-          top: 5%;
-          z-index: -1;
+        .contentSecond {
+            .question {
+                font-size: 16px;
+                padding: 27px 16px;
+            }
+            .answers {
+                font-size: 12px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
         }
-      }
     }
-    .contentSecond {
-      .question {
-        font-size: 16px;
-        padding: 27px 16px;
-      }
-      .answers {
-        font-size: 12px;
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-    }
-  }
 }
