@@ -75,8 +75,14 @@ const Header = () => {
       <div id="header" className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <img className={styles.logo} src="/images/logo.svg" alt="logo"
-              onClick={() => window.location.reload()}
+            <img
+              className={styles.logo}
+              src="/images/logo.svg"
+              alt="logo"
+              onClick={() => {
+                window.location.reload();
+                window.scrollTo(0, 0);
+              }}
             />
             <div className={styles.desktop}>
               <div className={styles.navigation}>
