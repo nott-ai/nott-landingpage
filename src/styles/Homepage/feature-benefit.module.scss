@@ -1,0 +1,487 @@
+@import "../variables.scss";
+
+.container {
+    width: 100%;
+    background-color: #001633;
+
+    .content {
+        max-width: $max-width-container;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+        padding-bottom: 160px;
+
+        .blockTop {
+            background-image: url('/images/feature-benefit-bg.svg');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 754px;
+            gap: 60px;
+            justify-content: end;
+
+            .header {
+                display: flex;
+                gap: 12px;
+                align-items: flex-end;
+                height: 110px;
+
+                .title {
+                    width: 300px;
+                    color: white;
+                    font-family: Orbitron;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    letter-spacing: 0.92px;
+                }
+
+                .description {
+                    width: 400px;
+                    color: white;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    opacity: 0.7;
+                }
+            }
+
+            .featureBenefitContainer {
+                display: flex;
+                gap: 24px;
+                height: 424px;
+                overflow-x: auto;
+
+                .featureBenefit {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    padding: 114px 32px 90px 32px;
+                    min-width: 360px;
+
+                    .title {
+                        color: #FFDC60;
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                        /* 33.6px */
+                        letter-spacing: -1.08px;
+                    }
+
+                    .description {
+                        color: white;
+                        font-family: Inter;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        /* 25.2px */
+                        letter-spacing: -0.81px;
+                        width: 248px;
+
+                    }
+                }
+            }
+        }
+
+        .blockBottom {
+            display: flex;
+            gap: 126px;
+
+
+            .imageContainer {
+                min-width: 546px;
+                height: 650px;
+
+                .image {
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                }
+
+                ;
+            }
+
+            .descriptionContainer {
+                margin: auto;
+
+                .type {
+                    color: #7890C0;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 28px */
+                    letter-spacing: -0.9px;
+                }
+
+                .title {
+                    color: #FFDC60;
+                    font-family: Inter;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    /* 44.8px */
+                    letter-spacing: -1.44px;
+                }
+
+                .description {
+                    list-style-type: none;
+                    padding: 0;
+                    margin-top: 60px;
+
+                    li {
+                        p {
+                            color: #E0EBFF;
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 140%;
+                            /* 28px */
+                        }
+
+                        margin-bottom: 16px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $lg) {
+    .container {
+        width: 100%;
+        background-color: #001633;
+
+        .content {
+            max-width: $max-width-container;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            padding: 0px 16px 64px 16px;
+
+            .blockTop {
+                background: none;
+                display: flex;
+                flex-direction: column;
+                min-height: 754px;
+                gap: 60px;
+                justify-content: end;
+
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: flex-start;
+                    height: 125px;
+
+                    .title {
+                        width: auto;
+                        color: white;
+                        font-family: Orbitron;
+                        font-size: 46px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                        letter-spacing: 0.92px;
+                    }
+
+                    .description {
+                        width: 400px;
+                        color: white;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        opacity: 0.7;
+                    }
+                }
+
+                .featureBenefitContainer {
+                    display: flex;
+                    gap: 24px;
+                    height: 424px;
+
+                    .featureBenefit {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        padding: 114px 32px 90px 32px;
+                        width: 360px;
+
+                        .title {
+                            color: #FFDC60;
+                            font-family: Inter;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 140%;
+                            /* 33.6px */
+                            letter-spacing: -1.08px;
+                        }
+
+                        .description {
+                            color: white;
+                            font-family: Inter;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            /* 25.2px */
+                            letter-spacing: -0.81px;
+                            width: 248px;
+
+                        }
+                    }
+                }
+            }
+
+            .blockBottom {
+                display: flex;
+                flex-direction: column;
+                gap: 126px;
+
+
+                .imageContainer {
+                    min-width: calc(100vw - 16px);
+                    height: auto;
+                }
+
+                .descriptionContainer {
+                    margin: auto;
+
+                    .type {
+                        color: #7890C0;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 28px */
+                        letter-spacing: -0.9px;
+                    }
+
+                    .title {
+                        color: #FFDC60;
+                        font-family: Inter;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                        /* 44.8px */
+                        letter-spacing: -1.44px;
+                    }
+
+                    .description {
+                        list-style-type: none;
+                        padding: 0;
+                        margin-top: 60px;
+
+                        li {
+                            p {
+                                color: #E0EBFF;
+                                font-family: Inter;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 140%;
+                                /* 28px */
+                            }
+
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .toggleLabel {
+        color: #2563EB;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        /* 15.4px */
+        letter-spacing: -0.35px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .container {
+        width: 100%;
+        background-color: #001633;
+
+        .content {
+            max-width: $max-width-container;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            padding: 0px 16px 64px 16px;
+
+            .blockTop {
+                background: none;
+                display: flex;
+                flex-direction: column;
+                min-height: 348px;
+                gap: 32px;
+                justify-content: end;
+
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: flex-start;
+                    height: 94px;
+
+                    .title {
+                        width: auto;
+                        font-family: Orbitron;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
+
+                    .description {
+                        width: 300px;
+                        color: #C0D2F5;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        /* 22.4px */
+                    }
+                }
+
+                .featureBenefitContainer {
+                    display: flex;
+                    gap: 24px;
+                    height: 158px;
+                    overflow-x: auto;
+
+                    .featureBenefit {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        padding: 12px;
+                        min-width: 293px;
+
+                        .title {
+                            color: #FFDC60;
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 140%;
+                            /* 33.6px */
+                            letter-spacing: -1.08px;
+                        }
+
+                        .description {
+                            color: white;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            /* 25.2px */
+                            letter-spacing: -0.81px;
+                            width: 248px;
+
+                        }
+                    }
+                }
+            }
+
+            .blockBottom {
+                display: flex;
+                flex-direction: column;
+                gap: 90px;
+
+
+                .imageContainer {
+                    min-width: calc(100vw - 16px);
+                    height: auto;
+                }
+
+                .descriptionContainer {
+                    margin: auto;
+
+                    .type {
+                        color: #C0D2F5;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: -0.63px;
+                    }
+
+                    .title {
+                        color: #FFDC60;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 140%;
+                        /* 28px */
+                        letter-spacing: -0.5px;
+                    }
+
+                    .description {
+                        list-style-type: none;
+                        padding: 0;
+                        margin-top: 16px;
+
+                        li {
+                            p {
+                                color: var(--Light, #FFF);
+                                font-family: Inter;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                /* 19.6px */
+                            }
+
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    .toggleLabel {
+                        color: #2563EB;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 110%;
+                        /* 15.4px */
+                        letter-spacing: -0.35px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
