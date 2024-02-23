@@ -114,7 +114,7 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    height: fit-content;
+    height: 100vh;
     margin-top: 30px;
     .videoDesktop {
       display: none;
