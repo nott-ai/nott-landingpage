@@ -19,12 +19,12 @@ const Campaign = () => {
             NOTT’s <span className={styles.highlightText}>Device Drop</span>{" "}
             Campaigns
           </div>
-          <img
+          {/* <img
             className={styles.cubeImage}
             src="../images/cube.svg"
             alt="cube"
             loading="lazy"
-          />
+          /> */}
           <div className={styles.mobileDescription}>
             Discover the ongoing revolution in health tracking through
             NOTT&#39;s Device Drop Campaigns. These periodic initiatives are our
@@ -35,7 +35,7 @@ const Campaign = () => {
           </PrimaryButton>
         </div>
         <div className={styles.leftBlock}>
-          <img src="../images/logo-campaign.svg" alt="graphic" />
+          <img src="../images/logo-campaign.png" alt="graphic" />
         </div>
         <div className={styles.right}>
           <div className={styles.title}>
