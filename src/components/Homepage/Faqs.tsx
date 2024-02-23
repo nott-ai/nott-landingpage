@@ -13,7 +13,7 @@ const Faqs = () => {
           Frequently Asked Questions
           <img className={styles.yellowCircle} src='../images/yellow-circle.svg' alt='graphic' />
         </div>
-        <img className={styles.graphicImage} src='../images/graphic.svg' alt='graphic' />
+        <img className={styles.graphicImage} src='../images/graphic.png' alt='graphic' />
       </div>
       <div className={styles.contentSecond}>
         {dataFaqs.map((faq, index) => (

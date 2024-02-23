@@ -1,7 +1,6 @@
 @import "../variables.scss";
 .wrapper {
     height: fit-content;
-    min-height: 869px;
     position: relative;
     background-color: white;
     margin: 0 auto;
@@ -12,7 +11,6 @@
         max-width: $max-width-container;
         margin: auto;
         margin-top: 100px;
-        margin-bottom: 60px;
         display: flex;
         gap: 57px;
         .leftBlock {
@@ -195,9 +193,7 @@
 
 @media screen and (max-width: $sm) {
     .wrapper {
-        margin-bottom: 107px;
         height: fit-content;
-        max-height: 1020px;
         .container {
             margin-top: 0px;
             padding-top: 0px;
@@ -238,7 +234,7 @@
                 line-height: 33.6px;
                 text-align: left;
                 width: 100%;
-                background-image: url("/images/cube.svg");
+                background-image: url("/images/cube.png");
                 background-repeat: no-repeat;
                 background-position: top right;
                 .highlightText {
@@ -257,7 +253,7 @@
                 margin: auto;
                 top: 86%;
                 height: fit-content;
-                margin-bottom: 56px;
+                margin-bottom: 30px;
                 .question {
                     backdrop-filter: blur(10px);
                     font-size: 16px;
