@@ -14,6 +14,14 @@ import Link from "next/link";
 
 const Footer = () => {
   const trans = useTrans();
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -33,6 +41,7 @@ const Footer = () => {
           <div className={styles.centerBlock}>
             <div className={`${styles.column} ${styles.contact}`}>
               <img
+                onClick={scrollToTop}
                 className={styles.footerLogo}
                 src="/images/footer-logo.svg"
                 alt="logo"
