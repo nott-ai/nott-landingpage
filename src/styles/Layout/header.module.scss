@@ -12,7 +12,13 @@
     justify-content: center;
 }
 
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
 .wrapper {
+    background-color: red($color: #000000);
     position: fixed;
     width: 100%;
     top: 0;
