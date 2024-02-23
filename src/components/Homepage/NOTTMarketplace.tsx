@@ -1,3 +1,4 @@
+import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Homepage/nott-marketplace.module.scss";
 import { ArrowRightIcon } from "../../assets";
 
@@ -5,22 +6,22 @@ const NOTTMarketplace = () => {
   const advantages = [
     {
       title: "Benefits for users and merchants",
-      icon: "/images/marketplace-card-1.svg",
+      icon: "/images/marketplace-card-1.png",
     },
     {
       title: "Open marketplace concept",
-      icon: "/images/marketplace-card-2.svg",
+      icon: "/images/marketplace-card-2.png",
     },
     {
       title: "Featured products and services",
-      icon: "/images/marketplace-card-3.svg",
+      icon: "/images/marketplace-card-3.png",
     },
   ];
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.title}>
+        <div className={`${styles.title} ${orbitron.className}`}>
           NOTT <span>Marketplace</span>
         </div>
         <div className={styles.description}>
@@ -35,10 +36,17 @@ const NOTTMarketplace = () => {
             key={index}
             className={`${styles.card} ${styles[`card-${index}`]}`}
           >
-            <img src={advantage.icon} alt="marketplace-card" />
+            <img
+              className={styles.icon}
+              src={advantage.icon}
+              alt="marketplace-card"
+              loading="lazy"
+            />
 
             <div className={styles.info}>
-              <div className={styles.title}>{advantage.title}</div>
+              <div className={`${styles.title} ${orbitron.className}`}>
+                <div className={styles.contentTitle}>{advantage.title}</div>
+              </div>
               <div className={styles.explore}>
                 Explore <ArrowRightIcon />
               </div>

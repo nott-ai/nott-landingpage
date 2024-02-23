@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
 import Hero from "@/components/Homepage/Hero";
 import Faqs from "@/components/Homepage/Faqs";
 import Campaign from "@/components/Homepage/Campaign";
@@ -38,7 +36,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
         <Element name="home">
           <Hero />
         </Element>
@@ -63,7 +60,6 @@ export default function Home() {
           <ProductsShowcase />
         </Element>
         <Faqs />
-        <Footer />
       </main>
     </>
   );
