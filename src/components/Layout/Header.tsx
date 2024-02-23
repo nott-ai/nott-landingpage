@@ -32,6 +32,7 @@ const customStyles: any = {
     borderRadius: "0",
     border: "none",
     backgroundImage: 'url(/images/banner-navigation-mobile.png)',
+    backgroundSize: "contain",
   },
 };
 const Header = () => {
@@ -189,8 +190,8 @@ const Header = () => {
             ))
           }
         </div>
-        <div className={styles.contactInfo}>
-          <div className={styles.titleContact}>
+        <div className={`${styles.contactInfo} ${inter.className}`}>
+          <div className={`${styles.titleContact} `}>
             Contact Us
           </div>
           <div className={styles.gmailInfo}>
