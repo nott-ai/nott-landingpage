@@ -20,7 +20,7 @@ const Faqs = () => {
         </div>
         <img
           className={styles.graphicImage}
-          src="../images/graphic.svg"
+          src="../images/graphic.png"
           alt="graphic"
         />
       </div>
