@@ -51,14 +51,11 @@ const Header = () => {
       if (modalIsOpen) return;
       const st = window.pageYOffset || document.documentElement.scrollTop;
       const wrapper = document.querySelector(`#header`);
-      const modal = document.querySelector(`#modal`);
       if (wrapper) {
         if (st > lastScrollTop) {
           wrapper.classList.add(styles.hidden);
-          modal?.classList.add(styles.top0);
         } else {
           wrapper.classList.remove(styles.hidden);
-          modal?.classList.remove(styles.top40);
         }
       }
 
