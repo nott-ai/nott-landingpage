@@ -13,7 +13,8 @@ const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
   getAnalytics(app);
 }
-const inter = Inter({ subsets: ["latin"] });
+export const inter = Inter({ subsets: ["latin"] });
+
 export const orbitron = Orbitron({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (

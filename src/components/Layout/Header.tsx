@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import useTrans from "@/hooks/useTrans";
 import Modal from "react-modal";
 import useDeviceDetect from "../common/DeviceDetect";
+import { inter } from "@/pages/_app";
 
 // const LANGUAGES = [
 //   {
@@ -160,26 +161,28 @@ const Header = () => {
         style={customStyles}
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        <div className={styles.navigationMobile}>
-          {NAVIGATIONS.map((item) => (
-            <LinkScroll
-              activeClass="active"
-              style={{ cursor: "pointer" }}
-              target={item.link}
-              to={item.link}
-              smooth={true}
-              spy={true}
-              offset={isDesktop ? -80 : -44}
-              duration={500}
-              key={item.id}
-              onClick={closeModal}
-              href={item.link}
-            >
-              <div>{trans.header[item.name]}</div>
-            </LinkScroll>
-          ))}
+        <div className={`${styles.navigationMobile} ${inter.className}`} >
+          {
+            NAVIGATIONS.map((item) => (
+              <LinkScroll
+                activeClass="active"
+                style={{ cursor: "pointer" }}
+                target={item.link}
+                to={item.link}
+                smooth={true}
+                spy={true}
+                offset={isDesktop ? -80 : -44}
+                duration={500}
+                key={item.id}
+                onClick={closeModal}
+                href={item.link}
+              >
+                <div>{trans.header[item.name]}</div>
+              </LinkScroll>
+            ))
+          }
         </div>
-      </Modal>
+      </Modal >
     </>
   );
 };

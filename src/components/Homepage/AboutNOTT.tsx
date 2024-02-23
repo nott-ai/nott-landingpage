@@ -44,10 +44,14 @@ const AboutNOTT = () => {
         <img
           className={styles.bannerDesktop}
           src="/images/about-nott-bg-banner.png"
+          loading="lazy"
+          alt="banner-desktop"
         />
         <img
           className={styles.bannerMobile}
           src="/images/about-nott-bg-banner-mobile.png"
+          loading="lazy"
+          alt="banner-mobile"
         />
         <div className={styles.character}>
           <div className={styles.robo}>
