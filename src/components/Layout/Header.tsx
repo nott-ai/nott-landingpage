@@ -1,4 +1,4 @@
-import { MenuIcon } from "@/assets";
+import { CrossIcon, MenuIcon } from "@/assets";
 import { NAVIGATIONS } from "@/constants/header";
 import styles from "@/styles/Layout/header.module.scss";
 import Link from "next/link";
@@ -19,6 +19,7 @@ import { inter } from "@/pages/_app";
 //     name: "Tiếng Việt",
 //   },
 // ];
+
 const customStyles: any = {
   content: {
     top: "40px",
@@ -30,6 +31,7 @@ const customStyles: any = {
     boxSizing: "border-box",
     borderRadius: "0",
     border: "none",
+    backgroundImage: 'url(/images/banner-navigation-mobile.png)',
   },
 };
 const Header = () => {
@@ -72,9 +74,9 @@ const Header = () => {
       <div id="header" className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <Link href="/">
-              <img className={styles.logo} src="/images/logo.svg" alt="logo" />
-            </Link>
+            <img className={styles.logo} src="/images/logo.svg" alt="logo"
+              onClick={() => window.location.reload()}
+            />
             <div className={styles.desktop}>
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
@@ -150,7 +152,7 @@ const Header = () => {
             </div>
 
             <div className={styles.mobile} onClick={openModal}>
-              <MenuIcon />
+              {modalIsOpen ? <CrossIcon /> : <MenuIcon />}
             </div>
           </div>
         </div>
@@ -164,23 +166,36 @@ const Header = () => {
         <div className={`${styles.navigationMobile} ${inter.className}`} >
           {
             NAVIGATIONS.map((item) => (
-              <LinkScroll
-                activeClass="active"
-                style={{ cursor: "pointer" }}
-                target={item.link}
-                to={item.link}
-                smooth={true}
-                spy={true}
-                offset={isDesktop ? -80 : -44}
-                duration={500}
-                key={item.id}
-                onClick={closeModal}
-                href={item.link}
-              >
-                <div>{trans.header[item.name]}</div>
-              </LinkScroll>
+              item.scroll ? (
+                <LinkScroll
+                  activeClass="active"
+                  style={{ cursor: "pointer" }}
+                  target={item.link}
+                  to={item.link}
+                  smooth={true}
+                  spy={true}
+                  offset={isDesktop ? -80 : -44}
+                  duration={500}
+                  key={item.id}
+                  onClick={closeModal}
+                >
+                  <div>{trans.header[item.name]}</div>
+                </LinkScroll>
+              ) : (
+                <Link onClick={closeModal} href={item.link} key={item.id}>
+                  {trans.header[item.name]}
+                </Link>
+              )
             ))
           }
+        </div>
+        <div className={styles.contactInfo}>
+          <div className={styles.titleContact}>
+            Contact Us
+          </div>
+          <div className={styles.gmailInfo}>
+            info@nott.ai
+          </div>
         </div>
       </Modal >
     </>

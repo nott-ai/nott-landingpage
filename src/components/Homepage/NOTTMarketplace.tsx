@@ -45,7 +45,7 @@ const NOTTMarketplace = () => {
 
             <div className={styles.info}>
               <div className={`${styles.title} ${orbitron.className}`}>
-                {advantage.title}
+                <div className={styles.contentTitle}>{advantage.title}</div>
               </div>
               <div className={styles.explore}>
                 Explore <ArrowRightIcon />

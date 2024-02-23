@@ -57,7 +57,7 @@ const Footer = () => {
                   <EmailIcon />
                   <div>
                     Contact Us:{" "}
-                    {INFO.EMAIL}
+                    <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
                   </div>
                 </div>
               </div>

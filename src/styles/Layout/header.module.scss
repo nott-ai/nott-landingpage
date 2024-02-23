@@ -1,133 +1,160 @@
 @use "sass:map";
 @import "../variables.scss";
 @mixin space-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 .wrapper {
-  background-color: red($color: #000000);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: map-get($map: $z-index, $key: "STICKY");
-  background-color: #fff;
-  height: 80px;
-  .container {
-    @include space-between;
+    background-color: red($color: #000000);
+    position: fixed;
     width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    .content {
-      @include space-between;
-      max-width: $max-width-container;
-      width: 100%;
-      margin: 0 auto;
-      .logo {
-        height: 40px;
-        width: auto;
-      }
-      .desktop {
-        display: block;
+    top: 0;
+    z-index: map-get($map: $z-index, $key: "STICKY");
+    background-color: #fff;
+    height: 80px;
+    .container {
         @include space-between;
-        .navigation {
-          display: flex;
-          align-items: center;
-          gap: 32px;
-          a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 16px;
-          }
-          .translationBtn {
-            @include center;
-            background: transparent;
-            border: none;
-            gap: 10px;
-            font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 100%;
+        .content {
             cursor: pointer;
-            font-weight: 600;
-            color: #333;
-            div {
-              border: none;
+            @include space-between;
+            max-width: $max-width-container;
+            width: 100%;
+            margin: 0 auto;
+            .logo {
+                height: 40px;
+                width: auto;
             }
-            .flag {
-              border-radius: 100%;
-              object-fit: cover;
-              object-position: center;
+            .desktop {
+                display: block;
+                @include space-between;
+                .navigation {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    .translationBtn {
+                        @include center;
+                        background: transparent;
+                        border: none;
+                        gap: 10px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        color: #333;
+                        div {
+                            border: none;
+                        }
+                        .flag {
+                            border-radius: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                }
+                .preOrderBtn {
+                    width: 190px;
+                    font-size: 14px;
+                    padding: 0;
+                }
             }
-          }
+            .mobile {
+                display: none;
+            }
         }
-        .preOrderBtn {
-          width: 190px;
-          font-size: 14px;
-          padding: 0;
-        }
-      }
-      .mobile {
-        display: none;
-      }
     }
-  }
 }
 
 @media screen and (max-width: $lg) {
-  .wrapper {
-    height: 44px;
-    .container {
-      .content {
-        padding: 0 16px;
-        .logo {
-          height: 30px;
-          width: auto;
+    .wrapper {
+        height: 44px;
+        .container {
+            .content {
+                padding: 0 16px;
+                .logo {
+                    height: 30px;
+                    width: auto;
+                }
+                .desktop {
+                    display: none !important;
+                }
+                .mobile {
+                    display: block;
+                    max-width: 40px;
+                    max-height: 40px;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
         }
-        .desktop {
-          display: none !important;
-        }
-        .mobile {
-          display: block;
-          max-width: 40px;
-          max-height: 40px;
-          svg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-        }
-      }
     }
-  }
 }
 
 .navigationMobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background-color: #fff;
-  a {
-    text-decoration: none;
-  }
+    position: relative;
+    margin-top: 65px;
+    display: flex;
+    padding-left: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+    color: #0f244c;
+    font-weight: 600;
+    background-color: #fff;
+    a {
+        text-decoration: none;
+        color: #0f244c;
+    }
+}
+
+.contactInfo {
+    position: absolute;
+    bottom: 13%;
+    .titleContact {
+        font-size: 14px;
+        line-height: 140%;
+        font-weight: 500;
+        color: 4c5e80;
+        font-family: "Inter";
+    }
+}
+
+.gmailInfo {
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 600;
+    padding-left: 12px;
 }
 
 .closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  width: fit-content;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: fit-content;
 }
