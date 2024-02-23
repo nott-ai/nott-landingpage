@@ -279,6 +279,11 @@
         .centerBlock {
           flex-wrap: wrap;
           gap: 32px;
+          .column {
+            .footerLogo {
+              height: 42px;
+            }
+          }
           .contact {
             gap: 16px;
             .subColumn {
