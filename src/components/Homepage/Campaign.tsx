@@ -3,6 +3,7 @@ import styles from "@/styles/Layout/campaign.module.scss";
 import { regularCampaigns } from "@/constants/faqs";
 import PrimaryButton from "../common/PrimaryButton";
 import Collapse from "../common/Collapse";
+import { orbitron } from "@/pages/_app";
 
 const Campaign = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -15,7 +16,7 @@ const Campaign = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.contentQuestion}>
-          <div className={styles.mobileTitle}>
+          <div className={`${styles.mobileTitle} ${orbitron.className}`}>
             NOTT’s <span className={styles.highlightText}>Device Drop</span>{" "}
             Campaigns
           </div>
@@ -38,7 +39,7 @@ const Campaign = () => {
           <img src="../images/logo-campaign.png" alt="graphic" />
         </div>
         <div className={styles.right}>
-          <div className={styles.title}>
+          <div className={`${styles.title} ${orbitron.className}`}>
             NOTT’s <span className={styles.highlightText}>Device Drop</span>{" "}
             Campaigns
           </div>

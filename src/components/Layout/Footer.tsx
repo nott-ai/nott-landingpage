@@ -9,6 +9,7 @@ import {
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
 import useTrans from "@/hooks/useTrans";
+import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
 
@@ -29,7 +30,9 @@ const Footer = () => {
         <div className={styles.topBlock}>
           <div className={styles.joinNOTT}>
             <div>
-              <div className={styles.title}>Joining The Waitlist now!</div>
+              <div className={`${styles.title} ${orbitron.className}`}>
+                Joining The Waitlist now!
+              </div>
               <div className={styles.description}>
                 {`Be the first to receive the latest updates on NOTT's innovative products and offerings`}
               </div>
