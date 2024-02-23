@@ -118,7 +118,7 @@
 
 @media screen and (max-width: $sm) {
     .wrapper {
-        height: fit-content;
+        height: 100vh;
         margin-top: 30px;
         .videoDesktop {
             display: none;
@@ -132,17 +132,32 @@
         .content {
             .container {
                 height: fit-content;
-                .leftBlock {
-                    gap: 16px;
-                    .highlight {
-                        font-size: 32px;
-                        line-height: 38px;
-                    }
-                    .joinWaitlistBtn {
-                        height: 40px;
-                        font-size: 16px;
-                        padding: 0 24px;
-                        width: fit-content;
+                margin-top: 30px;
+                .videoDesktop {
+                    display: none;
+                }
+                .videoMobile {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                }
+                .content {
+                    .container {
+                        height: fit-content;
+                        .leftBlock {
+                            gap: 16px;
+                            .highlight {
+                                font-size: 32px;
+                                line-height: 38px;
+                            }
+                            .joinWaitlistBtn {
+                                height: 40px;
+                                font-size: 16px;
+                                padding: 0 24px;
+                                width: fit-content;
+                            }
+                        }
                     }
                 }
             }
