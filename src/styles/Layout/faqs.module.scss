@@ -1,132 +1,130 @@
 @import "../variables.scss";
 .wrapper {
-    height: 693px;
+  height: 693px;
+  position: relative;
+  background-color: white;
+  max-width: $max-width-container;
+  margin: auto;
+  margin-bottom: 160px;
+  .containerFirst {
+    height: 137px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
     position: relative;
-    background-color: white;
-    max-width: $max-width-container;
-    margin: auto;
-    margin-bottom: 160px;
-    .containerFirst {
-        height: 137px;
-        display: flex;
-        align-items: flex-end;
-        flex-direction: row;
-        position: relative;
-        .graphicImage {
-            width: 424px;
-            height: 137px;
-            object-fit: contain;
-            position: absolute;
-            left: 25%;
-        }
-        .graphicMobileImage {
-            display: none;
-        }
-        .contentTitle {
-            max-width: 500px;
-            font-weight: 600;
-            font-size: 46px;
-            line-height: 55.2px;
-            letter-spacing: 2%;
-            font-family: "Orbitron";
-            position: relative;
-            z-index: 11;
-            .title {
-                margin-top: 178px;
-            }
-            .yellowCircle {
-                width: 59px;
-                height: 59px;
-                position: absolute;
-                left: 5%;
-                top: -15%;
-                z-index: -1;
-            }
-        }
+    .graphicImage {
+      width: 424px;
+      height: 137px;
+      object-fit: contain;
+      position: absolute;
+      left: 25%;
     }
-    .contentSecond {
-        margin-top: 100px;
-        height: 487px;
-        padding-top: 15px;
-        .question {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            font-family: "Inter";
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 26.4px;
-            padding: 27px 16px;
-        }
-        .activeQuestion {
-            color: #2563eb;
-        }
-        .answers {
-            font-family: "Inter";
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 25.2px;
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-bottom: 24px;
-        }
+    .graphicMobileImage {
+      display: none;
     }
+    .contentTitle {
+      max-width: 500px;
+      font-weight: 600;
+      font-size: 46px;
+      line-height: 55.2px;
+      letter-spacing: 2%;
+      position: relative;
+      z-index: 11;
+      .title {
+        margin-top: 178px;
+      }
+      .yellowCircle {
+        width: 59px;
+        height: 59px;
+        position: absolute;
+        left: 5%;
+        top: -15%;
+        z-index: -1;
+      }
+    }
+  }
+  .contentSecond {
+    margin-top: 100px;
+    height: 487px;
+    padding-top: 15px;
+    .question {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26.4px;
+      padding: 27px 16px;
+    }
+    .activeQuestion {
+      color: #2563eb;
+    }
+    .answers {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25.2px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 24px;
+    }
+  }
 }
 
 @media screen and (max-width: $lg) {
-    .wrapper {}
+  .wrapper {
+  }
 }
 
 @media screen and (max-width: $sm) {
-    .wrapper {
-        height: fit-content;
-        max-height: 640px;
-        margin-bottom: 84px;
-        .containerFirst {
-            background-image: url("/images/background-faq-mobile.png");
-            display: flex;
-            margin: auto;
-            padding: 0 16px;
-            .graphicImage {
-                display: none;
-            }
-            .graphicMobileImage {
-                position: absolute;
-                display: block;
-            }
-            .contentTitle {
-                font-size: 28px;
-                line-height: 48px;
-                font-weight: 700;
-                position: relative;
-                z-index: 0;
-                .title {
-                    margin-top: 89px;
-                }
-                .yellowCircle {
-                    width: 46px;
-                    height: 46px;
-                    position: absolute;
-                    left: 43%;
-                    top: 5%;
-                    display: none;
-                }
-            }
+  .wrapper {
+    height: fit-content;
+    max-height: 640px;
+    margin-bottom: 84px;
+    .containerFirst {
+      background-image: url("/images/background-faq-mobile.png");
+      display: flex;
+      margin: auto;
+      padding: 0 16px;
+      .graphicImage {
+        display: none;
+      }
+      .graphicMobileImage {
+        position: absolute;
+        display: block;
+      }
+      .contentTitle {
+        font-size: 28px;
+        line-height: 48px;
+        font-weight: 700;
+        position: relative;
+        z-index: 0;
+        .title {
+          margin-top: 89px;
         }
-        .contentSecond {
-            height: 662px;
-            max-height: 662px;
-            margin-bottom: 84px;
-            width: 90vw;
-            margin: auto;
-            .question {
-                font-size: 16px;
-            }
-            .answers {
-                font-size: 12px;
-                padding-left: 16px;
-                padding-right: 16px;
-            }
+        .yellowCircle {
+          width: 46px;
+          height: 46px;
+          position: absolute;
+          left: 43%;
+          top: 5%;
+          display: none;
         }
+      }
     }
+    .contentSecond {
+      height: 662px;
+      max-height: 662px;
+      margin-bottom: 84px;
+      width: 90vw;
+      margin: auto;
+      .question {
+        font-size: 16px;
+      }
+      .answers {
+        font-size: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
 }

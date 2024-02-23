@@ -4,6 +4,7 @@ import {
   SolarHealthOutlineIcon,
   SystemSumIcon,
 } from "@/assets/index";
+import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Homepage/about-nott.module.scss";
 
 const AboutNOTT = () => {
@@ -69,7 +70,7 @@ const AboutNOTT = () => {
       <div className={styles.aboutNott}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <div className={styles.overview}>
+            <div className={`${styles.overview} ${orbitron.className}`}>
               Overview of NOTT
               <br /> as an AI-powered Wellness DePIN platform
             </div>
@@ -86,7 +87,9 @@ const AboutNOTT = () => {
                   <img src={item.iconUrl} alt="icon" loading="lazy" />
                 </div>
                 <div className={styles.rightBlock}>
-                  <div className={styles.title}>{item.title}</div>
+                  <div className={`${styles.title} ${orbitron.className}`}>
+                    {item.title}
+                  </div>
                   <div className={styles.description}>{item.description}</div>
                 </div>
               </div>

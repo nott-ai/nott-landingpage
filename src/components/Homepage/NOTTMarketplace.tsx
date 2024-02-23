@@ -1,3 +1,4 @@
+import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Homepage/nott-marketplace.module.scss";
 import { ArrowRightIcon } from "../../assets";
 
@@ -20,7 +21,7 @@ const NOTTMarketplace = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.title}>
+        <div className={`${styles.title} ${orbitron.className}`}>
           NOTT <span>Marketplace</span>
         </div>
         <div className={styles.description}>
@@ -43,7 +44,9 @@ const NOTTMarketplace = () => {
             />
 
             <div className={styles.info}>
-              <div className={styles.title}>{advantage.title}</div>
+              <div className={`${styles.title} ${orbitron.className}`}>
+                {advantage.title}
+              </div>
               <div className={styles.explore}>
                 Explore <ArrowRightIcon />
               </div>

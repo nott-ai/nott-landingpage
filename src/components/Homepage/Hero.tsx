@@ -1,4 +1,5 @@
 import useTrans from "@/hooks/useTrans";
+import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Homepage/hero.module.scss";
 import { createMarkup } from "@/utils/index";
 
@@ -24,7 +25,7 @@ const Hero = () => {
       <div className={styles.content}>
         <div className={styles.container}>
           <div className={styles.leftBlock}>
-            <div className={styles.highlight}>
+            <div className={`${styles.highlight} ${orbitron.className}`}>
               Your Gateway <br /> to a{" "}
               <span style={{ color: "#346AF7" }}>Healthier </span>
               <br />
