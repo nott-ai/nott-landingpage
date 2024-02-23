@@ -54,7 +54,7 @@
             font-size: 24px;
             font-weight: 500;
             line-height: 26.4px;
-            padding: 27px 16px;
+            padding: 24px 16px;
         }
         .activeQuestion {
             color: #2563eb;
@@ -71,7 +71,13 @@
 }
 
 @media screen and (max-width: $lg) {
-    .wrapper {}
+    .wrapper {
+        .containerFirst {
+            .contentTitle {
+                z-index: 0;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $sm) {
@@ -91,7 +97,7 @@
                 display: block;
             }
             .contentTitle {
-                font-size: 28px;
+                font-size: 27px;
                 line-height: 48px;
                 font-weight: 700;
                 position: relative;
@@ -115,6 +121,7 @@
             margin: auto;
             .question {
                 font-size: 16px;
+                padding: 24px 16px 5px 16px;
             }
             .answers {
                 font-size: 12px;
