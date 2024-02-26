@@ -1,5 +1,7 @@
+import { orbitron } from "@/pages/_app";
 import style from "@/styles/Homepage/feature-benefit.module.scss";
-import { ReactElement, useEffect, useState } from "react";
+import { createMarkup } from "@/utils/index";
+import { ReactElement, useState } from "react";
 import useDeviceDetect from "../common/DeviceDetect";
 
 interface IFeatureBenefit {
@@ -11,6 +13,7 @@ interface IFeatureBenefit {
 }
 
 interface IDescription {
+  image: string;
   type: string;
   title: string;
   items: string[];
@@ -18,6 +21,7 @@ interface IDescription {
 
 const descriptions: IDescription[] = [
   {
+    image: "/images/benefits/engage-daily.png",
     type: "User Benefits",
     title: "Empowering User-Controlled Data with NOTT",
     items: [
@@ -27,15 +31,26 @@ const descriptions: IDescription[] = [
       "Contributing to Research: By sharing anonymized data, users can directly contribute to health research, aiding in the development of better health and wellness insights and solutions.",
     ],
   },
-  {
-    type: "User Benefits",
-    title: "Creating Healthy Habits with NOTT",
-    items: [
-      "Habit Tracking: Monitor and manage daily activities to foster healthier routines with NOTT's habit tracking feature.",
-      "AI-Powered Recommendations: Receive personalized suggestions for habit improvement based on your activity and health data.",
-      "Community Challenges: Engage with the NOTT community in health challenges to build and sustain beneficial habits collaboratively.",
-    ],
-  },
+  // {
+  //   image: "/images/benefits/insightful-survey.png",
+  //   type: "User Benefits",
+  //   title: "Creating Healthy Habits with NOTT",
+  //   items: [
+  //     "<strong>Habit Tracking<strong>: Monitor and manage daily activities to foster healthier routines with NOTT's habit tracking feature.",
+  //     "<strong>AI-Powered Recommendations<strong>: Receive personalized suggestions for habit improvement based on your activity and health data.",
+  //     "<strong>Community Challenges<strong>: Engage with the NOTT community in health challenges to build and sustain beneficial habits collaboratively.",
+  //   ],
+  // },
+  // {
+  //   image: "/images/benefits/sleep-quality.png",
+  //   type: "User Benefits",
+  //   title: "Comprehensive Sleep Monitoring with NOTT",
+  //   items: [
+  //     "<strong>Advanced Sleep Tracking</strong>: Utilize NOTT's smart devices, including wearables and smart beds, to monitor various sleep stages — REM, light, and deep sleep. Gain insights into sleep patterns and quality for a healthier lifestyle.",
+  //     "<strong>Personalized Sleep Insights</strong>: Through NOTT's AI-driven analytics, receive tailored suggestions for improving sleep hygiene based on your unique sleep data.",
+  //     "<strong>Smart Environment Control</strong>: NOTT’s smart devices, such as the smart pillow and capsule bed, can adjust the sleeping environment to optimize comfort, including temperature control and ambient settings.",
+  //   ],
+  // },
 ];
 const FeatureBenefit = () => {
   const { isMobile, isDesktop } = useDeviceDetect();
@@ -95,7 +110,9 @@ const FeatureBenefit = () => {
       <div className={style.content}>
         <div className={style.blockTop}>
           <div className={style.header}>
-            <p className={style.title}>Features & Benefits</p>
+            <p className={`${style.title} ${orbitron.className}`}>
+              Features & Benefits
+            </p>
             <p className={style.description}>
               AI-Powered Wellness DePIN Platform Shaping the Future of HealthFi
             </p>
@@ -118,28 +135,40 @@ const FeatureBenefit = () => {
           </div>
         </div>
 
-        <div className={style.blockBottom}>
-          <div className={style.imageContainer}>
-            <img
-              className={style.image}
-              src={"/images/feature-benefit.webp"}
-              alt="feature-benefit"
-            />
-          </div>
-          <div className={style.descriptionContainer}>
-            <p className={style.type}>{descriptionShowing.type}</p>
-            <p className={style.title}>{descriptionShowing.title}</p>
+        <div className={style.benefits}>
+          <div className={style.benefit}>
+            <div className={style.blockBottom}>
+              <div className={style.imageContainer}>
+                {descriptions.map((description, index) => (
+                  <div className={style.imageWrapper}>
+                    <img
+                      key={index}
+                      className={style.image}
+                      src={description.image}
+                      alt="feature-benefit"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className={style.rightBlock}>
+                {descriptions.map((description, index) => (
+                  <div className={style.descriptionContainer} key={index}>
+                    <p className={style.type}>{description.type}</p>
+                    <p className={style.title}>{description.title}</p>
 
-            <ul className={style.description}>
-              {descriptionShowing.items
-                .slice(0, visibleItems)
-                .map((item, index) => (
-                  <li key={index}>
-                    <p>{item}</p>
-                  </li>
-                ))}{" "}
-            </ul>
-            {!isDesktop && descriptionShowing.items.length > visibleItems && (
+                    <ul className={style.description}>
+                      {description.items
+                        // .slice(0, visibleItems)
+                        .map((item, index) => (
+                          <li key={index}>
+                            <p dangerouslySetInnerHTML={createMarkup(item)} />
+                          </li>
+                        ))}{" "}
+                    </ul>
+                  </div>
+                ))}
+
+                {/* {!isDesktop && descriptionShowing.items.length > visibleItems && (
               <label
                 htmlFor="toggle"
                 className={style.toggleLabel}
@@ -147,7 +176,9 @@ const FeatureBenefit = () => {
               >
                 {"See More >"}
               </label>
-            )}
+            )} */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
