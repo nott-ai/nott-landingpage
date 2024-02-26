@@ -51,7 +51,7 @@ const Footer = () => {
               />
               <div className={`${styles.subColumn} ${styles.logo}`}>
                 <div className={styles.description}>
-                  Your Gateway <br /> to a Healthier Tomorrow
+                  Your Gateway to a Healthier Tomorrow
                 </div>
                 <div className={styles.email}>
                   <EmailIcon />
@@ -84,6 +84,8 @@ const Footer = () => {
                   <Link href="#">{trans.footer.legalDisclaimer} </Link>
                 </div>
               </div>
+
+
               <div className={`${styles.column} ${styles.networkColumn}`}>
                 <div className={styles.title}>Get in touch</div>
                 <div className={styles.socialNetwork}>
@@ -107,6 +109,8 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
