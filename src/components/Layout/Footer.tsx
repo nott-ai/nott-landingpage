@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
+import { ROUTERS } from "@/constants/routes";
 import useTrans from "@/hooks/useTrans";
 import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Layout/footer.module.scss";
@@ -81,7 +82,7 @@ const Footer = () => {
                 <div className={styles.subColumn}>
                   <Link href="#">{trans.footer.term} </Link>
                   <Link href="#">{trans.footer.privacyPolicy} </Link>
-                  <Link href="#">{trans.footer.legalDisclaimer} </Link>
+                  <Link href={ROUTERS.LEGAL_DISCLAIMER}>{trans.footer.legalDisclaimer} </Link>
                 </div>
               </div>
 
