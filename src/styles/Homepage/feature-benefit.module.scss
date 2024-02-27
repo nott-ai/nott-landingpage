@@ -3,7 +3,6 @@
 .container {
   width: 100%;
   background-color: #001633;
-  height: 4000px;
 
   .content {
     max-width: $max-width-container;
@@ -13,28 +12,37 @@
     gap: 160px;
     padding-bottom: 160px;
     .benefits {
-      display: flex;
-      flex-direction: column;
-      gap: 160px;
       .benefit {
-        height: 3000px;
-        position: relative;
-        .blockBottom {
+        margin-top: 75px;
+        &::before {
+          content: "";
+          display: block;
+          height: 3000vh;
+        }
+        .stickyEl {
           position: sticky;
           position: -webkit-sticky;
-          top: 60px;
+          bottom: 50px;
 
           .imageContainer {
             position: relative;
+            width: 546px;
+            height: auto;
+
+            .deviceFrame {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
             .imageWrapper {
               position: absolute;
-              top: -30px;
-              left: 0;
-              right: 0;
+              top: 30px;
+              right: 37px;
               margin: auto;
               width: 100%;
-              max-width: 546px;
-              //   height: 650px;
+              width: 264px;
+              height: auto;
+              transition: opacity 300ms ease-in-out;
             }
           }
           .rightBlock {
@@ -42,8 +50,6 @@
             flex: 1;
             .descriptionContainer {
               position: absolute;
-              //   bottom: 70px;
-              top: 0;
             }
           }
         }
@@ -128,9 +134,21 @@
       gap: 126px;
 
       .imageContainer {
-        min-width: 546px;
-        // height: 650px;
-
+        .frameWrapper {
+          display: flex;
+          align-items: center;
+          .smartWatch {
+            margin-right: -150px;
+            width: 370px;
+            height: 370px;
+            object-fit: contain;
+          }
+          .iphone {
+            width: 312px;
+            height: 629px;
+            object-fit: contain;
+          }
+        }
         .image {
           object-fit: cover;
           width: 100%;
@@ -281,7 +299,6 @@
         gap: 126px;
 
         .imageContainer {
-          min-width: calc(100vw - 16px);
           height: auto;
         }
 
@@ -433,72 +450,103 @@
           }
         }
       }
+      .benefits {
+        .benefit {
+          margin-top: 0;
+          .stickyEl {
+            bottom: 0;
+            .blockBottom {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 90px;
+              box-sizing: border-box;
 
-      .blockBottom {
-        display: flex;
-        flex-direction: column;
-        gap: 90px;
-
-        .imageContainer {
-          min-width: calc(100vw - 16px);
-          height: auto;
-        }
-
-        .descriptionContainer {
-          margin: auto;
-
-          .type {
-            color: #c0d2f5;
-
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: -0.63px;
-          }
-
-          .title {
-            color: #ffdc60;
-
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 140%;
-            /* 28px */
-            letter-spacing: -0.5px;
-          }
-
-          .description {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 16px;
-
-            li {
-              p {
-                color: var(--Light, #fff);
-
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-                /* 19.6px */
+              .imageContainer {
+                width: 100%;
+                height: auto;
+                .smartWatch {
+                  width: 187px;
+                  height: 187px;
+                  position: absolute;
+                  z-index: -1;
+                  left: 10px;
+                }
+                .iphone {
+                  width: 242px;
+                  height: 488px;
+                  margin: auto;
+                }
+                .imageWrapper {
+                  width: 205px;
+                  height: auto;
+                  top: 23px;
+                  left: 0;
+                  right: 0;
+                }
               }
+              .rightBlock {
+                height: 300px;
+                .descriptionContainer {
+                  margin: auto;
 
-              margin-bottom: 16px;
+                  .type {
+                    color: #c0d2f5;
+
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: -0.63px;
+                  }
+
+                  .title {
+                    color: #ffdc60;
+
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    /* 28px */
+                    letter-spacing: -0.5px;
+                  }
+
+                  .description {
+                    list-style-type: none;
+                    padding: 0;
+                    margin-top: 16px;
+
+                    li {
+                      p {
+                        color: var(--Light, #fff);
+
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        /* 19.6px */
+                      }
+
+                      margin-bottom: 16px;
+                    }
+                  }
+
+                  .toggleLabel {
+                    color: #2563eb;
+
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 110%;
+                    /* 15.4px */
+                    letter-spacing: -0.35px;
+                    cursor: pointer;
+                  }
+                }
+              }
             }
-          }
-
-          .toggleLabel {
-            color: #2563eb;
-
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 110%;
-            /* 15.4px */
-            letter-spacing: -0.35px;
-            cursor: pointer;
           }
         }
       }

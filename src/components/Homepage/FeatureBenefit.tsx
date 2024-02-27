@@ -1,7 +1,8 @@
+import { BENEFITS } from "@/constants/metas";
 import { orbitron } from "@/pages/_app";
 import style from "@/styles/Homepage/feature-benefit.module.scss";
 import { createMarkup } from "@/utils/index";
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import useDeviceDetect from "../common/DeviceDetect";
 
 interface IFeatureBenefit {
@@ -12,51 +13,11 @@ interface IFeatureBenefit {
   titleColor?: string;
 }
 
-interface IDescription {
-  image: string;
-  type: string;
-  title: string;
-  items: string[];
-}
-
-const descriptions: IDescription[] = [
-  {
-    image: "/images/benefits/engage-daily.png",
-    type: "User Benefits",
-    title: "Empowering User-Controlled Data with NOTT",
-    items: [
-      "Discover the ongoing revolution in health tracking through NOTT's Device Drop Campaigns. These periodic initiatives are our commitment to making advanced health monitoring accessible to all.",
-      "Anonymous Data Sharing Rewards: Users can opt to anonymously share their health data, contributing to community health advancements and receiving rewards in return.",
-      "AI-powered wellness DePIN platform",
-      "Contributing to Research: By sharing anonymized data, users can directly contribute to health research, aiding in the development of better health and wellness insights and solutions.",
-    ],
-  },
-  // {
-  //   image: "/images/benefits/insightful-survey.png",
-  //   type: "User Benefits",
-  //   title: "Creating Healthy Habits with NOTT",
-  //   items: [
-  //     "<strong>Habit Tracking<strong>: Monitor and manage daily activities to foster healthier routines with NOTT's habit tracking feature.",
-  //     "<strong>AI-Powered Recommendations<strong>: Receive personalized suggestions for habit improvement based on your activity and health data.",
-  //     "<strong>Community Challenges<strong>: Engage with the NOTT community in health challenges to build and sustain beneficial habits collaboratively.",
-  //   ],
-  // },
-  // {
-  //   image: "/images/benefits/sleep-quality.png",
-  //   type: "User Benefits",
-  //   title: "Comprehensive Sleep Monitoring with NOTT",
-  //   items: [
-  //     "<strong>Advanced Sleep Tracking</strong>: Utilize NOTT's smart devices, including wearables and smart beds, to monitor various sleep stages — REM, light, and deep sleep. Gain insights into sleep patterns and quality for a healthier lifestyle.",
-  //     "<strong>Personalized Sleep Insights</strong>: Through NOTT's AI-driven analytics, receive tailored suggestions for improving sleep hygiene based on your unique sleep data.",
-  //     "<strong>Smart Environment Control</strong>: NOTT’s smart devices, such as the smart pillow and capsule bed, can adjust the sleeping environment to optimize comfort, including temperature control and ambient settings.",
-  //   ],
-  // },
-];
 const FeatureBenefit = () => {
   const { isMobile, isDesktop } = useDeviceDetect();
   const [visibleItems, setVisibleItems] = useState(1);
   const [descriptionShowing, setDescriptionShowing] = useState<IDescription>(
-    descriptions[0]
+    BENEFITS[0]
   );
   const width = isMobile ? 44 : 80;
   const height = isMobile ? 44 : 80;
@@ -105,6 +66,40 @@ const FeatureBenefit = () => {
     setVisibleItems(length); // Show all items
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+  const onScroll = () => {
+    if (window !== undefined) {
+      console.log(window.scrollY);
+      BENEFITS.forEach((_, index) => {
+        const des = document.getElementById(`description-${index}`);
+        const image = document.getElementById(`image-${index}`);
+        const startIndex = 4500 + index * 2000;
+        const nextIndex = 4500 + (index + 1) * 2000;
+        if (des) {
+          if (window.scrollY >= startIndex && window.scrollY < nextIndex) {
+            des.style.opacity = `${(window.scrollY - startIndex) / 1000}`;
+            des.style.transform = `matrix(1, 0, 0, 1, 0, ${
+              300 - (window.scrollY - startIndex) / 10
+            })`;
+          } else {
+            des.style.opacity = "0";
+          }
+        }
+        if (image) {
+          if (window.scrollY > startIndex && window.scrollY < nextIndex) {
+            image.style.opacity = "1";
+          } else {
+            image.style.opacity = "0";
+          }
+        }
+      });
+    }
+  };
   return (
     <div className={style.container}>
       <div className={style.content}>
@@ -137,38 +132,63 @@ const FeatureBenefit = () => {
 
         <div className={style.benefits}>
           <div className={style.benefit}>
-            <div className={style.blockBottom}>
-              <div className={style.imageContainer}>
-                {descriptions.map((description, index) => (
-                  <div className={style.imageWrapper}>
+            <div className={style.stickyEl}>
+              <div className={style.blockBottom}>
+                <div className={style.imageContainer}>
+                  <div className={style.frameWrapper}>
                     <img
-                      key={index}
-                      className={style.image}
-                      src={description.image}
-                      alt="feature-benefit"
+                      src="/images/benefits/smart-watch.png"
+                      alt="device-frame"
+                      className={style.smartWatch}
+                    />
+                    <img
+                      className={style.iphone}
+                      src="/images/benefits/iphone.png"
+                      alt="device-frame"
                     />
                   </div>
-                ))}
-              </div>
-              <div className={style.rightBlock}>
-                {descriptions.map((description, index) => (
-                  <div className={style.descriptionContainer} key={index}>
-                    <p className={style.type}>{description.type}</p>
-                    <p className={style.title}>{description.title}</p>
+                  {BENEFITS.map((description, index) => (
+                    <div
+                      className={style.imageWrapper}
+                      id={`image-${index}`}
+                      style={{ opacity: 0 }}
+                    >
+                      <img
+                        key={index}
+                        className={style.image}
+                        src={description.image}
+                        alt="feature-benefit"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className={style.rightBlock}>
+                  {BENEFITS.map((description, index) => (
+                    <div
+                      id={`description-${index}`}
+                      style={{
+                        transform: "matrix(1, 0, 0, 1, 0, 300)",
+                        opacity: 0,
+                      }}
+                      className={style.descriptionContainer}
+                      key={index}
+                    >
+                      <p className={style.type}>{description.type}</p>
+                      <p className={style.title}>{description.title}</p>
 
-                    <ul className={style.description}>
-                      {description.items
-                        // .slice(0, visibleItems)
-                        .map((item, index) => (
-                          <li key={index}>
-                            <p dangerouslySetInnerHTML={createMarkup(item)} />
-                          </li>
-                        ))}{" "}
-                    </ul>
-                  </div>
-                ))}
+                      <ul className={style.description}>
+                        {description.items
+                          // .slice(0, visibleItems)
+                          .map((item, index) => (
+                            <li key={index}>
+                              <p dangerouslySetInnerHTML={createMarkup(item)} />
+                            </li>
+                          ))}{" "}
+                      </ul>
+                    </div>
+                  ))}
 
-                {/* {!isDesktop && descriptionShowing.items.length > visibleItems && (
+                  {/* {!isDesktop && descriptionShowing.items.length > visibleItems && (
               <label
                 htmlFor="toggle"
                 className={style.toggleLabel}
@@ -177,6 +197,7 @@ const FeatureBenefit = () => {
                 {"See More >"}
               </label>
             )} */}
+                </div>
               </div>
             </div>
           </div>
