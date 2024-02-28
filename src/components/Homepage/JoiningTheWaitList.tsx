@@ -10,7 +10,7 @@ const JoiningTheWaitList = () => {
             Joining The Waitlist now!
           </div>
           <div className={styles.description}>
-            Be the first to receive the latest updates on NOTT's innovative
+            Be the first to receive the latest updates on NOTT&#39;s innovative
             products and offerings
           </div>
         </div>
