@@ -7,6 +7,7 @@ import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
 import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
 import { Element } from "react-scroll";
 import FeatureBenefit from "@/components/Homepage/FeatureBenefit";
+import JoiningTheWaitList from "@/components/Homepage/JoiningTheWaitList";
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
         <Element name="product-showcase">
           <ProductsShowcase />
         </Element>
+        <JoiningTheWaitList />
         <Faqs />
       </main>
     </>

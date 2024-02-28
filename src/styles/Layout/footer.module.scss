@@ -12,7 +12,7 @@
 
 .wrapper {
   background-color: #001633;
-  background-image: url("/images/footer-bg.png");
+  // background-image: url("/images/footer-bg.png");
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@
   .wrapper {
     padding: 0 16px;
     .container {
-      padding: 65px 0 24px 0;
+      padding: 44px 0 24px 0;
       width: 100%;
       gap: 64px;
       .topBlock {
