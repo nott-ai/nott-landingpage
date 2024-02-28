@@ -146,7 +146,11 @@ const FeatureBenefit = () => {
                     />
                   </div>
                   {BENEFITS.map((description, index) => (
-                    <div className={style.imageWrapper} id={`image-${index}`}>
+                    <div
+                      key={index}
+                      className={style.imageWrapper}
+                      id={`image-${index}`}
+                    >
                       <img
                         key={index}
                         className={style.image}
