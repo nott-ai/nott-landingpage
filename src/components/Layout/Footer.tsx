@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
+import { ROUTERS } from "@/constants/routes";
 import useTrans from "@/hooks/useTrans";
 import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Layout/footer.module.scss";
@@ -51,7 +52,7 @@ const Footer = () => {
               />
               <div className={`${styles.subColumn} ${styles.logo}`}>
                 <div className={styles.description}>
-                  Your Gateway <br /> to a Healthier Tomorrow
+                  Your Gateway to a Healthier Tomorrow
                 </div>
                 <div className={styles.email}>
                   <EmailIcon />
@@ -79,11 +80,13 @@ const Footer = () => {
               <div className={`${styles.column} ${styles.document}`}>
                 <div className={styles.title}>{trans.footer.documents}</div>
                 <div className={styles.subColumn}>
-                  <Link href="#">{trans.footer.term} </Link>
-                  <Link href="#">{trans.footer.privacyPolicy} </Link>
-                  <Link href="#">{trans.footer.legalDisclaimer} </Link>
+                  <Link href={ROUTERS.TERMS_OF_SERVICE}>{trans.footer.term} </Link>
+                  <Link href={ROUTERS.PRIVACY_POLICY}>{trans.footer.privacyPolicy} </Link>
+                  <Link href={ROUTERS.LEGAL_DISCLAIMER}>{trans.footer.legalDisclaimer} </Link>
                 </div>
               </div>
+
+
               <div className={`${styles.column} ${styles.networkColumn}`}>
                 <div className={styles.title}>Get in touch</div>
                 <div className={styles.socialNetwork}>
@@ -107,6 +110,8 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
