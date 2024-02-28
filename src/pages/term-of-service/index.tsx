@@ -14,13 +14,13 @@ const TermOfService = () => {
 
       <div className={style.contentContainer}>
         <div className={style.content}>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT maintains this website, the NOTT application and other related
             sites or applications for the use of its customers, merchants, and
             other website users (“Users”) upon agreement to the following terms.
           </p>
 
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             <span>
               Please read the following terms and conditions carefully before
               using the
@@ -40,7 +40,7 @@ const TermOfService = () => {
           </p>
 
           <p className={style.italicDesc}>NOTT products and services</p>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT is an innovative health and wellness platform leveraging
             Decentralized Physical Infrastructure Networks (DePIN), Artificial
             Intelligence (AI), and Health Finance (HealthFi) technologies and
@@ -49,13 +49,13 @@ const TermOfService = () => {
             enthusiasts, health professionals, NOTT device manufacturers, and
             other devices/service providers (merchants).
           </p>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT offers everything from smart wearables that fit easily into
             daily routines to innovative sleep aids like smart pillows and
             capsule beds, showing NOTT&apos;s dedication to enhancing health
             through technology.
           </p>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT also provides impressive services, such as a detailed mobile
             app for managing health data and personalized health tips and advice
             powered by AI. These services meet the needs of all types of health
@@ -64,7 +64,7 @@ const TermOfService = () => {
             devices.
           </p>
           <p className={style.italicDesc}>Disclaimer</p>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT physical wellness products are wellness devices and not a
             medical device. It is intended for aiding health improvement through
             personalized health tracking content. If you have any medical
@@ -85,7 +85,7 @@ const TermOfService = () => {
             website or application are meant to diagnose, treat, or cure any
             condition.
           </p>
-          <p className={style.description}>
+          <p className={style.descWithoutMargin}>
             NOTT Foundation DOES NOT OFFER ANYTHING that can be used to
             diagnose, treat, or prevent any medical, mental, or physical
             ailment. All of the information provided here is for information and

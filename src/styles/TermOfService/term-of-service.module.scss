@@ -9,7 +9,6 @@ $desc-color: #4C5E80;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-
     .banner {
         width: 523px;
         height: 322px;
@@ -30,7 +29,7 @@ $desc-color: #4C5E80;
             display: flex;
             flex-direction: column;
             gap: 12px;
-            padding: 0 24px;
+            padding: 0 16px;
 
             .smTitle {
                 color: $title-color;
@@ -72,6 +71,15 @@ $desc-color: #4C5E80;
                 /* 22.4px */
             }
 
+            .descWithoutMargin {
+                color: $desc-color;
+                text-align: justify;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+            }
+
             .description {
                 color: $desc-color;
                 text-align: justify;
@@ -79,8 +87,7 @@ $desc-color: #4C5E80;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
-                margin-left: 10px
-                    /* 22.4px */
+                margin-left: 10px;
             }
 
             ul {
@@ -107,7 +114,6 @@ $desc-color: #4C5E80;
             }
 
             .italicDesc {
-                margin-left: 10px;
                 color: $desc-color;
                 text-align: justify;
                 font-size: 14px;
