@@ -10,6 +10,7 @@
     flex-direction: row;
     gap: 50px;
     .sidebar {
+      z-index: 100;
       background-color: #ffffff;
       padding: 24px;
       width: 342px;
@@ -41,6 +42,12 @@
       text-align: left;
     }
     .listContent:hover {
+      background-color: #f0f5ff;
+      border-radius: 24px;
+      color: #346af7;
+      cursor: pointer;
+    }
+    .listContent.active {
       background-color: #f0f5ff;
       border-radius: 24px;
       color: #346af7;
