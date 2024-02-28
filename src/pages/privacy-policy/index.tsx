@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
           <ul>
             <li>
               <span>{`Visit our website at `}</span>
-              <a href={INFO.WEBSITE} target="_blank">
+              <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
                 {INFO.WEBSITE}
               </a>
               <span>{` or any website of ours that
