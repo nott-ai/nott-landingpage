@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   background-color: #001633;
-
+  margin: auto;
   .content {
     max-width: $max-width-container;
     margin: auto;
@@ -17,12 +17,13 @@
         &::before {
           content: "";
           display: block;
-          height: 3000vh;
+          // height: 1650vh;
+          height: 14697px;
         }
         .stickyEl {
           position: sticky;
           position: -webkit-sticky;
-          bottom: 50px;
+          bottom: 30px;
 
           .imageContainer {
             position: relative;
@@ -36,8 +37,8 @@
             }
             .imageWrapper {
               position: absolute;
-              top: 30px;
-              right: 37px;
+              top: 29px;
+              right: 38px;
               margin: auto;
               width: 100%;
               width: 264px;
@@ -132,6 +133,7 @@
     .blockBottom {
       display: flex;
       gap: 126px;
+      flex-wrap: wrap;
 
       .imageContainer {
         .frameWrapper {
@@ -216,7 +218,6 @@
       display: flex;
       flex-direction: column;
       gap: 100px;
-      padding: 0px 16px 64px 16px;
 
       .blockTop {
         background: none;
@@ -232,6 +233,7 @@
           gap: 16px;
           align-items: flex-start;
           height: 125px;
+          padding: 0 16px;
 
           .title {
             width: auto;
@@ -266,7 +268,12 @@
             gap: 40px;
             padding: 114px 32px 90px 32px;
             width: 360px;
-
+            cursor: pointer;
+            &:hover {
+              .title {
+                color: #83b4ff;
+              }
+            }
             .title {
               color: #ffdc60;
 
@@ -292,58 +299,85 @@
           }
         }
       }
-
-      .blockBottom {
-        display: flex;
-        flex-direction: column;
-        gap: 126px;
-
-        .imageContainer {
-          height: auto;
-        }
-
-        .descriptionContainer {
-          margin: auto;
-
-          .type {
-            color: #7890c0;
-
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 28px */
-            letter-spacing: -0.9px;
+      .benefits {
+        .benefit {
+          &::before {
+            height: 500vh;
           }
-
-          .title {
-            color: #ffdc60;
-
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 140%;
-            /* 44.8px */
-            letter-spacing: -1.44px;
-          }
-
-          .description {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 60px;
-
-            li {
-              p {
-                color: #e0ebff;
-
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 28px */
+          .stickyEl {
+            bottom: 30vh;
+            .blockBottom {
+              gap: 10px;
+              .imageContainer {
+                height: auto;
+                width: 50%;
+                .frameWrapper {
+                  justify-content: flex-end;
+                  .smartWatch {
+                    width: 300px;
+                    height: auto;
+                  }
+                  .iphone {
+                    width: 300px;
+                    height: auto;
+                  }
+                }
+                .imageWrapper {
+                  top: 23px;
+                  width: 251px;
+                  right: 24px;
+                }
               }
+              .rightBlock {
+                width: 100%;
+                .descriptionContainer {
+                  margin: auto;
+                  width: 100%;
+                  padding: 0 16px;
 
-              margin-bottom: 16px;
+                  .type {
+                    color: #7890c0;
+
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 28px */
+                    letter-spacing: -0.9px;
+                  }
+
+                  .title {
+                    color: #ffdc60;
+
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    /* 44.8px */
+                    letter-spacing: -1.44px;
+                  }
+
+                  .description {
+                    list-style-type: none;
+                    padding: 0;
+                    margin-top: 60px;
+
+                    li {
+                      p {
+                        color: #e0ebff;
+
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 28px */
+                      }
+
+                      margin-bottom: 16px;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -375,7 +409,7 @@
       display: flex;
       flex-direction: column;
       gap: 100px;
-      padding: 0px 16px 64px 16px;
+      padding-bottom: 60px;
 
       .blockTop {
         background: none;
@@ -453,30 +487,29 @@
       .benefits {
         .benefit {
           margin-top: 0;
+          &::before {
+            height: 850vh;
+          }
           .stickyEl {
-            bottom: 0;
+            bottom: 30px;
             .blockBottom {
-              display: flex;
-              flex-direction: column;
-              flex-wrap: wrap;
-              align-items: center;
-              gap: 90px;
-              box-sizing: border-box;
-
+              gap: 10px;
               .imageContainer {
                 width: 100%;
                 height: auto;
-                .smartWatch {
-                  width: 187px;
-                  height: 187px;
-                  position: absolute;
-                  z-index: -1;
-                  left: 10px;
-                }
-                .iphone {
-                  width: 242px;
-                  height: 488px;
-                  margin: auto;
+                .frameWrapper {
+                  .smartWatch {
+                    width: 187px;
+                    height: 187px;
+                    position: absolute;
+                    z-index: -1;
+                    left: 10px;
+                  }
+                  .iphone {
+                    width: 242px;
+                    height: 488px;
+                    margin: auto;
+                  }
                 }
                 .imageWrapper {
                   width: 205px;
@@ -487,10 +520,11 @@
                 }
               }
               .rightBlock {
-                height: 300px;
+                height: 200px;
+                box-sizing: border-box;
                 .descriptionContainer {
                   margin: auto;
-
+                  width: auto;
                   .type {
                     color: #c0d2f5;
 
@@ -498,7 +532,6 @@
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%;
-                    /* 19.6px */
                     letter-spacing: -0.63px;
                   }
 
@@ -509,7 +542,6 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: 140%;
-                    /* 28px */
                     letter-spacing: -0.5px;
                   }
 
@@ -521,12 +553,10 @@
                     li {
                       p {
                         color: var(--Light, #fff);
-
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%;
-                        /* 19.6px */
                       }
 
                       margin-bottom: 16px;

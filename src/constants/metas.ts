@@ -7,7 +7,7 @@ Syracuse, Connecticut 35624`,
   BLOG: "https://blog.nott.ai/",
 };
 
-interface IDescription {
+export interface IDescription {
   image: string;
   type: string;
   title: string;
