@@ -20,6 +20,12 @@ export const NAVIGATIONS = [
     scroll: true,
   },
   {
+    id: 7,
+    name: "About NOTT",
+    link: "about-NOTT",
+    scroll: true,
+  },
+  {
     id: 4,
     name: "Features & Benefits",
     link: "features-and-benefits",
@@ -27,20 +33,14 @@ export const NAVIGATIONS = [
   },
   {
     id: 5,
-    name: "Product Showcase",
+    name: "Products Showcase",
     link: "product-showcase",
     scroll: true,
   },
   {
     id: 6,
-    name: "NOTT Market",
+    name: "NOTT Marketplace",
     link: "nott-market",
-    scroll: true,
-  },
-  {
-    id: 7,
-    name: "About NOTT",
-    link: "about-NOTT",
     scroll: true,
   },
 ];

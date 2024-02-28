@@ -14,21 +14,21 @@ const AboutNOTT = () => {
       iconUrl: "/images/system-sum.svg",
       title: "AI at the Core",
       description:
-        "Harnessing the power of AI, NOTT offers personalized health insights and recommendations, transforming data into actionable wisdom for your wellness journey",
+        "With AI at our core, NOTT delivers personalized health recommendations based on data analysis, guiding you towards optimal well-being.",
     },
     {
       icon: <SolarHealthOutlineIcon />,
       iconUrl: "/images/solar-health-outline.svg",
       title: "Decentralized Wellness",
       description:
-        "As a DePIN platform, NOTT ensures secure, private, and efficient health data management, empowering users with control over their personal health information",
+        "As a DePIN platform, NOTT ensures the security and privacy of your health data, putting you in control of your information.",
     },
     {
       icon: <NimbusEcosystemIcon />,
       iconUrl: "/images/nimbus-ecosystem.svg",
       title: "Comprehensive Wellness Ecosystem",
       description:
-        "From sleep improvement to daily health monitoring, NOTT integrates various aspects of wellness into one cohesive platform, accessible to all",
+        "From sleep enhancement to daily health tracking, NOTT provides a holistic wellness platform accessible to everyone.",
     },
     {
       icon: <MdiTargetIcon />,
@@ -78,10 +78,10 @@ const AboutNOTT = () => {
               Overview of NOTT
               <br /> as an AI-powered Wellness DePIN platform
             </div>
-            <div className={styles.description}>
+            {/* <div className={styles.description}>
               Join us in redefining wellness with technology, where your health
               journey is personalized, secure, and forward-thinking.
-            </div>
+            </div> */}
           </div>
           <div className={styles.content}>
             {Overviews.map((item) => (

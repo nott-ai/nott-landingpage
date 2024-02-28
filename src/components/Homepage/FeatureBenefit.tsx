@@ -11,6 +11,22 @@ interface IFeatureBenefit {
   icon: ReactElement;
 }
 
+const Y_AXIS_DESKTOP = 300;
+const Y_AXIS_MOBILE = 25;
+
+const START_BLOCK_INDEX = 4000;
+
+const HEIGHT_DESKTOP = 629;
+const HEIGHT_MOBILE = 498;
+
+const FADE_DISTANCE_DESKTOP = Y_AXIS_DESKTOP * 2;
+const FADE_DISTANCE_MOBILE = Y_AXIS_MOBILE * 2;
+
+const TOTAL_HEIGHT_BLOCK_DESKTOP =
+  FADE_DISTANCE_DESKTOP + HEIGHT_DESKTOP + FADE_DISTANCE_DESKTOP;
+const TOTAL_HEIGHT_BLOCK_MOBILE =
+  FADE_DISTANCE_MOBILE + HEIGHT_MOBILE + FADE_DISTANCE_MOBILE;
+
 const FeatureBenefit = () => {
   const { isMobile, isDesktop } = useDeviceDetect();
   const width = isMobile ? 44 : 80;
@@ -66,8 +82,19 @@ const FeatureBenefit = () => {
       BENEFITS.forEach((_, index) => {
         const des = document.getElementById(`description-${index}`);
         const image = document.getElementById(`image-${index}`);
-        const startIndex = 4000 + index * (isDesktop ? 1633 : 800);
-        const nextIndex = 4000 + (index + 1) * (isDesktop ? 1633 : 800);
+        const startIndex =
+          START_BLOCK_INDEX +
+          index *
+            (isDesktop
+              ? TOTAL_HEIGHT_BLOCK_DESKTOP
+              : TOTAL_HEIGHT_BLOCK_MOBILE);
+        const nextIndex =
+          START_BLOCK_INDEX +
+          (index + 1) *
+            (isDesktop
+              ? TOTAL_HEIGHT_BLOCK_DESKTOP
+              : TOTAL_HEIGHT_BLOCK_MOBILE);
+
         if (des) {
           if (window.scrollY >= startIndex && window.scrollY < nextIndex) {
             const middle = (nextIndex - startIndex) / 2 + startIndex;
@@ -79,7 +106,7 @@ const FeatureBenefit = () => {
                 : 1
             }`;
             des.style.transform = `matrix(1, 0, 0, 1, 0, ${
-              (isDesktop ? 300 : 25) -
+              (isDesktop ? Y_AXIS_DESKTOP : Y_AXIS_MOBILE) -
               (window.scrollY - startIndex) / (isDesktop ? 10 : 100)
             })`;
           } else if (
@@ -131,6 +158,11 @@ const FeatureBenefit = () => {
         <div className={style.benefits}>
           <div className={style.benefit}>
             <div className={style.stickyEl}>
+              {/* <div
+                className={`${orbitron.className} ${style.titleUserBenefit}`}
+              >
+                User Benefits
+              </div> */}
               <div className={style.blockBottom}>
                 <div className={style.imageContainer}>
                   <div className={style.frameWrapper}>
@@ -166,7 +198,7 @@ const FeatureBenefit = () => {
                       id={`description-${index}`}
                       style={{
                         transform: `matrix(1, 0, 0, 1, 0, ${
-                          isDesktop ? 300 : 25
+                          isDesktop ? Y_AXIS_DESKTOP : Y_AXIS_MOBILE
                         })`,
                         opacity: 0,
                       }}

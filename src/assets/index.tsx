@@ -25,6 +25,7 @@ import FacebookIcon from "./facebook.svg";
 import GithubIcon from "./github.svg";
 import LinkedinIcon from "./linkedin.svg";
 import CrossIcon from "./cross.svg";
+import GoogleIcon from "./google.svg";
 
 export {
   CrossIcon,
@@ -54,4 +55,5 @@ export {
   FacebookIcon,
   GithubIcon,
   LinkedinIcon,
+  GoogleIcon,
 };
