@@ -10,6 +10,7 @@ const useDeviceDetect = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
+      // console.log("width", width);
       setDevice({
         isDesktop: width > 1024,
         isMobile: width <= 768,

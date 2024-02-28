@@ -1,9 +1,15 @@
 @import "../variables.scss";
 .wrapper {
   padding-top: 120px;
+  max-width: 100%;
+  overflow: hidden;
   .banner {
     position: relative;
     margin: auto;
+    width: 100%;
+    img {
+      max-width: 100vw;
+    }
     .bannerMobile {
       display: none;
     }
@@ -190,7 +196,7 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    padding-top: 62px;
+    padding-top: 80px;
     .banner {
       .bannerDesktop {
         display: none;

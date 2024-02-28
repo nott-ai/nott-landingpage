@@ -6,6 +6,7 @@ import AboutNOTT from "@/components/Homepage/AboutNOTT";
 import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
 import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
 import { Element } from "react-scroll";
+import FeatureBenefit from "@/components/Homepage/FeatureBenefit";
 
 export default function Home() {
   return (
@@ -49,6 +50,10 @@ export default function Home() {
 
         <Element name="nott-market">
           <NOTTMarketplace />
+        </Element>
+
+        <Element name="features-and-benefits">
+          <FeatureBenefit />
         </Element>
 
         <Element name="product-showcase">
