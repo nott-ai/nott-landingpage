@@ -5,4 +5,5 @@ Syracuse, Connecticut 35624`,
   EMAIL: "info@nott.ai",
   TWITTER: "https://twitter.com/nott_depin",
   BLOG: "https://blog.nott.ai/",
+  WEBSITE: "https://nott.ai",
 };
