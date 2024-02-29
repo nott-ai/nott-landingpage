@@ -3,6 +3,7 @@ import {
   EmailIcon,
   FacebookIcon,
   GithubIcon,
+  GoogleIcon,
   LinkedinIcon,
   TelegramIcon,
   TwitterIcon,
@@ -10,7 +11,6 @@ import {
 import { INFO } from "@/constants/metas";
 import { ROUTERS } from "@/constants/routes";
 import useTrans from "@/hooks/useTrans";
-import { orbitron } from "@/pages/_app";
 import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.topBlock}>
+        {/* <div className={styles.topBlock}>
           <div className={styles.joinNOTT}>
             <div>
               <div className={`${styles.title} ${orbitron.className}`}>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className={styles.joinBtn}>Join The Waitlist</div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.info}>
           <div className={styles.centerBlock}>
             <div className={`${styles.column} ${styles.contact}`}>
@@ -80,19 +80,21 @@ const Footer = () => {
               <div className={`${styles.column} ${styles.document}`}>
                 <div className={styles.title}>{trans.footer.documents}</div>
                 <div className={styles.subColumn}>
-                  <Link href={ROUTERS.TERMS_OF_SERVICE}>{trans.footer.term} </Link>
-                  <Link href={ROUTERS.PRIVACY_POLICY}>{trans.footer.privacyPolicy} </Link>
-                  <Link href={ROUTERS.LEGAL_DISCLAIMER}>{trans.footer.legalDisclaimer} </Link>
+                  <Link href={ROUTERS.TERMS_OF_SERVICE}>
+                    {trans.footer.term}{" "}
+                  </Link>
+                  <Link href={ROUTERS.PRIVACY_POLICY}>
+                    {trans.footer.privacyPolicy}{" "}
+                  </Link>
+                  <Link href={ROUTERS.LEGAL_DISCLAIMER}>
+                    {trans.footer.legalDisclaimer}{" "}
+                  </Link>
                 </div>
               </div>
-
 
               <div className={`${styles.column} ${styles.networkColumn}`}>
                 <div className={styles.title}>Get in touch</div>
                 <div className={styles.socialNetwork}>
-                  <Link href="#">
-                    <TelegramIcon />
-                  </Link>
                   <Link href="#">
                     <DiscordIcon />
                   </Link>
@@ -100,18 +102,19 @@ const Footer = () => {
                     <FacebookIcon />
                   </Link>
                   <Link href="#">
-                    <TwitterIcon />
+                    <TelegramIcon />
                   </Link>
                   <Link href="#">
-                    <LinkedinIcon />
+                    <GoogleIcon />
                   </Link>
                   <Link href="#">
                     <GithubIcon />
                   </Link>
+                  <Link href="#">
+                    <TwitterIcon />
+                  </Link>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>

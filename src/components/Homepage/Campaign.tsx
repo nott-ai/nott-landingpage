@@ -28,8 +28,7 @@ const Campaign = () => {
           /> */}
           <div className={styles.mobileDescription}>
             Discover the ongoing revolution in health tracking through
-            NOTT&#39;s Device Drop Campaigns. These periodic initiatives are our
-            commitment to making advanced health monitoring accessible to all
+            NOTT&#39;s Device Drop Campaigns.
           </div>
           <PrimaryButton className={styles.mobileJoinCampaign}>
             Join Campaigns
@@ -45,8 +44,7 @@ const Campaign = () => {
           </div>
           <div className={styles.description}>
             Discover the ongoing revolution in health tracking through
-            NOTT&#39;s Device Drop Campaigns. These periodic initiatives are our
-            commitment to making advanced health monitoring accessible to all
+            NOTT&#39;s Device Drop Campaigns.
           </div>
           <PrimaryButton className={styles.joinCampaign}>
             Join Campaigns

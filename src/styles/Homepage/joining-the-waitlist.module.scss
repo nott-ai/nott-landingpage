@@ -1,0 +1,81 @@
+@import "../variables.scss";
+.wrapper {
+  height: 450px;
+  background-image: url("/images/joining-bg.png");
+  background-size: cover;
+  background-repeat: none;
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 44px;
+    align-items: center;
+    justify-content: center;
+    .header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 12px;
+      .title {
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 55px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.92px;
+      }
+      .description {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #c0d2f5;
+        text-align: center;
+      }
+    }
+    .joinBtn {
+      font-size: 16px;
+      width: 167px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 71px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    height: 188px;
+    background-image: url("/images/joining-bg-mobile.png");
+
+    .container {
+      max-width: 100%;
+      gap: 24px;
+      .header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        .title {
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 600;
+        }
+        .description {
+          max-width: 380px;
+          margin: auto;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+      .joinBtn {
+        font-size: 14px;
+        width: 153px;
+      }
+    }
+  }
+}

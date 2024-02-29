@@ -31,7 +31,7 @@ const customStyles: any = {
     boxSizing: "border-box",
     borderRadius: "0",
     border: "none",
-    backgroundImage: 'url(/images/banner-navigation-mobile.png)',
+    backgroundImage: "url(/images/banner-navigation-mobile.png)",
     backgroundSize: "contain",
   },
 };
@@ -100,7 +100,7 @@ const Header = () => {
                         duration={500}
                         key={item.id}
                       >
-                        <div>{trans.header[item.name]}</div>
+                        <div>{item.name}</div>
                       </LinkScroll>
                     ) : (
                       <Link
@@ -109,7 +109,7 @@ const Header = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <div>{trans.header[item.name]}</div>
+                        <div>{item.name}</div>
                       </Link>
                     )}
                   </div>
@@ -170,41 +170,35 @@ const Header = () => {
         style={customStyles}
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        <div className={`${styles.navigationMobile} ${inter.className}`} >
-          {
-            NAVIGATIONS.map((item) => (
-              item.scroll ? (
-                <LinkScroll
-                  activeClass="active"
-                  style={{ cursor: "pointer" }}
-                  target={item.link}
-                  to={item.link}
-                  smooth={true}
-                  spy={true}
-                  offset={isDesktop ? -80 : -44}
-                  duration={500}
-                  key={item.id}
-                  onClick={closeModal}
-                >
-                  <div>{trans.header[item.name]}</div>
-                </LinkScroll>
-              ) : (
-                <Link onClick={closeModal} href={item.link} key={item.id}>
-                  {trans.header[item.name]}
-                </Link>
-              )
-            ))
-          }
+        <div className={`${styles.navigationMobile} ${inter.className}`}>
+          {NAVIGATIONS.map((item) =>
+            item.scroll ? (
+              <LinkScroll
+                activeClass="active"
+                style={{ cursor: "pointer" }}
+                target={item.link}
+                to={item.link}
+                smooth={true}
+                spy={true}
+                offset={isDesktop ? -80 : -44}
+                duration={500}
+                key={item.id}
+                onClick={closeModal}
+              >
+                <div>{item.name}</div>
+              </LinkScroll>
+            ) : (
+              <Link onClick={closeModal} href={item.link} key={item.id}>
+                {item.name}
+              </Link>
+            )
+          )}
         </div>
         <div className={`${styles.contactInfo} ${inter.className}`}>
-          <div className={`${styles.titleContact} `}>
-            Contact Us
-          </div>
-          <div className={styles.gmailInfo}>
-            info@nott.ai
-          </div>
+          <div className={`${styles.titleContact} `}>Contact Us</div>
+          <div className={styles.gmailInfo}>info@nott.ai</div>
         </div>
-      </Modal >
+      </Modal>
     </>
   );
 };
