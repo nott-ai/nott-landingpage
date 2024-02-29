@@ -288,7 +288,7 @@ const LegalDisclaimerPage = () => {
         router.push('/privacy-policy');
         break;
       case 'Terms & Service':
-        router.push('/terms-of-service');
+        router.push('/terms-service');
         break;
       default:
         break;

@@ -3,13 +3,14 @@ import {
   EmailIcon,
   FacebookIcon,
   GithubIcon,
-  GoogleIcon,
-  LinkedinIcon,
+  GmailIcon,
   TelegramIcon,
   TwitterIcon,
+  YoutubeIcon,
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
 import { ROUTERS } from "@/constants/routes";
+import { SOCIAL_LINK } from "@/constants/social";
 import useTrans from "@/hooks/useTrans";
 import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
@@ -95,22 +96,27 @@ const Footer = () => {
               <div className={`${styles.column} ${styles.networkColumn}`}>
                 <div className={styles.title}>Get in touch</div>
                 <div className={styles.socialNetwork}>
-                  <Link href="#">
+                  <Link href={SOCIAL_LINK.DISCORD}>
                     <DiscordIcon />
                   </Link>
-                  <Link href="#">
+                  <Link href={SOCIAL_LINK.FACEBOOK}>
                     <FacebookIcon />
                   </Link>
-                  <Link href="#">
+                  <Link href={SOCIAL_LINK.TELEGRAM}>
                     <TelegramIcon />
                   </Link>
-                  <Link href="#">
-                    <GoogleIcon />
+                  <Link href={SOCIAL_LINK.GMAIL}>
+                    <GmailIcon />
                   </Link>
-                  <Link href="#">
+                  <Link href={SOCIAL_LINK.YOUTUBE}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                      <YoutubeIcon />
+                    </div>
+                  </Link>
+                  <Link href={SOCIAL_LINK.GITHUB}>
                     <GithubIcon />
                   </Link>
-                  <Link href="#">
+                  <Link href={SOCIAL_LINK.X}>
                     <TwitterIcon />
                   </Link>
                 </div>

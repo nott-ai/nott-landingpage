@@ -329,7 +329,7 @@ const PrivacyPolicyPage = () => {
       case '/privacy-policy':
         setOpenMenu('Privacy Policy');
         break;
-      case '/terms-of-service':
+      case '/terms-service':
         setOpenMenu('Terms & Service');
         break;
       default:
