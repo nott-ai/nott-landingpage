@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "@/styles/Layout/policy.module.scss";
-import { Link as LinkScroll } from "react-scroll";
+import { Link as LinkScroll, scroller } from "react-scroll";
 import Link from "next/link";
 import { ROUTERS } from '@/constants/routes';
 import { useRouter } from 'next/router';
@@ -47,9 +47,49 @@ const menu: MenuItems[] = [
     mainTitle: "Privacy Policy",
     items: [
       {
-        id: "privacy-policy",
-        title: "Policy",
-        description: "This Privacy Policy describes how NOTT collects, uses, and shares information about you. This Privacy Policy applies to information we collect when you use our websites, mobile applications, and other online products and services (collectively, the “Services”) or when you otherwise interact with us.",
+        id: "collecting-information",
+        title: "Collecting information",
+        description: "",
+      },
+      {
+        id: "processing-information",
+        title: "Processing of information",
+        description: "",
+      },
+      {
+        id: "legal-basis",
+        title: "Legal basis",
+        description: "",
+      },
+      {
+        id: "personal-information",
+        title: "Sharing personal information",
+        description: "",
+      },
+      {
+        id: "cookies",
+        title: "Cookies & tracking technologies",
+        description: "",
+      },
+      {
+        id: "storing-personal-information",
+        title: "Storing personal information",
+        description: "",
+      },
+      {
+        id: "sharingData",
+        title: "Sharing data with others",
+        description: "",
+      },
+      {
+        id: "userRight",
+        title: "Users’ right with their own data",
+        description: "",
+      },
+      {
+        id: "updateAndNotice",
+        title: "Updates and Notice",
+        description: "",
       },
     ],
   },
@@ -57,8 +97,153 @@ const menu: MenuItems[] = [
     mainTitle: "Terms & Service",
     items: [
       {
-        id: "terms-of-service",
-        title: "Terms",
+        id: "1",
+        title: "About Use Of NOTT’s Site",
+        description: <></>,
+      },
+      {
+        id: "2",
+        title: "Creation Account In NOTT App",
+        description: <></>,
+      },
+      {
+        id: "3",
+        title: "Changes Of NOTT’s Terms And Conditions",
+        description: <></>,
+      },
+      {
+        id: "4",
+        title: "Collecting Information Of Website/App And Other Platforms Owned By NOTT",
+        description: <></>,
+      },
+      {
+        id: "5",
+        title: "Protection Of Your Privacy",
+        description: <></>,
+      },
+      {
+        id: "6",
+        title: "User Representations And Warranties",
+        description: <></>,
+      },
+      {
+        id: "7",
+        title: "Terms And Conditions For The Site",
+        description: <></>,
+      },
+      {
+        id: "8",
+        title: "Data Protection",
+        description: <></>,
+      },
+      {
+        id: "9",
+        title: "Ownership Of Intellectual Property Rights, Trademarks And Copyrights On The Site",
+        description: <></>,
+      },
+      {
+        id: "10",
+        title: "Prohibited Uses Of The Site",
+        description: <></>,
+      },
+      {
+        id: "11",
+        title: "Geographic Restrictions",
+        description: <></>,
+      },
+      {
+        id: "12",
+        title: "Technology, Security, And User Responsibilities",
+        description: <></>,
+      },
+      {
+        id: "13",
+        title: "Accounts Creation And Management; Site Access And Security",
+        description: <></>,
+      },
+      {
+        id: "14",
+        title: "Accessing The Site And Account Security",
+        description: <></>,
+      },
+      {
+        id: "15",
+        title: "Disclaimer Of Warranties And Limitation Of Liability",
+        description: <></>,
+      },
+      {
+        id: "16",
+        title: "Using Mobile Devices",
+        description: <></>,
+      },
+      {
+        id: "17",
+        title: "No Guaranteed Outcomes",
+        description: <></>,
+      },
+      {
+        id: "18",
+        title: "Independent Status",
+        description: <></>,
+      },
+      {
+        id: "19",
+        title: "Code Of Conduct",
+        description: <></>,
+      },
+      {
+        id: "20",
+        title: "Monitoring, Enforcement, And Termination",
+        description: <></>,
+      },
+      {
+        id: "21",
+        title: "Monitoring, Enforcement, And Termination",
+        description: <></>,
+      },
+      {
+        id: "22",
+        title: "Dependence On Information Provided",
+        description: <></>,
+      },
+      {
+        id: "23",
+        title: "Limitation Of Liability & Remedies",
+        description: <></>,
+      },
+      {
+        id: "24",
+        title: "Indemnification",
+        description: <></>,
+      },
+      {
+        id: "25",
+        title: "Dispute Resolution And Binding Arbitration",
+        description: <></>,
+      },
+      {
+        id: "26",
+        title: "Time Limitation For Claims",
+        description: <></>,
+      },
+      {
+        id: "27",
+        title: "Waiver And Severability",
+        description: <></>,
+      },
+      {
+        id: "28",
+        title: "Entire Agreement; Force Majeure",
+        description: <></>,
+      },
+      {
+        id: "29",
+        title: "Your Comments And Concerns",
+        description: <></>,
+      },
+      {
+        id: "30",
+        title: "Effective Date And Updates",
         description: <></>,
       },
     ],
@@ -70,14 +255,14 @@ const LegalDisclaimerPage = () => {
   const [openMenu, setOpenMenu] = useState('');
   const router = useRouter();
   const [mainTitle, setMainTitle] = useState('');
-  const [activeSection] = useState();
+  const [selectedTitle] = useState(null);
   const [selectedNavItem, setSelectedNavItem] = useState(ROUTERS.LEGAL_DISCLAIMER);
 
   const toggleMenu = (menuId: string) => {
     setOpenMenu(openMenu === menuId ? '' : menuId);
   };
 
-  useEffect(() => {
+  const getMainTitle = () => {
     switch (router.pathname) {
       case ROUTERS.LEGAL_DISCLAIMER:
         setMainTitle('Legal Disclaimer');
@@ -91,15 +276,67 @@ const LegalDisclaimerPage = () => {
       default:
         setMainTitle('Legal Disclaimer');
     }
+  }
+
+  const handleTitleClick = (mainTitle: string) => {
+    toggleMenu(mainTitle);
+    switch (mainTitle) {
+      case 'Legal Disclaimer':
+        router.push('/legal-disclaimer');
+        break;
+      case 'Privacy Policy':
+        router.push('/privacy-policy');
+        break;
+      case 'Terms & Service':
+        router.push('/terms-of-service');
+        break;
+      default:
+        break;
+    }
+    setSelectedNavItem(mainTitle);
+  };
+
+  useEffect(() => {
+    getMainTitle();
   }, [router.pathname]);
+
+  useEffect(() => {
+    const sectionToScrollTo = localStorage.getItem('sectionToScrollTo');
+    if (sectionToScrollTo) {
+      scroller.scrollTo(sectionToScrollTo, {
+        duration: 1000,
+        delay: 0,
+        offset: -100,
+        smooth: 'easeInOutQuart',
+      });
+
+      localStorage.removeItem('sectionToScrollTo');
+    }
+  }, []);
+
+  useEffect(() => {
+    switch (router.pathname) {
+      case '/legal-disclaimer':
+        setOpenMenu('Legal Disclaimer');
+        break;
+      case '/privacy-policy':
+        setOpenMenu('Privacy Policy');
+        break;
+      case '/terms-service':
+        setOpenMenu('Terms & Service');
+        break;
+      default:
+        setOpenMenu('');
+    }
+  }, [router.pathname]);
+
 
   return (
     <div className={styles.wrapper}>
-      {/* <div className={styles.containerNav}>
+      <div className={styles.containerNav}>
         <div className={styles.navbar}>
           <Link onClick={() => setSelectedNavItem(ROUTERS.LEGAL_DISCLAIMER)} href={ROUTERS.LEGAL_DISCLAIMER}>
-            <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER ? styles.active : ''}`}>Legal Disclaimer</div>
-          </Link>
+            <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER ? styles.active : ''}`}>Legal Disclaimer</div>          </Link>
           <Link onClick={() => setSelectedNavItem(ROUTERS.PRIVACY_POLICY)} href={ROUTERS.PRIVACY_POLICY}>
             <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ''}`}>Privacy Policy</div>
           </Link>
@@ -107,16 +344,18 @@ const LegalDisclaimerPage = () => {
             <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE ? styles.active : ''}`}>Terms of Service</div>
           </Link>
         </div>
-      </div> */}
+      </div>
       <div className={styles.container}>
         <div className={styles.sidebar}>
           <div className={styles.sidebarList}>
             {menu.map((content) => (
-              <div key={content.mainTitle}>
-                <div
-                  onClick={() => toggleMenu(content.mainTitle)}
-                  className={styles.mainTitleWrapper}
-                >
+              <div
+                onClick={() => {
+                  toggleMenu(content.mainTitle);
+                  handleTitleClick(content.mainTitle);
+                }}
+                key={content.mainTitle}>
+                <div className={styles.mainTitleWrapper}>
                   <div className={styles.mainTitle}>{content.mainTitle}</div>
                   <img src="/images/drop-down.svg" alt="hero" />
                 </div>
@@ -128,11 +367,10 @@ const LegalDisclaimerPage = () => {
                         to={item.id}
                         offset={-100}
                         smooth={true}
-                        duration={500}
+                        duration={1000}
                         style={{ background: 'transparent' }}
-                        className={`${styles.listContent} ${activeSection === item.id ? styles.active : ''}`}
                       >
-                        <div key={item.id} className={styles.listContent}>
+                        <div className={`${styles.listContent} ${selectedTitle === item.title ? styles.active : ''}`}>
                           {item.title}
                         </div>
                       </LinkScroll>
