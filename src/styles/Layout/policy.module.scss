@@ -13,14 +13,12 @@
     gap: 50px;
     overflow-y: visible;
     .sidebar {
-      position: -webkit-sticky;
-      position: sticky;
       margin-top: 80px;
-      background-color: #ffffff;
       padding: 24px;
       width: 336px;
-      max-height: fit-content;
       border-radius: 24px;
+      height: fit-content;
+      background-color: #ffffff;
     }
     .mainTitleWrapper {
       display: flex;
@@ -56,6 +54,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      max-height: fit-content;
     }
     .listContent {
       padding: 12px 16px;
@@ -106,6 +105,7 @@
             font-weight: 500;
           }
           .description {
+            color: #4c5e80;
             font-size: 16px;
             text-align: justify;
           }
