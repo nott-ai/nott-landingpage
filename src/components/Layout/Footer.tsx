@@ -96,27 +96,27 @@ const Footer = () => {
               <div className={`${styles.column} ${styles.networkColumn}`}>
                 <div className={styles.title}>Get in touch</div>
                 <div className={styles.socialNetwork}>
-                  <Link href={SOCIAL_LINK.DISCORD}>
+                  <Link target="_blank" href={SOCIAL_LINK.DISCORD}>
                     <DiscordIcon />
                   </Link>
-                  <Link href={SOCIAL_LINK.FACEBOOK}>
+                  <Link target="_blank" href={SOCIAL_LINK.FACEBOOK}>
                     <FacebookIcon />
                   </Link>
-                  <Link href={SOCIAL_LINK.TELEGRAM}>
+                  <Link target="_blank" href={SOCIAL_LINK.TELEGRAM}>
                     <TelegramIcon />
                   </Link>
-                  <Link href={SOCIAL_LINK.GMAIL}>
+                  <Link target="_blank" href={SOCIAL_LINK.GMAIL}>
                     <GmailIcon />
                   </Link>
-                  <Link href={SOCIAL_LINK.YOUTUBE}>
+                  <Link target="_blank" href={SOCIAL_LINK.YOUTUBE}>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
                       <YoutubeIcon />
                     </div>
                   </Link>
-                  <Link href={SOCIAL_LINK.GITHUB}>
+                  <Link target="_blank" href={SOCIAL_LINK.GITHUB}>
                     <GithubIcon />
                   </Link>
-                  <Link href={SOCIAL_LINK.X}>
+                  <Link target="_blank" href={SOCIAL_LINK.X}>
                     <TwitterIcon />
                   </Link>
                 </div>
