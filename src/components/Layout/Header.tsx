@@ -2,41 +2,28 @@ import { CrossIcon, MenuIcon } from "@/assets";
 import { NAVIGATIONS } from "@/constants/header";
 import styles from "@/styles/Layout/header.module.scss";
 import Link from "next/link";
-import { Link as LinkScroll } from "react-scroll";
 import { useEffect, useState } from "react";
-import useTrans from "@/hooks/useTrans";
 import Modal from "react-modal";
 import useDeviceDetect from "../common/DeviceDetect";
-import { inter } from "@/pages/_app";
-
-// const LANGUAGES = [
-//   {
-//     id: "en",
-//     name: "English",
-//   },
-//   {
-//     id: "vi",
-//     name: "Tiếng Việt",
-//   },
-// ];
+import TopBar from "./TopBar";
 
 const customStyles: any = {
   content: {
-    top: "40px",
+    top: "56px",
     left: "0",
     right: "auto",
+    padding: "0",
     bottom: "auto",
     width: "100vw",
     height: "100vh",
     boxSizing: "border-box",
     borderRadius: "0",
     border: "none",
-    backgroundImage: "url(/images/banner-navigation-mobile.png)",
     backgroundSize: "contain",
+    backgroundColor: "#F9F9F9",
   },
 };
 const Header = () => {
-  const trans: any = useTrans();
   const [modalIsOpen, setIsOpen] = useState(false);
   const { isDesktop } = useDeviceDetect();
 
@@ -72,7 +59,8 @@ const Header = () => {
 
   return (
     <>
-      <div id="header" className={styles.wrapper}>
+      <header id="header" className={styles.wrapper}>
+        <TopBar />
         <div className={styles.container}>
           <div className={styles.content}>
             <img
@@ -88,73 +76,15 @@ const Header = () => {
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
                   <div key={item.id}>
-                    {item.scroll ? (
-                      <LinkScroll
-                        activeClass="active"
-                        style={{ cursor: "pointer" }}
-                        target={item.link}
-                        to={item.link}
-                        smooth={true}
-                        spy={true}
-                        offset={isDesktop ? -80 : -44}
-                        duration={500}
-                        key={item.id}
-                      >
-                        <div>{item.name}</div>
-                      </LinkScroll>
+                    {item.isExternal ? (
+                      <a href={item.link} target="_blank">
+                        {item.name}
+                      </a>
                     ) : (
-                      <Link
-                        key={item.id}
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div>{item.name}</div>
-                      </Link>
+                      <Link href={item.link}>{item.name}</Link>
                     )}
                   </div>
                 ))}
-                {/* <DropdownMenu<HTMLButtonElement>
-                trigger={({
-                  triggerRef,
-                  isSelected,
-                  testId,
-                  ...providedProps
-                }) => (
-                  <button
-                    className={styles.translationBtn}
-                    type="button"
-                    {...providedProps}
-                    ref={triggerRef}
-                  >
-                    <Image
-                      width={20}
-                      height={20}
-                      alt="language"
-                      src={`/images/${language}.png`}
-                      className={styles.flag}
-                    />
-                    {language === "en" ? "English" : "Tiếng Việt"}
-                    <Icon icon={<ArrowDown />} color="#333333" />
-                  </button>
-                )}
-              >
-                <DropdownItemGroup>
-                  {LANGUAGES.map((item) => (
-                    <DropdownItem
-                      key={item.id}
-                      onClick={() => {
-                        setLanguage(item.id as Language);
-                        router.push(router.pathname, router.pathname, {
-                          locale: item.id,
-                        });
-                      }}
-                    >
-                      {item.name}
-                    </DropdownItem>
-                  ))}
-                </DropdownItemGroup>
-              </DropdownMenu> */}
               </div>
             </div>
 
@@ -163,38 +93,27 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </header>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        <div className={`${styles.navigationMobile} ${inter.className}`}>
+        <div className={`${styles.navigationMobile}`}>
           {NAVIGATIONS.map((item) =>
-            item.scroll ? (
-              <LinkScroll
-                activeClass="active"
-                style={{ cursor: "pointer" }}
-                target={item.link}
-                to={item.link}
-                smooth={true}
-                spy={true}
-                offset={isDesktop ? -80 : -44}
-                duration={500}
-                key={item.id}
-                onClick={closeModal}
-              >
+            item.isExternal ? (
+              <a key={item.id} href={item.link} target="_blank">
                 <div>{item.name}</div>
-              </LinkScroll>
+              </a>
             ) : (
-              <Link onClick={closeModal} href={item.link} key={item.id}>
+              <Link href={item.link} key={item.id}>
                 {item.name}
               </Link>
             )
           )}
         </div>
-        <div className={`${styles.contactInfo} ${inter.className}`}>
+        <div className={`${styles.contactInfo}`}>
           <div className={`${styles.titleContact} `}>Contact Us</div>
           <div className={styles.gmailInfo}>info@nott.ai</div>
         </div>

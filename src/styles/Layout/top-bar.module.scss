@@ -1,0 +1,48 @@
+@import "../variables.scss";
+.wrapper {
+  height: 46px;
+  background-color: #f9f9f9;
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    animation: autoScroll 30s linear infinite;
+    height: 100%;
+    width: 100%;
+    .notification {
+      display: flex;
+      align-items: center;
+      color: $body-text-color;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 26px;
+      letter-spacing: 0.12px;
+    }
+    .explore {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      a {
+        text-decoration: none;
+        color: $link-color;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+}
+@keyframes autoScroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    display: none;
+  }
+}

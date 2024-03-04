@@ -1,13 +1,4 @@
 import Head from "next/head";
-import Hero from "@/components/Homepage/Hero";
-import Faqs from "@/components/Homepage/Faqs";
-import Campaign from "@/components/Homepage/Campaign";
-import AboutNOTT from "@/components/Homepage/AboutNOTT";
-import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
-import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
-import { Element } from "react-scroll";
-import FeatureBenefit from "@/components/Homepage/FeatureBenefit";
-import JoiningTheWaitList from "@/components/Homepage/JoiningTheWaitList";
 
 export default function Home() {
   return (
@@ -36,33 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Element name="home">
-          <Hero />
-        </Element>
-
-        <Element name="campaigns">
-          <Campaign />
-        </Element>
-
-        <Element name="about-NOTT">
-          <AboutNOTT />
-        </Element>
-
-        <Element name="nott-market">
-          <NOTTMarketplace />
-        </Element>
-
-        <Element name="features-and-benefits">
-          <FeatureBenefit />
-        </Element>
-
-        <Element name="product-showcase">
-          <ProductsShowcase />
-        </Element>
-        <JoiningTheWaitList />
-        <Faqs />
-      </main>
+      <main></main>
     </>
   );
 }
