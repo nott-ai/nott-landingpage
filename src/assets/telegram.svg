@@ -1,33 +1,23 @@
-<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_1030_2043)">
-<g clip-path="url(#clip0_1030_2043)">
-<path d="M10 18.7208C10 15.6361 10 14.0937 10.6098 12.9197C11.1238 11.9304 11.9304 11.1238 12.9197 10.6098C14.0937 10 15.6361 10 18.7208 10H27.2792C30.3639 10 31.9063 10 33.0803 10.6098C34.0696 11.1238 34.8762 11.9304 35.3902 12.9197C36 14.0937 36 15.6361 36 18.7208V27.2792C36 30.3639 36 31.9063 35.3902 33.0803C34.8762 34.0696 34.0696 34.8762 33.0803 35.3902C31.9063 36 30.3639 36 27.2792 36H18.7208C15.6361 36 14.0937 36 12.9197 35.3902C11.9304 34.8762 11.1238 34.0696 10.6098 33.0803C10 31.9063 10 30.3639 10 27.2792V18.7208Z" fill="url(#paint0_linear_1030_2043)"/>
-<path d="M20.0202 29.9056C19.4937 29.9056 19.5832 29.7068 19.4016 29.2056L17.8535 24.1106L29.7702 17.041" fill="#C8DAEA"/>
-<path d="M20.0215 29.9065C20.4277 29.9065 20.6072 29.7207 20.834 29.5002L23.0007 27.3934L20.298 25.7637" fill="#A9C9DD"/>
-<path d="M20.2977 25.7635L26.8464 30.6018C27.5937 31.0142 28.1331 30.8007 28.3192 29.908L30.9849 17.3464C31.2578 16.2522 30.5678 15.7559 29.8529 16.0805L14.2001 22.1161C13.1316 22.5447 13.1378 23.1408 14.0053 23.4064L18.0222 24.6601L27.3217 18.7932C27.7607 18.527 28.1636 18.6701 27.8329 18.9636" fill="url(#paint1_linear_1030_2043)"/>
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Telegram">
+<g clip-path="url(#clip0_637_92)">
+<path id="Container" d="M0 8.72083C0 5.63609 0 4.09372 0.609844 2.91972C1.12375 1.9304 1.9304 1.12375 2.91972 0.609844C4.09372 0 5.63609 0 8.72083 0H17.2792C20.3639 0 21.9063 0 23.0803 0.609844C24.0696 1.12375 24.8762 1.9304 25.3902 2.91972C26 4.09372 26 5.63609 26 8.72083V17.2792C26 20.3639 26 21.9063 25.3902 23.0803C24.8762 24.0696 24.0696 24.8762 23.0803 25.3902C21.9063 26 20.3639 26 17.2792 26H8.72083C5.63609 26 4.09372 26 2.91972 25.3902C1.9304 24.8762 1.12375 24.0696 0.609844 23.0803C0 21.9063 0 20.3639 0 17.2792V8.72083Z" fill="url(#paint0_linear_637_92)"/>
+<path id="Vector" d="M10.0202 19.9056C9.49374 19.9056 9.58319 19.7068 9.40163 19.2056L7.85352 14.1106L19.7702 7.04102" fill="#C8DAEA"/>
+<path id="Vector_2" d="M10.0215 19.9065C10.4277 19.9065 10.6072 19.7207 10.834 19.5002L13.0007 17.3934L10.298 15.7637" fill="#A9C9DD"/>
+<path id="Vector_3" d="M10.2977 15.7635L16.8464 20.6018C17.5937 21.0142 18.1331 20.8007 18.3192 19.908L20.9849 7.34637C21.2578 6.25218 20.5678 5.7559 19.8529 6.08047L4.20007 12.1161C3.13162 12.5447 3.13785 13.1408 4.00532 13.4064L8.02218 14.6601L17.3217 8.79318C17.7607 8.52696 18.1636 8.67009 17.8329 8.96359" fill="url(#paint1_linear_637_92)"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_d_1030_2043" x="0" y="0" width="46" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.191667 0 0 0 0 0.682884 0 0 0 0 1 0 0 0 0.44 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1030_2043"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1030_2043" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_1030_2043" x1="27.3342" y1="14.3342" x2="20.8342" y2="29.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_637_92" x1="17.3342" y1="4.3342" x2="10.8342" y2="19.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#37AEE2"/>
 <stop offset="1" stop-color="#1E96C8"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1030_2043" x1="25.0325" y1="22.4578" x2="27.5755" y2="28.2446" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_637_92" x1="15.0325" y1="12.4578" x2="17.5755" y2="18.2446" gradientUnits="userSpaceOnUse">
 <stop stop-color="#EFF7FC"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
-<clipPath id="clip0_1030_2043">
-<rect x="10" y="10" width="26" height="26" rx="10" fill="white"/>
+<clipPath id="clip0_637_92">
+<rect width="26" height="26" rx="10" fill="white"/>
 </clipPath>
 </defs>
 </svg>
