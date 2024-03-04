@@ -401,7 +401,16 @@ const TermOfPolicyPage = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
-          <div className={styles.bannerImage}>
+          <div style={{marginBottom : '16px'}} className={styles.bannerImage}>
+            <div className={styles.content}>
+              <p  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
+                {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
+              </p>
+              <p style={{color: '#1b1b1d', fontWeight: 500, fontSize: '16px'}} className={styles.title}>{`Basic Information`}</p>
+              <p className={styles.smDesc}  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }}>
+                {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
+              </p>
+            </div>
             <img className={styles.imgPolicy} src="/images/banner-policy.png" alt="hero" />
           </div>
           <div className={styles.textContent}>
