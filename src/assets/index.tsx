@@ -29,6 +29,7 @@ import GoogleIcon from "./google.svg";
 import GmailIcon from "./gmail.svg";
 import YoutubeIcon from "./youtube.svg";
 import LoudSpeakerIcon from "./loud-speaker.svg";
+import IllustrationBar from "./illustration-bar.svg";
 
 export {
   GmailIcon,
@@ -62,4 +63,5 @@ export {
   LinkedinIcon,
   GoogleIcon,
   LoudSpeakerIcon,
+  IllustrationBar,
 };
