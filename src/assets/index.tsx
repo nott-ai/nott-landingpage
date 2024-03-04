@@ -28,6 +28,7 @@ import CrossIcon from "./cross.svg";
 import GoogleIcon from "./google.svg";
 import GmailIcon from "./gmail.svg";
 import YoutubeIcon from "./youtube.svg";
+import LoudSpeakerIcon from "./loud-speaker.svg";
 
 export {
   GmailIcon,
@@ -60,4 +61,5 @@ export {
   GithubIcon,
   LinkedinIcon,
   GoogleIcon,
+  LoudSpeakerIcon,
 };
