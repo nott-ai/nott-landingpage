@@ -1,6 +1,6 @@
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
-import { Inter, Orbitron } from "next/font/google";
+import { Orbitron } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { initializeApp } from "@firebase/app";
@@ -20,7 +20,6 @@ const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
   getAnalytics(app);
 }
-export const inter = Inter({ subsets: ["latin"] });
 
 export const orbitron = Orbitron({ subsets: ["latin"] });
 
@@ -31,19 +30,12 @@ const consentOptions: ConsentOptions = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ConsentProvider options={consentOptions}>
-      <main className={`${inter.className}`}>
-        <ConsentBanner>
-          <>
-            Can we use cookies and external services according to our{" "}
-            <a href="test">privacy paasdasdaolicy</a> to improve the browsing
-            experience?
-          </>
-        </ConsentBanner>
-        <Header />
+    <main>
+      <Header />
+      <div className="content-body">
         <Component {...pageProps} />
-        <Footer />
-      </main>
-    </ConsentProvider>
+      </div>
+      <Footer />
+    </main>
   );
 }

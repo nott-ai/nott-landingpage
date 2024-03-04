@@ -11,147 +11,89 @@
 }
 
 .wrapper {
-  background-color: #001633;
-  // background-image: url("/images/footer-bg.png");
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #f2f2f2;
   .container {
-    padding: 100px 0;
+    padding: 50px 0;
     width: $max-width-container;
     margin: auto;
-    @include flex-column();
-    gap: 100px;
-    .topBlock {
-      @include flex-column();
-      gap: 44px;
-      .joinNOTT {
-        margin: auto;
-        text-align: center;
-        @include flex-column();
-        gap: 44px;
-        .title {
-          font-weight: 500;
-          font-size: 46px;
-          line-height: 55px;
-          letter-spacing: 2%;
-          color: #fff;
-        }
-        .description {
-          font-size: 20px;
-          font-weight: 500;
-          line-height: 28px;
-          color: rgba($color: #fff, $alpha: 0.7);
-          margin-top: 12px;
-        }
-        .joinBtn {
-          font-size: 16px;
-          font-weight: 500;
-          letter-spacing: 0.5px;
-          line-height: 24px;
-          color: #ffffff;
-          height: 48px;
-          width: 191px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: $primary-color;
-          border-radius: 71px;
-          margin: auto;
-          cursor: pointer;
-          &:hover {
-            filter: brightness(1.3);
-          }
-        }
-      }
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #54545c;
+    .rightBlock {
+      width: 793px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
     }
-    .info {
+    .column {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
-      gap: 40px;
-      .topBlock {
-        @include space-between;
-        .logo {
-          height: 56px;
-          width: auto;
+      justify-content: flex-start;
+      gap: 9px;
+      &.contact {
+        gap: 20px;
+        .footerLogo {
+          height: 28px;
+          width: fit-content;
         }
-      }
-      .centerBlock {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        .rightBlock {
-          width: 872px;
+        .socialMediaWrapper {
           display: flex;
           align-items: flex-start;
-          justify-content: space-between;
-        }
-        .column {
-          display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          gap: 24px;
+
+          gap: 14px;
+          .socialMedia {
+            color: #1b1b1d;
+            line-height: 16px;
+            font-weight: 400;
+          }
           .socialNetwork {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-left: -9px;
+            grid-template-columns: repeat(6, 1fr);
             width: fit-content;
+            gap: 12px;
           }
-          .footerLogo {
-            height: 56px;
-            width: fit-content;
-          }
-          .subColumn {
-            @include flex-column();
-            gap: 16px;
-            color: #f4f8ff;
-            font-weight: 500;
-            &.logo {
-              gap: 12px;
-              .description {
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 30px;
-              }
-            }
-            a {
-              text-decoration: none;
-              font-weight: 500;
-              color: #fff;
-              font-size: 16px;
-            }
-            .email {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              color: #c0d2f5;
-              font-size: 16px;
-              font-weight: 500;
-              a {
-                color: #c0d2f5;
-              }
-            }
-          }
-          .title {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 29px;
-            color: #f4f8ff;
-          }
+        }
+      }
+      .title {
+        color: #1b1b1d;
+        font-weight: 600;
+        line-height: 22px;
+      }
+      .subColumn {
+        @include flex-column();
+        gap: 6px;
+        a,
+        div {
+          text-decoration: none;
+          color: #54545c;
+          font-size: 16px;
+        }
+        .email {
+          color: #346af7;
+          font-weight: 500;
+          line-height: 16px;
+          text-decoration: none;
         }
       }
     }
-    .bottomBlock {
+  }
+  .bottomBlock {
+    background-color: #e5e5e5;
+    height: 60px;
+    width: 100%;
+    .copyRight {
+      color: #54545c;
+      max-width: $max-width-container;
+      margin: auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #c0d2f5;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 19px;
-      .copyRight {
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      .content {
+        width: 100%;
         text-align: center;
       }
     }
@@ -160,179 +102,64 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 0 16px;
     .container {
-      .info {
-        .centerBlock {
-          flex-wrap: wrap;
-          gap: 32px;
-          .contact {
-            width: 100%;
-            justify-content: center;
-          }
-          .rightBlock {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-          }
-          .column {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 24px;
-            .socialNetwork {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              margin-left: -9px;
-              width: fit-content;
-            }
-            .footerLogo {
-              height: 56px;
-              width: fit-content;
-            }
-            .subColumn {
-              @include flex-column();
-              gap: 16px;
-              color: #f4f8ff;
-              font-weight: 500;
-              &.logo {
-                gap: 12px;
-                .description {
-                  font-size: 16px;
-                  font-weight: 600;
-                  line-height: 30px;
-                }
-              }
-              a {
-                text-decoration: none;
-                font-weight: 500;
-                color: #fff;
-                font-size: 16px;
-              }
-              .email {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                color: #c0d2f5;
-                font-size: 16px;
-                font-weight: 500;
-                a {
-                  color: #c0d2f5;
-                }
-              }
-            }
-            .title {
-              font-weight: 600;
-              font-size: 24px;
-              line-height: 29px;
-              color: #f4f8ff;
-            }
+      padding: 40px 16px;
+      max-width: 100%;
+      height: 100%;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 32px;
+      box-sizing: border-box;
+
+      .rightBlock {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        .documents {
+          align-items: flex-end;
+          text-align: right;
+        }
+        .support {
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+          .subColumn {
+            flex-direction: row;
           }
         }
       }
-      .bottomBlock {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #c0d2f5;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19px;
-        .copyRight {
-          text-align: center;
+      .column {
+        &.contact {
+          align-items: center;
+          width: 100%;
+          .socialMedia {
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        .subColumn {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: $sm) {
-  .wrapper {
-    padding: 0 16px;
-    .container {
-      padding: 44px 0 24px 0;
+    .bottomBlock {
+      background-color: #e5e5e5;
+      height: 60px;
       width: 100%;
-      gap: 64px;
-      .topBlock {
-        .joinNOTT {
-          gap: 24px;
-          .title {
-            font-size: 28px;
-            line-height: 34px;
-          }
-          .description {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 120%px;
-          }
-          .joinBtn {
-            font-size: 14px;
-            height: 40px;
-            width: 153px;
-            letter-spacing: 0.5px;
-          }
+      .copyRight {
+        color: #54545c;
+        max-width: $max-width-container;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        .content {
+          width: 100%;
+          text-align: center;
         }
-      }
-      .info {
-        gap: 32px;
-        margin-top: 64px;
-        .centerBlock {
-          flex-wrap: wrap;
-          gap: 32px;
-          .column {
-            .footerLogo {
-              height: 42px;
-            }
-          }
-          .contact {
-            display: flex;
-            align-items: center;
-            margin: auto;
-            gap: 16px;
-            .subColumn {
-              gap: 12px;
-              .email {
-                margin: auto;
-              }
-            }
-          }
-          .column {
-            .title {
-              font-size: 20px;
-            }
-          }
-          .rightBlock {
-            width: 100%;
-            flex-wrap: wrap;
-            gap: 32px;
-            .learn {
-              order: 2;
-            }
-            .document {
-              order: 3;
-            }
-            .column {
-              gap: 16px;
-            }
-          }
-          .networkColumn {
-            font-size: 16px;
-            order: 3;
-            width: 100%;
-            display: flex;
-            text-align: center;
-            flex-direction: column;
-            .socialNetwork {
-              margin: auto;
-              grid-template-columns: repeat(7, 1fr);
-            }
-          }
-        }
-      }
-      .bottomBlock {
-        margin: 24px auto 0 auto;
-        font-size: 12px;
       }
     }
   }
