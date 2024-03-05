@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Modal from 'react-modal';
 import styles from "@/styles/ProductService/product-service.module.scss";
+
+Modal.setAppElement('#__next');
 
 interface ModalProductServiceProps {
   modalIsOpen: boolean
@@ -9,17 +11,14 @@ interface ModalProductServiceProps {
 }
 
 const ModalProductService: React.FC<ModalProductServiceProps> = ({ modalIsOpen, setModalIsOpen, children }) => {
+
   return (
-    <Modal
-      isOpen={modalIsOpen}
+    <Modal isOpen={modalIsOpen}
       onRequestClose={() => setModalIsOpen(false)}
-      className={styles.modal}
+      className={styles.modalContent}
       overlayClassName={styles.overlay}
     >
-      <button className={styles.close} onClick={() => setModalIsOpen(false)}>×</button>
       {children}
-
-      asd
     </Modal>
   )
 }
