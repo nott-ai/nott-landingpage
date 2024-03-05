@@ -59,8 +59,8 @@ const CookiePopup = () => {
           </div>
         </div>
         <div className={styles.line} />
-        {cookiesContents.map((item) => (
-          <div className={styles.wrapperItem}>
+        {cookiesContents.map((item, index) => (
+          <div className={styles.wrapperItem} key={index}>
             <div className={styles.title}>{item.title}</div>
             <div className={styles.content}>{item.content}</div>
           </div>

@@ -71,6 +71,7 @@ const FeatureBenefit = () => {
   ];
 
   useEffect(() => {
+    console.log("isDesktop", isDesktop);
     window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);

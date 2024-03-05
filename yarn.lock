@@ -1433,6 +1433,17 @@
   dependencies:
     tslib "^2.1.0"
 
+"@firebase/remote-config@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@firebase/remote-config/-/remote-config-0.4.5.tgz#1aae1a4639bb0dddc14671c10dcd92c8a83c58c1"
+  integrity sha512-rGLqc/4OmxrS39RA9kgwa6JmgWytQuMo+B8pFhmGp3d++x2Hf9j+MLQfhOLyyUo64fNw20J19mLXhrXvKHsjZQ==
+  dependencies:
+    "@firebase/component" "0.6.5"
+    "@firebase/installations" "0.6.5"
+    "@firebase/logger" "0.4.0"
+    "@firebase/util" "1.9.4"
+    tslib "^2.1.0"
+
 "@firebase/util@1.9.4":
   version "1.9.4"
   resolved "https://registry.npmjs.org/@firebase/util/-/util-1.9.4.tgz#68eee380ab7e7828ec0d8684c46a1abed2d7e334"

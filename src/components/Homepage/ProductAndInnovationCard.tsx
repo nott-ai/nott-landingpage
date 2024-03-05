@@ -30,7 +30,7 @@ const ProductAndInnovationCard = ({
         <p className={styles.comingSoon}>Coming Soon</p>
         <p className={styles.title}>{title}</p>
         <p className={styles.description}>{description}</p>
-        <p className={styles.learnMore}>Learn More</p>
+        <p className={styles.learnMore}>Learn more</p>
       </div>
     </div>
   );

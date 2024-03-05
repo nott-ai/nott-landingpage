@@ -1,34 +1,41 @@
 @import "../variables.scss";
 
-.imgIcon {
+.imageContainer {
     width: 285px;
-    position: relative;
     height: 150px;
-    object-fit: cover;
+
+    .image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
+
 
 .newResearchOn {
     width: 253px;
-    position: relative;
+    height: 60px;
     letter-spacing: 0.01em;
     line-height: 20px;
     font-weight: 500;
     display: flex;
-    align-items: center;
 }
 
 .researchersAreReporting {
-    width: 253px;
-    position: relative;
+    flex: 1;
     font-size: 12px;
     letter-spacing: 0.01em;
     line-height: 20px;
-    color: #54545c;
-    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
 }
 
 .newResearchOnProstateCanceParent {
     width: 285px;
+    height: 160px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -40,7 +47,6 @@
 }
 
 .card1 {
-    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -49,4 +55,5 @@
     text-align: left;
     font-size: 14px;
     color: #1b1b1d;
+    cursor: pointer;
 }
