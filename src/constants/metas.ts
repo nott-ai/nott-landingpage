@@ -6,6 +6,8 @@ Syracuse, Connecticut 35624`,
   TWITTER: "https://twitter.com/nott_depin",
   BLOG: "https://blog.nott.ai/",
   WEBSITE: "https://nott.ai",
+  FAQS: "#",
+  WHITE_PAPER: "#",
 };
 
 export interface IDescription {
