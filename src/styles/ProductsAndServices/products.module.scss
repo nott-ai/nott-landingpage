@@ -96,7 +96,7 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     max-width: 100%;
-    padding: 0 18px;
+    padding: 30px 18px;
     box-sizing: border-box;
 
     .products {
@@ -110,14 +110,22 @@
 @media screen and (max-width: $sm) {
   .wrapper {
     max-width: 100%;
-    padding: 0 18px;
+    padding: 30px 18px;
     box-sizing: border-box;
 
     .products {
       .contentRow {
         grid-template-columns: repeat(1, 1fr);
         .card {
+          .imageWrapper {
+            width: 140px;
+            height: 140px;
+            .divider {
+              height: 119px;
+            }
+          }
           .textContent {
+            padding: 16px;
             .description {
               overflow: hidden;
               display: -webkit-box;

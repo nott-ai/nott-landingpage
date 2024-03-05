@@ -5,8 +5,10 @@
   .content {
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: 6px;
-    animation: autoScroll 30s linear infinite;
+    // animation: autoScroll 30s linear infinite;
     height: 100%;
     width: 100%;
     .notification {
