@@ -32,9 +32,41 @@ const Globe = () => {
               src="/images/illustration-bar-mobile.svg"
               alt="illustration-bar"
             />
+            <div className={styles.leftInfoMobile}>
+              <p className={styles.title}>Global reach</p>
+              <div className={styles.bottomBlock}>
+                <p>
+                  <span className={styles.number}>120</span> Countries with NOTT
+                  users
+                </p>
+                <p>
+                  <span className={styles.number}>703,740</span> New accounts in
+                  last 7 days
+                </p>
+                <p>
+                  <span className={styles.number}>235</span> Days since launch
+                </p>
+              </div>
+            </div>
+            <div className={styles.rightInfoMobile}>
+              <p className={styles.title}>Financial Momentum</p>
+              <div className={styles.bottomBlock}>
+                <p>
+                  <span className={styles.number}>87,343,220</span> Amount of
+                  NOTT claimed
+                </p>
+                <p>
+                  <span className={styles.number}>453,650</span> Daily wallet
+                  transactions
+                </p>
+                <p>
+                  <span className={styles.number}>2,000</span> Orbs manufactured
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        {/* <div className={styles.leftInfo}>
+        <div className={styles.leftInfo}>
           <p className={styles.title}>Global reach</p>
           <IllustrationBar />
           <div className={styles.bottomBlock}>
@@ -64,10 +96,10 @@ const Globe = () => {
               transactions
             </p>
             <p>
-              <span className={styles.number}>2,000</span>Orbs manufactured
+              <span className={styles.number}>2,000</span> Orbs manufactured
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
