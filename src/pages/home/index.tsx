@@ -42,8 +42,8 @@ const productsAndInnovations: IProductAndInnovationCard[] = [
     description:
       "Experience unparalleled comfort and sleep analysis with our smart pillow, featuring non-contact monitoring and AI-powered insights for a better night's rest",
     images: ["/images/smartpillow.webp"],
-    imageHeight: 136,
-    imageWidth: 80,
+    imageHeight: 80,
+    imageWidth: 136,
   },
 ];
 const HomePage = () => {
