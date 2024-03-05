@@ -1,20 +1,11 @@
 import { BENEFITS } from "@/constants/metas";
-import { orbitron } from "@/pages/_app";
-import style from "@/styles/Homepage/feature-benefit.module.scss";
+import style from "@/styles/AboutUs/feature-benefit.module.scss";
 import { createMarkup } from "@/utils/index";
-import { ReactElement, useEffect } from "react";
+import { useEffect } from "react";
 import useDeviceDetect from "../common/DeviceDetect";
-
-interface IFeatureBenefit {
-  title: string;
-  description: string;
-  icon: ReactElement;
-}
 
 const Y_AXIS_DESKTOP = 300;
 const Y_AXIS_MOBILE = 25;
-
-const START_BLOCK_INDEX = 4000;
 
 const HEIGHT_DESKTOP = 629;
 const HEIGHT_MOBILE = 498;
@@ -29,46 +20,7 @@ const TOTAL_HEIGHT_BLOCK_MOBILE =
 
 const FeatureBenefit = () => {
   const { isMobile, isDesktop } = useDeviceDetect();
-  const width = isMobile ? 44 : 80;
-  const height = isMobile ? 44 : 80;
-  const featureBenefitData: IFeatureBenefit[] = [
-    {
-      title: "Features",
-      description: "HealthFi Protocol, AI Integration, and DePIN Technology",
-      icon: (
-        <img
-          width={width}
-          height={height}
-          src="/images/feature.svg"
-          alt="feature"
-        />
-      ),
-    },
-    {
-      title: "User benefits",
-      description: "Personalized health insights and token rewards",
-      icon: (
-        <img
-          width={width}
-          height={height}
-          src="/images/user-benefit.svg"
-          alt="user-benefit"
-        />
-      ),
-    },
-    {
-      title: "Merchant benefits",
-      description: "Market access and increased sales opportunities",
-      icon: (
-        <img
-          width={width}
-          height={height}
-          src="/images/merchant-benefits.svg"
-          alt="merchant-benefits"
-        />
-      ),
-    },
-  ];
+  const START_BLOCK_INDEX = isDesktop ? 1600 : 2600;
 
   useEffect(() => {
     console.log("isDesktop", isDesktop);
@@ -135,35 +87,9 @@ const FeatureBenefit = () => {
   return (
     <div className={style.container}>
       <div className={style.content}>
-        <div className={style.blockTop}>
-          <div className={style.header}>
-            <p className={`${style.title} ${orbitron.className}`}>
-              Features & Benefits
-            </p>
-            <p className={style.description}>
-              AI-Powered Wellness DePIN Platform Shaping the Future of HealthFi
-            </p>
-          </div>
-
-          <div className={style.featureBenefitContainer}>
-            {featureBenefitData.map((data, index) => (
-              <div key={index} className={style.featureBenefit}>
-                <div className={style.iconContainer}>{data.icon}</div>
-                <p className={style.title}>{data.title}</p>
-                <p className={style.description}>{data.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className={style.benefits}>
           <div className={style.benefit}>
             <div className={style.stickyEl}>
-              {/* <div
-                className={`${orbitron.className} ${style.titleUserBenefit}`}
-              >
-                User Benefits
-              </div> */}
               <div className={style.blockBottom}>
                 <div className={style.imageContainer}>
                   <div className={style.frameWrapper}>

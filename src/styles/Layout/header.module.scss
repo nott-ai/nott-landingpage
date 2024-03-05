@@ -38,7 +38,7 @@
       height: 100%;
       margin: 0 auto;
       .logo {
-        height: 40px;
+        height: 34px;
         width: auto;
       }
       .desktop {
@@ -50,9 +50,12 @@
           gap: 32px;
           a {
             text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 16px;
+            color: #1b1b1d;
+          }
+          .active {
+            a {
+              color: #346af7;
+            }
           }
           .translationBtn {
             @include center;
@@ -92,7 +95,7 @@
     .container {
       height: 100%;
       .content {
-        padding: 0 16px;
+        padding: 0 18px;
         max-width: 100%;
 
         .logo {
@@ -138,6 +141,11 @@
   a {
     text-decoration: none;
     color: #0f244c;
+  }
+  .active {
+    a {
+      color: #346af7;
+    }
   }
 }
 

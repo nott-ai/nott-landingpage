@@ -1,7 +1,16 @@
+import Campaign from "./Campaign";
+import Faqs from "./Faqs";
+import FeatureBenefit from "./FeatureBenefit";
+import Globe from "./Globe";
+import Overview from "./Overview";
 const AboutUs = () => {
   return (
     <div>
-      <h1>About Us</h1>
+      <Globe />
+      <Campaign />
+      <Overview />
+      <FeatureBenefit />
+      <Faqs />
     </div>
   );
 };

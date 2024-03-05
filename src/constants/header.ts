@@ -1,30 +1,31 @@
 import { INFO } from "./metas";
+import { ROUTERS } from "./routes";
 
 export const NAVIGATIONS = [
   {
     id: 1,
     name: "Home",
-    link: "home",
+    link: ROUTERS.HOME,
   },
   {
     id: 2,
     name: "About us",
-    link: "about-us",
+    link: ROUTERS.ABOUT_US,
   },
   {
     id: 3,
     name: "Products & Services",
-    link: "products-and-services",
+    link: ROUTERS.PRODUCTS_AND_SERVICES,
   },
   {
     id: 4,
     name: "Technology & Innovation",
-    link: "technology-and-innovation",
+    link: ROUTERS.TECHNOLOGY_AND_INNOVATION,
   },
   {
     id: 5,
     name: "Legal & Compliance",
-    link: "legal-and-compliance",
+    link: ROUTERS.LEGAL_DISCLAIMER,
   },
   {
     id: 6,

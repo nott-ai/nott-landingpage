@@ -5,16 +5,19 @@
   src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "SF Pro Display";
   src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "SF Pro Display";
   src: url("/fonts/SF-Pro-Display-Semibold.otf") format("opentype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "SF Pro Display";
   src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
@@ -30,10 +33,12 @@ body {
   background-color: #f9f9f9;
   font-family: SF Pro Display, sans-serif;
 }
+
 .content-body {
   min-height: 100vh;
   margin-top: 122px;
 }
+
 main {
   // overflow: hidden;
 }
@@ -56,12 +61,14 @@ p {
       margin: 0 4px;
       width: fit-content;
       height: fit-content;
+
       div {
         width: 40px;
         height: 3px;
         background-color: #d9d9d9;
       }
     }
+
     .slick-active {
       div {
         background-color: #3c9bff !important;
@@ -75,15 +82,19 @@ p {
   .slick-list {
     height: 264px;
   }
+
   .slick-dots {
     bottom: -20px;
     height: 6px;
+
     ul {
       height: 6px;
+
       li {
         margin: 0 4px;
         height: 6px;
         width: 32px;
+
         div {
           width: 32px;
           height: 6px;
@@ -91,6 +102,7 @@ p {
           border: none;
           border-radius: 54px;
         }
+
         &.slick-active {
           background-color: #346af7;
           border-radius: 54px;
@@ -99,23 +111,102 @@ p {
     }
   }
 }
+#product-image-slider {
+  .slick-dots {
+    bottom: -30px !important;
+  }
+
+  .slick-dots ul {
+    list-style-type: none;
+  }
+
+  .slick-dots li.slick-active div {
+    background-color: #346af7 !important;
+  }
+
+  .slick-dots li div {
+    width: 100%;
+    background-color: #d9d9d9;
+    height: 2px;
+  }
+
+  .slick-dots li {
+    width: 16px !important;
+  }
+
+  .slick-dots li.slick-active {
+    width: 36px !important;
+  }
+}
+// ******** Slider screen ********
+#products-hightlight {
+  .slick-slide {
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .slick-slide img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .slick-center {
+    background-image: url("/images/product-service/phone-screen/phone15.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
+  }
+
+  .slick-dots {
+    bottom: -30px !important;
+  }
+
+  .slick-dots ul {
+    list-style-type: none;
+  }
+
+  .slick-dots li.slick-active div {
+    background-color: #346af7 !important;
+  }
+
+  .slick-dots li div {
+    width: 100%;
+    background-color: #d9d9d9;
+    height: 2px;
+  }
+
+  .slick-dots li {
+    width: 16px !important;
+  }
+
+  .slick-dots li.slick-active {
+    width: 36px !important;
+  }
+}
 
 @media screen and (max-width: $sm) {
   .content-body {
     margin-top: 56px;
   }
+
   #products-showcase {
     .slick-list {
       height: 250px;
     }
+
     .slick-dots {
       bottom: -12px;
       height: 4px;
+
       ul {
         height: 4px;
+
         li {
           height: 4px;
           width: 20px;
+
           div {
             width: 20px;
             height: 4px;

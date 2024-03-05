@@ -65,9 +65,13 @@ const Footer = () => {
           <div className={`${styles.column} ${styles.learn}`}>
             <p className={styles.title}>Learn</p>
             <div className={styles.subColumn}>
-              <Link href="#">About us</Link>
-              <Link href="#">Products & Services </Link>
-              <Link href="#">Technology & Innovation</Link>
+              <Link href={ROUTERS.ABOUT_US}>About us</Link>
+              <Link href={ROUTERS.PRODUCTS_AND_SERVICES}>
+                Products & Services
+              </Link>
+              <Link href={ROUTERS.TECHNOLOGY_AND_INNOVATION}>
+                Technology & Innovation
+              </Link>
             </div>
           </div>
 
@@ -82,8 +86,12 @@ const Footer = () => {
           <div className={`${styles.column} ${styles.support}`}>
             <p className={styles.title}>Support</p>
             <div className={styles.subColumn}>
-              <Link href={ROUTERS.TERMS_OF_SERVICE}>FAQs </Link>
-              <Link href={ROUTERS.PRIVACY_POLICY}>Whitepaper</Link>
+              <a href={INFO.FAQS} target="_blank">
+                FAQs{" "}
+              </a>
+              <a href={INFO.WHITE_PAPER} target="_blank">
+                Whitepaper
+              </a>
               <div>
                 Contact us{" "}
                 <a href="mailto:info@nott.ai" className={styles.email}>

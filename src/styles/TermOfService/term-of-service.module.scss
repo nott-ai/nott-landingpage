@@ -1,6 +1,6 @@
 @import "../variables.scss";
 $title-color: #0f244c;
-$desc-color: #4c5e80;
+$desc-color: #54545c;
 .container {
   margin-top: 80px;
   max-width: 933px;
@@ -25,7 +25,6 @@ $desc-color: #4c5e80;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      padding: 0 16px;
       .smTitle {
         color: $title-color;
         font-size: 18px;

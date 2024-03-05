@@ -1,0 +1,71 @@
+@import "../variables.scss";
+.wrapper {
+  position: relative;
+  max-width: $max-width-container;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  display: flex;
+  gap: 20px;
+  .faqs {
+    flex: 1;
+    .contentTitle {
+      color: #1b1b1d;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .contentSecond {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .question {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        color: #1b1b1d;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.16px;
+        padding: 10px 24px;
+      }
+      .activeQuestion {
+        color: #346af7;
+      }
+      .answers {
+        padding: 0 24px 16px 24px;
+        color: #54545c;
+        line-height: 22px;
+      }
+    }
+  }
+  .graphicImage {
+    max-width: 488px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 0 18px;
+    .graphicImage {
+      max-width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    margin: 30px auto;
+    .faqs {
+      width: 100%;
+    }
+    .graphicImage {
+      max-width: 100%;
+    }
+  }
+}

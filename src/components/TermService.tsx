@@ -254,7 +254,7 @@ const menu: MenuItems[] = [
 ];
 
 
-const TermOfPolicyPage = () => {
+const TermService = () => {
   const [openMenu, setOpenMenu] = useState('');
   const router = useRouter();
   const [mainTitle, setMainTitle] = useState('');
@@ -282,30 +282,30 @@ const TermOfPolicyPage = () => {
   const getMainTitle = () => {
     switch (router.pathname) {
       case ROUTERS.LEGAL_DISCLAIMER:
-        setMainTitle('Legal Disclaimer');
+        setMainTitle("Legal Disclaimer");
         break;
       case ROUTERS.PRIVACY_POLICY:
-        setMainTitle('Privacy Policy');
+        setMainTitle("Privacy Policy");
         break;
       case ROUTERS.TERMS_OF_SERVICE:
-        setMainTitle('Terms of Service');
+        setMainTitle("Terms of Service");
         break;
       default:
-        setMainTitle('Legal Disclaimer');
+        setMainTitle("Legal Disclaimer");
     }
-  }
+  };
 
   const handleTitleClick = (mainTitle: string) => {
     toggleMenu(mainTitle);
     switch (mainTitle) {
-      case 'Legal Disclaimer':
-        router.push('/legal-disclaimer');
+      case "Legal Disclaimer":
+        router.push(ROUTERS.LEGAL_DISCLAIMER);
         break;
-      case 'Privacy Policy':
-        router.push('/privacy-policy');
+      case "Privacy Policy":
+        router.push(ROUTERS.PRIVACY_POLICY);
         break;
-      case 'Terms & Service':
-        router.push('/terms-service');
+      case "Terms & Service":
+        router.push(ROUTERS.TERMS_OF_SERVICE);
         break;
       default:
         break;
@@ -333,17 +333,17 @@ const TermOfPolicyPage = () => {
 
   useEffect(() => {
     switch (router.pathname) {
-      case '/legal-disclaimer':
-        setOpenMenu('Legal Disclaimer');
+      case ROUTERS.LEGAL_DISCLAIMER:
+        setOpenMenu("Legal Disclaimer");
         break;
-      case '/privacy-policy':
-        setOpenMenu('Privacy Policy');
+      case ROUTERS.PRIVACY_POLICY:
+        setOpenMenu("Privacy Policy");
         break;
-      case '/terms-service':
-        setOpenMenu('Terms & Service');
+      case ROUTERS.TERMS_OF_SERVICE:
+        setOpenMenu("Terms & Service");
         break;
       default:
-        setOpenMenu('');
+        setOpenMenu("");
     }
   }, [router.pathname]);
 
@@ -401,13 +401,13 @@ const TermOfPolicyPage = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
-          <div style={{marginBottom : '16px'}} className={styles.bannerImage}>
+          <div style={{ marginBottom: '16px' }} className={styles.bannerImage}>
             <div className={styles.content}>
-              <p  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
+              <p style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
                 {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
               </p>
-              <p style={{color: '#1b1b1d', fontWeight: 500, fontSize: '16px'}} className={styles.title}>{`Basic Information`}</p>
-              <p className={styles.smDesc}  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }}>
+              <p style={{ color: '#1b1b1d', fontWeight: 500, fontSize: '16px' }} className={styles.title}>{`Basic Information`}</p>
+              <p className={styles.smDesc} style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }}>
                 {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
               </p>
             </div>
@@ -1807,4 +1807,4 @@ const TermOfPolicyPage = () => {
 
 
 
-export default TermOfPolicyPage;
+export default TermService;
