@@ -31,6 +31,9 @@ import YoutubeIcon from "./youtube.svg";
 import LoudSpeakerIcon from "./loud-speaker.svg";
 import IllustrationBar from "./illustration-bar.svg";
 import CloseCookieIcon from "./close-cookie.svg";
+import FeaturesIcon from "./features.svg";
+import UserBenefitsIcon from "./user-benefits.svg";
+import MerchantBenefitsIcon from "./merchant-benefits.svg";
 
 export {
   GmailIcon,
@@ -66,4 +69,7 @@ export {
   LoudSpeakerIcon,
   IllustrationBar,
   CloseCookieIcon,
+  FeaturesIcon,
+  UserBenefitsIcon,
+  MerchantBenefitsIcon,
 };

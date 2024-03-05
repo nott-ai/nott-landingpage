@@ -1,6 +1,6 @@
 import { BENEFITS } from "@/constants/metas";
 import { orbitron } from "@/pages/_app";
-import style from "@/styles/Homepage/feature-benefit.module.scss";
+import style from "@/styles/AboutUs/feature-benefit.module.scss";
 import { createMarkup } from "@/utils/index";
 import { ReactElement, useEffect } from "react";
 import useDeviceDetect from "../common/DeviceDetect";
@@ -134,35 +134,9 @@ const FeatureBenefit = () => {
   return (
     <div className={style.container}>
       <div className={style.content}>
-        <div className={style.blockTop}>
-          <div className={style.header}>
-            <p className={`${style.title} ${orbitron.className}`}>
-              Features & Benefits
-            </p>
-            <p className={style.description}>
-              AI-Powered Wellness DePIN Platform Shaping the Future of HealthFi
-            </p>
-          </div>
-
-          <div className={style.featureBenefitContainer}>
-            {featureBenefitData.map((data, index) => (
-              <div key={index} className={style.featureBenefit}>
-                <div className={style.iconContainer}>{data.icon}</div>
-                <p className={style.title}>{data.title}</p>
-                <p className={style.description}>{data.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className={style.benefits}>
           <div className={style.benefit}>
             <div className={style.stickyEl}>
-              {/* <div
-                className={`${orbitron.className} ${style.titleUserBenefit}`}
-              >
-                User Benefits
-              </div> */}
               <div className={style.blockBottom}>
                 <div className={style.imageContainer}>
                   <div className={style.frameWrapper}>
