@@ -6,10 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { initializeApp } from "@firebase/app";
 import { firebaseConfig } from "@/constants/firebase-config";
 import { getAnalytics } from "@firebase/analytics";
+import { getRemoteConfig, getString } from "@firebase/remote-config";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
   getAnalytics(app);
 }
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${inter.className}`}>
       <Header />
+
       <Component {...pageProps} />
       <Footer />
     </main>

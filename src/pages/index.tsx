@@ -8,6 +8,7 @@ import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
 import { Element } from "react-scroll";
 import FeatureBenefit from "@/components/Homepage/FeatureBenefit";
 import JoiningTheWaitList from "@/components/Homepage/JoiningTheWaitList";
+import HomePage from "./home";
 
 export default function Home() {
   return (
@@ -37,31 +38,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Element name="home">
-          <Hero />
-        </Element>
-
-        <Element name="campaigns">
-          <Campaign />
-        </Element>
-
-        <Element name="about-NOTT">
-          <AboutNOTT />
-        </Element>
-
-        <Element name="nott-market">
-          <NOTTMarketplace />
-        </Element>
-
-        <Element name="features-and-benefits">
-          <FeatureBenefit />
-        </Element>
-
-        <Element name="product-showcase">
-          <ProductsShowcase />
-        </Element>
-        <JoiningTheWaitList />
-        <Faqs />
+        <HomePage />
       </main>
     </>
   );
