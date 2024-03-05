@@ -299,7 +299,7 @@ const TermOfPolicyPage = () => {
     toggleMenu(mainTitle);
     switch (mainTitle) {
       case 'Legal Disclaimer':
-        router.push('/legal-disclaimer');
+        router.push("/legal-and-compliance");
         break;
       case 'Privacy Policy':
         router.push('/privacy-policy');
@@ -333,17 +333,17 @@ const TermOfPolicyPage = () => {
 
   useEffect(() => {
     switch (router.pathname) {
-      case '/legal-disclaimer':
-        setOpenMenu('Legal Disclaimer');
+      case "/legal-and-compliance":
+        setOpenMenu("Legal Disclaimer");
         break;
-      case '/privacy-policy':
-        setOpenMenu('Privacy Policy');
+      case "/privacy-policy":
+        setOpenMenu("Privacy Policy");
         break;
-      case '/terms-service':
-        setOpenMenu('Terms & Service');
+      case "/terms-service":
+        setOpenMenu("Terms & Service");
         break;
       default:
-        setOpenMenu('');
+        setOpenMenu("");
     }
   }, [router.pathname]);
 

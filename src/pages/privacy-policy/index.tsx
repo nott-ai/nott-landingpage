@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/Layout/policy.module.scss";
 import { Link as LinkScroll, scroller } from "react-scroll";
 import Link from "next/link";
-import { ROUTERS } from '@/constants/routes';
-import { useRouter } from 'next/router';
+import { ROUTERS } from "@/constants/routes";
+import { useRouter } from "next/router";
 import { INFO } from "@/constants/metas";
 import style from "@/styles/PrivacyPolicy/privacy-policy.module.scss";
 import { createMarkup } from "@/utils/index";
-
 
 interface IContent {
   id: string;
@@ -27,22 +26,26 @@ const menu: MenuItems[] = [
       {
         id: "general-disclaimer",
         title: "General Disclaimer",
-        description: "The information contained in this site is for general guidance on matters of interest only. The application and impact of laws can vary widely based on the specific facts involved. Given the changing nature of laws, rules and regulations, and the inherent hazards of electronic communication, there may be delays, omissions or inaccuracies in information contained in this site. Accordingly, the information on this site is provided with the understanding about the platform and products.",
+        description:
+          "The information contained in this site is for general guidance on matters of interest only. The application and impact of laws can vary widely based on the specific facts involved. Given the changing nature of laws, rules and regulations, and the inherent hazards of electronic communication, there may be delays, omissions or inaccuracies in information contained in this site. Accordingly, the information on this site is provided with the understanding about the platform and products.",
       },
       {
         id: "device-usage-disclaimer",
         title: "Device Usage Disclaimer",
-        description: "NOTT physical wellness products are wellness devices and not a medical device. It is intended for aiding health improvement through personalized health tracking content. If you have any medical concerns, please consult with your healthcare provider, including but not limited to, before using this device. NOTT devices are not intended to serve as a replacement for professional health care, diagnosis, treatment, or advice. NOTT company is not liable for any health issues that may arise as a result of the recommendations, activities, or other information or events you learn or experience as a result of using NOTT devices. You should read all product packaging and instructions carefully before purchasing or intending to acquire any of the products or services recommended on this website or application. YOU ACKNOWLEDGE AND AGREE THAT YOU ARE USING NOTT DEVICES AT YOUR OWN RISK. You and any of the physicians or health professionals linked with this website, application, or your use of any product or service from this website or application. Furthermore, neither this information nor any assertions on this website or application are meant to diagnose, treat, or cure any condition.",
+        description:
+          "NOTT physical wellness products are wellness devices and not a medical device. It is intended for aiding health improvement through personalized health tracking content. If you have any medical concerns, please consult with your healthcare provider, including but not limited to, before using this device. NOTT devices are not intended to serve as a replacement for professional health care, diagnosis, treatment, or advice. NOTT company is not liable for any health issues that may arise as a result of the recommendations, activities, or other information or events you learn or experience as a result of using NOTT devices. You should read all product packaging and instructions carefully before purchasing or intending to acquire any of the products or services recommended on this website or application. YOU ACKNOWLEDGE AND AGREE THAT YOU ARE USING NOTT DEVICES AT YOUR OWN RISK. You and any of the physicians or health professionals linked with this website, application, or your use of any product or service from this website or application. Furthermore, neither this information nor any assertions on this website or application are meant to diagnose, treat, or cure any condition.",
       },
       {
         id: "health-advisory-notice",
         title: "Health Advisory Notice",
-        description: "NOTT company DOES NOT OFFER ANYTHING that can be used to diagnose, treat, or prevent any medical, mental, or physical ailment. All of the information provided here is for information and educational purposes only, and it should not be construed as a personal medical device. As a result, you should not act entirely on the basis of the contents of this information. Instead, users should seek advice from qualified health professionals on any issues concerning their health and well-being. These items are not intended for symptom management or treatment, and they are not intended to be used in place of any form of therapy or treatment for any symptoms or disorders.",
+        description:
+          "NOTT company DOES NOT OFFER ANYTHING that can be used to diagnose, treat, or prevent any medical, mental, or physical ailment. All of the information provided here is for information and educational purposes only, and it should not be construed as a personal medical device. As a result, you should not act entirely on the basis of the contents of this information. Instead, users should seek advice from qualified health professionals on any issues concerning their health and well-being. These items are not intended for symptom management or treatment, and they are not intended to be used in place of any form of therapy or treatment for any symptoms or disorders.",
       },
       {
         id: "external-links-disclaimer",
         title: "External Links Disclaimer",
-        description: "Certain links in this site connect to other websites maintained by third parties over whom NOTT has no control. NOTT makes no representations as to the accuracy or any other aspect of information contained in other websites.",
+        description:
+          "Certain links in this site connect to other websites maintained by third parties over whom NOTT has no control. NOTT makes no representations as to the accuracy or any other aspect of information contained in other websites.",
       },
     ],
   },
@@ -116,7 +119,8 @@ const menu: MenuItems[] = [
       },
       {
         id: "4",
-        title: "Collecting Information Of Website/App And Other Platforms Owned By NOTT",
+        title:
+          "Collecting Information Of Website/App And Other Platforms Owned By NOTT",
         description: <></>,
       },
       {
@@ -141,7 +145,8 @@ const menu: MenuItems[] = [
       },
       {
         id: "9",
-        title: "Ownership Of Intellectual Property Rights, Trademarks And Copyrights On The Site",
+        title:
+          "Ownership Of Intellectual Property Rights, Trademarks And Copyrights On The Site",
         description: <></>,
       },
       {
@@ -253,49 +258,50 @@ const menu: MenuItems[] = [
   },
 ];
 
-
 const PrivacyPolicyPage = () => {
-  const [openMenu, setOpenMenu] = useState('');
+  const [openMenu, setOpenMenu] = useState("");
   const router = useRouter();
-  const [mainTitle, setMainTitle] = useState('');
+  const [mainTitle, setMainTitle] = useState("");
   const [activeSection] = useState();
-  const [selectedNavItem, setSelectedNavItem] = useState(ROUTERS.PRIVACY_POLICY);
+  const [selectedNavItem, setSelectedNavItem] = useState(
+    ROUTERS.PRIVACY_POLICY
+  );
 
   const getHighlightedText = (text: string) => {
     return `<span style="font-weight: 600; color: #0F244C">${text}</span>`;
   };
 
   const toggleMenu = (menuId: string) => {
-    setOpenMenu(openMenu === menuId ? '' : menuId);
+    setOpenMenu(openMenu === menuId ? "" : menuId);
   };
 
   const getMainTitle = () => {
     switch (router.pathname) {
       case ROUTERS.LEGAL_DISCLAIMER:
-        setMainTitle('Legal Disclaimer');
+        setMainTitle("Legal Disclaimer");
         break;
       case ROUTERS.PRIVACY_POLICY:
-        setMainTitle('Privacy Policy');
+        setMainTitle("Privacy Policy");
         break;
       case ROUTERS.TERMS_OF_SERVICE:
-        setMainTitle('Terms of Service');
+        setMainTitle("Terms of Service");
         break;
       default:
-        setMainTitle('Legal Disclaimer');
+        setMainTitle("Legal Disclaimer");
     }
-  }
+  };
 
   const handleTitleClick = (mainTitle: string) => {
     toggleMenu(mainTitle);
     switch (mainTitle) {
-      case 'Legal Disclaimer':
-        router.push('/legal-disclaimer');
+      case "Legal Disclaimer":
+        router.push("/legal-and-compliance");
         break;
-      case 'Privacy Policy':
-        router.push('/privacy-policy');
+      case "Privacy Policy":
+        router.push("/privacy-policy");
         break;
-      case 'Terms & Service':
-        router.push('/terms-service');
+      case "Terms & Service":
+        router.push("/terms-service");
         break;
       default:
         break;
@@ -308,32 +314,32 @@ const PrivacyPolicyPage = () => {
   }, [router.pathname]);
 
   useEffect(() => {
-    const sectionToScrollTo = localStorage.getItem('sectionToScrollTo');
+    const sectionToScrollTo = localStorage.getItem("sectionToScrollTo");
     if (sectionToScrollTo) {
       scroller.scrollTo(sectionToScrollTo, {
         duration: 1000,
         delay: 0,
         offset: -100,
-        smooth: 'easeInOutQuart',
+        smooth: "easeInOutQuart",
       });
 
-      localStorage.removeItem('sectionToScrollTo');
+      localStorage.removeItem("sectionToScrollTo");
     }
   }, []);
 
   useEffect(() => {
     switch (router.pathname) {
-      case '/legal-disclaimer':
-        setOpenMenu('Legal Disclaimer');
+      case "/legal-and-compliance":
+        setOpenMenu("Legal Disclaimer");
         break;
-      case '/privacy-policy':
-        setOpenMenu('Privacy Policy');
+      case "/privacy-policy":
+        setOpenMenu("Privacy Policy");
         break;
-      case '/terms-service':
-        setOpenMenu('Terms & Service');
+      case "/terms-service":
+        setOpenMenu("Terms & Service");
         break;
       default:
-        setOpenMenu('');
+        setOpenMenu("");
     }
   }, [router.pathname]);
 
@@ -341,14 +347,45 @@ const PrivacyPolicyPage = () => {
     <div className={styles.wrapper}>
       <div className={styles.containerNav}>
         <div className={styles.navbar}>
-          <Link onClick={() => setSelectedNavItem(ROUTERS.LEGAL_DISCLAIMER)} href={ROUTERS.LEGAL_DISCLAIMER}>
-            <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER ? styles.active : ''}`}>Legal Disclaimer</div>
+          <Link
+            onClick={() => setSelectedNavItem(ROUTERS.LEGAL_DISCLAIMER)}
+            href={ROUTERS.LEGAL_DISCLAIMER}
+          >
+            <div
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                  ? styles.active
+                  : ""
+              }`}
+            >
+              Legal Disclaimer
+            </div>
           </Link>
-          <Link onClick={() => setSelectedNavItem(ROUTERS.PRIVACY_POLICY)} href={ROUTERS.PRIVACY_POLICY}>
-            <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ''}`}>Privacy Policy</div>
+          <Link
+            onClick={() => setSelectedNavItem(ROUTERS.PRIVACY_POLICY)}
+            href={ROUTERS.PRIVACY_POLICY}
+          >
+            <div
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+              }`}
+            >
+              Privacy Policy
+            </div>
           </Link>
-          <Link onClick={() => setSelectedNavItem(ROUTERS.TERMS_OF_SERVICE)} href={ROUTERS.TERMS_OF_SERVICE}>
-            <div className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE ? styles.active : ''}`}>Terms of Service</div>
+          <Link
+            onClick={() => setSelectedNavItem(ROUTERS.TERMS_OF_SERVICE)}
+            href={ROUTERS.TERMS_OF_SERVICE}
+          >
+            <div
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                  ? styles.active
+                  : ""
+              }`}
+            >
+              Terms of Service
+            </div>
           </Link>
         </div>
       </div>
@@ -356,14 +393,14 @@ const PrivacyPolicyPage = () => {
         <div className={styles.sidebar}>
           <div className={styles.sidebarList}>
             {menu.map((content) => (
-              <div onClick={() => {
-                toggleMenu(content.mainTitle);
-                handleTitleClick(content.mainTitle);
-              }} key={content.mainTitle}>
-                <div
-                  className={styles.mainTitleWrapper}
-                >
-
+              <div
+                onClick={() => {
+                  toggleMenu(content.mainTitle);
+                  handleTitleClick(content.mainTitle);
+                }}
+                key={content.mainTitle}
+              >
+                <div className={styles.mainTitleWrapper}>
                   <div className={styles.mainTitle}>{content.mainTitle}</div>
                   <img src="/images/drop-down.svg" alt="hero" />
                 </div>
@@ -376,8 +413,10 @@ const PrivacyPolicyPage = () => {
                         offset={-100}
                         smooth={true}
                         duration={500}
-                        style={{ background: 'transparent' }}
-                        className={`${styles.listContent} ${activeSection === item.id ? styles.active : ''}`}
+                        style={{ background: "transparent" }}
+                        className={`${styles.listContent} ${
+                          activeSection === item.id ? styles.active : ""
+                        }`}
                       >
                         <div key={item.id} className={styles.listContent}>
                           {item.title}
@@ -394,22 +433,44 @@ const PrivacyPolicyPage = () => {
           <div className={styles.mainTittle}> {mainTitle}</div>
           <div className={styles.bannerImage}>
             <div className={style.content}>
-              <p  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }} className={style.smDesc}>
+              <p
+                style={{
+                  margin: "11px 0px",
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: 400,
+                }}
+                className={style.smDesc}
+              >
                 {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
               </p>
-              <p style={{color: '#1b1b1d', fontWeight: 500, fontSize: '16px'}} className={style.title}>{`Basic Information`}</p>
-              <p className={style.smDesc}  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }}>
+              <p
+                style={{ color: "#1b1b1d", fontWeight: 500, fontSize: "16px" }}
+                className={style.title}
+              >{`Basic Information`}</p>
+              <p
+                className={style.smDesc}
+                style={{
+                  margin: "11px 0px",
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: 400,
+                }}
+              >
                 {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
               </p>
             </div>
-            <img className={styles.imgPolicy} src="/images/banner-policy.png" alt="hero" />
+            <img
+              className={styles.imgPolicy}
+              src="/images/banner-policy.png"
+              alt="hero"
+            />
           </div>
           <div className={styles.textContent}>
             <div className={style.container}>
               <div className={style.contentContainer}>
-
                 <div className={style.content}>
-                  <p id='' className={style.title}>{`Basic Information`}</p>
+                  <p id="" className={style.title}>{`Basic Information`}</p>
                   <p className={style.description}>
                     {`
             We collect personal information that you voluntarily provide to us
@@ -437,8 +498,8 @@ const PrivacyPolicyPage = () => {
                     className={style.description}
                     dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-                      "Sensitive Information"
-                    )}: When necessary, with your consent or as
+              "Sensitive Information"
+            )}: When necessary, with your consent or as
             otherwise permitted by applicable law, we process the following
             categories of sensitive information:
             `)}
@@ -458,8 +519,8 @@ const PrivacyPolicyPage = () => {
                     className={style.description}
                     dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-                      "Application Data"
-                    )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
+              "Application Data"
+            )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
           `)}
                   />
                   <p className={style.description}>
@@ -474,7 +535,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='processing-information' className={style.title}>{`2. Processing of information`}</p>
+                  <p
+                    id="processing-information"
+                    className={style.title}
+                  >{`2. Processing of information`}</p>
                   <p className={style.description}>
                     {`We process your information to provide, improve, and administer our
             Services, communicate with you, for security and fraud prevention,
@@ -514,7 +578,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='legal-basis' className={style.title}>{`3. Legal basis`}</p>
+                  <p
+                    id="legal-basis"
+                    className={style.title}
+                  >{`3. Legal basis`}</p>
 
                   <p className={style.description}>
                     {`We may process your information if you have given us permission
@@ -570,7 +637,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='personal-information' className={style.title}>{`4. Sharing personal information`}</p>
+                  <p
+                    id="personal-information"
+                    className={style.title}
+                  >{`4. Sharing personal information`}</p>
                   <p
                     className={style.description}
                     dangerouslySetInnerHTML={createMarkup(
@@ -588,7 +658,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='cookies' className={style.title}>{`5. Cookies & tracking technologies`}</p>
+                  <p
+                    id="cookies"
+                    className={style.title}
+                  >{`5. Cookies & tracking technologies`}</p>
                   <p className={style.description}>
                     {`We may use cookies and similar tracking technologies (like web
             beacons and pixels) to access or store information. Specific
@@ -598,7 +671,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='storing-personal-information' className={style.title}>{`6. Storing personal information`}</p>
+                  <p
+                    id="storing-personal-information"
+                    className={style.title}
+                  >{`6. Storing personal information`}</p>
                   <p className={style.description}>
                     {`We will only keep your personal information for as long as it is
             necessary for the purposes set out in this privacy notice, unless a
@@ -657,7 +733,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='sharingData' className={style.title}>{`7. Sharing data with others`}</p>
+                  <p
+                    id="sharingData"
+                    className={style.title}
+                  >{`7. Sharing data with others`}</p>
                   <p className={style.description}>
                     {`We may disclose your personal information with our service providers
             pursuant to a written contract between us and each service provider.
@@ -679,7 +758,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='userRight' className={style.title}>{`8. Users’ right with their own data`}</p>
+                  <p
+                    id="userRight"
+                    className={style.title}
+                  >{`8. Users’ right with their own data`}</p>
                   <p className={style.italicDesc}>
                     {`Right to request deletion of the data — Request to delete:`}
                   </p>
@@ -749,7 +831,10 @@ const PrivacyPolicyPage = () => {
                 </div>
 
                 <div className={style.content}>
-                  <p id='updateAndNotice' className={style.title}>{`9. Updates and Notice`}</p>
+                  <p
+                    id="updateAndNotice"
+                    className={style.title}
+                  >{`9. Updates and Notice`}</p>
                   <p className={style.description}>
                     {`We may update this privacy notice from time to time. The updated
             version will be indicated by an updated "Revised" date and the
@@ -767,9 +852,7 @@ const PrivacyPolicyPage = () => {
         </div>
       </div>
     </div>
-  )
-}
-
-
+  );
+};
 
 export default PrivacyPolicyPage;
