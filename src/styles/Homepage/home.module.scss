@@ -7,6 +7,7 @@
     flex-direction: column;
 
     .banner {
+        max-width: $max-width-container;
         margin: auto;
         position: relative;
         width: 100%;
