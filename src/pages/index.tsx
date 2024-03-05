@@ -1,13 +1,4 @@
 import Head from "next/head";
-import Hero from "@/components/Homepage/Hero";
-import Faqs from "@/components/Homepage/Faqs";
-import Campaign from "@/components/Homepage/Campaign";
-import AboutNOTT from "@/components/Homepage/AboutNOTT";
-import ProductsShowcase from "@/components/Homepage/ProductsShowcase";
-import NOTTMarketplace from "../components/Homepage/NOTTMarketplace";
-import { Element } from "react-scroll";
-import FeatureBenefit from "@/components/Homepage/FeatureBenefit";
-import JoiningTheWaitList from "@/components/Homepage/JoiningTheWaitList";
 import HomePage from "./home";
 
 export default function Home() {

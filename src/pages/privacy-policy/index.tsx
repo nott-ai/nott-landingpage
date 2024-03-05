@@ -363,6 +363,7 @@ const PrivacyPolicyPage = () => {
                 <div
                   className={styles.mainTitleWrapper}
                 >
+
                   <div className={styles.mainTitle}>{content.mainTitle}</div>
                   <img src="/images/drop-down.svg" alt="hero" />
                 </div>
@@ -392,64 +393,23 @@ const PrivacyPolicyPage = () => {
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
           <div className={styles.bannerImage}>
+            <div className={style.content}>
+              <p  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }} className={style.smDesc}>
+                {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
+              </p>
+              <p style={{color: '#1b1b1d', fontWeight: 500, fontSize: '16px'}} className={style.title}>{`Basic Information`}</p>
+              <p className={style.smDesc}  style={{ margin: '11px 0px', lineHeight: '24px' , letterSpacing: '0.01em', fontWeight: 400 }}>
+                {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
+              </p>
+            </div>
             <img className={styles.imgPolicy} src="/images/banner-policy.png" alt="hero" />
           </div>
           <div className={styles.textContent}>
             <div className={style.container}>
               <div className={style.contentContainer}>
-                <div className={style.content}>
-                  <p className={style.smDesc}>
-                    {`The personal information that we collect depends on the context of
-            your interactions with us and the Services, the choices you make,
-            and the products and features you use. The personal information we
-            collect may include the following:`}
-                  </p>
-                </div>
 
                 <div className={style.content}>
-                  <p className={style.smTitle}>{`Basic information`}</p>
-                  <p className={style.subTitle}>{`[Name]`}</p>
-                  <p className={style.description}>
-                    {`This privacy notice for NOTT company (doing business as NOTT)
-            ("NOTT," "we," "us," or "our"), describes how and why we might
-            collect, store, use, and/or share ("process") your information when
-            you use our services ("Services"), such as when you:`}
-                  </p>
-                  <ul>
-                    <li>
-                      <span>{`Visit our website at `}</span>
-                      <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
-                        {INFO.WEBSITE}
-                      </a>
-                      <span>{` or any website of ours that
-            links to this privacy notice`}</span>
-                    </li>
-
-                    <li>
-                      {`Download and use our mobile application (NOTT), or any other
-            application of ours that links to this privacy notice`}
-                    </li>
-
-                    <li>
-                      {`Engage with us in other related ways, including any sales,
-            marketing, or events`}
-                    </li>
-                  </ul>
-
-                  <p className={style.description}>
-                    <span>
-                      {`Questions or concerns? Reading this privacy notice will help you
-            understand your privacy rights and choices. If you do not agree with
-            our policies and practices, please do not use our Services. If you
-            still have any questions or concerns, please contact us
-            at `}
-                    </span>
-                    <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
-                  </p>
-                </div>
-
-                <div className={style.content}>
-                  <p id='collecting-information' className={style.title}>{`1. Collecting information`}</p>
+                  <p id='' className={style.title}>{`Basic Information`}</p>
                   <p className={style.description}>
                     {`
             We collect personal information that you voluntarily provide to us

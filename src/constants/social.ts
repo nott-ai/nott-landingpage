@@ -1,4 +1,5 @@
 export const SOCIAL_LINK = {
+  LINKEDIN: "#",
   DISCORD: "https://discord.com/channels/@nottaiii_",
   FACEBOOK:
     "https://www.facebook.com/profile.php?id=61556914437265&is_tour_dismissed=true",
