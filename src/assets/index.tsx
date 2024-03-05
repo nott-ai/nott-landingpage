@@ -31,6 +31,8 @@ import YoutubeIcon from "./youtube.svg";
 import LoudSpeakerIcon from "./loud-speaker.svg";
 import IllustrationBar from "./illustration-bar.svg";
 import CloseCookieIcon from "./close-cookie.svg";
+import QuoteOpenIcon from "./quote-open.svg";
+import QuoteCloseIcon from "./quote-close.svg";
 import FeaturesIcon from "./features.svg";
 import UserBenefitsIcon from "./user-benefits.svg";
 import MerchantBenefitsIcon from "./merchant-benefits.svg";
@@ -70,6 +72,8 @@ export {
   LoudSpeakerIcon,
   IllustrationBar,
   CloseCookieIcon,
+  QuoteOpenIcon,
+  QuoteCloseIcon,
   FeaturesIcon,
   UserBenefitsIcon,
   MerchantBenefitsIcon,
