@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styles from "@/styles/AboutUs/faqs.module.scss";
 import { dataFaqs } from "@/constants/faqs";
 import Collapse from "../common/Collapse";
-import { orbitron } from "@/pages/_app";
-import Link from "next/link";
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
