@@ -1,4 +1,5 @@
 import DigitalMarketplace from "./DigitalMarketplace";
+import EngagementAndRewards from "./EngagementAndRewards";
 import Products from "./Products";
 
 const ProductsAndServices = () => {
@@ -6,6 +7,7 @@ const ProductsAndServices = () => {
     <>
       <Products />
       <DigitalMarketplace />
+      <EngagementAndRewards />
     </>
   );
 };

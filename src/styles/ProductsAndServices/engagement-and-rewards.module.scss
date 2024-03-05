@@ -1,0 +1,53 @@
+@import "../variables.scss";
+.wrapper {
+  max-width: $max-width-container;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 40px 0;
+  box-sizing: border-box;
+
+  .leftBlock {
+    flex: 1;
+    .title {
+      color: #1b1b1d;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 24px;
+    }
+    .description {
+      margin-top: 12px;
+      color: #54545c;
+      line-height: 24px;
+      letter-spacing: 0.14px;
+    }
+  }
+  .rightBlock {
+    max-width: 380px;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding: 40px 18px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    padding: 0px 18px 40px 18px;
+    .rightBlock {
+      max-width: 100%;
+    }
+  }
+}
