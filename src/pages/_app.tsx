@@ -8,13 +8,8 @@ import { firebaseConfig } from "@/constants/firebase-config";
 import { getAnalytics } from "@firebase/analytics";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import styles from "@/styles/Homepage/cookies-nott.module.scss";
-import "react-hook-consent/dist/styles/style.css";
-import {
-  ConsentBanner,
-  ConsentOptions,
-  ConsentProvider,
-} from "react-hook-consent";
+
+import CookiePopup from "@/components/Cookies/CookiePopup";
 
 const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
@@ -23,14 +18,10 @@ if (app.name && typeof window !== "undefined") {
 
 export const orbitron = Orbitron({ subsets: ["latin"] });
 
-const consentOptions: ConsentOptions = {
-  services: [],
-  theme: "light",
-};
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
+      <CookiePopup />
       <Header />
       <div className="content-body">
         <Component {...pageProps} />
