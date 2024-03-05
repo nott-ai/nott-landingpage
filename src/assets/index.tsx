@@ -34,6 +34,7 @@ import CloseCookieIcon from "./close-cookie.svg";
 import FeaturesIcon from "./features.svg";
 import UserBenefitsIcon from "./user-benefits.svg";
 import MerchantBenefitsIcon from "./merchant-benefits.svg";
+import ArrowDirectionRight from "./arrow-direction-right.svg";
 
 export {
   GmailIcon,
@@ -72,4 +73,5 @@ export {
   FeaturesIcon,
   UserBenefitsIcon,
   MerchantBenefitsIcon,
+  ArrowDirectionRight,
 };
