@@ -40,7 +40,6 @@ export default function ProductScreenSection() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    // centerPadding: "30px",
     appendDots: (dots: any) => <div>{dots}</div>,
     customPaging: (i: any) => <div className={styles.dot}></div>,
     responsive: [
