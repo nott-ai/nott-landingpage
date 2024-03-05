@@ -23,7 +23,7 @@ const DigitalMarketplace = () => {
       <p className={styles.description}>
         This digital space allows users to purchase wellness products and
         services, and for merchants to reach a wider audience.{" "}
-        {isDesktop && <br />} It's a place where the health and wellness
+        {isDesktop && <br />} It&apos;s a place where the health and wellness
         community can come together to share, grow, and benefit from the
         collective contributions of its members.
       </p>
