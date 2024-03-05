@@ -2,9 +2,9 @@ import { CrossIcon, MenuIcon } from "@/assets";
 import { NAVIGATIONS } from "@/constants/header";
 import styles from "@/styles/Layout/header.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import useDeviceDetect from "../common/DeviceDetect";
 import TopBar from "./TopBar";
 
 const customStyles: any = {
@@ -25,7 +25,7 @@ const customStyles: any = {
 };
 const Header = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const { isDesktop } = useDeviceDetect();
+  const router = useRouter();
 
   function openModal() {
     setIsOpen(!modalIsOpen);
@@ -68,14 +68,19 @@ const Header = () => {
               src="/images/logo.svg"
               alt="logo"
               onClick={() => {
-                window.location.reload();
+                window.location.href = "/";
                 window.scrollTo(0, 0);
               }}
             />
             <div className={styles.desktop}>
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
-                  <div key={item.id}>
+                  <div
+                    key={item.id}
+                    className={`${
+                      router.pathname === item.link ? styles.active : ""
+                    }`}
+                  >
                     {item.isExternal ? (
                       <a href={item.link} target="_blank">
                         {item.name}
@@ -101,17 +106,25 @@ const Header = () => {
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
         <div className={`${styles.navigationMobile}`}>
-          {NAVIGATIONS.map((item) =>
-            item.isExternal ? (
-              <a key={item.id} href={item.link} target="_blank">
-                <div>{item.name}</div>
-              </a>
-            ) : (
-              <Link href={item.link} key={item.id}>
-                {item.name}
-              </Link>
-            )
-          )}
+          {NAVIGATIONS.map((item) => (
+            <div
+              key={item.id}
+              className={`${
+                router.pathname === item.link ? styles.active : ""
+              }`}
+              onClick={closeModal}
+            >
+              {item.isExternal ? (
+                <a key={item.id} href={item.link} target="_blank">
+                  <div>{item.name}</div>
+                </a>
+              ) : (
+                <Link href={item.link} key={item.id}>
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
         </div>
         <div className={`${styles.contactInfo}`}>
           <div className={`${styles.titleContact} `}>Contact Us</div>
