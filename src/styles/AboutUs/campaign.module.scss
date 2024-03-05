@@ -1,0 +1,124 @@
+@import "../variables.scss";
+.wrapper {
+  height: fit-content;
+  position: relative;
+  margin: 40px auto 0 auto;
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 21px;
+    .leftBlock {
+      flex: 1;
+      .title {
+        color: #1b1b1d;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        line-height: 24px;
+      }
+      .description {
+        margin-top: 12px;
+        color: #54545c;
+        font-size: 14px;
+        line-height: 24px; /* 171.429% */
+        letter-spacing: 0.14px;
+      }
+      .joinCampaign {
+        height: 42px;
+        width: 169px;
+        border-radius: 0;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      .contentSecond {
+        margin-top: 20px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .question {
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 16px;
+          font-size: 16px;
+          color: #1b1b1d;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 0.16px;
+          &.activeQuestion {
+            color: #2563eb;
+          }
+          .leftQuestion {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            .leftImage {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+
+        .answers {
+          max-width: 100%;
+          color: #1f2e4d;
+          line-height: 20px;
+          letter-spacing: 0.14px;
+          padding: 0 16px 16px 16px;
+        }
+      }
+    }
+
+    .rightBlock {
+      max-width: 487px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .container {
+      max-width: 100%;
+      padding: 0 18px;
+      .rightBlock {
+        max-width: 45%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    .container {
+      .leftBlock {
+        width: 100%;
+        .title {
+          font-size: 16px;
+        }
+      }
+      .rightBlock {
+        max-width: 100%;
+      }
+    }
+  }
+}
