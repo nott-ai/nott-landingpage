@@ -9,15 +9,19 @@ import { getAnalytics } from "@firebase/analytics";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
+import CookiePopup from "@/components/Cookies/CookiePopup";
+
 const app = initializeApp(firebaseConfig);
 if (app.name && typeof window !== "undefined") {
   getAnalytics(app);
 }
 
 export const orbitron = Orbitron({ subsets: ["latin"] });
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
+      <CookiePopup />
       <Header />
       <div className="content-body">
         <Component {...pageProps} />
