@@ -258,7 +258,7 @@ const menu: MenuItems[] = [
   },
 ];
 
-const PrivacyPolicyPage = () => {
+const PrivacyPolicy = () => {
   const [openMenu, setOpenMenu] = useState("");
   const router = useRouter();
   const [mainTitle, setMainTitle] = useState("");
@@ -295,13 +295,13 @@ const PrivacyPolicyPage = () => {
     toggleMenu(mainTitle);
     switch (mainTitle) {
       case "Legal Disclaimer":
-        router.push("/legal-and-compliance");
+        router.push(ROUTERS.LEGAL_DISCLAIMER);
         break;
       case "Privacy Policy":
-        router.push("/privacy-policy");
+        router.push(ROUTERS.PRIVACY_POLICY);
         break;
       case "Terms & Service":
-        router.push("/terms-service");
+        router.push(ROUTERS.TERMS_OF_SERVICE);
         break;
       default:
         break;
@@ -329,13 +329,13 @@ const PrivacyPolicyPage = () => {
 
   useEffect(() => {
     switch (router.pathname) {
-      case "/legal-and-compliance":
+      case ROUTERS.LEGAL_DISCLAIMER:
         setOpenMenu("Legal Disclaimer");
         break;
-      case "/privacy-policy":
+      case ROUTERS.PRIVACY_POLICY:
         setOpenMenu("Privacy Policy");
         break;
-      case "/terms-service":
+      case ROUTERS.TERMS_OF_SERVICE:
         setOpenMenu("Terms & Service");
         break;
       default:
@@ -352,11 +352,10 @@ const PrivacyPolicyPage = () => {
             href={ROUTERS.LEGAL_DISCLAIMER}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                ? styles.active
+                : ""
+                }`}
             >
               Legal Disclaimer
             </div>
@@ -366,9 +365,8 @@ const PrivacyPolicyPage = () => {
             href={ROUTERS.PRIVACY_POLICY}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+                }`}
             >
               Privacy Policy
             </div>
@@ -378,11 +376,10 @@ const PrivacyPolicyPage = () => {
             href={ROUTERS.TERMS_OF_SERVICE}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                ? styles.active
+                : ""
+                }`}
             >
               Terms of Service
             </div>
@@ -414,9 +411,8 @@ const PrivacyPolicyPage = () => {
                         smooth={true}
                         duration={500}
                         style={{ background: "transparent" }}
-                        className={`${styles.listContent} ${
-                          activeSection === item.id ? styles.active : ""
-                        }`}
+                        className={`${styles.listContent} ${activeSection === item.id ? styles.active : ""
+                          }`}
                       >
                         <div key={item.id} className={styles.listContent}>
                           {item.title}
@@ -498,8 +494,8 @@ const PrivacyPolicyPage = () => {
                     className={style.description}
                     dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-              "Sensitive Information"
-            )}: When necessary, with your consent or as
+                      "Sensitive Information"
+                    )}: When necessary, with your consent or as
             otherwise permitted by applicable law, we process the following
             categories of sensitive information:
             `)}
@@ -519,8 +515,8 @@ const PrivacyPolicyPage = () => {
                     className={style.description}
                     dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-              "Application Data"
-            )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
+                      "Application Data"
+                    )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
           `)}
                   />
                   <p className={style.description}>
@@ -855,4 +851,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicy;

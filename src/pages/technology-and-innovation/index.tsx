@@ -39,7 +39,7 @@ const TechnologyInnovationPage = () => {
           {HealthInsight.map((item, index) => (
             <div key={index} className={style.block}>
               <div className={style.content}>
-                <img src={item.image} alt={`banner`} />
+                <img style={{ objectFit: 'contain' }} src={item.image} alt={`banner`} />
                 <div className={style.title}>
                   {item.title}
                 </div>
@@ -59,7 +59,7 @@ const TechnologyInnovationPage = () => {
           {HealthEngage.map((item, index) => (
             <div key={index} className={style.block}>
               <div className={style.content}>
-                <img src={item.image} alt={`banner`} />
+                <img style={{ objectFit: 'contain' }} src={item.image} alt={`banner`} />
                 <div className={style.title}>
                   {item.title}
                 </div>
