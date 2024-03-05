@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "@/styles/ProductService/product-screen-section.module.scss";
+import styles from "@/styles/ProductsAndServices/product-screen-section.module.scss";
 
 import Slider from "react-slick";
 
