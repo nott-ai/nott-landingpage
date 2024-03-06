@@ -1,6 +1,7 @@
 import { ArrowDirectionRight } from "@/assets/index";
 import styles from "@/styles/ProductsAndServices/digital-marketplace.module.scss";
 import useDeviceDetect from "../common/DeviceDetect";
+import { INFO } from "@/constants/metas";
 const advantages = [
   {
     title: "Benefits for users and merchants",
@@ -44,9 +45,11 @@ const DigitalMarketplace = () => {
               <div className={`${styles.title}`}>
                 <div className={styles.contentTitle}>{advantage.title}</div>
               </div>
-              <div className={styles.explore}>
-                Explore <ArrowDirectionRight />
-              </div>
+              <a style={{ textDecoration: 'none' }} href={INFO.BLOG}>
+                <div className={styles.explore}>
+                  Explore <ArrowDirectionRight />
+                </div>
+              </a>
             </div>
           </div>
         ))}

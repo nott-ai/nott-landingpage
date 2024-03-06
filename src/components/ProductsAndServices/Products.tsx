@@ -18,6 +18,7 @@ const Products = () => {
       setModalIsOpen(true);
     }
     setModalIsOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   return (
