@@ -381,7 +381,7 @@ const TermService = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
-          <div style={{ marginBottom: '16px' }} className={styles.bannerImage}>
+          <div className={styles.bannerImage}>
             <div style={{ marginRight: '20px', fontSize: '16px', letterSpacing: '0.01em', lineHeight: '24px' }} className={styles.content}>
               <p style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
                 NOTT maintains this website, the NOTT application and other related

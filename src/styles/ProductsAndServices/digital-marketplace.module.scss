@@ -1,5 +1,4 @@
 @import "../variables.scss";
-
 .wrapper {
   max-width: $max-width-container;
   margin: auto;
@@ -44,6 +43,9 @@
         align-items: center;
         flex-direction: column;
         gap: 14px;
+        a {
+          text-decoration: none;
+        }
         .title {
           color: #1b1b1d;
           text-align: center;
