@@ -422,7 +422,7 @@ const PrivacyPolicy = () => {
             </div>
             <img
               className={styles.imgPolicy}
-              src="/images/banner-policy.png"
+              src="/images/banner-policy2.png"
               alt="hero"
             />
           </div>

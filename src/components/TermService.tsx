@@ -407,7 +407,7 @@ const TermService = () => {
                 </span>
               </p>
             </div>
-            <img className={styles.imgPolicy} src="/images/banner-policy.png" alt="hero" />
+            <img className={styles.imgPolicy} src="/images/banner-policy3.png" alt="hero" />
           </div>
           <div className={styles.textContent}>
             <div className={style.container}>
