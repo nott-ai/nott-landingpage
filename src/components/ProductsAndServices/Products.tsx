@@ -23,7 +23,6 @@ const Products = () => {
           {PRODUCT_LINEUP_DATA.map((item, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
-                <img src={item.img} alt="smartwatch" />
                 <div className={styles.divider} />
               </div>
               <div className={styles.textContent}>
