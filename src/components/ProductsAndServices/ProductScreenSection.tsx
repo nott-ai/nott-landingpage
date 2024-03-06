@@ -7,27 +7,27 @@ import Slider from "react-slick";
 const screens = [
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen1.png",
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen2.png",
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen3.png",
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen4.png",
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen5.png",
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/wellness1.png",
+    image: "/images/product-service/phone-screen/screen1.png",
   },
 ];
 
