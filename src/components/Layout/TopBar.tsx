@@ -1,4 +1,5 @@
 import { ArrowRightIcon, LoudSpeakerIcon } from "@/assets/index";
+import { INFO } from "@/constants/metas";
 import styles from "@/styles/Layout/top-bar.module.scss";
 const TopBar = () => {
   return (
@@ -8,10 +9,10 @@ const TopBar = () => {
           <LoudSpeakerIcon /> Deep learning-based model development to predict
           critical pediatric events in general wards...
         </div>
-        <div className={styles.explore}>
-          <a href="#">Explore now</a>
+        <a className={styles.explore} target={"_blank"} href={INFO.BLOG}>
+          Explore now
           <ArrowRightIcon />
-        </div>
+        </a>
       </div>
     </div>
   );

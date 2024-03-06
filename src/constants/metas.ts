@@ -7,7 +7,8 @@ Syracuse, Connecticut 35624`,
   BLOG: "https://blog.nott.ai/",
   WEBSITE: "https://nott.ai",
   FAQS: "#",
-  WHITE_PAPER: "#",
+  WHITE_PAPER:
+    "https://docs.google.com/document/d/12b1QRxXMwiiW9yES774sP2H2YskHuvhosld1orGkR08/edit?tab=t.0#heading=h.pz4sjgnnu99j",
 };
 
 export interface IDescription {
