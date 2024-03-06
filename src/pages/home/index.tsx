@@ -12,43 +12,49 @@ import { INFO } from "@/constants/metas";
 import { REMOTE_CONFIG_KEYS } from "@/constants/firebase-config";
 import useDeviceDetect from "@/components/common/DeviceDetect";
 
-const productsAndInnovations: IProductAndInnovationCard[] = [
-  {
-    title: "Smartband",
-    description:
-      "This stylish tracker goes beyond counting steps, offering rich health insights and guidance to enhance your wellness journey with proactive data analysis.",
-    images: ["/images/smartband.webp"],
-    imageHeight: 100,
-    imageWidth: 100,
-  },
-  {
-    title: "Smartwatch",
-    description:
-      "A fusion of elegance and functionality, this smartwatch tracks your health, boosts productivity, and integrates seamlessly with your tech ecosystem.",
-    images: ["/images/smartwatch.webp"],
-    imageHeight: 100,
-    imageWidth: 100,
-  },
-  {
-    title: "Smartscale",
-    description:
-      "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
-    images: ["/images/smartscale.webp"],
-    imageHeight: 120,
-    imageWidth: 120,
-  },
-  {
-    title: "Smartpillow",
-    description:
-      "Experience unparalleled comfort and sleep analysis with our smart pillow, featuring non-contact monitoring and AI-powered insights for a better night's rest",
-    images: ["/images/smartpillow.webp"],
-    imageHeight: 80,
-    imageWidth: 136,
-  },
-];
 const HomePage = () => {
-  const { isDesktop } = useDeviceDetect();
+  const { isDesktop, isMobile } = useDeviceDetect();
   const [news, setNews] = useState<INewsCard[]>([]);
+
+  const productsAndInnovations: IProductAndInnovationCard[] = [
+    {
+      id: "smart_band",
+      title: "Smartband",
+      description:
+        "This stylish tracker goes beyond counting steps, offering rich health insights and guidance to enhance your wellness journey with proactive data analysis.",
+      images: ["/images/smartband.webp"],
+      imageHeight: isMobile ? 100 : 145,
+      imageWidth: isMobile ? 100 : 145,
+    },
+
+    {
+      id: "smart_watch",
+      title: "Smartwatch",
+      description:
+        "A fusion of elegance and functionality, this smartwatch tracks your health, boosts productivity, and integrates seamlessly with your tech ecosystem.",
+      images: ["/images/smartwatch.webp"],
+      imageHeight: isMobile ? 100 : 165,
+      imageWidth: isMobile ? 100 : 165,
+    },
+    {
+      id: "smart_scale",
+      title: "Smartscale",
+      description:
+        "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
+      images: ["/images/smartscale.webp"],
+      imageHeight: isMobile ? 120 : 183,
+      imageWidth: isMobile ? 120 : 183,
+    },
+    {
+      id: "smart_pillow",
+      title: "Smartpillow",
+      description:
+        "Experience unparalleled comfort and sleep analysis with our smart pillow, featuring non-contact monitoring and AI-powered insights for a better night's rest",
+      images: ["/images/smartpillow.webp"],
+      imageHeight: isMobile ? 80 : 127,
+      imageWidth: isMobile ? 136 : 213,
+    },
+  ];
 
   const convertNews = (news: string) => {
     const object = JSON.parse(news);

@@ -185,11 +185,12 @@
     .videoMobile {
       display: block;
       width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center bottom;
     }
     .globeWrapper {
-      padding-bottom: 100px;
+      padding-bottom: 80px;
     }
   }
 }
