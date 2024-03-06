@@ -415,7 +415,7 @@ const LegalDisclaimer = () => {
             </div>
             <img
               className={styles.imgPolicy}
-              src="/images/banner-policy.png"
+              src="/images/banner-policy1.png"
               alt="hero"
             />
           </div>

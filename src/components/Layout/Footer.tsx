@@ -103,7 +103,7 @@ const Footer = () => {
                   Whitepaper
                 </a>
                 <div>
-                  Contact us{" "}
+                  Contact us : {" "}
                   <a href="mailto:info@nott.ai" className={styles.email}>
                     info@nott.ai
                   </a>

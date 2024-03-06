@@ -27,7 +27,6 @@
       width: 793px;
       height: 115px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
     }
 
@@ -87,7 +86,7 @@
 
       .subColumn {
         @include flex-column();
-        gap: 6px;
+        gap: 15px;
 
         a,
         div {
