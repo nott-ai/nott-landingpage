@@ -407,43 +407,22 @@ const PrivacyPolicy = () => {
           <div className={styles.bannerImage}>
             <div className={style.content}>
               <p
-                style={{
-                  margin: "11px 0px",
-                  marginRight: "20px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.01em",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  color: '#54545c',
-                }}
-                className={style.smDesc}
+                className={style.content3}
               >
-                We collect personal information that you voluntarily provide to us
-                when you register on the Services, express an interest in obtaining
-                information about us or our products and Services, when you
-                participate in activities on the Services, or otherwise when you
-                contact us.
+                The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use.
               </p>
-              <ul style={{ fontSize: '16px', color: '#54545c' }}>
-                <li>{`Phone numbers`}</li>
-                <li>{`Email addresses`}</li>
-                <li>{`Gender`}</li>
-                <li>{`Nationality`}</li>
-                <li>{`Contact or authentication data`}</li>
-              </ul>
-
 
               <p
-                dangerouslySetInnerHTML={createMarkup(
-                  ' … other basic personal information according to <span style="font-weight: 600">Art. 4 GDPR</span>'
-                )}
-                style={{ fontSize: '16px' }}
-                className={style.description}
-              />
+                className={style.content3}
+              >
+                {'This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:      '}        </p>
+              <li>{`Visit our website at https://nott.ai, or any website of ours that links to this privacy notice`}</li>
+              <li>{`Download and use our mobile application (NOTT), or any other application of ours that links to this privacy notice`}</li>
+              <li>{`Engage with us in other related ways, including any sales, marketing, or events`}</li>
             </div>
             <img
               className={styles.imgPolicy}
-              src="/images/banner-policy.png"
+              src="/images/banner-policy2.png"
               alt="hero"
             />
           </div>
@@ -451,7 +430,37 @@ const PrivacyPolicy = () => {
           <div className={style.container}>
             <div className={style.contentContainer}>
               <div className={style.content}>
-
+                <p className={style.description}>
+                  Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@nott.ai
+                </p>
+                <p
+                  id="collecting-information"
+                  className={style.title}
+                >{`1. Collecting information:`}</p>
+                <p
+                  className={style.smDesc}
+                >
+                  We collect personal information that you voluntarily provide to us
+                  when you register on the Services, express an interest in obtaining
+                  information about us or our products and Services, when you
+                  participate in activities on the Services, or otherwise when you
+                  contact us.
+                </p>
+                <ul >
+                  <li>{`Name`}</li>
+                  <li>{`Phone numbers`}</li>
+                  <li>{`Email addresses`}</li>
+                  <li>{`Gender`}</li>
+                  <li>{`Nationality`}</li>
+                  <li>{`Contact or authentication data`}</li>
+                </ul>
+                <p
+                  dangerouslySetInnerHTML={createMarkup(
+                    ' … other basic personal information according to <span style="font-weight: 600">Art. 4 GDPR</span>'
+                  )}
+                  style={{ fontSize: '16px' }}
+                  className={style.description}
+                />
                 <p
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(`
@@ -809,7 +818,7 @@ const PrivacyPolicy = () => {
 
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
