@@ -381,14 +381,30 @@ const TermService = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
-          <div style={{ marginBottom: '16px' }} className={styles.bannerImage}>
-            <div className={styles.content}>
+          <div className={styles.bannerImage}>
+            <div style={{ marginRight: '20px', fontSize: '14px', letterSpacing: '0.01em', lineHeight: '24px', color: '#54545c' }} className={styles.content}>
               <p style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
-                {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
+                NOTT maintains this website, the NOTT application and other related
+                sites or applications for the use of its customers, merchants, and
+                other website users (“Users”) upon agreement to the following terms.
               </p>
-              <p style={{ color: '#1b1b1d', fontWeight: 500, fontSize: '16px' }} className={styles.title}>{`Basic Information`}</p>
-              <p className={styles.smDesc} style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }}>
-                {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
+              <p className={style.descWithoutMargin}>
+                <span>
+                  Please read the following terms and conditions carefully before
+                  using the
+                </span>
+                &nbsp;
+                <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
+                  {INFO.WEBSITE}
+                </a>
+                &nbsp;
+                <span>
+                  website and the NOTT app. Use of this website or the NOTT app
+                  indicates acceptance of these “Terms and Conditions” and forms a
+                  binding agreement between you and NOTT Foundation. If you do not
+                  agree to the following terms and conditions, do not use this
+                  website or the NOTT app.
+                </span>
               </p>
             </div>
             <img className={styles.imgPolicy} src="/images/banner-policy.png" alt="hero" />
@@ -397,31 +413,6 @@ const TermService = () => {
             <div className={style.container}>
               <div className={style.contentContainer}>
                 <div className={style.content}>
-                  <p className={style.descWithoutMargin}>
-                    NOTT maintains this website, the NOTT application and other related
-                    sites or applications for the use of its customers, merchants, and
-                    other website users (“Users”) upon agreement to the following terms.
-                  </p>
-
-                  <p className={style.descWithoutMargin}>
-                    <span>
-                      Please read the following terms and conditions carefully before
-                      using the
-                    </span>
-                    &nbsp;
-                    <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
-                      {INFO.WEBSITE}
-                    </a>
-                    &nbsp;
-                    <span>
-                      website and the NOTT app. Use of this website or the NOTT app
-                      indicates acceptance of these “Terms and Conditions” and forms a
-                      binding agreement between you and NOTT Foundation. If you do not
-                      agree to the following terms and conditions, do not use this
-                      website or the NOTT app.
-                    </span>
-                  </p>
-
                   <p className={style.italicDesc}>NOTT products and services</p>
                   <p className={style.descWithoutMargin}>
                     NOTT is an innovative health and wellness platform leveraging
