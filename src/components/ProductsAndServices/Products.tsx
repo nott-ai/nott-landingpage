@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/ProductsAndServices/products.module.scss";
 import ModalProductService from "@/components/ModalProductService";
 
@@ -20,12 +20,23 @@ const Products = () => {
     setModalIsOpen(true);
   };
 
+  useEffect(() => {
+    if (modalIsOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [modalIsOpen]);
+
   return (
     <div className={styles.wrapper}>
       <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
       <p
         className={styles.description}
-      >{`Explore NOTT's innovative product range, featuring smartwatch, smartband, smartscale, and smart pillow designed to enhance your health and wellness journey.`}</p>
+      >{`Explore NOTT's innovative product range, featuring smartwatch, smartband, smartscale, and smartpillow designed to enhance your health and wellness journey.`}</p>
       <div className={styles.products}>
         <div className={styles.contentRow}>
           {PRODUCT_LINEUP_DATA.map((item, index) => (
