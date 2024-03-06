@@ -1,8 +1,6 @@
-import { useState } from "react";
-import CookieConsent, { VISIBLE_OPTIONS } from "react-cookie-consent";
-import CookieButton from "./CookieButton";
-import { CloseCookieIcon } from "@/assets";
+import { InfoIcon } from "@/assets";
 import styles from "@/styles/Homepage/cookies-nott.module.scss";
+import Cookies from "js-cookie";
 
 const cookiesContents = [
   {
@@ -27,47 +25,61 @@ const cookiesContents = [
   },
 ];
 
-const CookiePopup = () => {
-  const [cookieVisibility, setCookieVisibility] = useState(
-    VISIBLE_OPTIONS.BY_COOKIE_VALUE
-  );
+interface CookieProps {
+  handleShowDetail: Function;
+  handleCloseCookieGeneral: Function;
+  isShow: boolean;
+}
 
-  const handleCloseCookie = () => {
-    setCookieVisibility(VISIBLE_OPTIONS.HIDDEN);
+const CookiePopup = ({
+  handleShowDetail,
+  isShow,
+  handleCloseCookieGeneral,
+}: CookieProps) => {
+  const handleReject = () => {
+    Cookies.set("CookieConsent", "false", { expires: 365 });
+    handleCloseCookieGeneral();
   };
+
+  const handleAccept = () => {
+    Cookies.set("CookieConsent", "true", { expires: 365 });
+    handleCloseCookieGeneral();
+  };
+
   return (
-    <CookieConsent
-      disableStyles={true}
-      enableDeclineButton
-      location="none"
-      visible={cookieVisibility}
-      disableButtonStyles
-      containerClasses={styles.cookieBanner}
-      buttonText={<CookieButton type="accept" />}
-      declineButtonText={<CookieButton type="reject" />}
-      buttonClasses={styles.acceptButton}
-      declineButtonClasses={styles.declineButton}
-      buttonWrapperClasses={styles.buttonWrapper}
+    <div
+      className={styles.cookieGeneral}
+      style={{ display: isShow ? "" : "none" }}
     >
-      <div className={styles.contentWrapper}>
-        <div className={styles.wrapperHeader}>
-          <div className={styles.title}>
-            Cookies and related technologies on this site
+      <div className={styles.contentGeneralWrapper}>
+        <div className={styles.headerGeneral}>We Value Your Privacy</div>
+        <div className={styles.content}>
+          At NOTT, your wellness journey is personal, and so is your privacy. We
+          use cookies to ensure our website works efficiently, tailor your
+          experience, and improve our services. By clicking "Accept," you agree
+          to our use of cookies for these purposes. To enhance your experience,
+          our site employs various cookies-small text files placed on your
+          device.
+        </div>
+        <div className={styles.functionWrapper}>
+          <div className={styles.details} onClick={() => handleShowDetail()}>
+            <InfoIcon />
+            <div className={styles.detailText}> View Details</div>
           </div>
-          <div className={styles.closeIcon} onClick={() => handleCloseCookie()}>
-            <CloseCookieIcon />
+          <div className={styles.buttonWrapper}>
+            <div className={styles.button} onClick={() => handleReject()}>
+              Reject
+            </div>
+            <div
+              className={`${styles.button} ${styles.acceptButton}`}
+              onClick={() => handleAccept()}
+            >
+              Accept All
+            </div>
           </div>
         </div>
-        <div className={styles.line} />
-        {cookiesContents.map((item, index) => (
-          <div key={index} className={styles.wrapperItem}>
-            <div className={styles.title}>{item.title}</div>
-            <div className={styles.content}>{item.content}</div>
-          </div>
-        ))}
-        <div className={styles.line} />
       </div>
-    </CookieConsent>
+    </div>
   );
 };
 

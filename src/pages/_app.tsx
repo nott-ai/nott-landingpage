@@ -15,6 +15,10 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
 import CookiePopup from "@/components/Cookies/CookiePopup";
+import CookieDetailPopup from "@/components/Cookies/CookieDetailPopup";
+import { useState } from "react";
+import { VISIBLE_OPTIONS } from "react-cookie-consent";
+import CookieRequest from "@/components/Cookies/CookieRequest";
 
 let remoteConfig: RemoteConfig;
 const app = initializeApp(firebaseConfig);
@@ -30,7 +34,7 @@ export const orbitron = Orbitron({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
-      <CookiePopup />
+      <CookieRequest />
       <Header />
       <div className="content-body">
         <Component {...pageProps} />

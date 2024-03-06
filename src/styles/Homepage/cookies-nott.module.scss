@@ -1,5 +1,95 @@
 @import "../variables.scss";
 
+.cookieGeneral {
+  z-index: map-get($map: $z-index, $key: "MODAL");
+  background-color: #FFF !important;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #1b1b1d;
+  font-family: 'SF Pro Display';
+
+  .contentGeneralWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    letter-spacing: 0.01em;
+
+
+    .headerGeneral {
+      font-size: 18px;
+      line-height: 110%;
+      font-weight: 600;
+      text-align: left;
+      display: flex;
+      padding: 0 120px;
+      height: 26px;
+    }
+
+    .content {
+      padding: 0 120px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #54545c;
+    }
+
+    .functionWrapper {
+      padding: 0 120px;
+      display: flex;
+      justify-content: space-between;
+
+      .details {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 6px;
+
+        .detailText {
+          font-size: 14px;
+          letter-spacing: 1px;
+          line-height: 24px;
+          font-weight: 500;
+          color: #346af7;
+          text-align: left;
+        }
+      }
+
+      .buttonWrapper {
+        display: flex;
+        gap: 16px;
+        font-size: 14px;
+
+        .button {
+          width: 100px;
+          border: 1px solid #54545c;
+          box-sizing: border-box;
+          height: 42px;
+          text-align: center;
+          padding: 12px;
+          margin: auto;
+          font-weight: 600;
+          cursor: pointer;
+        }
+
+        .acceptButton {
+          background-color: #346af7;
+          border: 1px solid #346af7;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+}
+
 .cookieBanner {
   z-index: map-get($map: $z-index, $key: "MODAL");
   background-color: #FFF !important;
@@ -135,6 +225,30 @@
       .textContainer {
         font-size: 14px;
       }
+    }
+  }
+
+  .cookieGeneral {
+    padding: 24px;
+
+    .contentGeneralWrapper {
+      .headerGeneral {
+        padding: 0 12px;
+      }
+
+      .content {
+        padding: 0 12px;
+      }
+
+      .functionWrapper {
+        padding: 0 12px;
+
+        .buttonWrapper {
+          gap: 6px
+        }
+      }
+
+
     }
   }
 
