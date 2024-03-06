@@ -382,7 +382,7 @@ const TermService = () => {
         <div className={styles.rightContent}>
           <div className={styles.mainTittle}> {mainTitle}</div>
           <div className={styles.bannerImage}>
-            <div style={{ marginRight: '20px', fontSize: '16px', letterSpacing: '0.01em', lineHeight: '24px' }} className={styles.content}>
+            <div style={{ marginRight: '20px', fontSize: '14px', letterSpacing: '0.01em', lineHeight: '24px', color: '#54545c' }} className={styles.content}>
               <p style={{ margin: '11px 0px', lineHeight: '24px', letterSpacing: '0.01em', fontWeight: 400 }} className={styles.smDesc}>
                 NOTT maintains this website, the NOTT application and other related
                 sites or applications for the use of its customers, merchants, and

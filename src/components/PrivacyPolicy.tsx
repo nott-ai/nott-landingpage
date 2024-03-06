@@ -414,6 +414,7 @@ const PrivacyPolicy = () => {
                   letterSpacing: "0.01em",
                   fontWeight: 400,
                   fontSize: "16px",
+                  color: '#54545c',
                 }}
                 className={style.smDesc}
               >
@@ -423,7 +424,7 @@ const PrivacyPolicy = () => {
                 participate in activities on the Services, or otherwise when you
                 contact us.
               </p>
-              <ul style={{ fontSize: '16px' }}>
+              <ul style={{ fontSize: '16px', color: '#54545c' }}>
                 <li>{`Phone numbers`}</li>
                 <li>{`Email addresses`}</li>
                 <li>{`Gender`}</li>
