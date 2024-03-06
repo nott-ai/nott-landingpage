@@ -61,6 +61,17 @@
         font-weight: 600;
         line-height: 22px;
       }
+      a,
+      div {
+        text-decoration: none;
+        color: #54545c;
+      }
+      .email {
+        color: #346af7;
+        font-weight: 500;
+        line-height: 16px;
+        text-decoration: none;
+      }
       .subColumn {
         @include flex-column();
         gap: 6px;
