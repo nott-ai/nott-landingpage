@@ -91,13 +91,13 @@ export default function ProductScreenSection() {
           <div className={styles.title}>
             Empowering User-Controlled Data with NOTT
           </div>
-          <div className={styles.content}>
+          <div className={styles.content2}>
             User BenefitsDiscover the ongoing revolution in health tracking
-            through NOTT's Device Drop Campaigns. These periodic initiatives are
-            our commitment to making advanced health monitoring accessible to
-            all. Anonymous Data Sharing Rewards: Users can opt to anonymously
-            share their health data, contributing to community health
-            advancements and receiving rewards in return. Contributing to
+            through NOTT&apos;s Device Drop Campaigns. These periodic
+            initiatives are our commitment to making advanced health monitoring
+            accessible to all. Anonymous Data Sharing Rewards: Users can opt to
+            anonymously share their health data, contributing to community
+            health advancements and receiving rewards in return. Contributing to
             Research: By sharing anonymized data, users can directly contribute
             to health research, aiding in the development of better health and
             wellness insights and solutions.

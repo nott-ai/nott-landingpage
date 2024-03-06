@@ -1,13 +1,10 @@
 import {
   DiscordIcon,
-  EmailIcon,
   FacebookIcon,
   GithubIcon,
-  GmailIcon,
   LinkedinIcon,
   TelegramIcon,
   TwitterIcon,
-  YoutubeIcon,
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
 import { ROUTERS } from "@/constants/routes";
@@ -15,9 +12,11 @@ import { SOCIAL_LINK } from "@/constants/social";
 import useTrans from "@/hooks/useTrans";
 import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
+import useDeviceDetect from "../common/DeviceDetect";
 
 const Footer = () => {
   const trans = useTrans();
+  const { isMobile } = useDeviceDetect();
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
       window.scrollTo({
@@ -85,20 +84,32 @@ const Footer = () => {
           </div>
           <div className={`${styles.column} ${styles.support}`}>
             <p className={styles.title}>Support</p>
-            <div className={styles.subColumn}>
-              <a href={INFO.FAQS} target="_blank">
-                FAQs{" "}
-              </a>
-              <a href={INFO.WHITE_PAPER} target="_blank">
-                Whitepaper
-              </a>
-              <div>
-                Contact us{" "}
-                <a href="mailto:info@nott.ai" className={styles.email}>
-                  info@nott.ai
+
+            {isMobile ? (
+              <>
+                <a href={INFO.WHITE_PAPER} target="_blank">
+                  Whitepaper
                 </a>
+                <div>
+                  Contact us{" "}
+                  <a href="mailto:info@nott.ai" className={styles.email}>
+                    info@nott.ai
+                  </a>
+                </div>
+              </>
+            ) : (
+              <div className={styles.subColumn}>
+                <a href={INFO.WHITE_PAPER} target="_blank">
+                  Whitepaper
+                </a>
+                <div>
+                  Contact us{" "}
+                  <a href="mailto:info@nott.ai" className={styles.email}>
+                    info@nott.ai
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

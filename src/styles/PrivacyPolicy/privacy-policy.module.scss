@@ -2,7 +2,7 @@
 $title-color: #1b1b1d;
 $desc-color: #54545c;
 .container {
-  margin-top: 80px;
+  margin-top: 20px;
   max-width: 933px;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ $desc-color: #54545c;
       }
       .title {
         color: $title-color;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
@@ -55,7 +55,7 @@ $desc-color: #54545c;
       .subTitle {
         color: $desc-color;
         text-align: justify;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 600;
         line-height: 140%;
@@ -64,7 +64,7 @@ $desc-color: #54545c;
       .description {
         color: $desc-color;
         text-align: justify;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
@@ -80,7 +80,7 @@ $desc-color: #54545c;
         margin-left: 15px;
         color: $desc-color;
         text-align: justify;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
