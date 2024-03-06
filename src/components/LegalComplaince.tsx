@@ -403,28 +403,14 @@ const LegalDisclaimer = () => {
               <p
                 style={{
                   margin: "11px 0px",
+                  marginRight: '20px',
                   lineHeight: "24px",
                   letterSpacing: "0.01em",
                   fontWeight: 400,
                 }}
                 className={styles.smDesc}
               >
-                {`The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following`}
-              </p>
-              <p
-                style={{ color: "#54545c", fontWeight: 500, fontSize: "16px" }}
-                className={styles.title}
-              >{`Basic Information`}</p>
-              <p
-                className={styles.smDesc}
-                style={{
-                  margin: "11px 0px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.01em",
-                  fontWeight: 400,
-                }}
-              >
-                {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:`}
+                The information contained in this site is for general guidance on matters of interest only. The application and impact of laws can vary widely based on the specific facts involved. Given the changing nature of laws, rules and regulations, and the inherent hazards of electronic communication, there may be delays, omissions or inaccuracies in information contained in this site. Accordingly, the information on this site is provided with the understanding about the platform and products.NOTT physical wellness products are wellness devices and not a medical device. It is intended for aiding health improvement through personalized health tracking content.
               </p>
             </div>
             <img
@@ -435,11 +421,7 @@ const LegalDisclaimer = () => {
           </div>
           <div className={styles.textContent}>
             <div className={styles.description}>
-              The information contained in this site is for general guidance on matters of interest only. The application and impact of laws can vary widely based on the specific facts involved. Given the changing nature of laws, rules and regulations, and the inherent hazards of electronic communication, there may be delays, omissions or inaccuracies in information contained in this site. Accordingly, the information on this site is provided with the understanding about the platform and products.
-            </div>
-
-            <div className={styles.description}>
-              NOTT physical wellness products are wellness devices and not a medical device. It is intended for aiding health improvement through personalized health tracking content. If you have any medical concerns, please consult with your healthcare provider, including but not limited to, before using this device. NOTT devices are not intended to serve as a replacement for professional health care, diagnosis, treatment, or advice. NOTT company is not liable for any health issues that may arise as a result of the recommendations, activities, or other information or events you learn or experience as a result of using NOTT devices. You should read all product packaging and instructions carefully before purchasing or intending to acquire any of the products or services recommended on this website or application. YOU ACKNOWLEDGE AND AGREE THAT YOU ARE USING NOTT DEVICES AT YOUR OWN RISK. You and any of the physicians or health professionals linked with this website, application, or your use of any product or service from this website or application. Furthermore, neither this information nor any assertions on this website or application are meant to diagnose, treat, or cure any condition. </div>
+              If you have any medical concerns, please consult with your healthcare provider, including but not limited to, before using this device. NOTT devices are not intended to serve as a replacement for professional health care, diagnosis, treatment, or advice.              NOTT company is not liable for any health issues that may arise as a result of the recommendations, activities, or other information or events you learn or experience as a result of using NOTT devices. You should read all product packaging and instructions carefully before purchasing or intending to acquire any of the products or services recommended on this website or application. YOU ACKNOWLEDGE AND AGREE THAT YOU ARE USING NOTT DEVICES AT YOUR OWN RISK. You and any of the physicians or health professionals linked with this website, application, or your use of any product or service from this website or application. Furthermore, neither this information nor any assertions on this website or application are meant to diagnose, treat, or cure any condition. </div>
 
             <div className={styles.description}>
               NOTT company DOES NOT OFFER ANYTHING that can be used to diagnose, treat, or prevent any medical, mental, or physical ailment. All of the information provided here is for information and educational purposes only, and it should not be construed as a personal medical device. As a result, you should not act entirely on the basis of the contents of this information. Instead, users should seek advice from qualified health professionals on any issues concerning their health and well-being. These items are not intended for symptom management or treatment, and they are not intended to be used in place of any form of therapy or treatment for any symptoms or disorders.            </div>
@@ -449,7 +431,7 @@ const LegalDisclaimer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

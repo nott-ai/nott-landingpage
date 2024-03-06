@@ -1,10 +1,8 @@
 @import "../variables.scss";
-
 .wrapper {
   padding: 40px 0;
   margin: auto;
   max-width: $max-width-container;
-
   .title {
     color: #1b1b1d;
     font-size: 18px;
@@ -98,7 +96,6 @@
     max-width: 100%;
     padding: 30px 18px;
     box-sizing: border-box;
-
     .products {
       .contentRow {
         grid-template-columns: repeat(1, 1fr);
@@ -112,7 +109,6 @@
     max-width: 100%;
     padding: 30px 18px;
     box-sizing: border-box;
-
     .products {
       .contentRow {
         grid-template-columns: repeat(1, 1fr);
