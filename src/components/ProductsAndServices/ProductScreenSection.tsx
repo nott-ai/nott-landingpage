@@ -87,7 +87,7 @@ export default function ProductScreenSection() {
             ))}
           </Slider>
         </div>
-        <div className={styles.paragraph}>
+        {/* <div className={styles.paragraph}>
           <div className={styles.title}>
             Empowering User-Controlled Data with NOTT
           </div>
@@ -102,7 +102,7 @@ export default function ProductScreenSection() {
             to health research, aiding in the development of better health and
             wellness insights and solutions.
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
