@@ -4,6 +4,7 @@ import { regularCampaigns } from "@/constants/faqs";
 import PrimaryButton from "../common/PrimaryButton";
 import Collapse from "../common/Collapse";
 import useDeviceDetect from "../common/DeviceDetect";
+import { ROUTERS } from "@/constants/routes";
 
 const Campaign = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -25,9 +26,15 @@ const Campaign = () => {
             periodic initiatives are our commitment to make advanced health
             monitoring accessible to all
           </div>
-          <PrimaryButton className={styles.joinCampaign}>
-            Join Campaigns
-          </PrimaryButton>
+          <a
+            style={{ textDecoration: "none" }}
+            href={ROUTERS.KYC}
+            target="_blank"
+          >
+            <PrimaryButton className={styles.joinCampaign}>
+              Join Campaigns
+            </PrimaryButton>
+          </a>
           <div className={styles.contentSecond}>
             {regularCampaigns.map((faq, index) => (
               <div key={index} style={{ background: "#F2F2F2" }}>

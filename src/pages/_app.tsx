@@ -13,7 +13,7 @@ import {
 } from "@firebase/remote-config";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-
+import Script from "next/script";
 import CookiePopup from "@/components/Cookies/CookiePopup";
 import CookieDetailPopup from "@/components/Cookies/CookieDetailPopup";
 import { useState } from "react";
