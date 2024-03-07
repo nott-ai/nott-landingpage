@@ -2,7 +2,6 @@ import {
   DiscordIcon,
   FacebookIcon,
   GithubIcon,
-  LinkedinIcon,
   TelegramIcon,
   TwitterIcon,
 } from "@/assets/index";
@@ -39,9 +38,6 @@ const Footer = () => {
           <div className={`${styles.subColumn} ${styles.socialMediaWrapper}`}>
             <p className={styles.socialMedia}>Social Media:</p>
             <div className={styles.socialNetwork}>
-              <Link target="_blank" href={SOCIAL_LINK.LINKEDIN}>
-                <LinkedinIcon />
-              </Link>
               <Link target="_blank" href={SOCIAL_LINK.GITHUB}>
                 <GithubIcon />
               </Link>
