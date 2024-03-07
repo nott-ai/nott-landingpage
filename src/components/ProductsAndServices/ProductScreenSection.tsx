@@ -27,7 +27,7 @@ const screens = [
   },
   {
     title: "Wellness",
-    image: "/images/product-service/phone-screen/screen1.png",
+    image: "/images/product-service/phone-screen/screen6.png",
   },
 ];
 
