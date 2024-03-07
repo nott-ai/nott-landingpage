@@ -1,6 +1,6 @@
 export const SOCIAL_LINK = {
   LINKEDIN: "#",
-  DISCORD: "https://discord.gg/KFmRu4uQ6N",
+  DISCORD: "https://discord.com/invite/healthyandhappylife",
   FACEBOOK:
     "https://www.facebook.com/profile.php?id=61556914437265&is_tour_dismissed=true",
   TELEGRAM: "https://t.me/nnottingham",
