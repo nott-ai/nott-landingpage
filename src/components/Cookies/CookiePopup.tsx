@@ -56,9 +56,10 @@ const CookiePopup = ({
         <div className={styles.content}>
           At NOTT, your wellness journey is personal, and so is your privacy. We
           use cookies to ensure our website works efficiently, tailor your
-          experience, and improve our services. By clicking Accept, you agree to
-          our use of cookies for these purposes. To enhance your experience, our
-          site employs various cookies-small text files placed on your device.
+          experience, and improve our services. By clicking &rdquo;Accept
+          All&ldquo; , you agree to our use of cookies for these purposes. To
+          enhance your experience, our site employs various cookies-small text
+          files placed on your device.
         </div>
         <div className={styles.functionWrapper}>
           <div className={styles.details} onClick={() => handleShowDetail()}>
