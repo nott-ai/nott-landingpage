@@ -1,0 +1,142 @@
+@import "../variables.scss";
+.wrapper {
+  max-width: $max-width-container;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .title,
+  .titleFeatureAndBenefit {
+    color: #1b1b1d;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .description,
+  .descriptionFeatureAndBenefit {
+    color: #54545c;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    margin-top: 12px;
+  }
+  .titleFeatureAndBenefit,
+  .descriptionFeatureAndBenefit {
+    text-align: left;
+  }
+  .aboutNOTT {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    height: 274px;
+    margin-bottom: 40px;
+    .card {
+      background: #fff;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      svg {
+        path {
+          fill: #346af7;
+        }
+      }
+      .title {
+        color: #1b1b1d;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+        height: 52px;
+        letter-spacing: 0.2px;
+        text-transform: none;
+        display: flex;
+        align-items: center;
+      }
+      .cardDescription {
+        color: #54545c;
+        text-align: center;
+        line-height: 22px;
+        letter-spacing: 0.14px;
+      }
+    }
+  }
+  .benefits {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    .card {
+      height: 120px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      box-sizing: border-box;
+      .info {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        color: #fff;
+        flex: 1;
+        .benefitTitle {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 26px;
+          letter-spacing: 0.18px;
+        }
+        .benefitDescription {
+          line-height: 22px;
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .title,
+    .description,
+    .titleFeatureAndBenefit,
+    .descriptionFeatureAndBenefit {
+      padding: 0 18px;
+    }
+    .aboutNOTT {
+      display: flex;
+      overflow-x: auto;
+      padding-left: 18px;
+      .card {
+        min-width: 275px;
+      }
+    }
+    .benefits {
+      padding: 0 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .aboutNOTT {
+      margin-bottom: 30px;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

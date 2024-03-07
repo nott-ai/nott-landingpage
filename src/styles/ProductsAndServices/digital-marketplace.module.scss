@@ -1,0 +1,94 @@
+@import "../variables.scss";
+.wrapper {
+  max-width: $max-width-container;
+  margin: auto;
+  padding-bottom: 40px;
+  .title {
+    color: #1b1b1d;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 24px;
+  }
+  .description {
+    margin-top: 12px;
+    color: #54545c;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+  }
+  .features {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    .card {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      width: 387px;
+      min-width: 387px;
+      height: 387px;
+      gap: 29px;
+      box-sizing: border-box;
+      .icon {
+        width: 212px;
+        height: 212px;
+        object-fit: contain;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 14px;
+        a {
+          text-decoration: none;
+        }
+        .title {
+          color: #1b1b1d;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 25px;
+          letter-spacing: 0.18px;
+          text-transform: uppercase;
+          .contentTitle {
+            max-width: 200px;
+            margin: auto;
+          }
+        }
+        .explore {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #346af7;
+          cursor: pointer;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .title,
+    .description {
+      padding: 0 18px;
+    }
+    .features {
+      display: flex;
+      overflow-x: auto;
+      padding-left: 18px;
+      .card {
+        min-width: 332px;
+        height: 357px;
+        padding: 10px;
+      }
+    }
+  }
+}

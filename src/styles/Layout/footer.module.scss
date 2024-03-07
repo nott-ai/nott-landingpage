@@ -4,78 +4,105 @@
   justify-content: space-between;
   align-items: center;
 }
-@mixin column-start {
+
+@mixin flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
+
 .wrapper {
-  background-color: #1c1c1c;
-  height: 470px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #f2f2f2;
   .container {
+    padding: 50px 0;
     width: $max-width-container;
     margin: auto;
-    @include column-start();
-    gap: 40px;
-    .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #54545c;
+    .rightBlock {
+      width: 793px;
+      height: 115px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .column {
       display: flex;
       flex-direction: column;
-      gap: 40px;
-
-      .topBlock {
-        @include space-between;
-        .logo {
-          height: 56px;
-          width: auto;
+      justify-content: flex-start;
+      gap: 9px;
+      &.contact {
+        gap: 20px;
+        .footerLogo {
+          height: 28px;
+          width: fit-content;
+        }
+        .socialMediaWrapper {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 14px;
+          .socialMedia {
+            color: #1b1b1d;
+            line-height: 16px;
+            font-weight: 400;
+          }
+          .socialNetwork {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            width: fit-content;
+            gap: 12px;
+          }
         }
       }
-      .centerBlock {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        .column {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          gap: 24px;
-          &:last-child {
-            text-align: right;
-          }
-          .subColumn {
-            @include column-start();
-            gap: 16px;
-            color: rgba($color: #fff, $alpha: 0.7);
-            font-weight: 500;
-            a {
-              text-decoration: none;
-              color: rgba($color: #fff, $alpha: 0.7);
-              font-weight: 500;
-            }
-            .socialNetwork {
-              width: fit-content;
-              margin-left: -9px;
-            }
-          }
-          .title {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 26px;
-            color: #fff;
-          }
+      .title {
+        color: #1b1b1d;
+        font-weight: 600;
+        line-height: 22px;
+      }
+      a,
+      div {
+        text-decoration: none;
+        color: #54545c;
+      }
+      .email {
+        color: #346af7;
+        font-weight: 500;
+        line-height: 16px;
+        text-decoration: none;
+      }
+      .subColumn {
+        @include flex-column();
+        gap: 15px;
+        a,
+        div {
+          text-decoration: none;
+          color: #54545c;
+        }
+        .email {
+          color: #346af7;
+          font-weight: 500;
+          line-height: 16px;
+          text-decoration: none;
         }
       }
     }
-
-    .bottomBlock {
+  }
+  .bottomBlock {
+    background-color: #e5e5e5;
+    height: 60px;
+    width: 100%;
+    .copyRight {
+      color: #54545c;
+      max-width: $max-width-container;
+      margin: auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      .copyRight {
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      .content {
+        width: 100%;
         text-align: center;
       }
     }
@@ -84,49 +111,65 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 0 18px;
-  }
-}
-
-@media screen and (max-width: $sm) {
-  .wrapper {
-    min-height: 481px;
-    padding: 30px 18px;
-    box-sizing: content-box;
     .container {
-      gap: 30px;
+      padding: 40px 16px;
+      max-width: 100%;
       height: 100%;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 32px;
       box-sizing: border-box;
-      .info {
-        gap: 30px;
-        .topBlock {
-          justify-content: center;
-          .logo {
-            height: 46px;
-            width: auto;
-          }
+      .rightBlock {
+        width: 100%;
+        height: fit-content;
+        flex-wrap: wrap;
+        gap: 32px;
+        .documents {
+          align-items: flex-end;
+          text-align: right;
         }
-        .centerBlock {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 30px;
-          .contact {
-          }
-          .column {
-            &.contact {
-              gap: 12px;
-              .subColumn {
-                gap: 0px;
-              }
-            }
-            &:nth-child(2) {
-              text-align: right;
-            }
+        .support {
+          width: 100%;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .subColumn {
+            flex-direction: row;
+            align-items: center;
           }
         }
       }
-      .bottomBlock {
-        max-width: 260px;
+      .column {
+        &.contact {
+          align-items: center;
+          width: 100%;
+          .socialMedia {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .subColumn {
+        }
+      }
+    }
+    .bottomBlock {
+      background-color: #e5e5e5;
+      height: 60px;
+      width: 100%;
+      .copyRight {
+        color: #54545c;
+        max-width: $max-width-container;
         margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        .content {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }

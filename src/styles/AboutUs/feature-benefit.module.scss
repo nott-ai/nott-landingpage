@@ -1,0 +1,369 @@
+@import "../variables.scss";
+
+.container {
+  width: 100%;
+  background-color: #fff;
+  margin: auto;
+  .content {
+    max-width: $max-width-container;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    padding-bottom: 160px;
+    .benefits {
+      .benefit {
+        margin-top: 75px;
+        &::before {
+          content: "";
+          display: block;
+          // total height block * (benefits.length - 1)
+          height: 14632px;
+        }
+        .stickyEl {
+          position: sticky;
+          position: -webkit-sticky;
+          bottom: calc((100vh - 629px) / 2);
+          .titleUserBenefit {
+            font-size: 46px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 20px;
+          }
+          .imageContainer {
+            position: relative;
+            width: 546px;
+            height: auto;
+
+            .deviceFrame {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+            .imageWrapper {
+              position: absolute;
+              top: 29px;
+              right: 38px;
+              margin: auto;
+              width: 100%;
+              width: 264px;
+              height: auto;
+              transition: opacity 300ms ease-in-out;
+            }
+          }
+          .rightBlock {
+            position: relative;
+            flex: 1;
+            .descriptionContainer {
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+    .blockTop {
+      background-image: url("/images/feature-benefit-bg.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 754px;
+      gap: 60px;
+      justify-content: end;
+
+      .header {
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+        height: 110px;
+
+        .title {
+          width: 300px;
+          color: white;
+          font-size: 46px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%;
+          letter-spacing: 0.92px;
+        }
+
+        .description {
+          width: 400px;
+          color: white;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          opacity: 0.7;
+        }
+      }
+
+      .featureBenefitContainer {
+        display: flex;
+        gap: 24px;
+        height: 424px;
+        overflow-x: auto;
+
+        .featureBenefit {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          padding: 114px 32px 90px 32px;
+          min-width: 360px;
+
+          .title {
+            color: #ffdc60;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            /* 33.6px */
+            letter-spacing: -1.08px;
+          }
+
+          .description {
+            color: white;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 25.2px */
+            letter-spacing: -0.81px;
+            width: 248px;
+          }
+        }
+      }
+    }
+
+    .blockBottom {
+      display: flex;
+      gap: 126px;
+      flex-wrap: wrap;
+
+      .imageContainer {
+        .frameWrapper {
+          display: flex;
+          align-items: center;
+          .smartWatch {
+            margin-right: -150px;
+            width: 370px;
+            height: 370px;
+            object-fit: contain;
+          }
+          .iphone {
+            width: 312px;
+            height: 629px;
+            object-fit: contain;
+          }
+        }
+        .image {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .descriptionContainer {
+        margin: auto;
+
+        .type {
+          color: #1b1b1d;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+        .title {
+          color: #346af7;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 30px;
+          letter-spacing: 0.22px;
+        }
+
+        .description {
+          padding-left: 16px;
+          margin-top: 60px;
+
+          li {
+            p {
+              color: #54545c;
+              line-height: 24px;
+              letter-spacing: 0.14px;
+            }
+
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .container {
+    width: 100%;
+
+    .content {
+      max-width: $max-width-container;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .blockTop {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        min-height: 754px;
+        gap: 60px;
+        justify-content: end;
+
+        .header {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: flex-start;
+          height: 125px;
+          padding: 0 16px;
+        }
+      }
+      .benefits {
+        .benefit {
+          &::before {
+            height: 500vh;
+          }
+          .stickyEl {
+            bottom: 30vh;
+            .blockBottom {
+              gap: 10px;
+              .imageContainer {
+                height: auto;
+                width: 50%;
+                .frameWrapper {
+                  justify-content: flex-end;
+                  .smartWatch {
+                    width: 300px;
+                    height: auto;
+                  }
+                  .iphone {
+                    width: 300px;
+                    height: auto;
+                  }
+                }
+                .imageWrapper {
+                  top: 23px;
+                  width: 251px;
+                  right: 24px;
+                }
+              }
+              .rightBlock {
+                width: 100%;
+                .descriptionContainer {
+                  margin: auto;
+                  width: 100%;
+                  padding: 0 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .container {
+    width: 100%;
+
+    .content {
+      max-width: $max-width-container;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      padding-bottom: 60px;
+
+      .benefits {
+        .benefit {
+          margin-top: 0;
+          &::before {
+            height: calc(800vh - 480px);
+          }
+          .stickyEl {
+            bottom: 30px;
+            .blockBottom {
+              gap: 10px;
+              .imageContainer {
+                width: 100%;
+                height: auto;
+                .frameWrapper {
+                  .smartWatch {
+                    width: 187px;
+                    height: 187px;
+                    position: absolute;
+                    z-index: -1;
+                    left: 10px;
+                  }
+                  .iphone {
+                    width: 242px;
+                    height: 488px;
+                    margin: auto;
+                  }
+                }
+                .imageWrapper {
+                  width: 205px;
+                  height: auto;
+                  top: 23px;
+                  left: 0;
+                  right: 0;
+                }
+              }
+              .rightBlock {
+                height: 200px;
+                box-sizing: border-box;
+                .descriptionContainer {
+                  margin: auto;
+                  width: auto;
+                  .type {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    letter-spacing: -0.63px;
+                  }
+
+                  .title {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    letter-spacing: -0.5px;
+                  }
+
+                  .description {
+                    margin-top: 16px;
+
+                    li {
+                      p {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                      }
+
+                      margin-bottom: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

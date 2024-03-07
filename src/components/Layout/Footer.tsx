@@ -1,84 +1,122 @@
 import {
   DiscordIcon,
-  FooterLogo,
+  FacebookIcon,
+  GithubIcon,
   TelegramIcon,
   TwitterIcon,
 } from "@/assets/index";
 import { INFO } from "@/constants/metas";
+import { ROUTERS } from "@/constants/routes";
+import { SOCIAL_LINK } from "@/constants/social";
 import useTrans from "@/hooks/useTrans";
 import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
+import useDeviceDetect from "../common/DeviceDetect";
 
 const Footer = () => {
   const trans = useTrans();
+  const { isMobile } = useDeviceDetect();
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.info}>
-          <div className={styles.topBlock}>
-            <img
-              className={styles.logo}
-              src="/images/footer-logo.svg"
-              alt="logo"
-            />
-          </div>
-          <div className={styles.centerBlock}>
-            <div className={`${styles.column} ${styles.contact}`}>
-              <div className={styles.title}>{trans.footer.contact}</div>
-              <div className={styles.subColumn}>
-                <div className={styles.socialNetwork}>
-                  <Link href="#">
-                    <TelegramIcon />
-                  </Link>
-                  <Link href="#">
-                    <DiscordIcon />
-                  </Link>
-                  <Link href={INFO.TWITTER} target="_blank">
-                    <TwitterIcon />
-                  </Link>
-                </div>
-                {/* <div dangerouslySetInnerHTML={createMarkup(INFO.ADDRESS)} />
-                <div>
-                  {trans.footer.callUs}{" "}
-                  <a href={`tel:${INFO.PHONE}`}>{INFO.PHONE}</a>
-                </div> */}
-                <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
-              </div>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.title}>{trans.footer.about}</div>
-              <div className={styles.subColumn}>
-                <Link href="#">{trans.footer.company} </Link>
-                <Link href={INFO.BLOG} target="_blank">
-                  {trans.footer.blog}{" "}
-                </Link>
-                <Link href="#">{trans.footer.faqs} </Link>
-              </div>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.title}>{trans.footer.services}</div>
-              <div className={styles.subColumn}>
-                <Link href="#">{trans.footer.token} </Link>
-                <Link href="#">{trans.footer.healthCare} </Link>
-                <Link href="#">{trans.footer.productShowcase} </Link>
-              </div>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.title}>{trans.footer.documents}</div>
-              <div className={styles.subColumn}>
-                <Link href="#">{trans.footer.term} </Link>
-                <Link href="#">{trans.footer.privacyPolicy} </Link>
-                <Link href="#">{trans.footer.legalDisclaimer} </Link>
-              </div>
+        <div className={`${styles.column} ${styles.contact}`}>
+          <img
+            onClick={scrollToTop}
+            className={styles.footerLogo}
+            src="/images/footer-logo.svg"
+            alt="logo"
+          />
+          <div className={`${styles.subColumn} ${styles.socialMediaWrapper}`}>
+            <p className={styles.socialMedia}>Social Media:</p>
+            <div className={styles.socialNetwork}>
+              <Link target="_blank" href={SOCIAL_LINK.GITHUB}>
+                <GithubIcon />
+              </Link>
+              <Link target="_blank" href={SOCIAL_LINK.TELEGRAM}>
+                <TelegramIcon />
+              </Link>
+              <Link target="_blank" href={SOCIAL_LINK.DISCORD}>
+                <DiscordIcon />
+              </Link>
+              <Link target="_blank" href={SOCIAL_LINK.FACEBOOK}>
+                <FacebookIcon />
+              </Link>
+              <Link target="_blank" href={SOCIAL_LINK.X}>
+                <TwitterIcon />
+              </Link>
             </div>
           </div>
         </div>
-        <div className={styles.bottomBlock}>
-          <div className={styles.copyRight}>{trans.footer.copyRight}</div>
+        <div className={styles.rightBlock}>
+          <div className={`${styles.column} ${styles.learn}`}>
+            <p className={styles.title}>Learn</p>
+            <div className={styles.subColumn}>
+              <Link href={ROUTERS.ABOUT_US}>About us</Link>
+              <Link href={ROUTERS.PRODUCTS_AND_SERVICES}>
+                Products & Services
+              </Link>
+              <Link href={ROUTERS.TECHNOLOGY_AND_INNOVATION}>
+                Technology & Innovation
+              </Link>
+            </div>
+          </div>
+
+          <div className={`${styles.column} ${styles.documents}`}>
+            <p className={styles.title}>{trans.footer.documents}</p>
+            <div className={styles.subColumn}>
+              <Link href={ROUTERS.TERMS_OF_SERVICE}>Terms & Services </Link>
+              <Link href={ROUTERS.PRIVACY_POLICY}>Privacy Policy</Link>
+              <Link href={ROUTERS.LEGAL_DISCLAIMER}>Legal Disclaimer</Link>
+            </div>
+          </div>
+          <div className={`${styles.column} ${styles.support}`}>
+            <p className={styles.title}>Support</p>
+
+            {isMobile ? (
+              <>
+                <a href={INFO.WHITE_PAPER} target="_blank">
+                  Whitepaper
+                </a>
+                <div>
+                  Contact us{" "}
+                  <a href="mailto:info@nott.ai" className={styles.email}>
+                    info@nott.ai
+                  </a>
+                </div>
+              </>
+            ) : (
+              <div className={styles.subColumn}>
+                <a href={INFO.WHITE_PAPER} target="_blank">
+                  Whitepaper
+                </a>
+                <div>
+                  Contact us : {" "}
+                  <a href="mailto:info@nott.ai" className={styles.email}>
+                    info@nott.ai
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.bottomBlock}>
+        <div className={styles.copyRight}>
+          <p className={styles.content}>
+            © 2018-2024 Healthy And Happy Life JSC. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 };
 

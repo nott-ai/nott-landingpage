@@ -15,10 +15,35 @@ import FooterLogo from "./footer-logo.svg";
 import TelegramIcon from "./telegram.svg";
 import TwitterIcon from "./twitter.svg";
 import DiscordIcon from "./discord.svg";
-import ComingSoon from "./coming-soon.svg";
+import MdiTargetIcon from "./mdi-target.svg";
+import NimbusEcosystemIcon from "./nimbus-ecosystem.svg";
+import SolarHealthOutlineIcon from "./solar-health-outline.svg";
+import SystemSumIcon from "./system-sum.svg";
+import ArrowRightIcon from "./arrow-right.svg";
+import EmailIcon from "./email.svg";
+import FacebookIcon from "./facebook.svg";
+import GithubIcon from "./github.svg";
+import LinkedinIcon from "./linkedin.svg";
+import CrossIcon from "./cross.svg";
+import GoogleIcon from "./google.svg";
+import GmailIcon from "./gmail.svg";
+import YoutubeIcon from "./youtube.svg";
+import LoudSpeakerIcon from "./loud-speaker.svg";
+import IllustrationBar from "./illustration-bar.svg";
+import CloseCookieIcon from "./close-cookie.svg";
+import QuoteOpenIcon from "./quote-open.svg";
+import QuoteCloseIcon from "./quote-close.svg";
+import FeaturesIcon from "./features.svg";
+import UserBenefitsIcon from "./user-benefits.svg";
+import MerchantBenefitsIcon from "./merchant-benefits.svg";
+import ArrowDirectionRight from "./arrow-direction-right.svg";
+import InfoIcon from "./info.svg";
 
 export {
+  GmailIcon,
+  CrossIcon,
   ShieldIcon,
+  YoutubeIcon,
   ShoppingCartIcon,
   Logo,
   ArrowDown,
@@ -35,5 +60,24 @@ export {
   TelegramIcon,
   TwitterIcon,
   DiscordIcon,
-  ComingSoon,
+  MdiTargetIcon,
+  NimbusEcosystemIcon,
+  SolarHealthOutlineIcon,
+  SystemSumIcon,
+  ArrowRightIcon,
+  EmailIcon,
+  FacebookIcon,
+  GithubIcon,
+  LinkedinIcon,
+  GoogleIcon,
+  LoudSpeakerIcon,
+  IllustrationBar,
+  CloseCookieIcon,
+  QuoteOpenIcon,
+  QuoteCloseIcon,
+  FeaturesIcon,
+  UserBenefitsIcon,
+  MerchantBenefitsIcon,
+  ArrowDirectionRight,
+  InfoIcon,
 };

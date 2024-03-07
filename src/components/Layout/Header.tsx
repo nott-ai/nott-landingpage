@@ -1,49 +1,31 @@
-import { ArrowDown, Logo, MenuIcon } from "@/assets";
+import { CrossIcon, MenuIcon } from "@/assets";
 import { NAVIGATIONS } from "@/constants/header";
 import styles from "@/styles/Layout/header.module.scss";
 import Link from "next/link";
-import DropdownMenu, {
-  DropdownItem,
-  DropdownItemGroup,
-} from "@atlaskit/dropdown-menu";
-import { useState } from "react";
-import useTrans from "@/hooks/useTrans";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import PrimaryButton from "../common/PrimaryButton";
-import Icon from "../common/Icon";
-import { ProfileIcon } from "@/assets/index";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
-type Language = "en" | "vi";
+import TopBar from "./TopBar";
 
 const customStyles: any = {
   content: {
-    top: "80px",
+    top: "56px",
     left: "0",
     right: "auto",
+    padding: "0",
     bottom: "auto",
     width: "100vw",
     height: "100vh",
     boxSizing: "border-box",
     borderRadius: "0",
+    border: "none",
+    backgroundSize: "contain",
+    backgroundColor: "#F9F9F9",
   },
 };
-
-const LANGUAGES = [
-  {
-    id: "en",
-    name: "English",
-  },
-  {
-    id: "vi",
-    name: "Tiếng Việt",
-  },
-];
 const Header = () => {
-  const trans: any = useTrans();
-  const router = useRouter();
-  const [language, setLanguage] = useState<Language>("en");
   const [modalIsOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   function openModal() {
     setIsOpen(!modalIsOpen);
@@ -52,85 +34,101 @@ const Header = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  useEffect(() => {
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      if (modalIsOpen) return;
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      const wrapper = document.querySelector(`#header`);
+      if (wrapper) {
+        if (st > lastScrollTop) {
+          wrapper.classList.add(styles.hidden);
+        } else {
+          wrapper.classList.remove(styles.hidden);
+        }
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [modalIsOpen]);
+
   return (
     <>
-      <div className={styles.wrapper}>
+      <header id="header" className={styles.wrapper}>
+        <TopBar />
         <div className={styles.container}>
           <div className={styles.content}>
-            <img className={styles.logo} src="/images/logo.svg" alt="logo" />
+            <img
+              className={styles.logo}
+              src="/images/logo.svg"
+              alt="logo"
+              onClick={() => {
+                window.location.href = "/";
+                window.scrollTo(0, 0);
+              }}
+            />
             <div className={styles.desktop}>
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
-                  <Link key={item.id} href={item.link}>
-                    <div>{trans.header[item.name]}</div>
-                  </Link>
-                ))}
-                {/* <DropdownMenu<HTMLButtonElement>
-                trigger={({
-                  triggerRef,
-                  isSelected,
-                  testId,
-                  ...providedProps
-                }) => (
-                  <button
-                    className={styles.translationBtn}
-                    type="button"
-                    {...providedProps}
-                    ref={triggerRef}
+                  <div
+                    key={item.id}
+                    className={`${
+                      router.pathname === item.link ? styles.active : ""
+                    }`}
                   >
-                    <Image
-                      width={20}
-                      height={20}
-                      alt="language"
-                      src={`/images/${language}.png`}
-                      className={styles.flag}
-                    />
-                    {language === "en" ? "English" : "Tiếng Việt"}
-                    <Icon icon={<ArrowDown />} color="#333333" />
-                  </button>
-                )}
-              >
-                <DropdownItemGroup>
-                  {LANGUAGES.map((item) => (
-                    <DropdownItem
-                      key={item.id}
-                      onClick={() => {
-                        setLanguage(item.id as Language);
-                        router.push(router.pathname, router.pathname, {
-                          locale: item.id,
-                        });
-                      }}
-                    >
-                      {item.name}
-                    </DropdownItem>
-                  ))}
-                </DropdownItemGroup>
-              </DropdownMenu> */}
+                    {item.isExternal ? (
+                      <a href={item.link} target="_blank">
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link href={item.link}>{item.name}</Link>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
-            {/* <PrimaryButton fontWeight={400} className={styles.preOrderBtn}>
-              <ProfileIcon /> {trans.header.joinTheWaitList}
-            </PrimaryButton> */}
+
             <div className={styles.mobile} onClick={openModal}>
-              <MenuIcon />
+              {modalIsOpen ? <CrossIcon /> : <MenuIcon />}
             </div>
           </div>
         </div>
-      </div>
+      </header>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
+        appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        {/* <div className={styles.closeBtn} onClick={closeModal}>
-          x
-        </div> */}
-        <div className={styles.navigationMobile}>
+        <div className={`${styles.navigationMobile}`}>
           {NAVIGATIONS.map((item) => (
-            <Link onClick={closeModal} key={item.id} href={item.link}>
-              <div>{trans.header[item.name]}</div>
-            </Link>
+            <div
+              key={item.id}
+              className={`${
+                router.pathname === item.link ? styles.active : ""
+              }`}
+              onClick={closeModal}
+            >
+              {item.isExternal ? (
+                <a key={item.id} href={item.link} target="_blank">
+                  <div>{item.name}</div>
+                </a>
+              ) : (
+                <Link href={item.link} key={item.id}>
+                  {item.name}
+                </Link>
+              )}
+            </div>
           ))}
+        </div>
+        <div className={`${styles.contactInfo}`}>
+          <div className={`${styles.titleContact} `}>Contact Us</div>
+          <div className={styles.gmailInfo}>info@nott.ai</div>
         </div>
       </Modal>
     </>
