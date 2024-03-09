@@ -114,7 +114,7 @@ const HomePage = () => {
           </div>
           <img
             className={styles.bannerImage}
-            src="/images/home-banner-mb.webp"
+            src="/images/home-banner-mb.png"
             alt="banner"
           />
         </div>

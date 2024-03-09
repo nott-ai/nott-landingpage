@@ -45,7 +45,7 @@ const DigitalMarketplace = () => {
               <div className={`${styles.title}`}>
                 <div className={styles.contentTitle}>{advantage.title}</div>
               </div>
-              <a href={INFO.BLOG}>
+              <a href={INFO.BLOG} target="_blank">
                 <div className={styles.explore}>
                   Explore <ArrowDirectionRight />
                 </div>
