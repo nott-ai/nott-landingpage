@@ -45,7 +45,7 @@ const ProductAndInnovationCard = ({
         </div>
         <div className={styles.divider} />
         <div className={styles.rightBlock}>
-          <p className={styles.comingSoon}>Coming Soon</p>
+          {/* <p className={styles.comingSoon}>Coming Soon</p> */}
           <p className={styles.title}>{title}</p>
           <p className={styles.description}>{description}</p>
           <a

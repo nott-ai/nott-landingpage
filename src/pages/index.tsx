@@ -8,7 +8,7 @@ export default function Home() {
         <title>NOTT Foundation</title>
         <meta
           name="description"
-          content="Discover NOTT, the forefront of health innovation leveraging AI, HealthFi, and DePIN to offer personalized wellness insights and a comprehensive health ecosystem. Empower your health journey with our smart devices and health monitoring platform."
+          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta
           name="keywords"
@@ -17,13 +17,17 @@ export default function Home() {
         <link rel="canonical" href="https://nott.ai"></link>
         <meta
           property="og:title"
-          content="Empower Your Health with NOTT Platform"
+          content="NOTT: Your Pathway to Enhanced Wellness"
         />
         <meta
           property="og:description"
-          content="Join the revolution in health and wellness with NOTT's advanced platform combining AI, HealthFi, and DePIN technologies for personalized health empowerment."
+          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta property="og:url" content="https://nott.ai" />
+        <meta
+          property="og:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
