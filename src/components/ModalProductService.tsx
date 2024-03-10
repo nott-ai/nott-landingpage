@@ -61,9 +61,9 @@ const ModalProductService: React.FC<ModalProductServiceProps> = ({
     >
       <div className={styles.topBlock}>
         <div className={styles.header}>
-          <div className={styles.price}>
+          {/* <div className={styles.price}>
             {productInfo.price || "Coming Soon"}
-          </div>
+          </div> */}
           <CloseCookieIcon
             className={styles.closeIcon}
             onClick={() => setModalIsOpen(false)}

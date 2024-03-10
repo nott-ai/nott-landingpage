@@ -99,7 +99,7 @@ const Footer = () => {
                   Whitepaper
                 </a>
                 <div>
-                  Contact us : {" "}
+                  Contact us :{" "}
                   <a href="mailto:info@nott.ai" className={styles.email}>
                     info@nott.ai
                   </a>
@@ -112,7 +112,7 @@ const Footer = () => {
       <div className={styles.bottomBlock}>
         <div className={styles.copyRight}>
           <p className={styles.content}>
-            © 2018-2024 Healthy And Happy Life JSC. All rights reserved
+            © 2018-2024 NOTT Foundation. All rights reserved
           </p>
         </div>
       </div>
