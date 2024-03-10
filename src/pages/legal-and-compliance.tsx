@@ -40,7 +40,7 @@ const LegalDisclaimerPage = () => {
           name="twitter:description"
           content="Ensuring Trust and Safety: NOTT's Vigilance in Legal Compliance and Ethical Standards in Health Innovation."
         />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:image" content="https://nott.ai/thumbnail.jpg" />
       </Head>
       <LegalDisclaimer />;
     </>
