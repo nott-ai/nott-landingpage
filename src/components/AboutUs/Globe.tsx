@@ -36,15 +36,16 @@ const Globe = () => {
               <p className={styles.title}>Global reach</p>
               <div className={styles.bottomBlock}>
                 <p>
-                  <span className={styles.number}>120</span> Countries with NOTT
-                  users
+                  <span className={styles.number}>. . . </span> Countries with
+                  NOTT users
                 </p>
                 <p>
-                  <span className={styles.number}>703,740</span> New accounts in
+                  <span className={styles.number}>. . . </span> New accounts in
                   last 7 days
                 </p>
                 <p>
-                  <span className={styles.number}>235</span> Days since launch
+                  <span className={styles.number}>. . . </span> Days since
+                  launch
                 </p>
               </div>
             </div>
@@ -52,15 +53,16 @@ const Globe = () => {
               <p className={styles.title}>Financial Momentum</p>
               <div className={styles.bottomBlock}>
                 <p>
-                  <span className={styles.number}>87,343,220</span> Amount of
-                  NOTT claimed
+                  <span className={styles.number}>. . . </span> Amount of NOTT
+                  claimed
                 </p>
                 <p>
-                  <span className={styles.number}>453,650</span> Daily wallet
+                  <span className={styles.number}>. . . </span> Daily wallet
                   transactions
                 </p>
                 <p>
-                  <span className={styles.number}>2,000</span> Orbs manufactured
+                  <span className={styles.number}>. . . </span> Orbs
+                  manufactured
                 </p>
               </div>
             </div>
@@ -71,15 +73,15 @@ const Globe = () => {
           <IllustrationBar />
           <div className={styles.bottomBlock}>
             <p>
-              <span className={styles.number}>120</span> Countries with NOTT
+              <span className={styles.number}> . . .</span> Countries with NOTT
               users
             </p>
             <p>
-              <span className={styles.number}>703,740</span> New accounts in
-              last 7 days
+              <span className={styles.number}>. . . </span> New accounts in last
+              7 days
             </p>
             <p>
-              <span className={styles.number}>235</span> Days since launch
+              <span className={styles.number}>. . . </span> Days since launch
             </p>
           </div>
         </div>
@@ -88,15 +90,15 @@ const Globe = () => {
           <IllustrationBar />
           <div className={styles.bottomBlock}>
             <p>
-              <span className={styles.number}>87,343,220</span> Amount of NOTT
+              <span className={styles.number}>. . . </span> Amount of NOTT
               claimed
             </p>
             <p>
-              <span className={styles.number}>453,650</span> Daily wallet
+              <span className={styles.number}>. . . </span> Daily wallet
               transactions
             </p>
             <p>
-              <span className={styles.number}>2,000</span> Orbs manufactured
+              <span className={styles.number}>. . . </span> Orbs manufactured
             </p>
           </div>
         </div>
