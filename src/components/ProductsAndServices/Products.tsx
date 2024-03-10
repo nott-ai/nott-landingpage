@@ -48,7 +48,7 @@ const Products = () => {
             <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <img src={item.img} alt={item.title} />
-                <div className={styles.divider} />
+              <div className={styles.divider} />
               </div>
               <div className={styles.textContent}>
                 <div className={styles.header}>
