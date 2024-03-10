@@ -18,7 +18,10 @@ const PrivacyPolicyPage = () => {
           property="og:description"
           content="Explore NOTT's commitment to privacy, detailing how we protect and use your data."
         />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nott.ai" />
@@ -31,7 +34,10 @@ const PrivacyPolicyPage = () => {
           name="twitter:description"
           content="Explore NOTT's commitment to privacy, detailing how we protect and use your data."
         />
-        <meta name="twitter:image" content="" />
+        <meta
+          name="twitter:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
       </Head>
       <PrivacyPolicy />;
     </>

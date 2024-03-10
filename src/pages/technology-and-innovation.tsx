@@ -55,7 +55,10 @@ const TechnologyInnovationPage = () => {
           property="og:description"
           content="Revolutionizing Wellness with NOTT: Cutting-Edge Health Technology and Innovation."
         />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nott.ai" />
@@ -71,7 +74,10 @@ const TechnologyInnovationPage = () => {
           name="twitter:description"
           content="Revolutionizing Wellness with NOTT: Cutting-Edge Health Technology and Innovation."
         />
-        <meta name="twitter:image" content="" />
+        <meta
+          name="twitter:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
       </Head>
       <div className={style.wrapper}>
         <div className={style.container}>

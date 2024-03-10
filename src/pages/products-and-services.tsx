@@ -24,7 +24,10 @@ const ProductsAndServicesPage = () => {
           property="og:description"
           content="Explore NOTT's Health Solutions: Products and Services for Your Wellness Journey."
         />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nott.ai" />
@@ -40,7 +43,10 @@ const ProductsAndServicesPage = () => {
           name="twitter:description"
           content="Explore NOTT's Health Solutions: Products and Services for Your Wellness Journey."
         />
-        <meta name="twitter:image" content="" />
+        <meta
+          name="twitter:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
       </Head>
       <ProductsAndServices />;
     </>
