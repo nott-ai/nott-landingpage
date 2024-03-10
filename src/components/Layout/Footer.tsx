@@ -73,7 +73,7 @@ const Footer = () => {
           <div className={`${styles.column} ${styles.documents}`}>
             <p className={styles.title}>{trans.footer.documents}</p>
             <div className={styles.subColumn}>
-              <Link href={ROUTERS.TERMS_OF_SERVICE}>Terms & Services </Link>
+              <Link href={ROUTERS.TERMS_OF_SERVICE}>Terms of Services </Link>
               <Link href={ROUTERS.PRIVACY_POLICY}>Privacy Policy</Link>
               <Link href={ROUTERS.LEGAL_DISCLAIMER}>Legal Disclaimer</Link>
             </div>
