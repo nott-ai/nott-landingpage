@@ -24,6 +24,10 @@ export default function Home() {
           content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta property="og:url" content="https://nott.ai" />
+        <meta
+          property="og:image"
+          content="https://nott.ai/images/thumbnail.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

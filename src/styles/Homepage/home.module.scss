@@ -1,20 +1,24 @@
 @import "../variables.scss";
+
 .container {
   margin: 80px auto;
   gap: 40px;
   display: flex;
   flex-direction: column;
+
   .banner {
     max-width: $max-width-container;
     margin: auto;
     position: relative;
     width: 100%;
     height: 298px;
+
     .bannerImage {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .content {
       top: 60px;
       left: 50px;
@@ -25,6 +29,7 @@
       width: 479px;
       height: 158px;
       color: white;
+
       .title {
         font-size: 22px;
         font-style: normal;
@@ -32,6 +37,7 @@
         line-height: 140%;
         letter-spacing: 0.44px;
       }
+
       .description {
         font-size: 20px;
         font-style: normal;
@@ -41,16 +47,19 @@
       }
     }
   }
+
   .latestNews {
     max-width: $max-width-container;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     .titleBlock {
       width: 100%;
       display: flex;
       justify-content: space-between;
+
       .left {
         font-size: 18px;
         font-style: normal;
@@ -59,6 +68,7 @@
         text-transform: uppercase;
         /* 88.889% */
       }
+
       .right {
         color: black;
         text-decoration: none;
@@ -71,18 +81,21 @@
         /* 114.286% */
       }
     }
+
     .news {
       display: flex;
       flex-direction: row;
       gap: 20px;
     }
   }
+
   .featuredProductsAndInnovations {
     max-width: $max-width-container;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     .title {
       font-size: 18px;
       font-style: normal;
@@ -91,45 +104,53 @@
       /* 88.889% */
       text-transform: uppercase;
     }
+
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
   }
+
   .footer {
     margin-top: 20px;
     position: relative;
     height: 230px;
     background: #0674c1;
+
     .content {
       margin: auto;
       max-width: $max-width-container;
       position: relative;
+
       .imageOneContainer {
         width: 505px;
         height: 230px;
         position: absolute;
         top: 0;
         left: 135px;
+
         .imageOne {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       .imageTwoContainer {
         width: 590px;
         height: 285px;
         position: absolute;
         top: -28px;
         right: 0;
+
         .imageTwo {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       .textBlock {
         width: 582px;
         display: flex;
@@ -137,6 +158,7 @@
         gap: 14px;
         position: absolute;
         top: 49px;
+
         .title {
           color: white;
           font-size: 18px;
@@ -146,6 +168,7 @@
           /* 88.889% */
           text-transform: uppercase;
         }
+
         .description {
           color: white;
           font-size: 16px;
@@ -165,9 +188,11 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
+
     .banner {
       width: 100%;
       height: auto;
+
       .content {
         position: static;
         margin: 20px 0px 30px 16px;
@@ -177,6 +202,7 @@
         width: 85%;
         height: 130px;
         color: white;
+
         .title {
           color: black;
           font-size: 22px;
@@ -185,6 +211,7 @@
           line-height: 140%;
           letter-spacing: 0.44px;
         }
+
         .description {
           color: black;
           font-size: 20px;
@@ -194,22 +221,26 @@
           letter-spacing: 0.4px;
         }
       }
+
       .bannerImage {
         width: 100%;
         height: auto;
         object-fit: cover;
       }
     }
+
     .latestNews {
       width: calc(100% - 32px);
       margin: auto;
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       .titleBlock {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .left {
           font-size: 18px;
           font-style: normal;
@@ -218,6 +249,7 @@
           text-transform: uppercase;
           /* 88.889% */
         }
+
         .right {
           color: black;
           text-decoration: none;
@@ -230,6 +262,7 @@
           /* 114.286% */
         }
       }
+
       .news {
         display: flex;
         flex-direction: row;
@@ -237,12 +270,14 @@
         gap: 20px;
       }
     }
+
     .featuredProductsAndInnovations {
       width: calc(100% - 32px);
       margin: auto;
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       .title {
         font-size: 18px;
         font-style: normal;
@@ -251,12 +286,14 @@
         /* 88.889% */
         text-transform: uppercase;
       }
+
       .content {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
       }
     }
+
     .footer {
       margin-top: 0px;
       padding-top: 20px;
@@ -270,20 +307,24 @@
       gap: 40px;
       justify-content: center;
       align-items: center;
+
       .imageBg {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
       .imageTwoContainer {
         width: 783px;
         height: 385px;
+
         .imageTwo {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       .textBlock {
         margin: 20px 0px 0px 16px;
         width: 95%;
@@ -291,6 +332,7 @@
         flex-direction: column;
         gap: 14px;
         text-wrap: balance;
+
         .title {
           color: white;
           font-size: 22px;
@@ -300,6 +342,7 @@
           /* 88.889% */
           text-transform: uppercase;
         }
+
         .description {
           color: white;
           font-size: 20px;
@@ -319,14 +362,15 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
+
     .banner {
       width: 100%;
       height: auto;
+
       .content {
         //posisitionin center of image
         top: 60px;
         left: 5px;
-        z-index: 20;
         position: absolute;
         margin: 30px 18px 20px 18px;
         display: flex;
@@ -334,6 +378,7 @@
         gap: 10px;
         height: 130px;
         color: white;
+
         .title {
           color: #fff;
           font-size: 20px;
@@ -342,6 +387,7 @@
           line-height: 140%;
           letter-spacing: 0.44px;
         }
+
         .description {
           color: #fff;
           font-size: 16px;
@@ -351,6 +397,7 @@
           letter-spacing: 0.32px;
         }
       }
+
       .bannerImage {
         width: 100%;
         height: auto;
@@ -358,16 +405,19 @@
         position: relative;
       }
     }
+
     .latestNews {
       width: calc(100% - 32px);
       margin: auto;
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       .titleBlock {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .left {
           font-size: 16px;
           font-style: normal;
@@ -376,6 +426,7 @@
           /* 100% */
           /* 88.889% */
         }
+
         .right {
           color: black;
           text-align: right;
@@ -389,6 +440,7 @@
           /* 114.286% */
         }
       }
+
       .news {
         display: flex;
         flex-direction: column;
@@ -396,12 +448,14 @@
         overflow-x: unset;
       }
     }
+
     .featuredProductsAndInnovations {
       width: calc(100% - 36px);
       margin: auto;
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       .title {
         font-size: 18px;
         font-style: normal;
@@ -410,6 +464,7 @@
         /* 88.889% */
         text-transform: uppercase;
       }
+
       .content {
         margin: auto;
         display: grid;
@@ -417,6 +472,7 @@
         gap: 20px;
       }
     }
+
     .footer {
       margin-top: 0px;
       width: 100%;
@@ -428,20 +484,24 @@
       gap: 40px;
       justify-content: center;
       align-items: center;
+
       .imageBg {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
       .imageTwoContainer {
         width: 392px;
         height: 211px;
+
         .imageTwo {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+
       .textBlock {
         margin: 20px 0px 0px 16px;
         width: 95%;
@@ -449,6 +509,7 @@
         flex-direction: column;
         gap: 14px;
         text-wrap: balance;
+
         .title {
           color: white;
           font-size: 16px;
@@ -458,6 +519,7 @@
           /* 88.889% */
           text-transform: uppercase;
         }
+
         .description {
           color: white;
           font-size: 14px;

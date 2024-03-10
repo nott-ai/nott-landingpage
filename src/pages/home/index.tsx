@@ -104,6 +104,11 @@ const HomePage = () => {
         </div>
       ) : (
         <div className={styles.banner}>
+          <img
+            className={styles.bannerImage}
+            src="/images/home-banner-mb.png"
+            alt="banner"
+          />
           <div className={styles.content}>
             <b className={styles.title}>Welcome to NOTT!</b>
             <div className={styles.description}>
@@ -112,11 +117,6 @@ const HomePage = () => {
               Infrastructure Network (DePIN) principles.
             </div>
           </div>
-          <img
-            className={styles.bannerImage}
-            src="/images/home-banner-mb.png"
-            alt="banner"
-          />
         </div>
       )}
 
