@@ -1,5 +1,4 @@
 @import "../variables.scss";
-
 @mixin space-between {
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,6 @@
 
 .wrapper {
   background-color: #f2f2f2;
-
   .container {
     padding: 50px 0;
     width: $max-width-container;
@@ -22,78 +20,65 @@
     align-items: flex-start;
     justify-content: space-between;
     color: #54545c;
-
     .rightBlock {
       width: 793px;
       height: 115px;
       display: flex;
       justify-content: space-between;
     }
-
     .column {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       gap: 9px;
-
       &.contact {
         gap: 20px;
-
         .footerLogo {
           height: 28px;
           width: fit-content;
         }
-
         .socialMediaWrapper {
           display: flex;
           align-items: flex-start;
           flex-direction: column;
           gap: 14px;
-
           .socialMedia {
             color: #1b1b1d;
             line-height: 16px;
             font-weight: 400;
           }
-
           .socialNetwork {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             width: fit-content;
             gap: 12px;
           }
         }
       }
-
       .title {
         color: #1b1b1d;
         font-weight: 600;
         line-height: 22px;
       }
-
       a,
       div {
         text-decoration: none;
         color: #54545c;
       }
-
       .email {
         color: #346af7;
         font-weight: 500;
         line-height: 16px;
         text-decoration: none;
       }
-
       .subColumn {
         @include flex-column();
         gap: 15px;
-
         a,
         div {
           text-decoration: none;
           color: #54545c;
         }
-
         .email {
           color: #346af7;
           font-weight: 500;
@@ -103,12 +88,10 @@
       }
     }
   }
-
   .bottomBlock {
     background-color: #e5e5e5;
     height: 60px;
     width: 100%;
-
     .copyRight {
       color: #54545c;
       max-width: $max-width-container;
@@ -118,7 +101,6 @@
       justify-content: space-between;
       width: 100%;
       height: 100%;
-
       .content {
         width: 100%;
         text-align: center;
@@ -137,52 +119,44 @@
       flex-wrap: wrap;
       gap: 32px;
       box-sizing: border-box;
-
       .rightBlock {
         width: 100%;
         height: fit-content;
         flex-wrap: wrap;
         gap: 32px;
-
         .documents {
           align-items: flex-end;
           text-align: right;
         }
-
         .support {
           width: 100%;
           flex-direction: row;
           display: flex;
           align-items: center;
           justify-content: space-between;
-
           .subColumn {
             flex-direction: row;
             align-items: center;
           }
         }
       }
-
       .column {
         &.contact {
           align-items: center;
           width: 100%;
-
           .socialMedia {
             text-align: center;
             width: 100%;
           }
         }
-
-        .subColumn {}
+        .subColumn {
+        }
       }
     }
-
     .bottomBlock {
       background-color: #e5e5e5;
       height: 60px;
       width: 100%;
-
       .copyRight {
         color: #54545c;
         max-width: $max-width-container;
@@ -192,7 +166,6 @@
         justify-content: space-between;
         width: 100%;
         height: 100%;
-
         .content {
           width: 100%;
           text-align: center;

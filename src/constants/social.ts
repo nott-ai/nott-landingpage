@@ -1,9 +1,8 @@
 export const SOCIAL_LINK = {
   LINKEDIN: "#",
-  DISCORD: "https://discord.gg/KFmRu4uQ6N",
-  FACEBOOK:
-    "https://www.facebook.com/profile.php?id=61556914437265&is_tour_dismissed=true",
-  TELEGRAM: "https://t.me/nnottingham",
+  DISCORD: "https://discord.com/invite/healthyandhappylife",
+  FACEBOOK: "https://www.facebook.com/Nottdepin",
+  TELEGRAM: "https://t.me/nottdepin",
   GOOGLE: "https://www.google.com/",
   GITHUB: "https://github.com/nott-ai",
   X: "https://twitter.com/nott_depin",

@@ -2,7 +2,6 @@ import {
   DiscordIcon,
   FacebookIcon,
   GithubIcon,
-  LinkedinIcon,
   TelegramIcon,
   TwitterIcon,
 } from "@/assets/index";
@@ -39,9 +38,6 @@ const Footer = () => {
           <div className={`${styles.subColumn} ${styles.socialMediaWrapper}`}>
             <p className={styles.socialMedia}>Social Media:</p>
             <div className={styles.socialNetwork}>
-              <Link target="_blank" href={SOCIAL_LINK.LINKEDIN}>
-                <LinkedinIcon />
-              </Link>
               <Link target="_blank" href={SOCIAL_LINK.GITHUB}>
                 <GithubIcon />
               </Link>
@@ -77,7 +73,7 @@ const Footer = () => {
           <div className={`${styles.column} ${styles.documents}`}>
             <p className={styles.title}>{trans.footer.documents}</p>
             <div className={styles.subColumn}>
-              <Link href={ROUTERS.TERMS_OF_SERVICE}>Terms & Services </Link>
+              <Link href={ROUTERS.TERMS_OF_SERVICE}>Terms of Services </Link>
               <Link href={ROUTERS.PRIVACY_POLICY}>Privacy Policy</Link>
               <Link href={ROUTERS.LEGAL_DISCLAIMER}>Legal Disclaimer</Link>
             </div>
@@ -103,7 +99,7 @@ const Footer = () => {
                   Whitepaper
                 </a>
                 <div>
-                  Contact us : {" "}
+                  Contact us :{" "}
                   <a href="mailto:info@nott.ai" className={styles.email}>
                     info@nott.ai
                   </a>
@@ -116,7 +112,7 @@ const Footer = () => {
       <div className={styles.bottomBlock}>
         <div className={styles.copyRight}>
           <p className={styles.content}>
-            © 2018-2024 Healthy And Happy Life JSC. All rights reserved
+            © 2018-2024 NOTT Foundation. All rights reserved
           </p>
         </div>
       </div>

@@ -75,7 +75,7 @@ const menu: MenuItems[] = [
     ],
   },
   {
-    mainTitle: "Terms & Service",
+    mainTitle: "Terms of Service",
     items: [
       {
         id: "1",
@@ -275,7 +275,7 @@ const PrivacyPolicy = () => {
       case "Privacy Policy":
         router.push(ROUTERS.PRIVACY_POLICY);
         break;
-      case "Terms & Service":
+      case "Terms of Service":
         router.push(ROUTERS.TERMS_OF_SERVICE);
         break;
       default:
@@ -311,7 +311,7 @@ const PrivacyPolicy = () => {
         setOpenMenu("Privacy Policy");
         break;
       case ROUTERS.TERMS_OF_SERVICE:
-        setOpenMenu("Terms & Service");
+        setOpenMenu("Terms of Service");
         break;
       default:
         setOpenMenu("");
@@ -327,10 +327,11 @@ const PrivacyPolicy = () => {
             href={ROUTERS.LEGAL_DISCLAIMER}
           >
             <div
-              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
-                ? styles.active
-                : ""
-                }`}
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                  ? styles.active
+                  : ""
+              }`}
             >
               Legal Disclaimer
             </div>
@@ -340,8 +341,9 @@ const PrivacyPolicy = () => {
             href={ROUTERS.PRIVACY_POLICY}
           >
             <div
-              className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
-                }`}
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+              }`}
             >
               Privacy Policy
             </div>
@@ -351,10 +353,11 @@ const PrivacyPolicy = () => {
             href={ROUTERS.TERMS_OF_SERVICE}
           >
             <div
-              className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE
-                ? styles.active
-                : ""
-                }`}
+              className={`${styles.navContent} ${
+                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                  ? styles.active
+                  : ""
+              }`}
             >
               Terms of Service
             </div>
@@ -380,22 +383,24 @@ const PrivacyPolicy = () => {
                 </div>
                 {openMenu === content.mainTitle && (
                   <div className={styles.dropdown}>
-                    {content.items && content.items.map((item) => (
-                      <LinkScroll
-                        key={item.id}
-                        to={item.id}
-                        offset={-100}
-                        smooth={true}
-                        duration={500}
-                        style={{ background: "transparent" }}
-                        className={`${styles.listContent} ${activeSection === item.id ? styles.active : ""
+                    {content.items &&
+                      content.items.map((item) => (
+                        <LinkScroll
+                          key={item.id}
+                          to={item.id}
+                          offset={-100}
+                          smooth={true}
+                          duration={500}
+                          style={{ background: "transparent" }}
+                          className={`${styles.listContent} ${
+                            activeSection === item.id ? styles.active : ""
                           }`}
-                      >
-                        <div key={item.id} className={styles.listContent}>
-                          {item.title}
-                        </div>
-                      </LinkScroll>
-                    ))}
+                        >
+                          <div key={item.id} className={styles.listContent}>
+                            {item.title}
+                          </div>
+                        </LinkScroll>
+                      ))}
                   </div>
                 )}
               </div>
@@ -406,16 +411,17 @@ const PrivacyPolicy = () => {
           <div className={styles.mainTittle}> {mainTitle}</div>
           <div className={styles.bannerImage}>
             <div className={style.content}>
-              <p
-                className={style.content3}
-              >
-                The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use.
+              <p className={style.content3}>
+                The personal information that we collect depends on the context
+                of your interactions with us and the Services, the choices you
+                make, and the products and features you use.
               </p>
 
-              <p
-                className={style.content3}
-              >
-                {'This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:      '}        </p>
+              <p className={style.content3}>
+                {
+                  'This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:      '
+                }{" "}
+              </p>
               <li>{`Visit our website at https://nott.ai, or any website of ours that links to this privacy notice`}</li>
               <li>{`Download and use our mobile application (NOTT), or any other application of ours that links to this privacy notice`}</li>
               <li>{`Engage with us in other related ways, including any sales, marketing, or events`}</li>
@@ -431,22 +437,24 @@ const PrivacyPolicy = () => {
             <div className={style.contentContainer}>
               <div className={style.content}>
                 <p className={style.description}>
-                  Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@nott.ai
+                  Questions or concerns? Reading this privacy notice will help
+                  you understand your privacy rights and choices. If you do not
+                  agree with our policies and practices, please do not use our
+                  Services. If you still have any questions or concerns, please
+                  contact us at info@nott.ai
                 </p>
                 <p
                   id="collecting-information"
                   className={style.title}
                 >{`1. Collecting information:`}</p>
-                <p
-                  className={style.smDesc}
-                >
-                  We collect personal information that you voluntarily provide to us
-                  when you register on the Services, express an interest in obtaining
-                  information about us or our products and Services, when you
-                  participate in activities on the Services, or otherwise when you
-                  contact us.
+                <p className={style.smDesc}>
+                  We collect personal information that you voluntarily provide
+                  to us when you register on the Services, express an interest
+                  in obtaining information about us or our products and
+                  Services, when you participate in activities on the Services,
+                  or otherwise when you contact us.
                 </p>
-                <ul >
+                <ul>
                   <li>{`Name`}</li>
                   <li>{`Phone numbers`}</li>
                   <li>{`Email addresses`}</li>
@@ -458,15 +466,15 @@ const PrivacyPolicy = () => {
                   dangerouslySetInnerHTML={createMarkup(
                     ' … other basic personal information according to <span style="font-weight: 600">Art. 4 GDPR</span>'
                   )}
-                  style={{ fontSize: '16px' }}
+                  style={{ fontSize: "16px" }}
                   className={style.description}
                 />
                 <p
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-                    "Sensitive Information"
-                  )}: When necessary, with your consent or as
+              "Sensitive Information"
+            )}: When necessary, with your consent or as
             otherwise permitted by applicable law, we process the following
             categories of sensitive information:
             `)}
@@ -486,8 +494,8 @@ const PrivacyPolicy = () => {
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-                    "Application Data"
-                  )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
+              "Application Data"
+            )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
           `)}
                 />
                 <p className={style.description}>
@@ -815,10 +823,9 @@ const PrivacyPolicy = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
