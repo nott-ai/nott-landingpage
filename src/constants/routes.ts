@@ -7,5 +7,8 @@ export const ROUTERS = {
   ABOUT_US: "/about-us",
   PRODUCTS_AND_SERVICES: "/products-and-services",
   TECHNOLOGY_AND_INNOVATION: "/technology-and-innovation",
-  KYC: "/kyc",
+  KYC: "/ekyc",
+  APPLY_KYC: "/ekyc/apply",
+  KYC_CONFIRMATION: "/ekyc/confirmation",
+  KYC_TRACKING: "/ekyc/tracking",
 };

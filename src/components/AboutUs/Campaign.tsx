@@ -26,11 +26,7 @@ const Campaign = () => {
             periodic initiatives are our commitment to make advanced health
             monitoring accessible to all
           </div>
-          <a
-            style={{ textDecoration: "none" }}
-            href={ROUTERS.KYC}
-            target="_blank"
-          >
+          <a style={{ textDecoration: "none" }} href={ROUTERS.KYC}>
             <PrimaryButton className={styles.joinCampaign}>
               Join Campaigns
             </PrimaryButton>

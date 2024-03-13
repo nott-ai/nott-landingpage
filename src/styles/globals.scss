@@ -35,7 +35,7 @@ body {
 
 .content-body {
   min-height: 100vh;
-  margin-top: 122px;
+  // margin-top: 122px;
 }
 
 main {
@@ -168,9 +168,6 @@ p {
 }
 
 @media screen and (max-width: $sm) {
-  .content-body {
-    margin-top: 56px;
-  }
   #products-showcase {
     .slick-list {
       height: 250px;

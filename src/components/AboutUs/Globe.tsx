@@ -9,6 +9,7 @@ const Globe = () => {
         autoPlay
         loop
         muted
+        playsInline
       />
       <video
         className={styles.videoMobile}
@@ -16,6 +17,7 @@ const Globe = () => {
         autoPlay
         loop
         muted
+        playsInline
       />
       <div className={styles.globeWrapper}>
         <img className={styles.globe} src="/images/earth.png" alt="earth" />
