@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
 .wrapper {
+  margin-top: 122px;
   position: relative;
   height: calc(100vh - 122px);
   .videoDesktop {
@@ -178,7 +179,7 @@
 @media screen and (max-width: $sm) {
   .wrapper {
     height: calc(100vh - 56px);
-    margin-top: 30px;
+    margin-top: 56px;
     .videoDesktop {
       display: none;
     }

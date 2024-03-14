@@ -38,6 +38,10 @@ import UserBenefitsIcon from "./user-benefits.svg";
 import MerchantBenefitsIcon from "./merchant-benefits.svg";
 import ArrowDirectionRight from "./arrow-direction-right.svg";
 import InfoIcon from "./info.svg";
+import CheckboxPersonIcon from "./checkbox-person.svg";
+import ShiftsTeamIcon from "./shifts-team.svg";
+import MailAlertIcon from "./mail-alert.svg";
+import Error404Icon from "./error-404.svg";
 
 export {
   GmailIcon,
@@ -80,4 +84,8 @@ export {
   MerchantBenefitsIcon,
   ArrowDirectionRight,
   InfoIcon,
+  CheckboxPersonIcon,
+  ShiftsTeamIcon,
+  MailAlertIcon,
+  Error404Icon,
 };

@@ -24,6 +24,35 @@
   top: 0;
   z-index: map-get($map: $z-index, $key: "STICKY");
   height: 122px;
+  &.ekyc {
+    height: 76px;
+
+    .container {
+      backdrop-filter: blur(10px);
+      background-color: transparent;
+      .content {
+        .desktop {
+          .navigation {
+            a {
+              color: #fff;
+            }
+          }
+        }
+        .mobile {
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ekycOpen {
+    .container {
+      background-color: #041c28;
+    }
+  }
   .container {
     background-color: #fff;
     @include space-between;
@@ -123,6 +152,9 @@
 @media screen and (max-width: $sm) {
   .wrapper {
     height: 56px;
+    &.ekyc {
+      height: 56px;
+    }
   }
 }
 .navigationMobile {
@@ -147,6 +179,16 @@
       color: #346af7;
     }
   }
+  &.ekyc {
+    a {
+      color: #fff;
+    }
+    .active {
+      a {
+        color: #346af7;
+      }
+    }
+  }
 }
 
 .contactInfo {
@@ -156,6 +198,14 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  &.ekyc {
+    .titleContact {
+      color: #fff;
+    }
+    .gmailInfo {
+      color: #fff;
+    }
+  }
   .titleContact {
     font-size: 14px;
     line-height: 17px;

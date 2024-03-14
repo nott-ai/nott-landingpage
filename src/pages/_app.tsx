@@ -13,12 +13,13 @@ import {
 } from "@firebase/remote-config";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-
+import Script from "next/script";
 import CookiePopup from "@/components/Cookies/CookiePopup";
 import CookieDetailPopup from "@/components/Cookies/CookieDetailPopup";
 import { useState } from "react";
 import { VISIBLE_OPTIONS } from "react-cookie-consent";
 import CookieRequest from "@/components/Cookies/CookieRequest";
+import { Toaster } from "react-hot-toast";
 
 let remoteConfig: RemoteConfig;
 const app = initializeApp(firebaseConfig);
@@ -40,6 +41,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </div>
       <Footer />
+      <Toaster
+        toastOptions={{
+          position: "top-right",
+          duration: 4000,
+        }}
+      />
     </main>
   );
 }
