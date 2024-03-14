@@ -29,6 +29,7 @@ jobs:
           npm install -g yarn
           npm install -g wrangler
           yarn install
+          cp .env.${GITHUB_REF##*/} .env
           CI=false && yarn build
           echo "CLOUDFLARE_ACCOUNT_ID=${{ env.CLOUDFLARE_ACCOUNT_ID }} $CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN=${{ env.CLOUDFLARE_API_TOKEN }} $CLOUDFLARE_API_TOKEN"
           wrangler pages publish out --project-name=${{ env.PROJECT_NAME }} --branch=${GITHUB_REF##*/} --commit-hash=${{ env.GITHUB_SHA }}
