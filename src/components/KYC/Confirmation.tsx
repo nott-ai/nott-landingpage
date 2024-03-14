@@ -84,8 +84,8 @@ const Confirmation = () => {
                 <>
                   Unfortunately, the verification link has expired and is not
                   available. For a new verification link, please click the
-                  'Resend' button below. A new link will be sent to your email
-                  immediately.
+                  &#39;Resend&#39; button below. A new link will be sent to your
+                  email immediately.
                 </>
               )}
             </p>
