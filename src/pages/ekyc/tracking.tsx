@@ -1,8 +1,14 @@
+import Tracking from "@/components/KYC/Tracking";
+import Head from "next/head";
+
 const TrackingPage = () => {
   return (
-    <div>
-      <div>Tracking</div>
-    </div>
+    <>
+      <Head>
+        <title>Tracking - NOTT Foundation</title>
+      </Head>
+      <Tracking />
+    </>
   );
 };
 

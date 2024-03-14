@@ -16,6 +16,17 @@ interface EKYCForm {
   discordUsername: string;
   telegramUsername: string;
 }
+interface KYCBody {
+  email: string;
+  firstName: string;
+  lastName: string;
+  idType: string;
+  idNumber: string;
+  address: string;
+  discord: string;
+  telegram?: string;
+  captchaToken: string;
+}
 const ApplyKyc = () => {
   const {
     register,
@@ -26,28 +37,76 @@ const ApplyKyc = () => {
   const [loading, setLoading] = useState(false);
   const [doEkyc, setDoEkyc] = useState(false);
   const [cameraPermission, setCameraPermission] = useState(false);
-  const onSubmit = (data: EKYCForm) => {
-    console.log(data);
+  const [authorizationData, setAuthorizationData] = useState({
+    kycToken: "",
+    idToken: "",
+  });
+  const env = process.env.NODE_ENV;
+
+  const onSubmit = async (data: EKYCForm) => {
     try {
+      await kyc(data);
       if (navigator.mediaDevices.getUserMedia !== null) {
         const constraints = {
           video: true,
         };
-        navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
-          mediaStream.getTracks().forEach((track) => {
-            track.stop();
+
+        navigator.mediaDevices
+          .getUserMedia(constraints)
+          .then((mediaStream) => {
+            mediaStream.getTracks().forEach((track) => {
+              track.stop();
+            });
+            setCameraPermission(true);
+            setDoEkyc(true);
+          })
+          .catch((error) => {
+            console.log(error);
+            toast.error("Camera permission denied");
           });
-          setCameraPermission(true);
-          setDoEkyc(true);
-          console.log(mediaStream);
+      }
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error);
+    }
+  };
+
+  const kyc = async (data: EKYCForm) => {
+    if (loading) return;
+    const body: KYCBody = {
+      email: data.email,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      idType: "PASSPORT",
+      idNumber: data.passportNumber,
+      address: data.address,
+      discord: data.discordUsername,
+      telegram: data.telegramUsername,
+      captchaToken: "",
+    };
+    try {
+      setLoading(true);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/kyc`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data?.data) {
+        setAuthorizationData({
+          kycToken: data?.data?.kycToken,
+          idToken: data?.data?.idToken,
         });
       }
     } catch (error) {
       console.log(error);
-      toast.error("Camera permission denied");
+      toast.error("Unexpected error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -55,14 +114,21 @@ const ApplyKyc = () => {
           <span className={styles.highlight}> Quick KYC Process</span> <br />-
           Your Path to Wellness
         </p>
-        <p className={styles.description}>
-          Complete our quick KYC process to secure your cutting-edge health
-          device. Enhance your well-being today!
-        </p>
+        {!doEkyc && (
+          <p className={styles.description}>
+            Complete our quick KYC process to secure your cutting-edge health
+            device. Enhance your well-being today!
+          </p>
+        )}
         {doEkyc && cameraPermission ? (
           <div className={styles.ekycIframe}>
             <iframe
-              src="http://localhost:4200"
+              id="kyc-iframe"
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/kyc/index${
+                env === "production" ? ".production" : ""
+              }.html?idToken=${authorizationData.idToken}&kycToken=${
+                authorizationData.kycToken
+              }`}
               allow={`${cameraPermission ? "camera" : ""}`}
             />
           </div>
@@ -182,6 +248,7 @@ const ApplyKyc = () => {
                 </div>
               )}
             </div>
+
             <button className={styles.applyEkyc} type="submit">
               Do eKYC
             </button>
@@ -189,9 +256,11 @@ const ApplyKyc = () => {
         )}
       </div>
       <div className={styles.footer}>
-        <div className={styles.content}>
-          <DiscordIcon /> <a href={SOCIAL_LINK.DISCORD}>Join Our Discord</a>
-        </div>
+        {!doEkyc && (
+          <div className={styles.content}>
+            <DiscordIcon /> <a href={SOCIAL_LINK.DISCORD}>Join Our Discord</a>
+          </div>
+        )}
         {isMobile && (
           <p className={styles.copyRight}>
             © 2018-2024 NOTT Foundation. All rights reserved

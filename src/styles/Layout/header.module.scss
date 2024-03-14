@@ -48,6 +48,11 @@
       }
     }
   }
+  &.ekycOpen {
+    .container {
+      background-color: #041c28;
+    }
+  }
   .container {
     background-color: #fff;
     @include space-between;
@@ -174,6 +179,16 @@
       color: #346af7;
     }
   }
+  &.ekyc {
+    a {
+      color: #fff;
+    }
+    .active {
+      a {
+        color: #346af7;
+      }
+    }
+  }
 }
 
 .contactInfo {
@@ -183,6 +198,14 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  &.ekyc {
+    .titleContact {
+      color: #fff;
+    }
+    .gmailInfo {
+      color: #fff;
+    }
+  }
   .titleContact {
     font-size: 14px;
     line-height: 17px;

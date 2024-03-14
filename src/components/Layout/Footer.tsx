@@ -18,6 +18,7 @@ const Footer = () => {
   const trans = useTrans();
   const router = useRouter();
   const { isMobile } = useDeviceDetect();
+
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
       window.scrollTo({

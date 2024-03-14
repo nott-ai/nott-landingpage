@@ -20,12 +20,12 @@ const Header = () => {
       padding: "0",
       bottom: "auto",
       width: "100vw",
-      height: "100vh",
+      height: !isEkyc ? "100vh" : "calc(100vh - 56px)",
       boxSizing: "border-box",
       borderRadius: "0",
       border: "none",
       backgroundSize: "contain",
-      backgroundColor: !isEkyc ? "#F9F9F9" : "transparent",
+      backgroundColor: !isEkyc ? "#F9F9F9" : "#041c28",
       backdropFilter: isEkyc ? "blur(10px)" : "none",
     },
   };
@@ -76,7 +76,9 @@ const Header = () => {
     <>
       <header
         id="header"
-        className={`${styles.wrapper} ${isEkyc ? styles.ekyc : ""}`}
+        className={`${styles.wrapper} ${isEkyc ? styles.ekyc : ""} ${
+          isEkyc && modalIsOpen ? styles.ekycOpen : ""
+        }`}
       >
         {!isEkyc && <TopBar />}
         <div className={styles.container}>
@@ -123,7 +125,9 @@ const Header = () => {
         style={customStyles}
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        <div className={`${styles.navigationMobile}`}>
+        <div
+          className={`${styles.navigationMobile} ${isEkyc ? styles.ekyc : ""} `}
+        >
           {NAVIGATIONS.map((item) => (
             <div
               key={item.id}
@@ -144,7 +148,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <div className={`${styles.contactInfo}`}>
+        <div className={`${styles.contactInfo} ${isEkyc ? styles.ekyc : ""}`}>
           <div className={`${styles.titleContact} `}>Contact Us</div>
           <div className={styles.gmailInfo}>info@nott.ai</div>
         </div>
