@@ -72,7 +72,7 @@ const Confirmation = () => {
                     <br /> Quick KYC Process
                   </>
                 ) : (
-                  <>Email Verification Link Expired</>
+                  <>Page Not Found</>
                 )}
               </p>
               <p className={styles.description}>
@@ -86,16 +86,19 @@ const Confirmation = () => {
                   </>
                 ) : (
                   <>
-                    Unfortunately, the verification link has expired and is not
-                    available. For a new verification link, please click the
-                    &#39;Resend&#39; button below. A new link will be sent to
-                    your email immediately.
+                    Oops! Something went wrong, and we couldn&#39;t complete
+                    your email verification. This may be due to a technical
+                    error or the page you&#39;re looking for doesn&#39;t exist
+                    anymore.
+                    <br />
+                    <br />
+                    Please try the verification process again, or contact our
+                    support team for assistance:{" "}
+                    <a href="mailto:info@nott.ai">info@nott.ai</a>
                   </>
                 )}
               </p>
-              {!verifySuccess && (
-                <button className={styles.resendBtn}>Get new link</button>
-              )}
+
               <p className={styles.contact}>Contact</p>
               <div className={styles.socialNetwork}>
                 <Link target="_blank" href={SOCIAL_LINK.GITHUB}>

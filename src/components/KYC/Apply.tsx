@@ -15,7 +15,7 @@ interface EKYCForm {
   address: string;
   email: string;
   discordUsername: string;
-  telegramUsername: string;
+  telegramUsername?: string;
 }
 interface KYCBody {
   email: string;
@@ -148,7 +148,7 @@ const ApplyKyc = () => {
                     required: ERROR_MESSAGE.REQUIRED,
                     validate: (value) => {
                       if (!VALIDATION.NAME.test(value)) {
-                        return ERROR_MESSAGE.INVALID_NAME;
+                        return ERROR_MESSAGE.INVALID_FIRST_NAME;
                       }
                     },
                   })}
@@ -166,7 +166,7 @@ const ApplyKyc = () => {
                     required: ERROR_MESSAGE.REQUIRED,
                     validate: (value) => {
                       if (!VALIDATION.NAME.test(value)) {
-                        return ERROR_MESSAGE.INVALID_NAME;
+                        return ERROR_MESSAGE.INVALID_LAST_NAME;
                       }
                     },
                   })}
@@ -202,7 +202,6 @@ const ApplyKyc = () => {
                 {...register("address", {
                   required: ERROR_MESSAGE.REQUIRED,
                 })}
-                maxLength={200}
                 placeholder="Address"
               />
               {errors.address?.message && (
@@ -244,16 +243,9 @@ const ApplyKyc = () => {
             </div>
             <div className={styles.inputWrapper}>
               <input
-                {...register("telegramUsername", {
-                  required: ERROR_MESSAGE.REQUIRED,
-                })}
+                {...register("telegramUsername")}
                 placeholder="Telegram username"
               />
-              {errors.telegramUsername?.message && (
-                <div className={styles.errorMsg}>
-                  {errors.telegramUsername?.message.toString()}
-                </div>
-              )}
             </div>
 
             <button className={styles.applyEkyc} type="submit">

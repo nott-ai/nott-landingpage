@@ -6,7 +6,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 100px;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   box-sizing: border-box;
 
   .leftBlock {
@@ -39,13 +39,13 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    padding: 40px 18px;
+    padding: 40px 18px 0 18px;
   }
 }
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    padding: 30px 18px 40px 18px;
+    padding: 30px 18px 0px 18px;
     .rightBlock {
       max-width: 100%;
     }
