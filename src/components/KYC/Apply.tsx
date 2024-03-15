@@ -44,6 +44,7 @@ const ApplyKyc = () => {
     idToken: "",
   });
   const env = process.env.NODE_ENV;
+  console.log(env, "env");
 
   const onSubmit = async (data: EKYCForm) => {
     if (startEkyc) return;
