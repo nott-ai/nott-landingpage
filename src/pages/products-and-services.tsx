@@ -48,7 +48,7 @@ const ProductsAndServicesPage = () => {
           content="https://nott.ai/images/thumbnail.jpg"
         />
       </Head>
-      <ProductsAndServices />;
+      <ProductsAndServices />
     </>
   );
 };
