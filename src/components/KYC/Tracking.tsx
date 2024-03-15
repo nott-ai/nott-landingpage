@@ -63,7 +63,9 @@ const Tracking = () => {
         <p className={styles.statusDescription}>{currenStatus.description}</p>
       </div>
       <div className={styles.footer}>
-        © 2018-2024 NOTT Foundation. All rights reserved
+        <div className={styles.copyRight}>
+          © 2018-2024 NOTT Foundation. All rights reserved
+        </div>
       </div>
     </div>
   );

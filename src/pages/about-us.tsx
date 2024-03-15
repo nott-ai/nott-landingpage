@@ -36,8 +36,11 @@ const AboutUsPage = () => {
           name="twitter:image"
           content="https://nott.ai/images/thumbnail.jpg"
         />
+        <link rel="preload" href="/images/earth.png" />
+        <link rel="preload" href="/videos/video-bg.mp4" />
+        <link rel="preload" href="/videos/video-bg-mobile.mp4" />
       </Head>
-      <AboutUs />;
+      <AboutUs />
     </>
   );
 };

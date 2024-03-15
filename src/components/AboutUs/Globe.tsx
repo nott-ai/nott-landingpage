@@ -1,6 +1,10 @@
 import { IllustrationBar } from "@/assets/index";
 import styles from "@/styles/AboutUs/globe.module.scss";
+import { BeatLoader } from "react-spinners";
 const Globe = () => {
+  const Loading = () => (
+    <BeatLoader size={4} color="#346af7" loading={true} speedMultiplier={0.5} />
+  );
   return (
     <div className={styles.wrapper}>
       <video
@@ -38,16 +42,22 @@ const Globe = () => {
               <p className={styles.title}>Global reach</p>
               <div className={styles.bottomBlock}>
                 <p>
-                  <span className={styles.number}>. . . </span> Countries with
-                  NOTT users
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  Countries with NOTT users
                 </p>
                 <p>
-                  <span className={styles.number}>. . . </span> New accounts in
-                  last 7 days
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  New accounts in last 7 days
                 </p>
                 <p>
-                  <span className={styles.number}>. . . </span> Days since
-                  launch
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  Days since launch
                 </p>
               </div>
             </div>
@@ -55,16 +65,22 @@ const Globe = () => {
               <p className={styles.title}>Financial Momentum</p>
               <div className={styles.bottomBlock}>
                 <p>
-                  <span className={styles.number}>. . . </span> Amount of NOTT
-                  claimed
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  Amount of NOTT claimed
                 </p>
                 <p>
-                  <span className={styles.number}>. . . </span> Daily wallet
-                  transactions
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  Daily wallet transactions
                 </p>
                 <p>
-                  <span className={styles.number}>. . . </span> Orbs
-                  manufactured
+                  <span className={styles.number}>
+                    <Loading />
+                  </span>{" "}
+                  Orbs manufactured
                 </p>
               </div>
             </div>
@@ -75,15 +91,22 @@ const Globe = () => {
           <IllustrationBar />
           <div className={styles.bottomBlock}>
             <p>
-              <span className={styles.number}> . . .</span> Countries with NOTT
-              users
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              Countries with NOTT users
             </p>
             <p>
-              <span className={styles.number}>. . . </span> New accounts in last
-              7 days
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              New accounts in last 7 days
             </p>
             <p>
-              <span className={styles.number}>. . . </span> Days since launch
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              Days since launch
             </p>
           </div>
         </div>
@@ -92,15 +115,22 @@ const Globe = () => {
           <IllustrationBar />
           <div className={styles.bottomBlock}>
             <p>
-              <span className={styles.number}>. . . </span> Amount of NOTT
-              claimed
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              Amount of NOTT claimed
             </p>
             <p>
-              <span className={styles.number}>. . . </span> Daily wallet
-              transactions
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              Daily wallet transactions
             </p>
             <p>
-              <span className={styles.number}>. . . </span> Orbs manufactured
+              <span className={styles.number}>
+                <Loading />
+              </span>{" "}
+              Orbs manufactured
             </p>
           </div>
         </div>

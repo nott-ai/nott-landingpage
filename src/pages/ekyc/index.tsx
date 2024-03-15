@@ -6,6 +6,8 @@ const EkycPage = () => {
     <>
       <Head>
         <title>eKYC - NOTT Foundation</title>
+        <link rel="preload" href="/images/ekyc-bg.webp" as="image" />
+        <link rel="preload" href="/images/ekyc-mobile-bg.webp" as="image" />
       </Head>
       <Ekyc />
     </>

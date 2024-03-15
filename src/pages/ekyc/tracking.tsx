@@ -6,6 +6,12 @@ const TrackingPage = () => {
     <>
       <Head>
         <title>Tracking - NOTT Foundation</title>
+        <link rel="preload" href="/images/ekyc-apply-bg.webp" as="image" />
+        <link
+          rel="preload"
+          href="/images/ekyc-apply-mobile-bg.webp"
+          as="image"
+        />
       </Head>
       <Tracking />
     </>

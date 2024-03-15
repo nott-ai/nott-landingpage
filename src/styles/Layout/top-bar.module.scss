@@ -28,6 +28,9 @@
       color: $link-color;
       font-weight: 500;
       font-size: 12px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
