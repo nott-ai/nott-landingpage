@@ -79,11 +79,19 @@
           text-decoration: none;
           color: #54545c;
         }
+        a {
+          &:hover {
+            color: #000;
+          }
+        }
         .email {
           color: #346af7;
           font-weight: 500;
           line-height: 16px;
           text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

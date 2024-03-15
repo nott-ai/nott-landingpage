@@ -5,6 +5,7 @@ import styles from "@/styles/Ekyc/apply-ekyc.module.scss";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { ClipLoader } from "react-spinners";
 import useDeviceDetect from "../common/DeviceDetect";
 
 interface EKYCForm {
@@ -35,6 +36,7 @@ const ApplyKyc = () => {
   } = useForm<EKYCForm>();
   const { isMobile } = useDeviceDetect();
   const [loading, setLoading] = useState(false);
+  const [startEkyc, setStartEkyc] = useState(false);
   const [doEkyc, setDoEkyc] = useState(false);
   const [cameraPermission, setCameraPermission] = useState(false);
   const [authorizationData, setAuthorizationData] = useState({
@@ -44,7 +46,9 @@ const ApplyKyc = () => {
   const env = process.env.NODE_ENV;
 
   const onSubmit = async (data: EKYCForm) => {
+    if (startEkyc) return;
     try {
+      setStartEkyc(true);
       await kyc(data);
       if (navigator.mediaDevices.getUserMedia !== null) {
         const constraints = {
@@ -63,11 +67,14 @@ const ApplyKyc = () => {
           .catch((error) => {
             console.log(error);
             toast.error("Camera permission denied");
+            setCameraPermission(false);
           });
       }
     } catch (error: any) {
       console.log(error);
       toast.error(error);
+    } finally {
+      setStartEkyc(false);
     }
   };
 
@@ -250,7 +257,7 @@ const ApplyKyc = () => {
             </div>
 
             <button className={styles.applyEkyc} type="submit">
-              Do eKYC
+              {startEkyc ? <ClipLoader color="#fff" size={16} /> : "Do eKYC"}
             </button>
           </form>
         )}

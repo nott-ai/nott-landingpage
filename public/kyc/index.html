@@ -168,9 +168,9 @@
               body: JSON.stringify(bodyData)
             }).then(res => res.json()).then(resultData => {
               if(!!resultData.data) {
-                window.location.href = `http://localhost:3000/kyc/success.html?idToken=${idToken}&kycToken=${kycToken}`
+                window.location.href = `https://develop.nott-landingpage.pages.dev/kyc/success.html?idToken=${idToken}&kycToken=${kycToken}`
               } else {
-                window.location.href = `http://localhost:3000/kyc/fail.html?idToken=${idToken}&kycToken=${kycToken}`
+                window.location.href = `https://develop.nott-landingpage.pages.dev/kyc/fail.html?idToken=${idToken}&kycToken=${kycToken}`
               }
             })
 
