@@ -1,7 +1,9 @@
-import { DiscordIcon } from "@/assets";
+import { CheckedIcon, DiscordIcon } from "@/assets";
+import { ROUTERS } from "@/constants/routes";
 import { SOCIAL_LINK } from "@/constants/social";
 import { ERROR_MESSAGE, VALIDATION } from "@/constants/validation";
 import styles from "@/styles/Ekyc/apply-ekyc.module.scss";
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -42,9 +44,10 @@ const ApplyKyc = () => {
     idToken: "",
   });
   const env = process.env.NEXT_PUBLIC_ENV;
+  const [agreeTerm, setAgreeTerm] = useState<boolean>(false);
 
   const onSubmit = async (data: EKYCForm) => {
-    if (startEkyc) return;
+    if (startEkyc || !agreeTerm) return;
     try {
       setStartEkyc(true);
       const res = await getKycToken(data);
@@ -237,8 +240,37 @@ const ApplyKyc = () => {
                 placeholder="Telegram username"
               />
             </div>
-
-            <button className={styles.applyEkyc} type="submit">
+            <div className={styles.termAndPolicy}>
+              <div className={styles.checkBoxWrapper}>
+                {agreeTerm ? (
+                  <CheckedIcon />
+                ) : (
+                  <div className={styles.inputUnchecked} />
+                )}
+                <input
+                  type="checkbox"
+                  checked={agreeTerm}
+                  onChange={(event) => setAgreeTerm(event.target.checked)}
+                />
+              </div>
+              <div>
+                By ticking, you are confirming that you have read, understood &
+                agreed to Device Drop{" "}
+                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                  Terms of Service
+                </Link>{" "}
+                &{" "}
+                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
+            <button
+              className={`${styles.applyEkyc} ${
+                !agreeTerm ? styles.disable : ""
+              }`}
+              type="submit"
+            >
               {startEkyc ? <ClipLoader color="#fff" size={16} /> : "Do eKYC"}
             </button>
           </form>
@@ -253,11 +285,9 @@ const ApplyKyc = () => {
             </a>
           </div>
         )}
-        {isMobile && (
-          <p className={styles.copyRight}>
-            © 2018-2024 NOTT Foundation. All rights reserved
-          </p>
-        )}
+        <p className={styles.copyRight}>
+          © 2018-2024 NOTT Foundation. All rights reserved
+        </p>
       </div>
     </div>
   );
