@@ -42,6 +42,7 @@ import CheckboxPersonIcon from "./checkbox-person.svg";
 import ShiftsTeamIcon from "./shifts-team.svg";
 import MailAlertIcon from "./mail-alert.svg";
 import Error404Icon from "./error-404.svg";
+import CheckedIcon from "./checked.svg";
 
 export {
   GmailIcon,
@@ -88,4 +89,5 @@ export {
   ShiftsTeamIcon,
   MailAlertIcon,
   Error404Icon,
+  CheckedIcon,
 };

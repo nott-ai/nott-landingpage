@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-modal";
 import styles from "@/styles/ProductsAndServices/product-modal.module.scss";
 import { CloseCookieIcon } from "@/assets/index";
-import { PRODUCT_IMAGES } from "@/constants/products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
