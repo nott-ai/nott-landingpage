@@ -35,9 +35,7 @@ const ApplyKyc = () => {
     formState: { errors },
   } = useForm<EKYCForm>();
   const { isMobile } = useDeviceDetect();
-  const [loading, setLoading] = useState(false);
   const [startEkyc, setStartEkyc] = useState(false);
-  const [doEkyc, setDoEkyc] = useState(false);
   const [cameraPermission, setCameraPermission] = useState(false);
   const [authorizationData, setAuthorizationData] = useState({
     kycToken: "",
@@ -49,26 +47,28 @@ const ApplyKyc = () => {
     if (startEkyc) return;
     try {
       setStartEkyc(true);
-      await kyc(data);
-      if (navigator.mediaDevices.getUserMedia !== null) {
-        const constraints = {
-          video: true,
-        };
+      const res = await getKycToken(data);
+      if (res) {
+        setAuthorizationData(res.data);
+        if (navigator.mediaDevices.getUserMedia !== null) {
+          const constraints = {
+            video: true,
+          };
 
-        navigator.mediaDevices
-          .getUserMedia(constraints)
-          .then((mediaStream) => {
-            mediaStream.getTracks().forEach((track) => {
-              track.stop();
+          navigator.mediaDevices
+            .getUserMedia(constraints)
+            .then((mediaStream) => {
+              mediaStream.getTracks().forEach((track) => {
+                track.stop();
+              });
+              setCameraPermission(true);
+            })
+            .catch((error) => {
+              console.log(error);
+              toast.error("Camera permission denied");
+              setCameraPermission(false);
             });
-            setCameraPermission(true);
-            setDoEkyc(true);
-          })
-          .catch((error) => {
-            console.log(error);
-            toast.error("Camera permission denied");
-            setCameraPermission(false);
-          });
+        }
       }
     } catch (error: any) {
       console.log(error);
@@ -78,8 +78,7 @@ const ApplyKyc = () => {
     }
   };
 
-  const kyc = async (data: EKYCForm) => {
-    if (loading) return;
+  const getKycToken = async (data: EKYCForm) => {
     const body: KYCBody = {
       email: data.email,
       firstName: data.firstName,
@@ -91,28 +90,19 @@ const ApplyKyc = () => {
       telegram: data.telegramUsername,
       captchaToken: "",
     };
-    try {
-      setLoading(true);
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/kyc`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/kyc`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
       const data = await res.json();
-      if (data?.data) {
-        setAuthorizationData({
-          kycToken: data?.data?.kycToken,
-          idToken: data?.data?.idToken,
-        });
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error("Unexpected error occurred. Please try again.");
-    } finally {
-      setLoading(false);
+      toast.error(data?.message);
+      return;
     }
+    return await res.json();
   };
   return (
     <div className={styles.wrapper}>
@@ -121,13 +111,13 @@ const ApplyKyc = () => {
           <span className={styles.highlight}> Quick KYC Process</span> <br />-
           Your Path to Wellness
         </p>
-        {!doEkyc && (
+        {!authorizationData?.idToken && (
           <p className={styles.description}>
             Complete our quick KYC process to secure your cutting-edge health
             device. Enhance your well-being today!
           </p>
         )}
-        {doEkyc && cameraPermission ? (
+        {authorizationData?.idToken && cameraPermission ? (
           <div className={styles.ekycIframe}>
             <iframe
               id="kyc-iframe"
@@ -255,9 +245,12 @@ const ApplyKyc = () => {
         )}
       </div>
       <div className={styles.footer}>
-        {!doEkyc && (
+        {!authorizationData?.idToken && (
           <div className={styles.content}>
-            <DiscordIcon /> <a href={SOCIAL_LINK.DISCORD}>Join Our Discord</a>
+            <DiscordIcon />{" "}
+            <a href={SOCIAL_LINK.DISCORD} target="_blank">
+              Join Our Discord
+            </a>
           </div>
         )}
         {isMobile && (
