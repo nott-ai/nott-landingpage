@@ -285,11 +285,9 @@ const ApplyKyc = () => {
             </a>
           </div>
         )}
-        {isMobile && (
-          <p className={styles.copyRight}>
-            © 2018-2024 NOTT Foundation. All rights reserved
-          </p>
-        )}
+        <p className={styles.copyRight}>
+          © 2018-2024 NOTT Foundation. All rights reserved
+        </p>
       </div>
     </div>
   );

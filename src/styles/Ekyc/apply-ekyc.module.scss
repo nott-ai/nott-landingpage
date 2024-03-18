@@ -76,10 +76,27 @@
       display: flex;
       align-items: center;
       .highlight {
-        color: #f66;
         font-size: 32px;
         font-weight: 700;
         margin-right: 16px;
+        &.NOT_FOUND {
+          color: #ff6666;
+        }
+        &.NOT_VERIFIED_EMAIL {
+          color: #ff6e05;
+        }
+        &.PENDING {
+          color: #70baff;
+        }
+        &.APPROVED {
+          color: #34f7eb;
+        }
+        &.SHIPPED {
+          color: #2db162;
+        }
+        &.REJECTED {
+          color: #ff6666;
+        }
       }
     }
     .statusDescription {
@@ -347,6 +364,7 @@
         .title {
           font-size: 24px;
           margin-top: 16px;
+          text-align: center;
         }
         .description {
           max-width: 313px;
