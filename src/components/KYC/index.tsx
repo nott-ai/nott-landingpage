@@ -27,6 +27,7 @@ const Ekyc = () => {
   };
 
   const trackStatus = async (email: string) => {
+    if (!email.trim()) return;
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/kyc/${email}`,
@@ -60,9 +61,9 @@ const Ekyc = () => {
         </p>
         <p className={styles.description}>
           Explore our exclusive HealthTech Airdrop with over{" "}
-          <span className={styles.number}>10,000</span> devices to revolutionize
-          your wellness journey with the latest health innovations. Don&#39;t
-          miss out!
+          <span className={styles.number}>10,000 devices</span> to revolutionize
+          your wellness journey with the latest health innovations. <br />{" "}
+          Don&#39;t miss out!
         </p>
         <button
           className={styles.applyEkyc}
@@ -75,7 +76,12 @@ const Ekyc = () => {
             placeholder="Enter your email"
             onChange={(event) => setEmail(event.target.value)}
           />
-          <div className={styles.track} onClick={() => trackStatus(email)}>
+          <div
+            className={`${styles.track} ${
+              email.trim().length === 0 ? styles.disable : ""
+            }`}
+            onClick={() => trackStatus(email)}
+          >
             Track
           </div>
         </div>

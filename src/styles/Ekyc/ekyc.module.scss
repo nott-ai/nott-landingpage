@@ -3,7 +3,8 @@
   background-image: url("/images/ekyc-bg.webp");
   width: 100%;
   min-height: 100vh;
-  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   padding-top: 76px;
   padding-bottom: 44px;
@@ -105,6 +106,13 @@
         &:hover {
           color: #70cde9;
         }
+        &.disable {
+          color: rgba(123, 224, 255, 0.5);
+          cursor: not-allowed;
+          &:hover {
+            color: rgba(123, 224, 255, 0.5);
+          }
+        }
       }
     }
     .info {
@@ -189,7 +197,7 @@
         line-height: 17px;
       }
       .applyEkyc {
-        margin-top: 5px;
+        margin-top: 24px;
         font-size: 18px;
         height: 56px;
       }
@@ -204,6 +212,8 @@
         .queue {
           width: 100%;
           height: 108px;
+          justify-content: flex-start;
+          padding-left: 63px;
           .label {
             font-size: 18px;
             font-weight: 600;
