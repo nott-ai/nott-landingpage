@@ -25,7 +25,9 @@ export const NAVIGATIONS = [
   {
     id: 5,
     name: "Legal & Compliance",
-    link: ROUTERS.LEGAL_DISCLAIMER,
+    link: ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER,
+    rootUrl: ROUTERS.LEGAL_AND_COMPLIANCE.index,
+    isRoot: true,
   },
   {
     id: 6,

@@ -182,7 +182,7 @@ const ApplyKyc = () => {
                     }
                   },
                 })}
-                placeholder="Passport"
+                placeholder="ID number"
               />
               {errors.passportNumber?.message && (
                 <div className={styles.errorMsg}>
@@ -256,11 +256,17 @@ const ApplyKyc = () => {
               <div>
                 By ticking, you are confirming that you have read, understood &
                 agreed to Device Drop{" "}
-                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                <Link
+                  href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
+                  target="_blank"
+                >
                   Terms of Service
                 </Link>{" "}
                 &{" "}
-                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                <Link
+                  href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
+                  target="_blank"
+                >
                   Privacy Policy
                 </Link>
               </div>
@@ -285,11 +291,9 @@ const ApplyKyc = () => {
             </a>
           </div>
         )}
-        {isMobile && (
-          <p className={styles.copyRight}>
-            © 2018-2024 NOTT Foundation. All rights reserved
-          </p>
-        )}
+        <p className={styles.copyRight}>
+          © 2018-2024 NOTT Foundation. All rights reserved
+        </p>
       </div>
     </div>
   );

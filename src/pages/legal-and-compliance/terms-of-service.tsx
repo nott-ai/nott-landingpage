@@ -1,4 +1,4 @@
-import TermService from "@/components/TermService";
+import TermService from "@/components/LegalAndCompliance/TermService";
 import Head from "next/head";
 
 const TermServicePage = () => {

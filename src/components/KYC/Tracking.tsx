@@ -57,7 +57,10 @@ const Tracking = () => {
         </p>
         <p className={styles.email}>{email}</p>
         <div className={styles.status}>
-          <div className={styles.highlight}> {currenStatus.title}</div>
+          <div className={`${styles.highlight} ${styles[`${status}`]}`}>
+            {" "}
+            {currenStatus.title}
+          </div>
           <div>Status</div>
         </div>
         <p className={styles.statusDescription}>{currenStatus.description}</p>
