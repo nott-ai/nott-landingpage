@@ -118,9 +118,11 @@ export const PRODUCT_INFO = [
     id: "smart_scale",
     name: "NOTT Smartscale",
     images: [
-      "/images/product-service/product-lineup/Pillow_2.webp",
-      "/images/product-service/product-lineup/Pillow_3.webp",
-      "/images/product-service/product-lineup/Pillow_4.webp",
+      "/images/product-service/product-lineup/Smartscale_3.webp",
+      "/images/product-service/product-lineup/Smartscale_4.webp",
+      "/images/product-service/product-lineup/Smartscale_5.webp",
+      "/images/product-service/product-lineup/Smartscale_6.webp",
+
     ],
     benefits: [
       {
