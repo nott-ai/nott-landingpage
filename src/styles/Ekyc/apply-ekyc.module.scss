@@ -1,5 +1,4 @@
 @import "../variables.scss";
-
 .wrapper {
   background-image: url("/images/ekyc-apply-bg.webp");
   width: 100%;
@@ -120,7 +119,6 @@
       font-weight: 700;
       line-height: 38px;
       max-width: 422px;
-
       .highlight {
         color: #70baff;
       }
@@ -192,7 +190,7 @@
         font-weight: 700;
         letter-spacing: 1px;
         background: #346af7;
-        margin-top: 44px;
+        margin-top: 8px;
         border: none;
         cursor: pointer;
         transition: ease 0.3s;
@@ -218,9 +216,14 @@
         line-height: 24px;
         max-width: 422px;
         gap: 8px;
+        margin-top: 8px;
         a {
           color: #70baff;
           font-weight: 500;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         .checkBoxWrapper {
           position: relative;
@@ -276,6 +279,7 @@
     }
   }
 }
+
 .resendBtn {
   display: flex;
   width: 200px;
@@ -299,6 +303,7 @@
     background-color: #70baff;
   }
 }
+
 .loading {
   height: 80vh;
   width: 100%;
@@ -331,6 +336,7 @@
     }
   }
 }
+
 @media screen and (max-width: $sm) {
   .wrapper {
     padding-top: 56px;
@@ -392,7 +398,6 @@
       padding: 0 18px;
       box-sizing: border-box;
       margin: 36px auto 0 auto;
-
       .title {
         max-width: 100%;
         font-size: 24px;
@@ -414,7 +419,6 @@
         margin-top: 24px;
         width: 100%;
         .applyEkyc {
-          margin-top: 30px;
           font-size: 18px;
           font-weight: 700;
           letter-spacing: 1px;

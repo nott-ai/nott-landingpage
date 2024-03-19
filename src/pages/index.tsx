@@ -26,7 +26,7 @@ export default function Home() {
         <meta property="og:url" content="https://nott.ai" />
         <meta
           property="og:image"
-          content="https://nott.ai/images/thumbnail.jpg"
+          content="https://nott.ai/images/thumbnail.webp"
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

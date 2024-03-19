@@ -1,4 +1,4 @@
-import PrivacyPolicy from "@/components/PrivacyPolicy";
+import PrivacyPolicy from "@/components/LegalAndCompliance/PrivacyPolicy";
 import Head from "next/head";
 
 const PrivacyPolicyPage = () => {

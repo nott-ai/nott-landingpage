@@ -89,7 +89,7 @@ const HomePage = () => {
         <div className={styles.banner}>
           <img
             className={styles.bannerImage}
-            src="/images/home-banner.webp"
+            src="/images/banner-main.webp"
             alt="banner"
           />
 
@@ -106,12 +106,12 @@ const HomePage = () => {
         <div className={styles.banner}>
           <img
             className={styles.bannerImage}
-            src="/images/home-banner-mb.png"
+            src="/images/banner-main-mobile.webp"
             alt="banner"
           />
           <div className={styles.content}>
             <b className={styles.title}>Welcome to NOTT!</b>
-            <div className={styles.description}>
+            <div style={{textAlign: 'center'}} className={styles.description}>
               An innovative platform at the forefront of digital wellness -
               powered by AI and grounded in Decentralized Physical
               Infrastructure Network (DePIN) principles.

@@ -1,4 +1,4 @@
-import LegalDisclaimer from "@/components/LegalComplaince";
+import LegalDisclaimer from "@/components/LegalAndCompliance/LegalDisclaimer";
 import Head from "next/head";
 
 const LegalDisclaimerPage = () => {
