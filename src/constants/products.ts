@@ -5,7 +5,7 @@ export const PRODUCT_LINEUP_DATA = [
     title: "Smartband",
     description:
       "This stylish tracker goes beyond counting steps, offering rich health insights and guidance to enhance your wellness journey with proactive data analysis.",
-    img: "/images/product-service/product-lineup/banner1.png",
+    img: "/images/product-service/product-lineup/sb3.webp",
   },
   {
     id: "smart_watch",
@@ -13,8 +13,8 @@ export const PRODUCT_LINEUP_DATA = [
     title: "Smartwatch",
     description:
       "A fusion of elegance and functionality, this smartwatch tracks your health, boosts productivity, and integrates seamlessly with your tech ecosystem.",
-    img: "/images/product-service/product-lineup/banner2.png",
-  },
+      img: "/images/product-service/product-lineup/Watch_1.webp",
+    },
   {
     id: "smart_scale",
     status: "Comming Soon",
@@ -84,9 +84,12 @@ export const PRODUCT_INFO = [
     id: "smart_watch",
     name: "NOTT Smartwatch",
     images: [
-      "/images/product-service/product-lineup/sw1.webp",
-      "/images/product-service/product-lineup/sw2.webp",
-      "/images/product-service/product-lineup/sw3.webp",
+      "/images/product-service/product-lineup/Watch_2.webp",
+      "/images/product-service/product-lineup/Watch_3.webp",
+      "/images/product-service/product-lineup/Watch_4.webp",
+      "/images/product-service/product-lineup/Watch_5.webp",
+      "/images/product-service/product-lineup/Watch_6.webp",
+
     ],
     benefits: [
       {
