@@ -67,10 +67,7 @@ const Confirmation = () => {
 
               <p className={styles.title}>
                 {verifySuccess ? (
-                  <>
-                    Your Path to Wellness:
-                    <br /> Quick KYC Process
-                  </>
+                  <>Submission Confirmed</>
                 ) : (
                   <>Page Not Found</>
                 )}
@@ -80,8 +77,8 @@ const Confirmation = () => {
                   <>
                     Thank you for participating in NOTT&#39;s Device Drop
                     campaign. Your registration and eKYC submission have been
-                    received. Stay informed about your application status by
-                    email updates or for faster tracking, visit our{" "}
+                    received. <br /> Stay informed about your application status
+                    by email updates or for faster tracking, visit our{" "}
                     <Link href={ROUTERS.KYC}> Landing Page</Link>{" "}
                   </>
                 ) : (

@@ -13,23 +13,26 @@ const PrivacyPolicy = () => {
   return (
     <LegalAndCompliance>
       <div className={styles.rightContent}>
-        <div className={styles.mainTittle}> PRIVACY POLICY</div>
         <div className={styles.bannerImage}>
-          <div className={style.content}>
-            <p className={style.content3}>
-              The personal information that we collect depends on the context of
-              your interactions with us and the Services, the choices you make,
-              and the products and features you use.
-            </p>
+          <div>
+            <p className={styles.mainTittle}> PRIVACY POLICY</p>
 
-            <p className={style.content3}>
-              {
-                'This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:      '
-              }{" "}
-            </p>
-            <li>{`Visit our website at https://nott.ai, or any website of ours that links to this privacy notice`}</li>
-            <li>{`Download and use our mobile application (NOTT), or any other application of ours that links to this privacy notice`}</li>
-            <li>{`Engage with us in other related ways, including any sales, marketing, or events`}</li>
+            <div className={style.content}>
+              <p className={style.content3}>
+                The personal information that we collect depends on the context
+                of your interactions with us and the Services, the choices you
+                make, and the products and features you use.
+              </p>
+
+              <p className={style.content3}>
+                {
+                  'This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:      '
+                }{" "}
+              </p>
+              <li>{`Visit our website at https://nott.ai, or any website of ours that links to this privacy notice`}</li>
+              <li>{`Download and use our mobile application (NOTT), or any other application of ours that links to this privacy notice`}</li>
+              <li>{`Engage with us in other related ways, including any sales, marketing, or events`}</li>
+            </div>
           </div>
           <img
             className={styles.imgPolicy}

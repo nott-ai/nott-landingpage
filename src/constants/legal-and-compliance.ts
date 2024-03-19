@@ -170,7 +170,7 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "21",
-        title: "Monitoring, Enforcement, And Termination",
+        title: "Updates To The Website",
         description: "",
       },
       {

@@ -41,10 +41,11 @@
     line-height: 24px;
     letter-spacing: 0.01em;
     margin-top: 11px;
+    gap: 20px;
     .imgPolicy {
       width: 488px;
-      margin-right: 20px;
       height: 300px;
+      padding-top: 42px;
     }
   }
   .textContent {
@@ -91,6 +92,7 @@
         object-fit: contain;
         width: 90vw;
         height: 350px;
+        padding-top: 0px;
       }
     }
   }

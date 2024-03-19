@@ -8,50 +8,53 @@ const TermService = () => {
   return (
     <LegalAndCompliance>
       <div className={styles.rightContent} style={{ paddingBottom: "30px" }}>
-        <div className={styles.mainTittle}> TERMS OF SERVICE (TOS)</div>
         <div className={styles.bannerImage}>
-          <div
-            style={{
-              marginRight: "20px",
-              fontSize: "14px",
-              letterSpacing: "0.01em",
-              lineHeight: "24px",
-              color: "#54545c",
-            }}
-            className={styles.content}
-          >
-            <p
+          <div>
+            <p className={styles.mainTittle}> TERMS OF SERVICE (TOS)</p>
+
+            <div
               style={{
-                margin: "11px 0px",
-                lineHeight: "24px",
+                marginRight: "20px",
+                fontSize: "14px",
                 letterSpacing: "0.01em",
-                fontWeight: 400,
+                lineHeight: "24px",
+                color: "#54545c",
               }}
-              className={styles.smDesc}
+              className={styles.content}
             >
-              NOTT maintains this website, the NOTT application and other
-              related sites or applications for the use of its customers,
-              merchants, and other website users (“Users”) upon agreement to the
-              following terms.
-            </p>
-            <p className={style.descWithoutMargin}>
-              <span>
-                Please read the following terms and conditions carefully before
-                using the
-              </span>
-              &nbsp;
-              <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
-                {INFO.WEBSITE}
-              </a>
-              &nbsp;
-              <span>
-                website and the NOTT app. Use of this website or the NOTT app
-                indicates acceptance of these “Terms and Conditions” and forms a
-                binding agreement between you and NOTT Foundation. If you do not
-                agree to the following terms and conditions, do not use this
-                website or the NOTT app.
-              </span>
-            </p>
+              <p
+                style={{
+                  margin: "11px 0px",
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: 400,
+                }}
+                className={styles.smDesc}
+              >
+                NOTT maintains this website, the NOTT application and other
+                related sites or applications for the use of its customers,
+                merchants, and other website users (“Users”) upon agreement to
+                the following terms.
+              </p>
+              <p className={style.descWithoutMargin}>
+                <span>
+                  Please read the following terms and conditions carefully
+                  before using the
+                </span>
+                &nbsp;
+                <a href={INFO.WEBSITE} target="_blank" rel="noreferrer">
+                  {INFO.WEBSITE}
+                </a>
+                &nbsp;
+                <span>
+                  website and the NOTT app. Use of this website or the NOTT app
+                  indicates acceptance of these “Terms and Conditions” and forms
+                  a binding agreement between you and NOTT Foundation. If you do
+                  not agree to the following terms and conditions, do not use
+                  this website or the NOTT app.
+                </span>
+              </p>
+            </div>
           </div>
           <img
             className={styles.imgPolicy}

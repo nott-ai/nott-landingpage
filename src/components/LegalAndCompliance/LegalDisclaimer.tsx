@@ -6,31 +6,33 @@ const LegalDisclaimer = () => {
   return (
     <LegalAndCompliance>
       <div className={styles.rightContent}>
-        <div className={styles.mainTittle}>LEGAL DISCLAIMER</div>
         <div style={{ marginBottom: "16px" }} className={styles.bannerImage}>
-          <div className={styles.content}>
-            <p
-              style={{
-                margin: "11px 0px",
-                marginRight: "20px",
-                lineHeight: "24px",
-                letterSpacing: "0.01em",
-                fontWeight: 400,
-              }}
-              className={styles.smDesc}
-            >
-              The information contained in this site is for general guidance on
-              matters of interest only. The application and impact of laws can
-              vary widely based on the specific facts involved. Given the
-              changing nature of laws, rules and regulations, and the inherent
-              hazards of electronic communication, there may be delays,
-              omissions or inaccuracies in information contained in this site.
-              Accordingly, the information on this site is provided with the
-              understanding about the platform and products.NOTT physical
-              wellness products are wellness devices and not a medical device.
-              It is intended for aiding health improvement through personalized
-              health tracking content.
-            </p>
+          <div>
+            <p className={styles.mainTittle}>LEGAL DISCLAIMER</p>
+            <div className={styles.content}>
+              <p
+                style={{
+                  margin: "11px 0px",
+                  marginRight: "20px",
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: 400,
+                }}
+                className={styles.smDesc}
+              >
+                The information contained in this site is for general guidance
+                on matters of interest only. The application and impact of laws
+                can vary widely based on the specific facts involved. Given the
+                changing nature of laws, rules and regulations, and the inherent
+                hazards of electronic communication, there may be delays,
+                omissions or inaccuracies in information contained in this site.
+                Accordingly, the information on this site is provided with the
+                understanding about the platform and products.NOTT physical
+                wellness products are wellness devices and not a medical device.
+                It is intended for aiding health improvement through
+                personalized health tracking content.
+              </p>
+            </div>
           </div>
           <img
             className={styles.imgPolicy}
