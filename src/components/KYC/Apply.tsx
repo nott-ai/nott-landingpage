@@ -257,14 +257,14 @@ const ApplyKyc = () => {
                 By ticking, you are confirming that you have read, understood &
                 agreed to Device Drop{" "}
                 <Link
-                  href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}
+                  href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
                   target="_blank"
                 >
                   Terms of Service
                 </Link>{" "}
                 &{" "}
                 <Link
-                  href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}
+                  href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
                   target="_blank"
                 >
                   Privacy Policy
