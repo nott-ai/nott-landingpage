@@ -135,6 +135,8 @@
       flex-direction: column;
       gap: 12px;
       .inputWrapper {
+        border-radius: 0;
+
         input {
           height: 56px;
           width: 100%;
@@ -145,6 +147,7 @@
           font-weight: 500;
           color: #515151;
           border: none;
+          border-radius: 0;
           &::placeholder {
             color: rgba(118, 130, 152, 0.6);
           }
