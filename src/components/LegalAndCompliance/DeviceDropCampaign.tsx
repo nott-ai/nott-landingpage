@@ -10,7 +10,7 @@ const DeviceDropCampaign = () => {
           <p
             id="collecting-information"
             className={style.deviceDropCampaignTitle}
-          >{`Terms of Service (ToS)`}</p>
+          >{`Terms of Service`}</p>
           <p
             id="collecting-information"
             className={style.title}
@@ -70,7 +70,7 @@ const DeviceDropCampaign = () => {
         <div className={style.content}>
           <p
             id="collecting-information"
-            className={style.title}
+            className={style.deviceDropCampaignTitle}
           >{`Privacy Policy`}</p>
           <p
             id="collecting-information"
