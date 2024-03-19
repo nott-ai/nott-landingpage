@@ -9,12 +9,7 @@ const DeviceDropCampaign = () => {
         <div className={style.content}>
           <p
             id="collecting-information"
-            className={style.title}
-            style={{
-              fontSize: "18px",
-              fontWeight: 600,
-              textTransform: "uppercase",
-            }}
+            className={style.deviceDropCampaignTitle}
           >{`Terms of Service (ToS)`}</p>
           <p
             id="collecting-information"

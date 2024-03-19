@@ -2,6 +2,12 @@
 $title-color: #1b1b1d;
 $desc-color: #54545c;
 
+.deviceDropCampaignTitle {
+  color: $title-color;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 .banner {
   width: 523px;
   height: 322px;
@@ -97,7 +103,13 @@ $desc-color: #54545c;
   }
 }
 @media screen and (max-width: $sm) {
+  .deviceDropCampaignTitle {
+    display: none;
+  }
   .contentContainer {
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-top: 20px;
     .content {
       padding: 0px;
     }

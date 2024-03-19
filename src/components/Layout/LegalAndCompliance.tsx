@@ -3,9 +3,15 @@ import { ROUTERS } from "@/constants/routes";
 import styles from "@/styles/Layout/legal-and-compliance.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 
+const scrollConfig = {
+  behavior: "smooth",
+  block: "center",
+  inline: "center",
+};
 interface IProps {
   children: React.ReactNode;
 }
@@ -19,6 +25,10 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
   const toggleMenu = (menuId: string) => {
     setOpenMenu(openMenu === menuId ? "" : menuId);
   };
+  const refLegalAndDisclaimer = useRef<any>();
+  const refPrivacyPolicy = useRef<any>();
+  const refTermsOfService = useRef<any>();
+  const refDeviceDropCampaign = useRef<any>();
 
   useEffect(() => {
     const sectionToScrollTo = localStorage.getItem("sectionToScrollTo");
@@ -39,25 +49,32 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
   }, [router.pathname]);
 
   const handleRouterChange = (pathname: string) => {
+    setSelectedNavItem(pathname);
+
     switch (pathname) {
       case ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER:
         setOpenMenu("Legal Disclaimer");
+        refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY:
         setOpenMenu("Privacy Policy");
+        refPrivacyPolicy.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE:
         setOpenMenu("Terms of Service");
+        refTermsOfService.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN:
         setOpenMenu("Device Drop Campaign");
+        refDeviceDropCampaign.current.scrollIntoView(scrollConfig);
         break;
 
       default:
         setOpenMenu("Legal Disclaimer");
+        refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
     }
   };
 
@@ -79,7 +96,6 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
       default:
         break;
     }
-    setSelectedNavItem(mainTitle);
   };
   return (
     <div className={styles.wrapper}>
@@ -90,6 +106,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
               setSelectedNavItem(ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER)
             }
             href={ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER}
+            ref={refLegalAndDisclaimer}
           >
             <div
               className={`${styles.navContent} ${
@@ -107,6 +124,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
               setSelectedNavItem(ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY)
             }
             href={ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY}
+            ref={refPrivacyPolicy}
           >
             <div
               className={`${styles.navContent} ${
@@ -123,6 +141,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
               setSelectedNavItem(ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE)
             }
             href={ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE}
+            ref={refTermsOfService}
           >
             <div
               className={`${styles.navContent} ${
@@ -142,6 +161,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
               )
             }
             href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
+            ref={refDeviceDropCampaign}
           >
             <div
               className={`${styles.navContent} ${
