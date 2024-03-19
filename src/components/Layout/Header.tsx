@@ -98,7 +98,13 @@ const Header = () => {
                   <div
                     key={item.id}
                     className={`${
-                      router.pathname === item.link ? styles.active : ""
+                      item.isRoot
+                        ? router.pathname.includes(item.rootUrl)
+                          ? styles.active
+                          : ""
+                        : router.pathname === item.link
+                        ? styles.active
+                        : ""
                     }`}
                   >
                     {item.isExternal ? (

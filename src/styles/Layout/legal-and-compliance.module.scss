@@ -16,6 +16,7 @@
       margin-top: 40px;
       padding: 20px 16px;
       width: 253px;
+      min-width: 253px;
       height: fit-content;
       background-color: #ffffff;
       overflow-y: auto;
@@ -78,7 +79,7 @@
       color: #346af7;
       cursor: pointer;
     }
-    .rightContent {
+    .rightBlock {
       flex: 1;
       .bannerImage {
         display: flex;

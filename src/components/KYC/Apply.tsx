@@ -182,7 +182,7 @@ const ApplyKyc = () => {
                     }
                   },
                 })}
-                placeholder="Passport"
+                placeholder="ID number"
               />
               {errors.passportNumber?.message && (
                 <div className={styles.errorMsg}>
@@ -256,11 +256,17 @@ const ApplyKyc = () => {
               <div>
                 By ticking, you are confirming that you have read, understood &
                 agreed to Device Drop{" "}
-                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                <Link
+                  href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}
+                  target="_blank"
+                >
                   Terms of Service
                 </Link>{" "}
                 &{" "}
-                <Link href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}>
+                <Link
+                  href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}
+                  target="_blank"
+                >
                   Privacy Policy
                 </Link>
               </div>
