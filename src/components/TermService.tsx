@@ -230,6 +230,10 @@ const menu: MenuItems[] = [
       },
     ],
   },
+  {
+    mainTitle: "Device Drop Campaign",
+    items: [],
+  },
 ];
 
 const TermService = () => {
@@ -272,6 +276,9 @@ const TermService = () => {
       case ROUTERS.TERMS_OF_SERVICE:
         setMainTitle("Terms of Service");
         break;
+      case ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY:
+        setMainTitle("Device Drop Campaign");
+        break;
       default:
         setMainTitle("Legal Disclaimer");
     }
@@ -288,6 +295,9 @@ const TermService = () => {
         break;
       case "Terms of Service":
         router.push(ROUTERS.TERMS_OF_SERVICE);
+        break;
+      case "Device Drop Campaign":
+        router.push(ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY);
         break;
       default:
         break;
@@ -338,11 +348,10 @@ const TermService = () => {
             href={ROUTERS.LEGAL_DISCLAIMER}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                ? styles.active
+                : ""
+                }`}
             >
               Legal Disclaimer
             </div>
@@ -352,9 +361,8 @@ const TermService = () => {
             href={ROUTERS.PRIVACY_POLICY}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+                }`}
             >
               Privacy Policy
             </div>
@@ -364,11 +372,10 @@ const TermService = () => {
             href={ROUTERS.TERMS_OF_SERVICE}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                ? styles.active
+                : ""
+                }`}
             >
               Terms of Service
             </div>
@@ -402,9 +409,8 @@ const TermService = () => {
                         smooth={true}
                         duration={500}
                         style={{ background: "transparent" }}
-                        className={`${styles.listContent} ${
-                          activeSection === item.id ? styles.active : ""
-                        }`}
+                        className={`${styles.listContent} ${activeSection === item.id ? styles.active : ""
+                          }`}
                       >
                         <div
                           key={item.id}

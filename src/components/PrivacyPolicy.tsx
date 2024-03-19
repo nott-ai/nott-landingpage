@@ -231,6 +231,10 @@ const menu: MenuItems[] = [
       },
     ],
   },
+  {
+    mainTitle: "Device Drop Campaign",
+    items: [],
+  },
 ];
 
 const PrivacyPolicy = () => {
@@ -261,6 +265,9 @@ const PrivacyPolicy = () => {
       case ROUTERS.TERMS_OF_SERVICE:
         setMainTitle("Terms of Service");
         break;
+      case ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY:
+        setMainTitle("Device Drop Campaign");
+        break;
       default:
         setMainTitle("Legal Disclaimer");
     }
@@ -277,6 +284,9 @@ const PrivacyPolicy = () => {
         break;
       case "Terms of Service":
         router.push(ROUTERS.TERMS_OF_SERVICE);
+        break;
+      case "Device Drop Campaign":
+        router.push(ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY);
         break;
       default:
         break;
@@ -327,11 +337,10 @@ const PrivacyPolicy = () => {
             href={ROUTERS.LEGAL_DISCLAIMER}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                ? styles.active
+                : ""
+                }`}
             >
               Legal Disclaimer
             </div>
@@ -341,9 +350,8 @@ const PrivacyPolicy = () => {
             href={ROUTERS.PRIVACY_POLICY}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+                }`}
             >
               Privacy Policy
             </div>
@@ -353,11 +361,10 @@ const PrivacyPolicy = () => {
             href={ROUTERS.TERMS_OF_SERVICE}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                ? styles.active
+                : ""
+                }`}
             >
               Terms of Service
             </div>
@@ -392,9 +399,8 @@ const PrivacyPolicy = () => {
                           smooth={true}
                           duration={500}
                           style={{ background: "transparent" }}
-                          className={`${styles.listContent} ${
-                            activeSection === item.id ? styles.active : ""
-                          }`}
+                          className={`${styles.listContent} ${activeSection === item.id ? styles.active : ""
+                            }`}
                         >
                           <div key={item.id} className={styles.listContent}>
                             {item.title}
@@ -473,8 +479,8 @@ const PrivacyPolicy = () => {
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-              "Sensitive Information"
-            )}: When necessary, with your consent or as
+                    "Sensitive Information"
+                  )}: When necessary, with your consent or as
             otherwise permitted by applicable law, we process the following
             categories of sensitive information:
             `)}
@@ -494,8 +500,8 @@ const PrivacyPolicy = () => {
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(`
             ${getHighlightedText(
-              "Application Data"
-            )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
+                    "Application Data"
+                  )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:
           `)}
                 />
                 <p className={style.description}>

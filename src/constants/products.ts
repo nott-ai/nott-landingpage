@@ -21,15 +21,15 @@ export const PRODUCT_LINEUP_DATA = [
     title: "Smartscale",
     description:
       "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
-    img: "/images/product-service/product-lineup/banner3.png",
-  },
+      img: "/images/product-service/product-lineup/Smartscale_2.webp",
+    },
   {
     id: "smart_pillow",
     status: "Comming Soon",
     title: "Smartpillow",
     description:
       "Experience unparalleled comfort and sleep analysis with our smart pillow, featuring non-contact monitoring and AI-powered insights for a better night's rest",
-    img: "/images/product-service/product-lineup/banner4.png",
+    img: "/images/product-service/product-lineup/Pillow_1.webp",
   },
 ];
 
@@ -115,8 +115,9 @@ export const PRODUCT_INFO = [
     id: "smart_scale",
     name: "NOTT Smartscale",
     images: [
-      "/images/product-service/product-lineup/ss.webp",
-      "/images/product-service/product-lineup/ss2.webp",
+      "/images/product-service/product-lineup/Pillow_2.webp",
+      "/images/product-service/product-lineup/Pillow_3.webp",
+      "/images/product-service/product-lineup/Pillow_4.webp",
     ],
     benefits: [
       {
@@ -139,7 +140,11 @@ export const PRODUCT_INFO = [
   {
     id: "smart_pillow",
     name: "NOTT Smartpillow",
-    images: ["/images/product-service/product-lineup/sp.webp"],
+    images: [
+      "/images/product-service/product-lineup/Pillow_2.webp",
+      "/images/product-service/product-lineup/Pillow_3.webp",
+      "/images/product-service/product-lineup/Pillow_4.webp",
+    ],    
     benefits: [
       {
         title: "Advanced Sleep Monitoring & Analysis:",

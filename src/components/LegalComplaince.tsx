@@ -228,6 +228,10 @@ const menu: MenuItems[] = [
       },
     ],
   },
+  {
+    mainTitle: "Device Drop Campaign",
+    items: [],
+  },
 ];
 
 const LegalDisclaimer = () => {
@@ -254,6 +258,9 @@ const LegalDisclaimer = () => {
       case ROUTERS.TERMS_OF_SERVICE:
         setMainTitle("Terms of Service");
         break;
+      case ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY:
+        setMainTitle("Device Drop Campaign");
+        break;
       default:
         setMainTitle("Legal Disclaimer");
     }
@@ -270,6 +277,9 @@ const LegalDisclaimer = () => {
         break;
       case "Terms of Service":
         router.push(ROUTERS.TERMS_OF_SERVICE);
+        break;
+      case "Device Drop Campaign":
+        router.push(ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY);
         break;
       default:
         break;
@@ -306,6 +316,9 @@ const LegalDisclaimer = () => {
       case ROUTERS.TERMS_OF_SERVICE:
         setOpenMenu("Terms of Service");
         break;
+      case ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY:
+        setOpenMenu("Device Drop Campaign");
+        break;
       default:
         setOpenMenu("");
     }
@@ -320,11 +333,10 @@ const LegalDisclaimer = () => {
             href={ROUTERS.LEGAL_DISCLAIMER}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_DISCLAIMER
+                ? styles.active
+                : ""
+                }`}
             >
               Legal Disclaimer
             </div>{" "}
@@ -334,9 +346,8 @@ const LegalDisclaimer = () => {
             href={ROUTERS.PRIVACY_POLICY}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.PRIVACY_POLICY ? styles.active : ""
+                }`}
             >
               Privacy Policy
             </div>
@@ -346,13 +357,25 @@ const LegalDisclaimer = () => {
             href={ROUTERS.TERMS_OF_SERVICE}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.TERMS_OF_SERVICE
-                  ? styles.active
-                  : ""
-              }`}
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.TERMS_OF_SERVICE
+                ? styles.active
+                : ""
+                }`}
             >
               Terms of Service
+            </div>
+          </Link>
+          <Link
+            onClick={() => setSelectedNavItem(ROUTERS.TERMS_OF_SERVICE)}
+            href={ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY}
+          >
+            <div
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.DEVICE_DROP_CAMPAIGN_POLICY
+                ? styles.active
+                : ""
+                }`}
+            >
+              Device Drop Campaign
             </div>
           </Link>
         </div>
@@ -387,9 +410,8 @@ const LegalDisclaimer = () => {
                           style={{ background: "transparent" }}
                         >
                           <div
-                            className={`${styles.listContent} ${
-                              selectedTitle === item.title ? styles.active : ""
-                            }`}
+                            className={`${styles.listContent} ${selectedTitle === item.title ? styles.active : ""
+                              }`}
                           >
                             {item.title}
                           </div>
