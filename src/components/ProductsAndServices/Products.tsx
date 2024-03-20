@@ -63,13 +63,11 @@ const Products = () => {
           ))}
         </div>
       </div>
-      {modalIsOpen && (
-        <ModalProductService
-          modalIsOpen={modalIsOpen}
-          setModalIsOpen={setModalIsOpen}
-          productInfo={productInfo}
-        />
-      )}
+      <ModalProductService
+        modalIsOpen={modalIsOpen}
+        setModalIsOpen={setModalIsOpen}
+        productInfo={productInfo}
+      />
     </div>
   );
 };
