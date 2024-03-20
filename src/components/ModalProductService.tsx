@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Modal from "react-modal";
 import styles from "@/styles/ProductsAndServices/product-modal.module.scss";
 import { CloseCookieIcon } from "@/assets/index";
@@ -42,32 +42,54 @@ interface ProductInfo {
 }
 interface ModalProductServiceProps {
   modalIsOpen: boolean;
-  setModalIsOpen: (isOpen: boolean) => void;
   productInfo: ProductInfo;
+  onClose: () => void;
 }
 
 const ModalProductService: React.FC<ModalProductServiceProps> = ({
   modalIsOpen,
-  setModalIsOpen,
   productInfo,
+  onClose,
 }) => {
+  const modalRef = useRef<any>(null);
+  useEffect(() => {
+    const preventTouchMove = (e: TouchEvent) => {
+      if (
+        modalRef.current &&
+        modalRef.current.contains &&
+        !modalRef.current.contains(e.target)
+      ) {
+        e.preventDefault();
+      }
+    };
+    if (modalIsOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    };
+  }, [modalIsOpen]);
   return (
     <Modal
       isOpen={modalIsOpen}
-      onRequestClose={() => setModalIsOpen(false)}
+      onRequestClose={onClose}
       className={styles.modalContent}
       overlayClassName={styles.overlay}
-      id="modal_product_service"
+      ref={modalRef}
     >
       <div className={styles.topBlock}>
         <div className={styles.header}>
           {/* <div className={styles.price}>
             {productInfo.price || "Coming Soon"}
           </div> */}
-          <CloseCookieIcon
-            className={styles.closeIcon}
-            onClick={() => setModalIsOpen(false)}
-          />
+          <CloseCookieIcon className={styles.closeIcon} onClick={onClose} />
         </div>
         <div className={styles.title}>
           Key Features of the {productInfo.name}

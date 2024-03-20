@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/ProductsAndServices/products.module.scss";
 import ModalProductService from "@/components/ModalProductService";
 
 import { PRODUCT_INFO, PRODUCT_LINEUP_DATA } from "@/constants/products";
+import useModal from "@/hooks/useModal";
 
 const Products = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { modalIsOpen, onOpen, onClose } = useModal();
   const [productInfo, setProductInfo] = useState(PRODUCT_INFO[0]);
   const openModal = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -15,29 +16,10 @@ const Products = () => {
     const info = PRODUCT_INFO.find((item) => item.id === infoId);
     if (info) {
       setProductInfo(info);
-      setModalIsOpen(true);
+      onOpen();
     }
-    setModalIsOpen(true);
+    onOpen();
   };
-
-  useEffect(() => {
-    const preventTouchMove = (e: TouchEvent) => {
-      e.preventDefault();
-    };
-    if (modalIsOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.addEventListener("touchmove", preventTouchMove, {
-        passive: false,
-      });
-    } else {
-      document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", preventTouchMove);
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", preventTouchMove);
-    };
-  }, [modalIsOpen]);
 
   return (
     <div className={styles.wrapper}>
@@ -73,8 +55,8 @@ const Products = () => {
       </div>
       <ModalProductService
         modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
         productInfo={productInfo}
+        onClose={onClose}
       />
     </div>
   );
