@@ -10,12 +10,12 @@ const DeviceDropCampaign = () => {
           <p
             id="collecting-information"
             className={style.deviceDropCampaignTitle}
-          >{`Terms of Service`}</p>
+          >{`Terms of Service (TOS)`}</p>
           <p
             id="collecting-information"
             className={style.title}
           >{`Introduction`}</p>
-          <p className={style.smDesc}>
+          <p className={style.description}>
             {`Welcome to the NOTT Device-Drop Campaign ("Campaign"). By participating in the Campaign and completing the electronic Know Your Customer (eKYC) process to receive a NOTT device, you agree to these Terms of Service (ToS). Please read them carefully.`}
           </p>
           <p
@@ -76,7 +76,7 @@ const DeviceDropCampaign = () => {
             id="collecting-information"
             className={style.title}
           >{`Introduction`}</p>
-          <p className={style.smDesc}>
+          <p className={style.description}>
             {`NOTT is committed to protecting the privacy and security of the personal information of its users. This Privacy Policy outlines our practices regarding the collection, use, and sharing of your information through the NOTT devices received via our Device-Drop Campaign.`}
           </p>
           <p
@@ -140,10 +140,10 @@ const DeviceDropCampaign = () => {
           <ul>
             <li>{`1. We reserve the right to modify this policy at any time. Changes will be posted on our website.`}</li>
           </ul>
-          <p className={style.smDesc}>
+          <p className={style.description}>
             {`By participating in the NOTT Device-Drop Campaign and completing the eKYC process, you consent to these terms and our handling of your information as described. For questions or concerns, please contact our support team.`}
           </p>
-          <p className={style.smDesc}>
+          <p className={style.description}>
             {`This ToS and Privacy Policy are designed to meet general legal requirements and protect both the users' rights and NOTT's interests. Depending on the jurisdiction, additional clauses or adjustments may be necessary to comply with local laws and regulations.`}
           </p>
         </div>
