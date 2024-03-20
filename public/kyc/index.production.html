@@ -148,7 +148,8 @@
           },
           (res2) => {
             let merged = { ...data, ...res2 };
-            console.log("merged", merged);
+            console.log("merged", JSON.stringify(merged));
+
 
             const bodyData = {
               "compare": {
