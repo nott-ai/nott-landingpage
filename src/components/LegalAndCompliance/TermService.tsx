@@ -10,7 +10,7 @@ const TermService = () => {
       <div className={styles.rightContent} style={{ paddingBottom: "30px" }}>
         <div className={styles.bannerImage}>
           <div>
-            <p className={styles.mainTittle}> TERMS OF SERVICE (TOS)</p>
+            <p className={styles.mainTittle}> TERMS OF SERVICE</p>
 
             <div
               style={{

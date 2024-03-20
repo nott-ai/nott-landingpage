@@ -27,6 +27,9 @@ $desc-color: #54545c;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    ul li {
+      list-style: none;
+    }
     .smTitle {
       color: $title-color;
       font-size: 18px;
