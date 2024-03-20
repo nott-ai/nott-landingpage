@@ -9,7 +9,7 @@ const LegalDisclaimer = () => {
         <div style={{ marginBottom: "16px" }} className={styles.bannerImage}>
           <div>
             <p className={styles.mainTittle}>LEGAL DISCLAIMER</p>
-            <div className={styles.contentImg}>
+            <div className={styles.content}>
               <p className={styles.smDesc}>
                 The information contained in this site is for general guidance
                 on matters of interest only. The application and impact of laws
