@@ -17,16 +17,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.show {
-  transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
-}
-
 .wrapper {
   position: fixed;
   width: 100%;
   max-width: 100vw;
   top: 0;
+  transition: transform 0.3s ease-in-out;
   z-index: map-get($map: $z-index, $key: "STICKY");
   height: 122px;
   &.ekyc {

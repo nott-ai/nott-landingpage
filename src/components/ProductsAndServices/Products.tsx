@@ -23,16 +23,11 @@ const Products = () => {
   useEffect(() => {
     if (modalIsOpen) {
       document.body.style.overflow = "hidden";
-      // document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
-      //   passive: false,
-      // });
     } else {
       document.body.style.overflow = "auto";
-      // document.body.removeEventListener("touchmove", (e) => e.preventDefault());
     }
     return () => {
       document.body.style.overflow = "auto";
-      // document.body.removeEventListener("touchmove", (e) => e.preventDefault());
     };
   }, [modalIsOpen]);
 

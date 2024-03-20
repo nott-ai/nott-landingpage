@@ -47,10 +47,8 @@ const Header = () => {
       if (wrapper) {
         if (st > lastScrollTop) {
           wrapper.classList.add(styles.hidden);
-          wrapper.classList.remove(styles.show);
         } else {
           wrapper.classList.remove(styles.hidden);
-          wrapper.classList.add(styles.show);
         }
       }
 
