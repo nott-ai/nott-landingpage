@@ -23,16 +23,16 @@ const Products = () => {
   useEffect(() => {
     if (modalIsOpen) {
       document.body.style.overflow = "hidden";
-      document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
-        passive: false,
-      });
+      // document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
+      //   passive: false,
+      // });
     } else {
       document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", (e) => e.preventDefault());
+      // document.body.removeEventListener("touchmove", (e) => e.preventDefault());
     }
     return () => {
       document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", (e) => e.preventDefault());
+      // document.body.removeEventListener("touchmove", (e) => e.preventDefault());
     };
   }, [modalIsOpen]);
 
@@ -48,7 +48,7 @@ const Products = () => {
             <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <img src={item.img} alt={item.title} />
-              <div className={styles.divider} />
+                <div className={styles.divider} />
               </div>
               <div className={styles.textContent}>
                 <div className={styles.header}>
@@ -68,11 +68,13 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <ModalProductService
-        modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
-        productInfo={productInfo}
-      />
+      {modalIsOpen && (
+        <ModalProductService
+          modalIsOpen={modalIsOpen}
+          setModalIsOpen={setModalIsOpen}
+          productInfo={productInfo}
+        />
+      )}
     </div>
   );
 };
