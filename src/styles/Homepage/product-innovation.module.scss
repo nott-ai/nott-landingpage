@@ -14,8 +14,8 @@
         height: 183px;
 
         .imageContainer {
-            width: 145px;
-            height: 145px;
+            max-width: 145px;
+            max-height: 145px;
 
             .image {
                 width: 100%;

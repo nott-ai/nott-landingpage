@@ -17,6 +17,11 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.show {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
 .wrapper {
   position: fixed;
   width: 100%;

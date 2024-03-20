@@ -38,7 +38,7 @@ const ProductAndInnovationCard = ({
         <div className={styles.leftBlock}>
           <div
             className={styles.imageContainer}
-            style={{ height: imageHeight, width: imageWidth }}
+            // style={{ height: imageHeight, width: imageWidth }}
           >
             <img className={styles.image} src={images[0]} alt="wearable" />
           </div>
