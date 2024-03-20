@@ -21,13 +21,21 @@ const Products = () => {
   };
 
   useEffect(() => {
+    const preventTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+    };
     if (modalIsOpen) {
       document.body.style.overflow = "hidden";
+      document.body.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
     } else {
       document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
     }
     return () => {
       document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
     };
   }, [modalIsOpen]);
 

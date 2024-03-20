@@ -57,6 +57,7 @@ const ModalProductService: React.FC<ModalProductServiceProps> = ({
       onRequestClose={() => setModalIsOpen(false)}
       className={styles.modalContent}
       overlayClassName={styles.overlay}
+      id="modal_product_service"
     >
       <div className={styles.topBlock}>
         <div className={styles.header}>
