@@ -278,6 +278,7 @@
             .imageTwoContainer {
                 width: 783px;
                 height: 385px;
+                position: relative;
                 .imageTwo {
                     width: 100%;
                     height: 100%;
@@ -321,7 +322,7 @@
         flex-direction: column;
         .banner {
             width: 100%;
-            height: auto;
+            height: 676px;
             .content {
                 //posisitionin center of image
                 top: 60px;
@@ -352,7 +353,7 @@
             }
             .bannerImage {
                 width: 100%;
-                height: auto;
+                height: 100%;
                 object-fit: cover;
                 position: relative;
             }
@@ -434,7 +435,8 @@
             }
             .imageTwoContainer {
                 width: 100%;
-                height: 100%;
+                height: 215px;
+                position: relative;
                 .imageTwo {
                     width: 100%;
                     height: 100%;
