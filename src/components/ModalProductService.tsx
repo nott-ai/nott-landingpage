@@ -89,10 +89,11 @@ const ModalProductService: React.FC<ModalProductServiceProps> = ({
           {/* <div className={styles.price}>
             {productInfo.price || "Coming Soon"}
           </div> */}
+
+          <div className={styles.title}>
+            Key Features of the {productInfo.name}
+          </div>
           <CloseCookieIcon className={styles.closeIcon} onClick={onClose} />
-        </div>
-        <div className={styles.title}>
-          Key Features of the {productInfo.name}
         </div>
       </div>
       <div className={styles.slider} id="product-image-slider">
