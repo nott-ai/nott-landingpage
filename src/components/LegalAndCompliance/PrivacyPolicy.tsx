@@ -15,7 +15,9 @@ const PrivacyPolicy = () => {
       <div className={styles.rightContent}>
         <div className={styles.bannerImage}>
           <div>
-            <p className={styles.mainTittle}> PRIVACY POLICY</p>
+            <p className={styles.mainTittle} style={{ marginBottom: "11px" }}>
+              PRIVACY POLICY
+            </p>
 
             <div className={style.content}>
               <p className={style.content3}>

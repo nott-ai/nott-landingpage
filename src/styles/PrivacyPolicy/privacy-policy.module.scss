@@ -7,6 +7,8 @@ $desc-color: #54545c;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
 }
 .banner {
   width: 523px;
@@ -28,7 +30,7 @@ $desc-color: #54545c;
     .content {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
       ul li {
         list-style: none;
       }
