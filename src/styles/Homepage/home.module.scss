@@ -1,12 +1,15 @@
 @import "../variables.scss";
+@mixin container-styled {
+    max-width: $max-width-container;
+    margin: auto;
+}
 .container {
     margin: 122px auto 80px auto;
     gap: 40px;
     display: flex;
     flex-direction: column;
     .banner {
-        max-width: $max-width-container;
-        margin: auto;
+        @include container-styled();
         position: relative;
         width: 100%;
         height: 298px;
@@ -42,8 +45,7 @@
         }
     }
     .latestNews {
-        max-width: $max-width-container;
-        margin: auto;
+        @include container-styled();
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -78,8 +80,7 @@
         }
     }
     .featuredProductsAndInnovations {
-        max-width: $max-width-container;
-        margin: auto;
+        @include container-styled();
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -103,8 +104,7 @@
         height: 230px;
         background: #0674c1;
         .content {
-            margin: auto;
-            max-width: $max-width-container;
+            @include container-styled();
             position: relative;
             .imageOneContainer {
                 width: 505px;
@@ -162,9 +162,6 @@
 @media screen and (max-width: $lg) {
     .container {
         margin: 44px auto;
-        gap: 40px;
-        display: flex;
-        flex-direction: column;
         .banner {
             width: 100%;
             height: auto;
