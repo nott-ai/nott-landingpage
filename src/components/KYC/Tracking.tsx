@@ -44,6 +44,7 @@ const Tracking = () => {
 
   const email = searchParams.get("email");
   const status = searchParams.get("status");
+  const reason = searchParams.get("reason");
   const currenStatus = status ? STATUS[status + ""] : STATUS.NOT_FOUND;
 
   return (
@@ -63,7 +64,11 @@ const Tracking = () => {
           </div>
           <div>Status</div>
         </div>
-        <p className={styles.statusDescription}>{currenStatus.description}</p>
+        <p className={styles.statusDescription}>
+          {status !== "REJECTED"
+            ? currenStatus.description
+            : `Reason: ${reason}`}
+        </p>
       </div>
       <div className={styles.footer}>
         <div className={styles.copyRight}>
