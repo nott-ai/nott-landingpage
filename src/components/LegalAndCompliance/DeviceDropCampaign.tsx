@@ -139,7 +139,7 @@ const DeviceDropCampaign = () => {
               className={style.title}
             >{`Changes to the Privacy Policy`}</p>
             <ul>
-              <li>{`1. We reserve the right to modify this policy at any time. Changes will be posted on our website.`}</li>
+              <li>{`We reserve the right to modify this policy at any time. Changes will be posted on our website.`}</li>
             </ul>
             <p className={style.description}>
               {`By participating in the NOTT Device-Drop Campaign and completing the eKYC process, you consent to these terms and our handling of your information as described. For questions or concerns, please contact our support team.`}

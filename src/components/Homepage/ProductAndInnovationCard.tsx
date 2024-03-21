@@ -2,6 +2,7 @@ import styles from "@/styles/Homepage/product-innovation.module.scss";
 import ModalProductService from "../ModalProductService";
 import { useState } from "react";
 import { PRODUCT_INFO } from "@/constants/products";
+import useModal from "@/hooks/useModal";
 
 export interface IProductAndInnovationCard {
   id: string;
@@ -20,16 +21,16 @@ const ProductAndInnovationCard = ({
   imageHeight,
   imageWidth,
 }: IProductAndInnovationCard) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [productInfo, setProductInfo] = useState(PRODUCT_INFO[0]);
+  const { modalIsOpen, onOpen, onClose } = useModal();
   const openModal = (e: any, infoId: string) => {
     e.preventDefault();
     const info = PRODUCT_INFO.find((item) => item.id === infoId);
     if (info) {
       setProductInfo(info);
-      setModalIsOpen(true);
+      onOpen();
     }
-    setModalIsOpen(true);
+    onOpen();
   };
 
   return (
@@ -38,7 +39,7 @@ const ProductAndInnovationCard = ({
         <div className={styles.leftBlock}>
           <div
             className={styles.imageContainer}
-            style={{ height: imageHeight, width: imageWidth }}
+            // style={{ height: imageHeight, width: imageWidth }}
           >
             <img className={styles.image} src={images[0]} alt="wearable" />
           </div>
@@ -59,7 +60,7 @@ const ProductAndInnovationCard = ({
       </div>
       <ModalProductService
         modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
+        onClose={onClose}
         productInfo={productInfo}
       />
     </>
