@@ -45,7 +45,13 @@ const Ekyc = () => {
       if (data?.data) {
         setEmail("");
         router.push(
-          `${ROUTERS.KYC_TRACKING}?email=${email}&status=${data?.data?.kycStatus}`
+          `${ROUTERS.KYC_TRACKING}?email=${email}&status=${
+            data?.data?.kycStatus
+          }${
+            data?.data?.kycRejectReason
+              ? `&reason=${data?.data?.kycRejectReason}`
+              : ""
+          }`
         );
       }
     } catch (error: any) {
