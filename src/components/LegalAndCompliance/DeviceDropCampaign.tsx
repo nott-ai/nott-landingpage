@@ -6,12 +6,12 @@ const DeviceDropCampaign = () => {
   return (
     <LegalAndCompliance>
       <div className={style.contentContainer}>
-        <p
-          id="collecting-information"
-          className={style.deviceDropCampaignTitle}
-        >{`Terms of Service (TOS)`}</p>
         <div className={style.contentMain}>
           <div className={style.content}>
+            <p
+              id="collecting-information"
+              className={style.deviceDropCampaignTitle}
+            >{`Terms of Service (TOS)`}</p>
             <p
               id="collecting-information"
               className={style.title}
@@ -138,9 +138,9 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Changes to the Privacy Policy`}</p>
-            <ul>
-              <li>{`We reserve the right to modify this policy at any time. Changes will be posted on our website.`}</li>
-            </ul>
+            <p
+              className={style.description}
+            >{`We reserve the right to modify this policy at any time. Changes will be posted on our website.`}</p>
             <p className={style.description}>
               {`By participating in the NOTT Device-Drop Campaign and completing the eKYC process, you consent to these terms and our handling of your information as described. For questions or concerns, please contact our support team.`}
             </p>
