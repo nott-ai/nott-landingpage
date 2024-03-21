@@ -36,7 +36,9 @@ const TermService = () => {
                 merchants, and other website users (“Users”) upon agreement to
                 the following terms.
               </p>
-              <p className={style.descWithoutMargin}>
+              <p
+                className={style.descWithoutMargin}
+              >
                 <span>
                   Please read the following terms and conditions carefully
                   before using the

@@ -30,7 +30,7 @@ const Ekyc = () => {
     if (!email.trim()) return;
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/auth/kyc/${email}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/kyc/${email.trim()}`,
         {
           method: "GET",
           headers: {

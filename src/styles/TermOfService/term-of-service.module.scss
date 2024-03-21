@@ -128,6 +128,9 @@ $desc-color: #54545c;
 }
 
 @media screen and (max-width: $sm) {
+  .descWithoutMargin {
+    text-align: justify;
+  }
   .container {
     .contentContainer {
       .content {
