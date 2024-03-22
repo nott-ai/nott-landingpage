@@ -3,7 +3,7 @@
     max-width: $max-width-container;
     margin: auto;
 }
-@mixin imageStyled {
+@mixin image-fill {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -19,7 +19,7 @@
         width: 100%;
         height: 298px;
         .bannerImage {
-           @include imageStyled();
+           @include image-fill();
         }
         .content {
             top: 60px;
@@ -116,7 +116,7 @@
                 top: 0;
                 left: 135px;
                 .imageOne {
-                    @include imageStyled();
+                    @include image-fill();
                 }
             }
             .imageTwoContainer {
@@ -126,7 +126,7 @@
                 top: -28px;
                 right: 0;
                 .imageTwo {
-                    @include imageStyled();
+                    @include image-fill();
                 }
             }
             .textBlock {
@@ -191,7 +191,7 @@
                 }
             }
             .bannerImage {
-                @include imageStyled();
+                @include image-fill();
             }
         }
         .latestNews {
@@ -265,14 +265,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                @include imageStyled();
+                @include image-fill();
             }
             .imageTwoContainer {
                 width: 783px;
                 height: 385px;
                 position: relative;
                 .imageTwo {
-                    @include imageStyled();
+                    @include image-fill();
                 }
             }
             .textBlock {
@@ -342,7 +342,7 @@
                 }
             }
             .bannerImage {
-                @include imageStyled();
+                @include image-fill();
                 position: relative;
             }
         }
@@ -417,14 +417,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                @include imageStyled();
+                @include image-fill();
             }
             .imageTwoContainer {
                 width: 100%;
                 height: 215px;
                 position: relative;
                 .imageTwo {
-                    @include imageStyled();
+                    @include image-fill();
                 }
             }
             .textBlock {
