@@ -195,7 +195,7 @@ const ApplyKyc = () => {
                 {...register("address", {
                   required: ERROR_MESSAGE.REQUIRED,
                 })}
-                placeholder="Address"
+                placeholder="Address to ship the device"
               />
               {errors.address?.message && (
                 <div className={styles.errorMsg}>

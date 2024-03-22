@@ -23,7 +23,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Eligibility`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. Participants must be 18 years or older.`}</li>
               <li>{`2. Complete the eKYC process accurately and truthfully`}</li>
               <li>{`3. Agree to the data collection and usage policies as outlined in our Privacy Policy`}</li>
@@ -35,7 +35,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Device Usage`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. NOTT devices, including smart bands and smart watches, are provided as part of our initiative to enhance health and wellness through technology.`}</li>
               <li>{`2. Devices are for personal use only and should not be sold or distributed.`}</li>
             </ul>
@@ -45,7 +45,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Data Collection and Privacy`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. Refer to our Privacy Policy for detailed information on the data collected through NOTT devices and its usage..`}</li>
             </ul>
           </div>
@@ -54,7 +54,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`User Obligations`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. Maintain the security and confidentiality of your device.`}</li>
               <li>{`2. Report any issues or defects with the device promptly to NOTT support..`}</li>
             </ul>
@@ -64,9 +64,9 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Termination`}</p>
-            <ul>
-              <li>{`1. NOTT reserves the right to terminate your participation in the Campaign for any breach of these ToS.`}</li>
-            </ul>
+            <p>
+              {`NOTT reserves the right to terminate your participation in the Campaign for any breach of these ToS.`}
+            </p>
           </div>
           <div className={style.content}>
             <p
@@ -84,7 +84,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Information We Collect`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. Personal Identification Information: Collected through the eKYC process.`}</li>
               <li>{`2. Health and Wellness Data: Generated through your use of NOTT devices.`}</li>
               <li>{`3. Device and App Usage Data: Information on how you interact with the device and NOTT app.`}</li>
@@ -95,7 +95,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Use of Information`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. To provide personalized health insights and recommendations.`}</li>
               <li>{`2. To improve our products and services.`}</li>
               <li>{`3. For research and development purposes, with anonymized data.`}</li>
@@ -106,7 +106,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Sharing of Information`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. We do not sell your personal information.`}</li>
               <li>{`2. Information may be shared with third-party service providers bound by confidentiality agreements.`}</li>
               <li>{`3. Anonymized data may be used for research and shared with healthcare professionals.`}</li>
@@ -117,7 +117,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`Data Security and Storage`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. We employ state-of-the-art security measures to protect your information.`}</li>
               <li>{`2. Data is stored on secure servers with limited access.`}</li>
             </ul>
@@ -127,7 +127,7 @@ const DeviceDropCampaign = () => {
               id="collecting-information"
               className={style.title}
             >{`User Rights`}</p>
-            <ul>
+            <ul className={style.listNotStyle}>
               <li>{`1. Access to the personal information we hold about you.`}</li>
               <li>{`2. Request correction of inaccurate information.`}</li>
               <li>{`3. Opt-out of certain uses of your information.`}</li>

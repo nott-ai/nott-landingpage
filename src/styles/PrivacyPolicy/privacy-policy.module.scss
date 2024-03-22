@@ -31,9 +31,6 @@ $desc-color: #54545c;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      ul li {
-        list-style: none;
-      }
       .smTitle {
         color: $title-color;
         font-size: 18px;
@@ -106,6 +103,9 @@ $desc-color: #54545c;
         font-weight: 500;
         line-height: 140%;
         /* 19.6px */
+      }
+      .listNotStyle li {
+        list-style: none;
       }
     }
   }
