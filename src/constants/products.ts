@@ -21,7 +21,7 @@ export const PRODUCT_LINEUP_DATA = [
     title: "Smartscale",
     description:
       "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
-      img: "/images/product-service/product-lineup/Smartscale_2.webp",
+      img: "/images/product-service/product-lineup/Smartscale_3.webp",
     },
   {
     id: "smart_pillow",
