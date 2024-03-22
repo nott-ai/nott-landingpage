@@ -78,16 +78,21 @@ const Footer = () => {
               </div>
 
               <div className={`${styles.column} ${styles.documents}`}>
-                <p className={styles.title}>{trans.footer.documents}</p>
+                <p className={styles.title}>{trans.footer.legalDocuments}</p>
                 <div className={styles.subColumn}>
-                  <Link href={ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE}>
-                    Terms of Services{" "}
+                  <Link href={ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER}>
+                    Legal Disclaimer
                   </Link>
                   <Link href={ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY}>
                     Privacy Policy
                   </Link>
-                  <Link href={ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER}>
-                    Legal Disclaimer
+                  <Link href={ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE}>
+                    Terms of Services{" "}
+                  </Link>
+                  <Link
+                    href={ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN}
+                  >
+                    Device Drop Campaign
                   </Link>
                 </div>
               </div>
