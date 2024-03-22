@@ -3,6 +3,11 @@
     max-width: $max-width-container;
     margin: auto;
 }
+@mixin imageStyled {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .container {
     margin: 122px auto 80px auto;
     gap: 40px;
@@ -14,9 +19,7 @@
         width: 100%;
         height: 298px;
         .bannerImage {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+           @include imageStyled();
         }
         .content {
             top: 60px;
@@ -113,9 +116,7 @@
                 top: 0;
                 left: 135px;
                 .imageOne {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    @include imageStyled();
                 }
             }
             .imageTwoContainer {
@@ -125,9 +126,7 @@
                 top: -28px;
                 right: 0;
                 .imageTwo {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    @include imageStyled();
                 }
             }
             .textBlock {
@@ -192,9 +191,7 @@
                 }
             }
             .bannerImage {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
+                @include imageStyled();
             }
         }
         .latestNews {
@@ -268,18 +265,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                @include imageStyled();
             }
             .imageTwoContainer {
                 width: 783px;
                 height: 385px;
                 position: relative;
                 .imageTwo {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    @include imageStyled();
                 }
             }
             .textBlock {
@@ -349,9 +342,7 @@
                 }
             }
             .bannerImage {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                @include imageStyled();
                 position: relative;
             }
         }
@@ -426,18 +417,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                @include imageStyled();
             }
             .imageTwoContainer {
                 width: 100%;
                 height: 215px;
                 position: relative;
                 .imageTwo {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    @include imageStyled();
                 }
             }
             .textBlock {
