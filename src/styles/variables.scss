@@ -17,8 +17,35 @@ $title-text-color: #334e80;
 $subtitle-text-color: #334e80;
 $body-text-color: #1f2e4d;
 $link-color: #346af7;
-$coming-soon-text-color: #FFA41C;
-$description-text-color: #54545C;
-$learn-more-text-color: #346AF7;
+$coming-soon-text-color: #ffa41c;
+$description-text-color: #54545c;
+$learn-more-text-color: #346af7;
 
+@mixin container-styled {
+  max-width: $max-width-container;
+  margin: auto;
+}
+@mixin image-fill($objectFit) {
+  width: 100%;
+  height: 100%;
+  object-fit: $objectFit;
+}
 
+@mixin sizes($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position(
+  $position,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
