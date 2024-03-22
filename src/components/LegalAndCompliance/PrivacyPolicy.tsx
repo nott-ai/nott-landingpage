@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
                 your information when you use our services ("Services"), such as when you:`}
               </p>
               <li>
-                Visit our website at https://nott.ai, or any website of ours
+                Visit our website at <a href="https://nott.ai">https://nott.ai</a>, or any website of ours
                 that links to this privacy notice
               </li>
               <li>
@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
                   you understand your privacy rights and choices. If you do not
                   agree with our policies and practices, please do not use our
                   Services. If you still have any questions or concerns, please
-                  contact us at info@nott.ai
+                  contact us at <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
                 </p>
                 <p
                   id="collecting-information"
