@@ -61,7 +61,11 @@ const PrivacyPolicy = () => {
                   you understand your privacy rights and choices. If you do not
                   agree with our policies and practices, please do not use our
                   Services. If you still have any questions or concerns, please
+<<<<<<< HEAD
                   contact us at <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
+=======
+                  contact us at info@nott.ai
+>>>>>>> origin
                 </p>
                 <p
                   id="collecting-information"
