@@ -22,7 +22,7 @@ const HomePage = () => {
       title: "Smartband",
       description:
         "This stylish tracker goes beyond counting steps, offering rich health insights and guidance to enhance your wellness journey with proactive data analysis.",
-      images: ["/images/smartband.webp"],
+      images: ["/images/product-service/product-lineup/sb3.webp"],
       imageHeight: isMobile ? 100 : 145,
       imageWidth: isMobile ? 100 : 145,
     },
@@ -32,7 +32,7 @@ const HomePage = () => {
       title: "Smartwatch",
       description:
         "A fusion of elegance and functionality, this smartwatch tracks your health, boosts productivity, and integrates seamlessly with your tech ecosystem.",
-      images: ["/images/smartwatch.webp"],
+      images: ["/images/product-service/product-lineup/Watch_1.webp"],
       imageHeight: isMobile ? 100 : 165,
       imageWidth: isMobile ? 100 : 165,
     },
@@ -41,7 +41,7 @@ const HomePage = () => {
       title: "Smartscale",
       description:
         "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
-      images: ["/images/smartscale.webp"],
+      images: ["/images/product-service/product-lineup/Smartscale_3.webp"],
       imageHeight: isMobile ? 120 : 183,
       imageWidth: isMobile ? 120 : 183,
     },
