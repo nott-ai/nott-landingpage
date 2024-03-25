@@ -109,12 +109,11 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             ref={refLegalAndDisclaimer}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem ===
-                ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
+              className={`${styles.navContent} ${selectedNavItem ===
+                  ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
                   ? styles.active
                   : ""
-              }`}
+                }`}
             >
               Legal Disclaimer
             </div>{" "}
@@ -127,11 +126,10 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             ref={refPrivacyPolicy}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem === ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY
+              className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY
                   ? styles.active
                   : ""
-              }`}
+                }`}
             >
               Privacy Policy
             </div>
@@ -144,12 +142,11 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             ref={refTermsOfService}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem ===
-                ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE
+              className={`${styles.navContent} ${selectedNavItem ===
+                  ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE
                   ? styles.active
                   : ""
-              }`}
+                }`}
             >
               Terms of Service
             </div>
@@ -164,12 +161,11 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             ref={refDeviceDropCampaign}
           >
             <div
-              className={`${styles.navContent} ${
-                selectedNavItem ===
-                ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN
+              className={`${styles.navContent} ${selectedNavItem ===
+                  ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN
                   ? styles.active
                   : ""
-              }`}
+                }`}
             >
               Device Drop Campaign
             </div>
@@ -193,31 +189,26 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                {openMenu === content.mainTitle && (
-                  <div className={styles.dropdown}>
-                    {content.items &&
-                      content.items.map((item) => (
-                        <LinkScroll
-                          key={item.id}
-                          to={item.id}
-                          offset={-100}
-                          smooth={true}
-                          duration={1000}
-                          style={{ background: "transparent" }}
-                        >
-                          <div
-                            className={`${styles.listContent} ${
-                              selectedTitle === item.title ? styles.active : ""
-                            }`}
-                          >
-                            {item.title}
-                          </div>
-                        </LinkScroll>
-                      ))}
-                  </div>
-                )}
+                <div className={`${styles.dropdown} ${openMenu === content.mainTitle ? styles.dropdownExpanded : ''}`}>
+                  {content.items &&
+                    content.items.map((item) => (
+                      <LinkScroll
+                        key={item.id}
+                        to={item.id}
+                        offset={-100}
+                        smooth={true}
+                        duration={1000}
+                        style={{ background: "transparent" }}
+                      >
+                        <div className={`${styles.listContent} ${selectedTitle === item.title ? styles.active : ""}`}>
+                          {item.title}
+                        </div>
+                      </LinkScroll>
+                    ))}
+                </div>
               </div>
             ))}
+
           </div>
         </div>
         <div className={styles.rightBlock}>{children}</div>
