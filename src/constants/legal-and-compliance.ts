@@ -17,57 +17,57 @@ export const SIDE_MENU: MenuItems[] = [
     mainTitle: "Privacy Policy",
     items: [
       {
-        id: "collecting-information",
+        id: "1",
         title: "Collecting information",
         description: "",
       },
       {
-        id: "processing-information",
+        id: "2",
         title: "Processing of information",
         description: "",
       },
       {
-        id: "legal-basis",
+        id: "3",
         title: "Legal basis",
         description: "",
       },
       {
-        id: "personal-information",
+        id: "4",
         title: "Sharing personal information",
         description: "",
       },
       {
-        id: "cookies",
+        id: "5",
         title: "Cookies & tracking technologies",
         description: "",
       },
       {
-        id: "storing-personal-information",
+        id: "6",
         title: "Storing personal information",
         description: "",
       },
       {
-        id: "keepPersonal",
+        id: "7",
         title: "Keep personal information safe",
         description: "",
       },
       {
-        id: "controlsFeature",
+        id: "8",
         title: "Controls for do-not-track features",
         description: "",
       },
       {
-        id: "sharingData",
+        id: "9",
         title: "Sharing data with others",
         description: "",
       },
       {
-        id: "userRight",
+        id: "10",
         title: "Users’ right with their own data",
         description: "",
       },
       {
-        id: "updateAndNotice",
+        id: "11",
         title: "Updates and Notice",
         description: "",
       },

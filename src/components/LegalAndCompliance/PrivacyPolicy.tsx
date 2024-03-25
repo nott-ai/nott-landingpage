@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
               </div>
               <div className={style.content}>
                 <p
-                  id="collecting-information"
+                  id="1"
                   className={style.title}
                 >{`1. Collecting information:`}</p>
                 <p className={style.description}>
@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="processing-information"
+                  id="2"
                   className={style.title}
                 >{`2. Processing of information`}</p>
                 <p className={style.description}>
@@ -182,7 +182,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="legal-basis"
+                  id="3"
                   className={style.title}
                 >{`3. Legal basis`}</p>
 
@@ -231,7 +231,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="personal-information"
+                  id="4"
                   className={style.title}
                 >{`4. Sharing personal information`}</p>
                 <p className={style.description}>
@@ -248,7 +248,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="cookies"
+                  id="5"
                   className={style.title}
                 >{`5. Cookies and tracking technologies`}</p>
                 <p className={style.description}>
@@ -259,7 +259,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="storing-personal-information"
+                  id="5"
                   className={style.title}
                 >{`6. Storing personal information`}</p>
                 <p className={style.description}>
@@ -277,7 +277,7 @@ const PrivacyPolicy = () => {
               </div>
 
               <div className={style.content}>
-                <p className={style.title} id="keepPersonal">
+                <p className={style.title} id="7">
                   7. Keep personal information safe
                 </p>
                 <p className={style.description}>
@@ -292,7 +292,7 @@ const PrivacyPolicy = () => {
               </div>
 
               <div className={style.content}>
-                <p className={style.title} id="controlsFeature">
+                <p className={style.title} id="8">
                   8. Controls for do-not-track features
                 </p>
                 <p className={style.description}>
@@ -308,7 +308,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="sharingData"
+                  id="9"
                   className={style.title}
                 >{`9. Sharing data with others`}</p>
                 <p className={style.description}>
@@ -329,7 +329,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="userRight"
+                  id="10"
                   className={style.title}
                 >{`10. Users’ right with their own data`}</p>
                 <p className={style.italicDesc}>
@@ -411,7 +411,7 @@ const PrivacyPolicy = () => {
 
               <div className={style.content}>
                 <p
-                  id="updateAndNotice"
+                  id="11"
                   className={style.title}
                 >{`11. Updates and Notice`}</p>
                 <p className={style.description}>

@@ -22,9 +22,6 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
     ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
   );
   const [selectedTitle] = useState(null);
-  const toggleMenu = (menuId: string) => {
-    setOpenMenu(openMenu === menuId ? "" : menuId);
-  };
   const refLegalAndDisclaimer = useRef<any>();
   const refPrivacyPolicy = useRef<any>();
   const refTermsOfService = useRef<any>();
@@ -50,7 +47,6 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
 
   const handleRouterChange = (pathname: string) => {
     setSelectedNavItem(pathname);
-
     switch (pathname) {
       case ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER:
         setOpenMenu("Legal Disclaimer");
@@ -77,9 +73,11 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
         refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
     }
   };
+  const toggleMenu = (menuId: string) => {
+    setOpenMenu(openMenu === menuId ? "" : menuId);
+  };
 
   const handleTitleClick = (mainTitle: string) => {
-    toggleMenu(mainTitle);
     switch (mainTitle) {
       case "Legal Disclaimer":
         router.push(ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER);
@@ -110,9 +108,9 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
           >
             <div
               className={`${styles.navContent} ${selectedNavItem ===
-                  ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
-                  ? styles.active
-                  : ""
+                ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
+                ? styles.active
+                : ""
                 }`}
             >
               Legal Disclaimer
@@ -127,8 +125,8 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
           >
             <div
               className={`${styles.navContent} ${selectedNavItem === ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY
-                  ? styles.active
-                  : ""
+                ? styles.active
+                : ""
                 }`}
             >
               Privacy Policy
@@ -143,9 +141,9 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
           >
             <div
               className={`${styles.navContent} ${selectedNavItem ===
-                  ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE
-                  ? styles.active
-                  : ""
+                ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE
+                ? styles.active
+                : ""
                 }`}
             >
               Terms of Service
@@ -162,9 +160,9 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
           >
             <div
               className={`${styles.navContent} ${selectedNavItem ===
-                  ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN
-                  ? styles.active
-                  : ""
+                ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN
+                ? styles.active
+                : ""
                 }`}
             >
               Device Drop Campaign
@@ -177,10 +175,8 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
           <div className={styles.sidebarList}>
             {SIDE_MENU.map((content) => (
               <div
-                onClick={() => {
-                  toggleMenu(content.mainTitle);
-                  handleTitleClick(content.mainTitle);
-                }}
+                onClick={() => toggleMenu(content.mainTitle)
+                }
                 key={content.mainTitle}
               >
                 <div className={styles.mainTitleWrapper}>
@@ -189,7 +185,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                <div className={`${styles.dropdown} ${openMenu === content.mainTitle ? styles.dropdownExpanded : ''}`}>
+                <div onClick={() => handleTitleClick(content.mainTitle)} className={`${styles.dropdown} ${openMenu === content.mainTitle ? styles.dropdownExpanded : ''}`}>
                   {content.items &&
                     content.items.map((item) => (
                       <LinkScroll
@@ -208,8 +204,8 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                 </div>
               </div>
             ))}
-
           </div>
+
         </div>
         <div className={styles.rightBlock}>{children}</div>
       </div>
