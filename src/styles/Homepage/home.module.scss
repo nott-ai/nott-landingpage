@@ -1,13 +1,4 @@
 @import "../variables.scss";
-@mixin container-styled {
-    max-width: $max-width-container;
-    margin: auto;
-}
-@mixin image-fill {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .container {
     margin: 122px auto 80px auto;
     gap: 40px;
@@ -15,21 +6,17 @@
     flex-direction: column;
     .banner {
         @include container-styled();
+        @include sizes(100%, 298px);
         position: relative;
-        width: 100%;
-        height: 298px;
         .bannerImage {
-           @include image-fill();
+           @include image-fill("cover");
         }
         .content {
-            top: 60px;
-            left: 50px;
-            position: absolute;
+            @include position(absolute, 60px, 0, 0, 50px);
             display: flex;
             flex-direction: column;
             gap: 16px;
-            width: 479px;
-            height: 158px;
+            @include sizes(479px, 158px);
             color: white;
             .title {
                 font-size: 22px;
@@ -110,23 +97,17 @@
             @include container-styled();
             position: relative;
             .imageOneContainer {
-                width: 505px;
-                height: 230px;
-                position: absolute;
-                top: 0;
-                left: 135px;
+                @include sizes(505px, 230px);
+                @include position(absolute, 0, 0, 0, 135px);
                 .imageOne {
-                    @include image-fill();
+                    @include image-fill("cover");
                 }
             }
             .imageTwoContainer {
-                width: 590px;
-                height: 285px;
-                position: absolute;
-                top: -28px;
-                right: 0;
+                @include sizes(590px, 285px);
+                @include position(absolute, -28px, 0);
                 .imageTwo {
-                    @include image-fill();
+                    @include image-fill("cover");
                 }
             }
             .textBlock {
@@ -134,8 +115,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 14px;
-                position: absolute;
-                top: 49px;
+                @include position(absolute, 49px);
                 .title {
                     color: white;
                     font-size: 18px;
@@ -191,7 +171,7 @@
                 }
             }
             .bannerImage {
-                @include image-fill();
+                @include image-fill("cover");
             }
         }
         .latestNews {
@@ -265,14 +245,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                @include image-fill();
+                @include image-fill("cover");
             }
             .imageTwoContainer {
                 width: 783px;
                 height: 385px;
                 position: relative;
                 .imageTwo {
-                    @include image-fill();
+                    @include image-fill("cover");
                 }
             }
             .textBlock {
@@ -315,9 +295,7 @@
             height: 676px;
             .content {
                 //posisitionin center of image
-                top: 60px;
-                left: 5px;
-                position: absolute;
+                @include position(absolute, 60px, 0, 0, 5px);
                 margin: 30px 18px 20px 18px;
                 display: flex;
                 flex-direction: column;
@@ -342,7 +320,7 @@
                 }
             }
             .bannerImage {
-                @include image-fill();
+                @include image-fill("cover");
                 position: relative;
             }
         }
@@ -417,14 +395,14 @@
             justify-content: center;
             align-items: center;
             .imageBg {
-                @include image-fill();
+                @include image-fill("cover");
             }
             .imageTwoContainer {
                 width: 100%;
                 height: 215px;
                 position: relative;
                 .imageTwo {
-                    @include image-fill();
+                    @include image-fill("cover");
                 }
             }
             .textBlock {
