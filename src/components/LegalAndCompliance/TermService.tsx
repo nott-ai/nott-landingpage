@@ -222,7 +222,7 @@ const TermService = () => {
 
               <div className={style.content}>
                 <p id="2" className={style.title}>
-                  2. Creation account in NOTT app
+                  2. Creation account in NOTT application
                 </p>
 
                 <p className={style.description}>
@@ -601,7 +601,7 @@ const TermService = () => {
                   notice. Your notice should include the following:
                 </p>
 
-                <ul>
+                <ul className={style.listDesc}>
                   <li>
                     An electronic or physical signature of the person authorized
                     to act on behalf of the intellectual property right owner’s
@@ -679,7 +679,7 @@ const TermService = () => {
                   The following non-exhaustive list outlines prohibited uses of
                   the Site. By using the Site, you agree not to:
                 </p>
-                <ul>
+                <ul className={style.listDesc}>
                   <li>
                     Violate any applicable federal, state, provincial,
                     municipal, local, or international law or regulation
@@ -724,7 +724,7 @@ const TermService = () => {
                 <p className={style.description}>
                   10.2. Further, you agree not to:
                 </p>
-                <ul>
+                <ul className={style.listDesc}>
                   <li>
                     Use the Site in any manner that could disable, overburden,
                     damage, or impair the Site or interfere with any other
@@ -939,7 +939,7 @@ const TermService = () => {
                 <p className={style.description}>
                   14.2. You are responsible for:
                 </p>
-                <ul>
+                <ul className={style.listDesc}>
                   <li>Making all arrangements necessary to access the Site.</li>
                   <li>
                     Ensuring that all individuals who access the Site through
@@ -1111,7 +1111,7 @@ const TermService = () => {
                   20.1. We reserve the right to:
                 </p>
 
-                <ul>
+                <ul className={style.listDesc}>
                   <li>
                     Pursue legal actions, including, but not limited to,
                     notifying law enforcement authorities, for any illegal or

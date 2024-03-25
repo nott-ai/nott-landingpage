@@ -48,12 +48,12 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "keepPersonal",
-        title: "Keep Personal Information Safe",
+        title: "Keep personal information safe",
         description: "",
       },
       {
         id: "controlsFeature",
-        title: "Controls For Do-Not-Track Features",
+        title: "Controls for do-not-track features",
         description: "",
       },
       {
@@ -78,33 +78,33 @@ export const SIDE_MENU: MenuItems[] = [
     items: [
       {
         id: "1",
-        title: "About Use Of NOTT’s Site",
+        title: "About Use of NOTT’s Site",
         description: "",
       },
       {
         id: "2",
-        title: "Creation Account In NOTT App",
+        title: "Creation account in NOTT application",
         description: "",
       },
       {
         id: "3",
-        title: "Changes Of NOTT’s Terms And Conditions",
+        title: "Changes of NOTT’s Terms and Conditions",
         description: "",
       },
       {
         id: "4",
         title:
-          "Collecting Information Of Website/App And Other Platforms Owned By NOTT",
+          "Collecting information of website/app and other platforms owned by NOTT",
         description: "",
       },
       {
         id: "5",
-        title: "Protection Of Your Privacy",
+        title: "Protection of Your Privacy",
         description: "",
       },
       {
         id: "6",
-        title: "User Representations And Warranties",
+        title: "User Representations and Warranties",
         description: "",
       },
       {
@@ -120,12 +120,12 @@ export const SIDE_MENU: MenuItems[] = [
       {
         id: "9",
         title:
-          "Ownership Of Intellectual Property Rights, Trademarks And Copyrights On The Site",
+          "Ownership of Intellectual Property Rights, Trademarks and Copyrights on the Site",
         description: "",
       },
       {
         id: "10",
-        title: "Prohibited Uses Of The Site",
+        title: "Prohibited Uses of the Site",
         description: "",
       },
       {
@@ -135,22 +135,22 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "12",
-        title: "Technology, Security, And User Responsibilities",
+        title: "Technology, Security, and User Responsibilities",
         description: "",
       },
       {
         id: "13",
-        title: "Accounts Creation And Management; Site Access And Security",
+        title: "Accounts Creation and Management; Site Access and Security",
         description: "",
       },
       {
         id: "14",
-        title: "Accessing The Site And Account Security",
+        title: "Accessing the Site and Account Security",
         description: "",
       },
       {
         id: "15",
-        title: "Disclaimer Of Warranties And Limitation Of Liability",
+        title: "Disclaimer of Warranties and Limitation of Liability",
         description: "",
       },
       {
@@ -170,27 +170,27 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "19",
-        title: "Code Of Conduct",
+        title: "Code of Conduct",
         description: "",
       },
       {
         id: "20",
-        title: "Monitoring, Enforcement, And Termination",
+        title: "Monitoring, Enforcement, and Termination",
         description: "",
       },
       {
         id: "21",
-        title: "Updates To The Website",
+        title: "Updates to the Website",
         description: "",
       },
       {
         id: "22",
-        title: "Dependence On Information Provided",
+        title: "Dependence on Information Provided",
         description: "",
       },
       {
         id: "23",
-        title: "Limitation Of Liability & Remedies",
+        title: "Limitation of Liability & Remedies",
         description: "",
       },
       {
@@ -200,17 +200,17 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "25",
-        title: "Dispute Resolution And Binding Arbitration",
+        title: "Dispute Resolution and Binding Arbitration",
         description: "",
       },
       {
         id: "26",
-        title: "Time Limitation For Claims",
+        title: "Time Limitation for Claims",
         description: "",
       },
       {
         id: "27",
-        title: "Waiver And Severability",
+        title: "Waiver and Severability",
         description: "",
       },
       {
@@ -220,12 +220,12 @@ export const SIDE_MENU: MenuItems[] = [
       },
       {
         id: "29",
-        title: "Your Comments And Concerns",
+        title: "Your Comments and Concerns",
         description: "",
       },
       {
         id: "30",
-        title: "Effective Date And Updates",
+        title: "Effective Date and Updates",
         description: "",
       },
     ],

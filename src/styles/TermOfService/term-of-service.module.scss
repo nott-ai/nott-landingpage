@@ -40,7 +40,7 @@ $desc-color: #54545c;
         font-weight: 500;
         line-height: 140%;
         /* 25.2px */
-        text-transform: capitalize;
+        // text-transform: capitalize;
       }
       .smDesc {
         color: $desc-color;
@@ -96,6 +96,9 @@ $desc-color: #54545c;
       }
       ul li:last-child {
         margin-bottom: 0;
+      }
+      .listDesc li {
+        font-size: 14px;
       }
       .italicDesc {
         color: $desc-color;

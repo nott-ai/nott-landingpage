@@ -1,27 +1,31 @@
 @import "./variables.scss";
-// @font-face {
-//   font-family: "SF Pro Display";
-//   src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
-//   font-weight: 400;
-// }
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: sans-serif;
+}
 
-// @font-face {
-//   font-family: "SF Pro Display";
-//   src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: sans-serif;
+}
 
-// @font-face {
-//   font-family: "SF Pro Display";
-//   src: url("/fonts/SF-Pro-Display-Semibold.otf") format("opentype");
-//   font-weight: 600;
-// }
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-display: sans-serif;
+}
 
-// @font-face {
-//   font-family: "SF Pro Display";
-//   src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
-//   font-weight: 500;
-// }
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: sans-serif;
+}
 
 body {
   margin: 0;

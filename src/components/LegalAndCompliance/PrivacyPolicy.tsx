@@ -15,17 +15,15 @@ const PrivacyPolicy = () => {
       <div className={styles.rightContent}>
         <div className={styles.bannerImage}>
           <div>
-            <p className={styles.mainTittle} style={{ marginBottom: "11px" }}>
-              PRIVACY POLICY
-            </p>
-
             <div className={style.content}>
+              <p className={styles.mainTittle} style={{ marginBottom: "11px" }}>
+                PRIVACY POLICY
+              </p>
               <p className={style.content3}>
                 The personal information that we collect depends on the context
                 of your interactions with us and the Services, the choices you
                 make, and the products and features you use.
               </p>
-
               <p className={style.content3}>
                 {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), 
                 describes how and why we might collect, store, use, and/or share ("process") 
@@ -71,7 +69,7 @@ const PrivacyPolicy = () => {
                   id="collecting-information"
                   className={style.title}
                 >{`1. Collecting information:`}</p>
-                <p className={style.smDesc}>
+                <p className={style.description}>
                   We collect personal information that you voluntarily provide
                   to us when you register on the Services, express an interest
                   in obtaining information about us or our products and
@@ -96,7 +94,7 @@ const PrivacyPolicy = () => {
                   dangerouslySetInnerHTML={createMarkup(
                     ' … other basic personal information according to <span style="font-weight: 600">Art. 4 GDPR</span>'
                   )}
-                  style={{ fontSize: "16px" }}
+                  style={{ fontSize: "14px" }}
                   className={style.description}
                 />
                 <p
@@ -236,14 +234,11 @@ const PrivacyPolicy = () => {
                   id="personal-information"
                   className={style.title}
                 >{`4. Sharing personal information`}</p>
-                <p
-                  className={style.description}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText(
-                      "We may need to share your personal information in the following situations:"
-                    )
-                  )}
-                />
+                <p className={style.description}>
+                  {
+                    "We may need to share your personal information in the following situations:"
+                  }
+                </p>
                 <p className={style.description}>
                   {`Business Transfers. We may share or transfer your information in connection with, or during negotiations of, 
                   any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
