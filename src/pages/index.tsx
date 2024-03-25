@@ -38,7 +38,6 @@ export default function Home() {
         ) : (
           <link rel="preload" href="/images/banner-main-mobile.webp" />
         )}
-        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
       </Head>
       <HomePage />
     </>
