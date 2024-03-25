@@ -346,7 +346,7 @@ const PrivacyPolicy = () => {
                 <p
                   className={style.description}
                   dangerouslySetInnerHTML={createMarkup(
-                    `<span style="font-weight: 600">Depending on the circumstances, you have a right to know:</span>`
+                    `<span>Depending on the circumstances, you have a right to know:</span>`
                   )}
                 />
 
