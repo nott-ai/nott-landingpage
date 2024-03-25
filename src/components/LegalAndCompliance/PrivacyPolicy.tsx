@@ -15,25 +15,24 @@ const PrivacyPolicy = () => {
       <div className={styles.rightContent}>
         <div className={styles.bannerImage}>
           <div>
-            <p className={styles.mainTittle} style={{ marginBottom: "11px" }}>
-              PRIVACY POLICY
-            </p>
-
             <div className={style.content}>
+              <p className={styles.mainTittle} style={{ marginBottom: "11px" }}>
+                PRIVACY POLICY
+              </p>
               <p className={style.content3}>
                 The personal information that we collect depends on the context
                 of your interactions with us and the Services, the choices you
                 make, and the products and features you use.
               </p>
-
               <p className={style.content3}>
                 {`This privacy notice for NOTT company (doing business as NOTT) ("NOTT," "we," "us," or "our"), 
                 describes how and why we might collect, store, use, and/or share ("process") 
                 your information when you use our services ("Services"), such as when you:`}
               </p>
               <li>
-                Visit our website at <a href="https://nott.ai">https://nott.ai</a>, or any website of ours
-                that links to this privacy notice
+                Visit our website at{" "}
+                <a href="https://nott.ai">https://nott.ai</a>, or any website of
+                ours that links to this privacy notice
               </li>
               <li>
                 Download and use our mobile application (NOTT), or any other
@@ -61,13 +60,16 @@ const PrivacyPolicy = () => {
                   you understand your privacy rights and choices. If you do not
                   agree with our policies and practices, please do not use our
                   Services. If you still have any questions or concerns, please
-                  contact us at <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
+                  contact us at{" "}
+                  <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
                 </p>
+              </div>
+              <div className={style.content}>
                 <p
                   id="collecting-information"
                   className={style.title}
                 >{`1. Collecting information:`}</p>
-                <p className={style.smDesc}>
+                <p className={style.description}>
                   We collect personal information that you voluntarily provide
                   to us when you register on the Services, express an interest
                   in obtaining information about us or our products and
@@ -92,7 +94,7 @@ const PrivacyPolicy = () => {
                   dangerouslySetInnerHTML={createMarkup(
                     ' … other basic personal information according to <span style="font-weight: 600">Art. 4 GDPR</span>'
                   )}
-                  style={{ fontSize: "16px" }}
+                  style={{ fontSize: "14px" }}
                   className={style.description}
                 />
                 <p
@@ -232,14 +234,11 @@ const PrivacyPolicy = () => {
                   id="personal-information"
                   className={style.title}
                 >{`4. Sharing personal information`}</p>
-                <p
-                  className={style.description}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText(
-                      "We may need to share your personal information in the following situations:"
-                    )
-                  )}
-                />
+                <p className={style.description}>
+                  {
+                    "We may need to share your personal information in the following situations:"
+                  }
+                </p>
                 <p className={style.description}>
                   {`Business Transfers. We may share or transfer your information in connection with, or during negotiations of, 
                   any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
@@ -275,12 +274,12 @@ const PrivacyPolicy = () => {
                   anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives),
                    then we will securely store your personal information and isolate it from any further processing until deletion is possible.`}
                 </p>
-                <p
-                  className={style.title}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText("7. Keep personal information safe")
-                  )}
-                />
+              </div>
+
+              <div className={style.content}>
+                <p className={style.title} id="keepPersonal">
+                  7. Keep personal information safe
+                </p>
                 <p className={style.description}>
                   {`We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any 
                   personal information we process. However, despite our safeguards and efforts to secure your information, no electronic 
@@ -290,12 +289,12 @@ const PrivacyPolicy = () => {
                   You should only access the Services within a secure environment.
 `}
                 </p>
-                <p
-                  className={style.title}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText("8. Controls for do-not-track features")
-                  )}
-                />
+              </div>
+
+              <div className={style.content}>
+                <p className={style.title} id="controlsFeature">
+                  8. Controls for do-not-track features
+                </p>
                 <p className={style.description}>
                   {`Most web browsers and some mobile operating systems and mobile applications include a do-not-track ("dnt") 
                   feature or setting you can activate to signal your privacy preference not to have data about your online 
@@ -346,7 +345,9 @@ const PrivacyPolicy = () => {
                 </p>
                 <p
                   className={style.description}
-                  dangerouslySetInnerHTML={createMarkup(`<span style="font-weight: 600">Depending on the circumstances, you have a right to know:</span>`)}
+                  dangerouslySetInnerHTML={createMarkup(
+                    `<span style="font-weight: 600">Depending on the circumstances, you have a right to know:</span>`
+                  )}
                 />
 
                 <ul>
