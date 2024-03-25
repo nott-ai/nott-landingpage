@@ -72,7 +72,7 @@ export default function ProductScreenSection() {
           </div>
         </div>
         <div className={styles.slideScreen} id="products-hightlight">
-          <Slider {...settings}>
+          <Slider className={styles.slider} {...settings}>
             {screens.map((screen, index) => (
               <div key={index}>
                 <div className={styles.imageBack}>
