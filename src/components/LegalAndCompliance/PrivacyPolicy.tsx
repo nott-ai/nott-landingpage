@@ -32,8 +32,9 @@ const PrivacyPolicy = () => {
                 your information when you use our services ("Services"), such as when you:`}
               </p>
               <li>
-                Visit our website at <a href="https://nott.ai">https://nott.ai</a>, or any website of ours
-                that links to this privacy notice
+                Visit our website at{" "}
+                <a href="https://nott.ai">https://nott.ai</a>, or any website of
+                ours that links to this privacy notice
               </li>
               <li>
                 Download and use our mobile application (NOTT), or any other
@@ -61,8 +62,11 @@ const PrivacyPolicy = () => {
                   you understand your privacy rights and choices. If you do not
                   agree with our policies and practices, please do not use our
                   Services. If you still have any questions or concerns, please
-                  contact us at <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
+                  contact us at{" "}
+                  <a href={`mailto:${INFO.EMAIL}`}>{INFO.EMAIL}</a>
                 </p>
+              </div>
+              <div className={style.content}>
                 <p
                   id="collecting-information"
                   className={style.title}
@@ -275,12 +279,12 @@ const PrivacyPolicy = () => {
                   anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives),
                    then we will securely store your personal information and isolate it from any further processing until deletion is possible.`}
                 </p>
-                <p
-                  className={style.title}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText("7. Keep personal information safe")
-                  )}
-                />
+              </div>
+
+              <div className={style.content}>
+                <p className={style.title} id="keepPersonal">
+                  7. Keep personal information safe
+                </p>
                 <p className={style.description}>
                   {`We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any 
                   personal information we process. However, despite our safeguards and efforts to secure your information, no electronic 
@@ -290,12 +294,12 @@ const PrivacyPolicy = () => {
                   You should only access the Services within a secure environment.
 `}
                 </p>
-                <p
-                  className={style.title}
-                  dangerouslySetInnerHTML={createMarkup(
-                    getHighlightedText("8. Controls for do-not-track features")
-                  )}
-                />
+              </div>
+
+              <div className={style.content}>
+                <p className={style.title} id="controlsFeature">
+                  8. Controls for do-not-track features
+                </p>
                 <p className={style.description}>
                   {`Most web browsers and some mobile operating systems and mobile applications include a do-not-track ("dnt") 
                   feature or setting you can activate to signal your privacy preference not to have data about your online 
@@ -346,7 +350,9 @@ const PrivacyPolicy = () => {
                 </p>
                 <p
                   className={style.description}
-                  dangerouslySetInnerHTML={createMarkup(`<span style="font-weight: 600">Depending on the circumstances, you have a right to know:</span>`)}
+                  dangerouslySetInnerHTML={createMarkup(
+                    `<span style="font-weight: 600">Depending on the circumstances, you have a right to know:</span>`
+                  )}
                 />
 
                 <ul>

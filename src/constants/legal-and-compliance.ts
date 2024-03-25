@@ -47,6 +47,16 @@ export const SIDE_MENU: MenuItems[] = [
         description: "",
       },
       {
+        id: "keepPersonal",
+        title: "Keep Personal Information Safe",
+        description: "",
+      },
+      {
+        id: "controlsFeature",
+        title: "Controls For Do-Not-Track Features",
+        description: "",
+      },
+      {
         id: "sharingData",
         title: "Sharing data with others",
         description: "",
