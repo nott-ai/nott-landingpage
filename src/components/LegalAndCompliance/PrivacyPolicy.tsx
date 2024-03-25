@@ -123,12 +123,12 @@ const PrivacyPolicy = () => {
             )}: If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:`)}
                 />
                 <p className={style.description}>
-                  <i>Mobile Device Access</i>. We may request access or
+                  <span className={style.italicDesc}>Mobile Device Access</span>. We may request access or
                   permission to certain features from your mobile device,
                   including your mobile device&apos;s bluetooth, camera,
                   microphone, storage, and other features. If you wish to change
                   our access or permissions, you may do so in your device&apos;s
-                  settings <i>Push Notifications</i>. We may request to send you
+                  settings <span className={style.italicDesc}>Push Notifications</span>. We may request to send you
                   push notifications regarding your account or certain features
                   of the application(s). If you wish to opt out from receiving
                   these types of communications, you may turn them off in your
