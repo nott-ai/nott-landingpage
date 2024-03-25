@@ -12,6 +12,24 @@ import { INFO } from "@/constants/metas";
 import { REMOTE_CONFIG_KEYS } from "@/constants/firebase-config";
 import useDeviceDetect from "@/components/common/DeviceDetect";
 
+const TypeWriter = ({ text, speed }: { text: string; speed: number }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText((prevText) => prevText + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }, speed);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [text, speed, currentIndex]);
+
+  return <div>{displayText}</div>;
+};
+
 const HomePage = () => {
   const { isDesktop, isMobile } = useDeviceDetect();
   const [news, setNews] = useState<INewsCard[]>([]);
@@ -94,6 +112,7 @@ const HomePage = () => {
           />
 
           <div className={styles.content}>
+            <TypeWriter text="Hello, world!" speed={100} />
             <b className={styles.title}>Welcome to NOTT!</b>
             <div className={styles.description}>
               An innovative platform at the forefront of digital wellness -
@@ -110,8 +129,9 @@ const HomePage = () => {
             alt="banner"
           />
           <div className={styles.content}>
-            <b className={styles.title}>Welcome to NOTT!</b>
-            <div style={{textAlign: 'center'}} className={styles.description}>
+            <TypeWriter text="Hello, world!" speed={100} />
+            <b className={styles.title}>Welcome to NOTTTTT!</b>
+            <div style={{ textAlign: "center" }} className={styles.description}>
               An innovative platform at the forefront of digital wellness -
               powered by AI and grounded in Decentralized Physical
               Infrastructure Network (DePIN) principles.
