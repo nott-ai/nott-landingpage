@@ -120,18 +120,15 @@ const HomePage = () => {
             />
             <div className={styles.content}>
               <b className={styles.title}>Welcome to NOTT!</b>
-              <div className={styles.description}>
-                <TypeWriter
-                  text="An innovative platform at the forefront of digital wellness -
-              powered by AI and grounded in Decentralized Physical
-              Infrastructure Network (DePIN) principles."
-                  speed={100}
-                />
-              </div>
+
               <div
                 style={{ textAlign: "center" }}
                 className={styles.description}
-              ></div>
+              >
+                An innovative platform at the forefront of digital wellness -
+                powered by AI and grounded in Decentralized Physical
+                Infrastructure Network (DePIN) principles.
+              </div>
             </div>
           </div>
         )}
