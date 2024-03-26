@@ -17,13 +17,16 @@ interface IProps {
 }
 const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
   const router = useRouter();
-  const [openMenu, setOpenMenu] = useState("");
   const [selectedNavItem, setSelectedNavItem] = useState(
     ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
   );
+
   const [selectedTitle] = useState(null);
-  const toggleMenu = (menuId: string) => {
-    setOpenMenu(openMenu === menuId ? "" : menuId);
+  const toggleMenu = (menuRouter: string) => {
+    if (selectedNavItem && selectedNavItem !== menuRouter)
+      router.push(menuRouter);
+    else if (selectedNavItem === menuRouter) setSelectedNavItem("");
+    else setSelectedNavItem(menuRouter);
   };
   const refLegalAndDisclaimer = useRef<any>();
   const refPrivacyPolicy = useRef<any>();
@@ -53,50 +56,26 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
 
     switch (pathname) {
       case ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER:
-        setOpenMenu("Legal Disclaimer");
         refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY:
-        setOpenMenu("Privacy Policy");
         refPrivacyPolicy.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE:
-        setOpenMenu("Terms of Service");
         refTermsOfService.current.scrollIntoView(scrollConfig);
         break;
 
       case ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN:
-        setOpenMenu("Device Drop Campaign");
         refDeviceDropCampaign.current.scrollIntoView(scrollConfig);
         break;
 
       default:
-        setOpenMenu("Legal Disclaimer");
         refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
     }
   };
 
-  const handleTitleClick = (mainTitle: string) => {
-    toggleMenu(mainTitle);
-    switch (mainTitle) {
-      case "Legal Disclaimer":
-        router.push(ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER);
-        break;
-      case "Privacy Policy":
-        router.push(ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY);
-        break;
-      case "Terms of Service":
-        router.push(ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE);
-        break;
-      case "Device Drop Campaign":
-        router.push(ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN);
-        break;
-      default:
-        break;
-    }
-  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.containerNav}>
@@ -182,8 +161,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             {SIDE_MENU.map((content) => (
               <div
                 onClick={() => {
-                  toggleMenu(content.mainTitle);
-                  handleTitleClick(content.mainTitle);
+                  toggleMenu(content.router);
                 }}
                 key={content.mainTitle}
               >
@@ -193,27 +171,31 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                {openMenu === content.mainTitle && (
-                  <div className={styles.dropdown}>
-                    {content.items &&
-                      content.items.map((item) => (
-                        <LinkScroll
-                          key={item.id}
-                          to={item.id}
-                          offset={-100}
-                          smooth={true}
-                          duration={1000}
-                          style={{ background: "transparent" }}
+                {content.items && content.items.length >= 1 && (
+                  <div
+                    className={`${styles.dropdown}`}
+                    style={{
+                      height: content.router !== selectedNavItem ? 0 : 450,
+                    }}
+                  >
+                    {content.items.map((item) => (
+                      <LinkScroll
+                        key={item.id}
+                        to={item.id}
+                        offset={-100}
+                        smooth={true}
+                        duration={1000}
+                        style={{ background: "transparent" }}
+                      >
+                        <div
+                          className={`${styles.listContent} ${
+                            selectedTitle === item.title ? styles.active : ""
+                          }`}
                         >
-                          <div
-                            className={`${styles.listContent} ${
-                              selectedTitle === item.title ? styles.active : ""
-                            }`}
-                          >
-                            {item.title}
-                          </div>
-                        </LinkScroll>
-                      ))}
+                          {item.title}
+                        </div>
+                      </LinkScroll>
+                    ))}
                   </div>
                 )}
               </div>

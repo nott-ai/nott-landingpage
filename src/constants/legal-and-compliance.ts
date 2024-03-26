@@ -1,3 +1,5 @@
+import { ROUTERS } from "./routes";
+
 interface IContent {
   id: string;
   title: string;
@@ -7,11 +9,13 @@ interface IContent {
 interface MenuItems {
   mainTitle: string;
   items: IContent[];
+  router: string;
 }
 export const SIDE_MENU: MenuItems[] = [
   {
     mainTitle: "Legal Disclaimer",
     items: [],
+    router: ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER,
   },
   {
     mainTitle: "Privacy Policy",
@@ -72,6 +76,7 @@ export const SIDE_MENU: MenuItems[] = [
         description: "",
       },
     ],
+    router: ROUTERS.LEGAL_AND_COMPLIANCE.PRIVACY_POLICY,
   },
   {
     mainTitle: "Terms of Service",
@@ -229,9 +234,11 @@ export const SIDE_MENU: MenuItems[] = [
         description: "",
       },
     ],
+    router: ROUTERS.LEGAL_AND_COMPLIANCE.TERMS_OF_SERVICE,
   },
   {
     mainTitle: "Device Drop Campaign",
     items: [],
+    router: ROUTERS.LEGAL_AND_COMPLIANCE.DEVICE_DROP_CAMPAIGN,
   },
 ];
