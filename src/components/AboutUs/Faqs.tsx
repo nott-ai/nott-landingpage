@@ -9,7 +9,7 @@ const Faqs = () => {
   return (
     <div className={styles.wrapper}>
       <div
-        data-aos="fade-right"
+        data-aos="fade-up"
         data-aos-duration="1000"
         className={styles.faqs}
       >
@@ -53,7 +53,7 @@ const Faqs = () => {
         </div>
       </div>
       <img
-        data-aos="fade-left"
+        data-aos="fade-uo"
         data-aos-duration="1000"
         className={styles.graphicImage}
         src="/images/faqs.png"
