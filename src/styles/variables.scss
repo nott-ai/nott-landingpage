@@ -25,7 +25,7 @@ $learn-more-text-color: #346af7;
   max-width: $max-width-container;
   margin: auto;
 }
-@mixin image-fill($objectFit) {
+@mixin image-fill($objectFit: cover) {
   width: 100%;
   height: 100%;
   object-fit: $objectFit;

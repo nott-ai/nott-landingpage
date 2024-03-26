@@ -11,6 +11,7 @@ import Link from "next/link";
 import { INFO } from "@/constants/metas";
 import { REMOTE_CONFIG_KEYS } from "@/constants/firebase-config";
 import useDeviceDetect from "@/components/common/DeviceDetect";
+import TypeWriter from "@/components/common/TypeWriter";
 
 const HomePage = () => {
   const { isDesktop, isMobile } = useDeviceDetect();
@@ -85,42 +86,63 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      {isDesktop ? (
-        <div className={styles.banner}>
-          <img
-            className={styles.bannerImage}
-            src="/images/banner-main.webp"
-            alt="banner"
-          />
+      <div
+        className={styles.bannerContainer}
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        {isDesktop ? (
+          <div className={styles.banner}>
+            <img
+              className={styles.bannerImage}
+              src="/images/banner-main.webp"
+              alt="banner"
+            />
 
-          <div className={styles.content}>
-            <b className={styles.title}>Welcome to NOTT!</b>
-            <div className={styles.description}>
-              An innovative platform at the forefront of digital wellness -
+            <div className={styles.content}>
+              <b className={styles.title}>Welcome to NOTT!</b>
+              <div className={styles.description}>
+                <TypeWriter
+                  text="An innovative platform at the forefront of digital wellness -
               powered by AI and grounded in Decentralized Physical
-              Infrastructure Network (DePIN) principles.
+              Infrastructure Network (DePIN) principles."
+                  speed={40}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={styles.banner}>
-          <img
-            className={styles.bannerImage}
-            src="/images/banner-main-mobile.webp"
-            alt="banner"
-          />
-          <div className={styles.content}>
-            <b className={styles.title}>Welcome to NOTT!</b>
-            <div style={{textAlign: 'center'}} className={styles.description}>
-              An innovative platform at the forefront of digital wellness -
+        ) : (
+          <div className={styles.banner}>
+            <img
+              className={styles.bannerImage}
+              src="/images/banner-main-mobile.webp"
+              alt="banner"
+            />
+            <div className={styles.content}>
+              <b className={styles.title}>Welcome to NOTT!</b>
+              <div className={styles.description}>
+                <TypeWriter
+                  text="An innovative platform at the forefront of digital wellness -
               powered by AI and grounded in Decentralized Physical
-              Infrastructure Network (DePIN) principles.
+              Infrastructure Network (DePIN) principles."
+                  speed={100}
+                />
+              </div>
+              <div
+                style={{ textAlign: "center" }}
+                className={styles.description}
+              ></div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      <div className={styles.latestNews}>
+      <div
+        className={styles.latestNews}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div className={styles.titleBlock}>
           <p className={styles.left}>Latest News</p>
 
@@ -140,7 +162,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles.featuredProductsAndInnovations}>
+      <div
+        className={styles.featuredProductsAndInnovations}
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-anchor-placement="top-bottom"
+      >
         <p className={styles.title}>Featured Products And Innovations</p>
         <div className={styles.content}>
           {productsAndInnovations.map(
@@ -154,14 +181,24 @@ const HomePage = () => {
       {isDesktop ? (
         <div className={styles.footer}>
           <div className={styles.content}>
-            <div className={styles.imageOneContainer}>
+            <div
+              className={styles.imageOneContainer}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="top-bottom"
+            >
               <img
                 className={styles.imageOne}
                 src="/images/home-footer-1.webp"
                 alt="footer1"
               />
             </div>
-            <div className={styles.imageTwoContainer}>
+            <div
+              className={styles.imageTwoContainer}
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <img
                 className={styles.imageTwo}
                 src="/images/home-footer-2.webp"
@@ -169,7 +206,12 @@ const HomePage = () => {
               />
             </div>
 
-            <div className={styles.textBlock}>
+            <div
+              className={styles.textBlock}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <b className={styles.title}>Mission and Vision</b>
               <div className={styles.description}>
                 <QuoteOpenIcon />
