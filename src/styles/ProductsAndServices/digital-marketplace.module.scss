@@ -37,6 +37,10 @@
         width: 212px;
         height: 212px;
         object-fit: contain;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
       .info {
         display: flex;
