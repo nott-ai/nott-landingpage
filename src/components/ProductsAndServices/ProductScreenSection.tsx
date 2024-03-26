@@ -61,7 +61,7 @@ export default function ProductScreenSection() {
   };
   return (
     <div className={styles.wrapper}
-      data-aos="zoom-out-left"
+      data-aos="zoom-out-down"
     >
       <div className={styles.container}>
         <div className={styles.header}>

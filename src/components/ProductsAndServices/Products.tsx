@@ -24,7 +24,7 @@ const Products = () => {
   return (
     <div className={styles.wrapper}
       data-aos="fade-up"
-      data-aos-duration="2000"
+      data-aos-duration="1000"
       data-aos-anchor-placement="top-bottom"
     >
       <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
@@ -36,7 +36,7 @@ const Products = () => {
           {PRODUCT_LINEUP_DATA.map((item, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
-                <img src={item.img} alt={item.title} />
+                <img className={styles.image} src={item.img} alt={item.title} />
                 <div className={styles.divider} />
               </div>
               <div className={styles.textContent}>

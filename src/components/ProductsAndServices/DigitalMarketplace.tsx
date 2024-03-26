@@ -20,7 +20,9 @@ const DigitalMarketplace = () => {
   const { isDesktop } = useDeviceDetect();
   return (
     <div className={styles.wrapper}
-      data-aos="zoom-out-right"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-anchor-placement="top-bottom"
     >
       <div>
         <p className={styles.title}>Digital Marketplace</p>
