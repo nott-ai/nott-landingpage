@@ -17,21 +17,37 @@ const Campaign = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.leftBlock}>
-          <div className={`${styles.title}`}>
+          <div
+            className={`${styles.title}`}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             NOTT&#39;s Device Drop Campaigns
           </div>
-          <div className={styles.description}>
+          <div
+            className={styles.description}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             Discover the ongoing revolution in health tracking through
             NOTT&#39;s Device Drop Campaigns. {isDesktop && <br />}These
             periodic initiatives are our commitment to make advanced health
             monitoring accessible to all
           </div>
           <a style={{ textDecoration: "none" }} href={ROUTERS.KYC}>
-            <PrimaryButton className={styles.joinCampaign}>
+            <PrimaryButton
+              className={styles.joinCampaign}
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               Join Campaigns
             </PrimaryButton>
           </a>
-          <div className={styles.contentSecond}>
+          <div
+            className={styles.contentSecond}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             {regularCampaigns.map((faq, index) => (
               <div key={index} style={{ background: "#F2F2F2" }}>
                 <div
@@ -68,7 +84,11 @@ const Campaign = () => {
             ))}
           </div>
         </div>
-        <div className={styles.rightBlock}>
+        <div
+          className={styles.rightBlock}
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <img src="/images/campaign-content-image.png" alt="campaign" />
         </div>
       </div>

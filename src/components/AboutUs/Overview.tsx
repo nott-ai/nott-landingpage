@@ -59,17 +59,26 @@ const FeaturesAndBenefits = [
 const Overview = () => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.title}>
+      <p className={styles.title} data-aos="fade-up" data-aos-duration="1000">
         Overview of NOTT as an AI-powered
         <br /> Wellness DePIN platform
       </p>
-      <p className={styles.description}>
+      <p
+        className={styles.description}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         Join us in redefining wellness with technology, where your health
         journey is personalized, secure, and forward-thinking.
       </p>
       <div className={styles.aboutNOTT}>
         {Overviews.map((item, index) => (
-          <div key={index} className={styles.card}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration={`${index}000`}
+            key={index}
+            className={styles.card}
+          >
             {item.icon}
             <div
               className={styles.title}
@@ -79,8 +88,18 @@ const Overview = () => {
           </div>
         ))}
       </div>
-      <p className={styles.titleFeatureAndBenefit}>Features & Benefits</p>
-      <p className={styles.descriptionFeatureAndBenefit}>
+      <p
+        className={styles.titleFeatureAndBenefit}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Features & Benefits
+      </p>
+      <p
+        className={styles.descriptionFeatureAndBenefit}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         Explore how the AI Wellness Depin Platform is revolutionizing HealthFi,
         paving the way for innovative advancements in personalized health and
         wellness solutions.
@@ -88,6 +107,8 @@ const Overview = () => {
       <div className={styles.benefits}>
         {FeaturesAndBenefits.map((item, index) => (
           <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
             key={index}
             style={{ backgroundColor: item.backgroundColor }}
             className={styles.card}
