@@ -19,20 +19,26 @@ const advantages = [
 const DigitalMarketplace = () => {
   const { isDesktop } = useDeviceDetect();
   return (
-    <div className={styles.wrapper}>
-      <p className={styles.title}>Digital Marketplace</p>
-      <p className={styles.description}>
-        This digital space allows users to purchase wellness products and
-        services, and for merchants to reach a wider audience.{" "}
-        {isDesktop && <br />} It&apos;s a place where the health and wellness
-        community can come together to share, grow, and benefit from the
-        collective contributions of its members.
-      </p>
+    <div className={styles.wrapper}
+      data-aos="zoom-out-right"
+    >
+      <div>
+        <p className={styles.title}>Digital Marketplace</p>
+        <p className={styles.description}>
+          This digital space allows users to purchase wellness products and
+          services, and for merchants to reach a wider audience.{" "}
+          {isDesktop && <br />} It&apos;s a place where the health and wellness
+          community can come together to share, grow, and benefit from the
+          collective contributions of its members.
+        </p>
+      </div>
       <div className={styles.features}>
         {advantages.map((advantage, index) => (
           <div
+
             key={index}
             className={`${styles.card} ${styles[`card-${index}`]}`}
+
           >
             <img
               className={styles.icon}

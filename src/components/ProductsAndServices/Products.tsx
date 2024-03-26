@@ -22,7 +22,11 @@ const Products = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper}
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-anchor-placement="top-bottom"
+    >
       <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
       <p
         className={styles.description}

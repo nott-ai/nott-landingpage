@@ -3,7 +3,9 @@ import styles from "@/styles/ProductsAndServices/engagement-and-rewards.module.s
 const EngagementAndRewards = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.leftBlock}>
+      <div className={styles.leftBlock} data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
         <p className={styles.title}>User Engagement and Rewards</p>
         <p className={styles.description}>
           NOTT&apos;s Value-Based User Rewards system is the pulse of our
@@ -13,7 +15,9 @@ const EngagementAndRewards = () => {
           our user engagement strategy
         </p>
       </div>
-      <div className={styles.rightBlock}>
+      <div className={styles.rightBlock} data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
         <img src="/images/rewards.png" alt="rewards" />
       </div>
     </div>

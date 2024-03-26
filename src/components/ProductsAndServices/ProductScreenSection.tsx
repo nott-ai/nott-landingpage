@@ -60,7 +60,9 @@ export default function ProductScreenSection() {
     ],
   };
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper}
+      data-aos="zoom-out-left"
+    >
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.title}>NOTT Mobile App</div>
