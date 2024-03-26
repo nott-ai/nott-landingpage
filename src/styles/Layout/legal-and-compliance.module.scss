@@ -43,6 +43,13 @@
     .dropdown {
       scroll-behavior: smooth;
       color: #4c5e80;
+      transition: height 0.5s ease;
+      overflow: auto;
+    }
+    .dropdownOpen {
+      height: 450px;
+      overflow: auto;
+      transition: height 0.3s ease;
     }
     .mainTittle {
       color: #1b1b1d;
