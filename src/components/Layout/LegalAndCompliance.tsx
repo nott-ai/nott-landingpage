@@ -198,16 +198,11 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                {/* {openMenu === content.mainTitle && ( */}
                 <div
-                  className={styles.dropdown}
-                  style={{
-                    height:
-                      content.items.length >= 1 &&
-                      content.router === selectedNavItem
-                        ? "450px"
-                        : 0,
-                  }}
+                  className={`${styles.dropdown} ${content.items.length >= 1 && content.router === selectedNavItem
+                      ? styles.dropdownOpen
+                      : styles.dropdown
+                    }`}
                 >
                   {content.items &&
                     content.items.map((item) => (
