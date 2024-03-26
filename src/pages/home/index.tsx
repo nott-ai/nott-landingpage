@@ -125,9 +125,12 @@ const HomePage = () => {
                 style={{ textAlign: "center" }}
                 className={styles.description}
               >
-                An innovative platform at the forefront of digital wellness -
-                powered by AI and grounded in Decentralized Physical
-                Infrastructure Network (DePIN) principles.
+                <TypeWriter
+                  text="An innovative platform at the forefront of digital wellness -
+              powered by AI and grounded in Decentralized Physical
+              Infrastructure Network (DePIN) principles."
+                  speed={40}
+                />
               </div>
             </div>
           </div>
