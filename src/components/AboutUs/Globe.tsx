@@ -24,12 +24,20 @@ const Globe = () => {
         playsInline
       />
       <div className={styles.globeWrapper}>
-        <img className={styles.globe} src="/images/earth.png" alt="earth" />
+        <img
+          className={styles.globe}
+          src="/images/earth.png"
+          alt="earth"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        />
         <div className={styles.globelMobileWrapper}>
           <img
             className={styles.globeMobile}
             src="/images/earth-mobile.png"
             alt="earth"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
           />
         </div>
         <div className={styles.illustrationBarMobile}>
@@ -86,23 +94,33 @@ const Globe = () => {
             </div>
           </div>
         </div>
-        <div className={styles.leftInfo}>
-          <p className={styles.title}>Global reach</p>
+        <div
+          className={styles.leftInfo}
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <p
+            className={styles.title}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Global reach
+          </p>
           <IllustrationBar />
           <div className={styles.bottomBlock}>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="1000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
               Countries with NOTT users
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
               New accounts in last 7 days
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="3000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
@@ -110,23 +128,33 @@ const Globe = () => {
             </p>
           </div>
         </div>
-        <div className={styles.rightInfo}>
-          <p className={styles.title}>Financial Momentum</p>
+        <div
+          className={styles.rightInfo}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <p
+            className={styles.title}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Financial Momentum
+          </p>
           <IllustrationBar />
           <div className={styles.bottomBlock}>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="1000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
               Amount of NOTT claimed
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
               Daily wallet transactions
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="3000">
               <span className={styles.number}>
                 <Loading />
               </span>{" "}
