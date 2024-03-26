@@ -25,7 +25,7 @@ const Products = () => {
     <div className={styles.wrapper}
       data-aos="fade-up"
       data-aos-duration="1000"
-      data-aos-anchor-placement="top-bottom"
+      data-aos-anchor-placement="top"
     >
       <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
       <p

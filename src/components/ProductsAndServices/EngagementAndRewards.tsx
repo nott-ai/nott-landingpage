@@ -2,10 +2,13 @@ import styles from "@/styles/ProductsAndServices/engagement-and-rewards.module.s
 
 const EngagementAndRewards = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.leftBlock} data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine">
+    <div className={styles.wrapper}
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-anchor-placement="top-bottom"
+    >
+      <div className={styles.leftBlock}
+      >
         <p className={styles.title}>User Engagement and Rewards</p>
         <p className={styles.description}>
           NOTT&apos;s Value-Based User Rewards system is the pulse of our
@@ -15,9 +18,7 @@ const EngagementAndRewards = () => {
           our user engagement strategy
         </p>
       </div>
-      <div className={styles.rightBlock} data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine">
+      <div className={styles.rightBlock}>
         <img src="/images/rewards.png" alt="rewards" />
       </div>
     </div>

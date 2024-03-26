@@ -21,7 +21,7 @@ const DigitalMarketplace = () => {
   return (
     <div className={styles.wrapper}
       data-aos="fade-up"
-      data-aos-duration="1000"
+      data-aos-duration="2000"
       data-aos-anchor-placement="top-bottom"
     >
       <div>
