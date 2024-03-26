@@ -21,9 +21,14 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
   const [selectedNavItem, setSelectedNavItem] = useState(
     ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER
   );
+
   const [selectedTitle] = useState(null);
   const toggleMenu = (menuId: string) => {
     setOpenMenu(openMenu === menuId ? "" : menuId);
+  };
+  const toggleMenuNav = (menuRouter: string) => {
+    if (selectedNavItem === menuRouter) setSelectedNavItem("");
+    else setSelectedNavItem(menuRouter);
   };
   const refLegalAndDisclaimer = useRef<any>();
   const refPrivacyPolicy = useRef<any>();
@@ -182,7 +187,7 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
             {SIDE_MENU.map((content) => (
               <div
                 onClick={() => {
-                  toggleMenu(content.mainTitle);
+                  toggleMenuNav(content.router);
                   handleTitleClick(content.mainTitle);
                 }}
                 key={content.mainTitle}
@@ -193,29 +198,38 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                {openMenu === content.mainTitle && (
-                  <div className={styles.dropdown}>
-                    {content.items &&
-                      content.items.map((item) => (
-                        <LinkScroll
-                          key={item.id}
-                          to={item.id}
-                          offset={-100}
-                          smooth={true}
-                          duration={1000}
-                          style={{ background: "transparent" }}
+                {/* {openMenu === content.mainTitle && ( */}
+                <div
+                  className={styles.dropdown}
+                  style={{
+                    height:
+                      content.items.length >= 1 &&
+                      content.router === selectedNavItem
+                        ? "450px"
+                        : 0,
+                  }}
+                >
+                  {content.items &&
+                    content.items.map((item) => (
+                      <LinkScroll
+                        key={item.id}
+                        to={item.id}
+                        offset={-100}
+                        smooth={true}
+                        duration={1000}
+                        style={{ background: "transparent" }}
+                      >
+                        <div
+                          className={`${styles.listContent} ${
+                            selectedTitle === item.title ? styles.active : ""
+                          }`}
                         >
-                          <div
-                            className={`${styles.listContent} ${
-                              selectedTitle === item.title ? styles.active : ""
-                            }`}
-                          >
-                            {item.title}
-                          </div>
-                        </LinkScroll>
-                      ))}
-                  </div>
-                )}
+                          {item.title}
+                        </div>
+                      </LinkScroll>
+                    ))}
+                </div>
+                {/* )} */}
               </div>
             ))}
           </div>
