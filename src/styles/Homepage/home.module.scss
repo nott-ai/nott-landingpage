@@ -4,7 +4,8 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
-   
+
+    .bannerContainer
     .banner {
         @include container-styled();
         @include sizes(100%, 298px);

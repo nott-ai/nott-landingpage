@@ -8,10 +8,6 @@
 
     .image {
         @include image-fill();
-        transition: 0.3s ease-in-out;
-        &:hover {
-            transform: scale(1.1);
-        }
     }
 }
 
@@ -62,6 +58,12 @@
     color: #1b1b1d;
     cursor: pointer;
     background-color: #fff;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
 }
 
 @media screen and (max-width: $sm) {

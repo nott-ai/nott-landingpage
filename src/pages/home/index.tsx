@@ -86,8 +86,13 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
+      <div
+        className={styles.bannerContainer}
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
         {isDesktop ? (
-          <div data-aos="fade-up" data-aos-duration="3000" className={styles.banner}>
+          <div className={styles.banner}>
             <img
               className={styles.bannerImage}
               src="/images/banner-main.webp"
@@ -101,7 +106,7 @@ const HomePage = () => {
                   text="An innovative platform at the forefront of digital wellness -
               powered by AI and grounded in Decentralized Physical
               Infrastructure Network (DePIN) principles."
-                  speed={50}
+                  speed={40}
                 />
               </div>
             </div>
@@ -130,8 +135,14 @@ const HomePage = () => {
             </div>
           </div>
         )}
+      </div>
 
-      <div className={styles.latestNews}>
+      <div
+        className={styles.latestNews}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div className={styles.titleBlock}>
           <p className={styles.left}>Latest News</p>
 
@@ -151,7 +162,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles.featuredProductsAndInnovations}>
+      <div
+        className={styles.featuredProductsAndInnovations}
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-anchor-placement="top-bottom"
+      >
         <p className={styles.title}>Featured Products And Innovations</p>
         <div className={styles.content}>
           {productsAndInnovations.map(
@@ -165,14 +181,24 @@ const HomePage = () => {
       {isDesktop ? (
         <div className={styles.footer}>
           <div className={styles.content}>
-            <div className={styles.imageOneContainer}>
+            <div
+              className={styles.imageOneContainer}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="top-bottom"
+            >
               <img
                 className={styles.imageOne}
                 src="/images/home-footer-1.webp"
                 alt="footer1"
               />
             </div>
-            <div className={styles.imageTwoContainer}>
+            <div
+              className={styles.imageTwoContainer}
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <img
                 className={styles.imageTwo}
                 src="/images/home-footer-2.webp"
@@ -180,20 +206,21 @@ const HomePage = () => {
               />
             </div>
 
-            <div className={styles.textBlock}>
+            <div
+              className={styles.textBlock}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <b className={styles.title}>Mission and Vision</b>
               <div className={styles.description}>
                 <QuoteOpenIcon />
-                <TypeWriter
-                  text="&nbsp;&nbsp;NOTT’s mission is to empower individuals and
+                &nbsp;&nbsp;NOTT’s mission is to empower individuals and
                 communities to take control of their health and wellness through
                 innovative technology. Our vision is to create a world where
                 health and wellness are accessible to all, driven by the
                 principles of decentralization, empowerment, and
-                community.&nbsp;&nbsp;"
-                  speed={100}
-                />
-
+                community.&nbsp;&nbsp;
                 <QuoteCloseIcon />
               </div>
             </div>
