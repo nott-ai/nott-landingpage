@@ -2,6 +2,7 @@ import { SIDE_MENU } from "@/constants/legal-and-compliance";
 import { ROUTERS } from "@/constants/routes";
 import styles from "@/styles/Layout/legal-and-compliance.module.scss";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import { useEffect, useState } from "react";
@@ -45,8 +46,9 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
     handleRouterChange(router.pathname);
   }, [router.pathname]);
 
-  const handleRouterChange = (pathname: string) => {
+  const handleRouterChange = async (pathname: string) => {
     setSelectedNavItem(pathname);
+    await new Promise(resolve => setTimeout(resolve, 300));
     switch (pathname) {
       case ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER:
         setOpenMenu("Legal Disclaimer");
@@ -73,11 +75,8 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
         refLegalAndDisclaimer.current.scrollIntoView(scrollConfig);
     }
   };
-  const toggleMenu = (menuId: string) => {
-    setOpenMenu(openMenu === menuId ? "" : menuId);
-  };
 
-  const handleTitleClick = (mainTitle: string) => {
+  const handleTitleClick = async (mainTitle: string) => {
     switch (mainTitle) {
       case "Legal Disclaimer":
         router.push(ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER);
@@ -94,6 +93,8 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
       default:
         break;
     }
+    setOpenMenu(prevMenu => prevMenu === mainTitle ? "" : mainTitle);
+
   };
   return (
     <div className={styles.wrapper}>
@@ -174,18 +175,16 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
         <div className={styles.sidebar}>
           <div className={styles.sidebarList}>
             {SIDE_MENU.map((content) => (
-              <div
-                onClick={() => toggleMenu(content.mainTitle)
-                }
-                key={content.mainTitle}
-              >
+              <div key={content.mainTitle}>
                 <div className={styles.mainTitleWrapper}>
-                  <div className={styles.mainTitle}>{content.mainTitle}</div>
+                  <div onClick={() => {
+                    handleTitleClick(content.mainTitle);
+                  }} className={styles.mainTitle}>{content.mainTitle}</div>
                   {content.items?.length > 0 && (
                     <img src="/images/drop-down.svg" alt="hero" />
                   )}
                 </div>
-                <div onClick={() => handleTitleClick(content.mainTitle)} className={`${styles.dropdown} ${openMenu === content.mainTitle ? styles.dropdownExpanded : ''}`}>
+                <div className={`${styles.dropdown} ${openMenu === content.mainTitle ? styles.dropdownExpanded : ''}`}>
                   {content.items &&
                     content.items.map((item) => (
                       <LinkScroll
