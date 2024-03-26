@@ -8,7 +8,11 @@ const Faqs = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.faqs}>
+      <div
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        className={styles.faqs}
+      >
         <div className={`${styles.contentTitle} `}>
           Frequently Asked Questions
         </div>
@@ -49,6 +53,8 @@ const Faqs = () => {
         </div>
       </div>
       <img
+        data-aos="fade-left"
+        data-aos-duration="1000"
         className={styles.graphicImage}
         src="/images/faqs.png"
         alt="faqs"
