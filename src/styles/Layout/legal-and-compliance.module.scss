@@ -44,8 +44,7 @@
       scroll-behavior: smooth;
       color: #4c5e80;
       transition: height 0.3s ease;
-      overflow: hidden;
-      height: 0;
+      overflow: auto;
     }
     .dropdownOpen {
       height: 450px;
