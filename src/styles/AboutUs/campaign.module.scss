@@ -3,6 +3,7 @@
   height: fit-content;
   position: relative;
   margin: 40px auto 0 auto;
+  overflow-x: hidden;
   .container {
     max-width: $max-width-container;
     margin: auto;
