@@ -23,10 +23,14 @@ const LegalAndCompliance: React.FC<IProps> = ({ children }: IProps) => {
 
   const [selectedTitle] = useState(null);
   const toggleMenu = (menuRouter: string) => {
-    if (selectedNavItem && selectedNavItem !== menuRouter)
+    if (selectedNavItem && selectedNavItem !== menuRouter) {
       router.push(menuRouter);
-    else if (selectedNavItem === menuRouter) setSelectedNavItem("");
-    else setSelectedNavItem(menuRouter);
+    } else if (selectedNavItem === menuRouter) {
+      setSelectedNavItem("");
+    } else {
+      router.push(menuRouter);
+      setSelectedNavItem(menuRouter);
+    }
   };
   const refLegalAndDisclaimer = useRef<any>();
   const refPrivacyPolicy = useRef<any>();
