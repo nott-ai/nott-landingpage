@@ -30,58 +30,22 @@ const Feature: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.containerNav}>
         <div className={styles.navbar}>
-          <LinkScroll
-            to={'systemRequirements'}
-            offset={-100}
-            smooth={true}
-            duration={1000}
-            spy={true}
-          >
-            <div
-              className={`${styles.navContent} ${selectedItem === "systemRequirements" ? styles.active : ""}`}
+          {SIDE_MENU_SUPPORT.map((menuItem) => (
+            <LinkScroll
+              key={menuItem.id}
+              to={menuItem.id}
+              offset={0}
+              smooth={true}
+              duration={1000}
+              spy={true}
             >
-              System Requirements
-            </div>{" "}
-          </LinkScroll>
-          <LinkScroll
-            to={'ios'}
-            offset={-100}
-            smooth={true}
-            duration={1000}
-            spy={true}
-          >
-            <div
-              className={`${styles.navContent} ${selectedItem === "ios" ? styles.active : ""}`}
-            >
-              Download NOTT Application
-            </div>{" "}
-          </LinkScroll>
-          <LinkScroll
-            to={'registerLogin'}
-            offset={-100}
-            smooth={true}
-            duration={1000}
-            spy={true}
-          >
-            <div
-              className={`${styles.navContent} ${selectedItem === "registerLogin" ? styles.active : ""}`}
-            >
-              Register & Login with Passkey
-            </div>{" "}
-          </LinkScroll>
-          <LinkScroll
-            to={'connectingDevices1'}
-            offset={-100}
-            smooth={true}
-            duration={1000}
-            spy={true}
-          >
-            <div
-              className={`${styles.navContent} ${selectedItem === "connectingDevices1" ? styles.active : ""}`}
-            >
-              Connecting Devices
-            </div>{" "}
-          </LinkScroll>
+              <div
+                className={`${styles.navContent} ${selectedItem === menuItem.id ? styles.active : ""}`}
+              >
+                {menuItem.mainTitle}
+              </div>
+            </LinkScroll>
+          ))}
         </div>
       </div>
       <Hero />
@@ -149,20 +113,26 @@ const Feature: React.FC = () => {
           </div>
         </div>
         <div className={styles.rightBlock}>
-          <div>
-            <div className={styles.mainTitle}>1.System Requirements</div>
-            <div className={styles.textContent}>
-              To ensure the optimal performance and security of the NOTT application, it is necessary to use devices operating on compatible system software.
-            </div>
-            <div className={styles.textContent}>
-              &bull; For users with iOS devices, the application requires iOS 16.5 or later.                </div>
-            <div className={styles.textContent}>
-              &bull; For users with Android devices,  the application requires Android 11 or later.                </div>
-          </div>
-
+          <div className={styles.userManual}>User Manual</div>
           <div>
             {GUIDELINE.map((content) => (
               <>
+                {
+                  content.id === "systemRequirements" && (
+                    <>
+                      <Element name={content.id} key={content.id}>
+                        <div className={styles.textContent}>
+                          <div className={styles.mainTitle}>1.System Requirements</div>
+                          To ensure the optimal performance and security of the NOTT application, it is necessary to use devices operating on compatible system software.
+                          <br />
+                          &bull; For users with iOS devices, the application requires iOS 16.5 or later.
+                          <br />
+                          &bull; For users with Android devices, the application requires Android 11 or later.
+                        </div>
+                      </Element>
+                    </>
+                  )
+                }
                 <Element name={content.id} key={content.id}>
                   <div id={content.id} key={content.mainTitle} className={styles.mainTitle}>{content.mainSection}</div>
                   {content.mainTitle && <div className={styles.highlightTitle}>&bull; {content.mainTitle}</div>}
