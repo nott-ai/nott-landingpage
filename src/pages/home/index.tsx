@@ -86,11 +86,7 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.bannerContainer}
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-      >
+      <div className={styles.bannerContainer}>
         {isDesktop ? (
           <div className={styles.banner}>
             <img
@@ -102,12 +98,11 @@ const HomePage = () => {
             <div className={styles.content}>
               <b className={styles.title}>Welcome to NOTT!</b>
               <div className={styles.description}>
-                <TypeWriter
-                  text="An innovative platform at the forefront of digital wellness -
-              powered by AI and grounded in Decentralized Physical
-              Infrastructure Network (DePIN) principles."
-                  speed={40}
-                />
+                <p>
+                  An innovative platform at the forefront of digital wellness -
+                  powered by AI and grounded in Decentralized Physical
+                  Infrastructure Network (DePIN) principles.
+                </p>
               </div>
             </div>
           </div>
@@ -125,24 +120,18 @@ const HomePage = () => {
                 style={{ textAlign: "center" }}
                 className={styles.description}
               >
-                <TypeWriter
-                  text="An innovative platform at the forefront of digital wellness -
-              powered by AI and grounded in Decentralized Physical
-              Infrastructure Network (DePIN) principles."
-                  speed={40}
-                />
+                <p>
+                  An innovative platform at the forefront of digital wellness -
+                  powered by AI and grounded in Decentralized Physical
+                  Infrastructure Network (DePIN) principles.
+                </p>
               </div>
             </div>
           </div>
         )}
       </div>
 
-      <div
-        className={styles.latestNews}
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-bottom"
-      >
+      <div className={styles.latestNews}>
         <div className={styles.titleBlock}>
           <p className={styles.left}>Latest News</p>
 
@@ -162,12 +151,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div
-        className={styles.featuredProductsAndInnovations}
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        data-aos-anchor-placement="top-bottom"
-      >
+      <div className={styles.featuredProductsAndInnovations}>
         <p className={styles.title}>Featured Products And Innovations</p>
         <div className={styles.content}>
           {productsAndInnovations.map(
@@ -181,24 +165,14 @@ const HomePage = () => {
       {isDesktop ? (
         <div className={styles.footer}>
           <div className={styles.content}>
-            <div
-              className={styles.imageOneContainer}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-anchor-placement="top-bottom"
-            >
+            <div className={styles.imageOneContainer}>
               <img
                 className={styles.imageOne}
                 src="/images/home-footer-1.webp"
                 alt="footer1"
               />
             </div>
-            <div
-              className={styles.imageTwoContainer}
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
+            <div className={styles.imageTwoContainer}>
               <img
                 className={styles.imageTwo}
                 src="/images/home-footer-2.webp"
@@ -206,12 +180,7 @@ const HomePage = () => {
               />
             </div>
 
-            <div
-              className={styles.textBlock}
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
-            >
+            <div className={styles.textBlock}>
               <b className={styles.title}>Mission and Vision</b>
               <div className={styles.description}>
                 <QuoteOpenIcon />

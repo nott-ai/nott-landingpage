@@ -15,6 +15,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
+  autoplay: true,
   appendDots: (dots: any) => (
     <div className={styles.dots}>
       <ul
