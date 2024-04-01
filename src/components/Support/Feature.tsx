@@ -9,7 +9,11 @@ const Feature: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState("systemRequirements");
 
   const toggleDropDown = (id: string) => {
-    setOpenDropdown((prevOpen) => prevOpen === id ? null : id);
+    if (openDropdown === id) {
+      setOpenDropdown({});
+    } else {
+      setOpenDropdown(id);
+    }
   };
 
   useEffect(() => {
@@ -27,7 +31,7 @@ const Feature: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper}`}>
       <div className={styles.containerNav}>
         <div className={styles.navbar}>
           {SIDE_MENU_SUPPORT.map((menuItem) => (
@@ -36,6 +40,7 @@ const Feature: React.FC = () => {
               to={menuItem.id}
               offset={0}
               smooth={true}
+              delay={-100}
               duration={1000}
               spy={true}
             >
@@ -64,15 +69,13 @@ const Feature: React.FC = () => {
                   spy={true}
                   onSetActive={() => {
                     setSelectedItem(content.id);
-                    toggleDropDown(content.id);
                   }}
                   style={{ background: "transparent" }}
-                  onClick={() => {
-                    toggleDropDown(content.id);
-                    setSelectedItem(content.id);
-                  }}                >
-                  <div className={`${styles.mainTitleWrapper} ${selectedItem === content.id ? styles.active : ""}`}>
-                    <div className={`${styles.mainTitle} ${selectedItem === content.id ? styles.active : ""}`}>
+                   >
+                  <div 
+                  onClick={() => toggleDropDown(content.id)}
+                  className={`${styles.mainTitleWrapper} ${selectedItem === content.id ? styles.active : ""}`}>
+                    <div className={`${styles.mainTitle}`}>
                       {content.mainTitle}
                     </div>
                     {content.items?.length > 0 && (
