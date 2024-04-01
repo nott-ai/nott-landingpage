@@ -1,4 +1,4 @@
-import { QuoteCloseIcon, QuoteOpenIcon } from "@/assets";
+import { ArrowRightIcon, QuoteCloseIcon, QuoteOpenIcon } from "@/assets";
 import NewsCard, { INewsCard } from "@/components/Homepage/NewsCard";
 import ProductAndInnovationCard, {
   IProductAndInnovationCard,
@@ -11,7 +11,6 @@ import Link from "next/link";
 import { INFO } from "@/constants/metas";
 import { REMOTE_CONFIG_KEYS } from "@/constants/firebase-config";
 import useDeviceDetect from "@/components/common/DeviceDetect";
-import TypeWriter from "@/components/common/TypeWriter";
 
 const HomePage = () => {
   const { isDesktop, isMobile } = useDeviceDetect();
@@ -141,7 +140,7 @@ const HomePage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {"View all >"}
+            {"View all"} <ArrowRightIcon />
           </Link>
         </div>
         <div className={styles.news}>
@@ -170,6 +169,7 @@ const HomePage = () => {
                 className={styles.imageOne}
                 src="/images/home-footer-1.webp"
                 alt="footer1"
+                loading="lazy"
               />
             </div>
             <div className={styles.imageTwoContainer}>
@@ -177,6 +177,7 @@ const HomePage = () => {
                 className={styles.imageTwo}
                 src="/images/home-footer-2.webp"
                 alt="footer2"
+                loading="lazy"
               />
             </div>
 
@@ -216,6 +217,7 @@ const HomePage = () => {
               className={styles.imageTwo}
               src="/images/home-footer-2.webp"
               alt="footer2"
+              loading="lazy"
             />
           </div>
         </div>

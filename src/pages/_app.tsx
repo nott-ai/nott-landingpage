@@ -6,11 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { initializeApp } from "@firebase/app";
 import { firebaseConfig } from "@/constants/firebase-config";
 import { getAnalytics } from "@firebase/analytics";
-import {
-  RemoteConfig,
-  getRemoteConfig,
-  getString,
-} from "@firebase/remote-config";
+import { RemoteConfig, getRemoteConfig } from "@firebase/remote-config";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import CookieRequest from "@/components/Cookies/CookieRequest";

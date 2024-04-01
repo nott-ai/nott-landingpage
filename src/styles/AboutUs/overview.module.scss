@@ -119,6 +119,9 @@
       padding-left: 18px;
       .card {
         min-width: 275px;
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
     .benefits {

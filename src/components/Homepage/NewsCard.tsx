@@ -1,5 +1,4 @@
 import styles from "@/styles/Homepage/news-card.module.scss";
-import Link from "next/link";
 
 export interface INewsCard {
   title: string;
@@ -15,7 +14,7 @@ const NewsCard = ({ title, description, url, image }: INewsCard) => {
   return (
     <div className={styles.card1} onClick={handleClick}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} alt="" src={image} />
+        <img className={styles.image} alt={title} src={image} loading="lazy" />
       </div>
       <div className={styles.newResearchOnProstateCanceParent}>
         <div className={styles.newResearchOn}>{title}</div>
