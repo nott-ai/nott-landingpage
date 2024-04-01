@@ -1,156 +1,152 @@
 @import "../variables.scss";
 .wrapper {
-    // margin: 122px 0;
-    background-color: #fff;
-    padding: 40px 0;
-    overflow: hidden;
-    .container {
-        max-width: $max-width-container;
+  // margin: 122px 0;
+  background-color: #fff;
+  padding: 40px 0;
+  overflow: hidden;
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    .slideScreen {
+      width: 100%;
+      padding: 20px 0;
+      .imageBack {
+        padding: 9px;
+      }
+      .imageFront {
         margin: auto;
-        .slideScreen {
-            width: 100%;
-            padding: 20px 0;
-            .imageBack {
-                padding: 9px;
-            }
-            .imageFront {
-                margin: auto;
-                border-radius: 30px;
-            }
-        }
-        .header {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            .title {
-                font-size: 18px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                display: flex;
-                font-family: "SF Pro Display";
-                color: #1b1b1d;
-                text-align: left;
-                align-items: center;
-                height: 24px;
-                font-weight: 700;
-            }
-            .content {
-                max-width: 850px;
-                font-size: 14px;
-                letter-spacing: 0.01em;
-                line-height: 24px;
-                font-family: "SF Pro Display";
-                color: #54545c;
-                text-align: left;
-                display: flex;
-                align-items: center;
-            }
-        }
-        .paragraph {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 16px;
-            .title {
-                justify-content: center;
-                font-size: 18px;
-                letter-spacing: 1px;
-                display: flex;
-                font-family: "SF Pro Display";
-                color: #346af7;
-                text-align: left;
-                align-items: center;
-                height: 24px;
-                font-weight: 700;
-            }
-            .content {
-                justify-content: center;
-                font-size: 14px;
-                letter-spacing: 0.01em;
-                line-height: 24px;
-                font-family: "SF Pro Display";
-                color: #54545c;
-                text-align: left;
-                display: flex;
-                align-items: center;
-            }
-            .content2 {
-                text-align: center;
-                max-width: 976px;
-                margin: auto;
-                font-size: 14px;
-                letter-spacing: 0.01em;
-                color: #54545c;
-                line-height: 24px;
-            }
-        }
+        border-radius: 30px;
+      }
     }
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .title {
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        color: #1b1b1d;
+        text-align: left;
+        align-items: center;
+        height: 24px;
+        font-weight: 700;
+      }
+      .content {
+        max-width: 850px;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        color: #54545c;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .paragraph {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      .title {
+        justify-content: center;
+        font-size: 18px;
+        letter-spacing: 1px;
+        display: flex;
+        color: #346af7;
+        text-align: left;
+        align-items: center;
+        height: 24px;
+        font-weight: 700;
+      }
+      .content {
+        justify-content: center;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        line-height: 24px;
+        color: #54545c;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+      .content2 {
+        text-align: center;
+        max-width: 976px;
+        margin: auto;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: #54545c;
+        line-height: 24px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $lg) {
-    .wrapper {
-        width: 100%;
-        .container {
-            .header {
-                padding: 20px 20px 0 20px;
-                .title {
-                    font-size: 16px;
-                }
-            }
-            .slideScreen {
-                overflow-x: auto;
-                .imageBack {
-                    padding: 12px;
-                }
-                .imageFront {
-                    border-radius: 40px;
-                }
-            }
-            .paragraph {
-                padding: 20px;
-                .title {
-                    font-size: 14px;
-                }
-            }
+  .wrapper {
+    width: 100%;
+    .container {
+      .header {
+        padding: 20px 20px 0 20px;
+        .title {
+          font-size: 16px;
         }
+      }
+      .slideScreen {
+        overflow-x: auto;
+        .imageBack {
+          padding: 12px;
+        }
+        .imageFront {
+          border-radius: 40px;
+        }
+      }
+      .paragraph {
+        padding: 20px;
+        .title {
+          font-size: 14px;
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: $sm) {
-    .wrapper {
-        width: 100%;
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-        .container {
-            .header {
-                padding: 20px 10px 0 10px;
-                .title {
-                    font-size: 16px;
-                }
-            }
-            .slideScreen {
-                overflow: hidden;
-                .slider {
-                    .imageBack {
-                        padding: 12px;
-                        overflow-y: none;
-                    }
-                    .imageFront {
-                        border-radius: 40px;
-                    }
-                }
-            }
-            .paragraph {
-                margin-top: 0;
-                .title {
-                    font-size: 14px;
-                    letter-spacing: 0.01em;
-                    line-height: 140%;
-                    font-weight: 600;
-                }
-            }
+  .wrapper {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    .container {
+      .header {
+        padding: 20px 10px 0 10px;
+        .title {
+          font-size: 16px;
         }
+      }
+      .slideScreen {
+        overflow: hidden;
+        .slider {
+          .imageBack {
+            padding: 12px;
+            overflow-y: none;
+          }
+          .imageFront {
+            border-radius: 40px;
+          }
+        }
+      }
+      .paragraph {
+        margin-top: 0;
+        .title {
+          font-size: 14px;
+          letter-spacing: 0.01em;
+          line-height: 140%;
+          font-weight: 600;
+        }
+      }
     }
+  }
 }

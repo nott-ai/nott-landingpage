@@ -1,43 +1,40 @@
 import { IllustrationBar } from "@/assets/index";
 import styles from "@/styles/AboutUs/globe.module.scss";
 import { BeatLoader } from "react-spinners";
+import useDeviceDetect from "../common/DeviceDetect";
 const Globe = () => {
+  const { isMobile } = useDeviceDetect();
   const Loading = () => (
     <BeatLoader size={4} color="#346af7" loading={true} speedMultiplier={0.5} />
   );
   return (
     <div className={styles.wrapper}>
-      <video
-        className={styles.videoDesktop}
-        src="/videos/video-bg.mp4?v=1"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <video
-        className={styles.videoMobile}
-        src="/videos/video-bg-mobile.mp4?v=1"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className={styles.globeWrapper}>
-        <img
-          className={styles.globe}
-          src="/images/earth.png"
-          alt="earth"
-          data-aos="zoom-in"
-          data-aos-duration="1000"
+      {!isMobile ? (
+        <video
+          className={styles.videoDesktop}
+          src="/videos/video-bg.mp4?v=1"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
+      ) : (
+        <video
+          className={styles.videoMobile}
+          src="/videos/video-bg-mobile.mp4?v=1"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      )}
+      <div className={styles.globeWrapper}>
+        <img className={styles.globe} src="/images/earth.png" alt="earth" />
         <div className={styles.globelMobileWrapper}>
           <img
             className={styles.globeMobile}
             src="/images/earth-mobile.png"
             alt="earth"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
           />
         </div>
         <div className={styles.illustrationBarMobile}>

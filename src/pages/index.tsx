@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomePage from "./home";
+import HomePage from "../components/Homepage";
 import useDeviceDetect from "@/components/common/DeviceDetect";
 
 export default function Home() {
@@ -34,9 +34,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {isDesktop ? (
-          <link rel="preload" href="/images/banner-main.webp" />
+          <link rel="preload" href="/images/banner-main.webp" as="image" />
         ) : (
-          <link rel="preload" href="/images/banner-main-mobile.webp" />
+          <link
+            rel="preload"
+            href="/images/banner-main-mobile.webp"
+            as="image"
+          />
         )}
       </Head>
       <HomePage />

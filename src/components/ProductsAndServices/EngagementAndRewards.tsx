@@ -14,7 +14,7 @@ const EngagementAndRewards = () => {
         </p>
       </div>
       <div className={styles.rightBlock}>
-        <img src="/images/rewards.png" alt="rewards" />
+        <img src="/images/rewards.png" alt="rewards" loading="lazy" />
       </div>
     </div>
   );
