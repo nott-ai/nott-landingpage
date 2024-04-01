@@ -44,6 +44,7 @@ const Footer = () => {
                 className={`${styles.subColumn} ${styles.socialMediaWrapper}`}
               >
                 <p className={styles.socialMedia}>Social Media:</p>
+
                 <div className={styles.socialNetwork}>
                   <Link target="_blank" href={SOCIAL_LINK.GITHUB}>
                     <GithubIcon />
@@ -60,6 +61,12 @@ const Footer = () => {
                   <Link target="_blank" href={SOCIAL_LINK.X}>
                     <TwitterIcon />
                   </Link>
+                </div>
+                <div className={styles.contactUsMobile}>
+                  Contact us{" "}
+                  <a href="mailto:info@nott.ai" className={styles.email}>
+                    info@nott.ai
+                  </a>
                 </div>
               </div>
             </div>
@@ -96,32 +103,36 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
+
               <div className={`${styles.column} ${styles.support}`}>
                 <p className={styles.title}>Support</p>
 
                 {isMobile ? (
                   <>
                     <a href={INFO.WHITE_PAPER} target="_blank">
-                      Whitepaper
+                      FAQS
                     </a>
-                    <div>
-                      Contact us{" "}
-                      <a href="mailto:info@nott.ai" className={styles.email}>
-                        info@nott.ai
-                      </a>
-                    </div>
-                  </>
-                ) : (
-                  <div className={styles.subColumn}>
                     <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
                     <div>
-                      Contact us :{" "}
-                      <a href="mailto:info@nott.ai" className={styles.email}>
-                        info@nott.ai
-                      </a>
+                      Help & Support{" "}
+                      <a href="mailto:info@nott.ai" className={styles.email}></a>
                     </div>
+                  </>
+                ) : (
+                  <div className={styles.subColumn}>
+                    <a href={ROUTERS.ABOUT_US}>
+                      FAQs
+                    </a>
+
+                    <a href={INFO.WHITE_PAPER} target="_blank">
+                      Whitepaper
+                    </a>
+
+                    <a href={ROUTERS.SUPPORT}>
+                      Help & Support
+                    </a>
                   </div>
                 )}
               </div>

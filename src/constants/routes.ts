@@ -15,4 +15,5 @@ export const ROUTERS = {
     TERMS_OF_SERVICE: "/legal-and-compliance/terms-of-service",
     DEVICE_DROP_CAMPAIGN: "/legal-and-compliance/device-drop-campaign",
   },
+  SUPPORT: "/support",
 };
