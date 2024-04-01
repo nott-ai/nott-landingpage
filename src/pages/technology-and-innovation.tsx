@@ -79,11 +79,8 @@ const TechnologyInnovationPage = () => {
           content="https://nott.ai/images/thumbnail.jpg"
         />
       </Head>
-      <div className={style.wrapper} data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-bottom">
-        <div className={style.container}
-        >
+      <div className={style.wrapper}>
+        <div className={style.container}>
           <div className={style.title}>
             AI & DePIN Integration for Enhanced Health Insights
           </div>

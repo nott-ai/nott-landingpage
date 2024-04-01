@@ -89,6 +89,9 @@
             font-size: 12px;
             font-weight: 500;
             letter-spacing: 0.12px;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
