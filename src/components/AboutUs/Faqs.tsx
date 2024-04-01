@@ -8,11 +8,7 @@ const Faqs = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className={styles.faqs}
-      >
+      <div className={styles.faqs}>
         <div className={`${styles.contentTitle} `}>
           Frequently Asked Questions
         </div>
@@ -20,6 +16,7 @@ const Faqs = () => {
           {dataFaqs.map((faq, index) => (
             <div
               key={index}
+              className={styles.faq}
               style={openIndex === index ? { backgroundColor: "#F2F2F2" } : {}}
             >
               <div
@@ -53,8 +50,6 @@ const Faqs = () => {
         </div>
       </div>
       <img
-        data-aos="fade-uo"
-        data-aos-duration="1000"
         className={styles.graphicImage}
         src="/images/faqs.png"
         alt="faqs"

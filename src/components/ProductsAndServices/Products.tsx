@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/ProductsAndServices/products.module.scss";
 import ModalProductService from "@/components/ModalProductService";
 
@@ -22,11 +22,7 @@ const Products = () => {
   };
 
   return (
-    <div className={styles.wrapper}
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-anchor-placement="top"
-    >
+    <div className={styles.wrapper}>
       <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
       <p
         className={styles.description}

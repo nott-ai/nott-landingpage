@@ -19,11 +19,7 @@ const advantages = [
 const DigitalMarketplace = () => {
   const { isDesktop } = useDeviceDetect();
   return (
-    <div className={styles.wrapper}
-      data-aos="fade-up"
-      data-aos-duration="2000"
-      data-aos-anchor-placement="top-bottom"
-    >
+    <div className={styles.wrapper}>
       <div>
         <p className={styles.title}>Digital Marketplace</p>
         <p className={styles.description}>
@@ -37,10 +33,8 @@ const DigitalMarketplace = () => {
       <div className={styles.features}>
         {advantages.map((advantage, index) => (
           <div
-
             key={index}
             className={`${styles.card} ${styles[`card-${index}`]}`}
-
           >
             <img
               className={styles.icon}

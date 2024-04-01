@@ -38,6 +38,7 @@ export default function ProductScreenSection() {
     focusOnSelect: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     appendDots: (dots: any) => <div>{dots}</div>,
@@ -60,11 +61,7 @@ export default function ProductScreenSection() {
     ],
   };
   return (
-    <div className={styles.wrapper}
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-anchor-placement="top-bottom"
-    >
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.title}>NOTT Mobile App</div>
