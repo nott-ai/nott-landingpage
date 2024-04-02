@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Link as LinkScroll } from "react-scroll";
+
 interface IProps {
   selectedItem: string;
   handleScrollIntoView: (id: string) => void;
+  refs: {
+    [key: string]: React.RefObject<HTMLDivElement>;
+  };
 }
 
-const Navbar = ({ selectedItem , handleScrollIntoView}: IProps) => {
+const Navbar = ({ selectedItem, handleScrollIntoView, refs }: IProps) => {
   return (
     <div className={styles.containerNav}>
       <div className={styles.navbar}>
@@ -23,6 +27,7 @@ const Navbar = ({ selectedItem , handleScrollIntoView}: IProps) => {
             onClick={() => handleScrollIntoView(menuItem.id)}
           >
             <div
+              ref={refs[menuItem.id]}
               className={`${styles.navContent} ${selectedItem === menuItem.id ? styles.active : ""}`}
             >
               {menuItem.mainTitle}
@@ -30,7 +35,8 @@ const Navbar = ({ selectedItem , handleScrollIntoView}: IProps) => {
           </LinkScroll>
         ))}
       </div>
-    </div>)
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

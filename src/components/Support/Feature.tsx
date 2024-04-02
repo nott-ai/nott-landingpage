@@ -7,7 +7,7 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
-const scrollConfig = {
+const scrollConfig: ScrollIntoViewOptions = {
   behavior: "smooth",
   block: "center",
   inline: "center",
@@ -32,22 +32,20 @@ const Feature: React.FC = () => {
   const handleScrollIntoView = (id: string) => {
     switch (id) {
       case "systemRequirements":
-        refSystemRequirements.current.scrollIntoView(scrollConfig);
+        refSystemRequirements.current?.scrollIntoView(scrollConfig);
         break;
-      case "ios":
-        refIOS.current.scrollIntoView(scrollConfig);
+      case "iOS":
+        refIOS.current?.scrollIntoView(scrollConfig);
         break;
       case "registerLogin":
-        refRegisterLogin.current.scrollIntoView(scrollConfig);
+        refRegisterLogin.current?.scrollIntoView(scrollConfig);
         break;
       case "connectingDevices1":
-        refConnectingDevices1.current.scrollIntoView(scrollConfig);
+        refConnectingDevices1.current?.scrollIntoView(scrollConfig);
         break;
       default:
-        refSystemRequirements.current.scrollIntoView(scrollConfig);
+        refSystemRequirements.current?.scrollIntoView(scrollConfig);
     }
-    console.log('id',id);
-    console.log('handle',handleScrollIntoView);
   }
 
   useEffect(() => {
@@ -69,6 +67,12 @@ const Feature: React.FC = () => {
       <Navbar
         selectedItem={selectedItem}
         handleScrollIntoView={handleScrollIntoView}
+        refs={{
+          systemRequirements: refSystemRequirements,
+          iOS: refIOS,
+          registerLogin: refRegisterLogin,
+          connectingDevices1: refConnectingDevices1,
+        }}
       />
       <Hero />
       <div className={styles.container}>
