@@ -15,7 +15,9 @@ const TypeWriter = ({ text, speed }: { text: string; speed: number }) => {
     }
   }, [text, speed, currentIndex]);
 
-  return displayText;
+  return (
+    <div dangerouslySetInnerHTML={{ __html: displayText.split('<br/>').join('<br />') }} />
+  );
 };
 
 export default TypeWriter;

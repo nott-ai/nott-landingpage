@@ -128,6 +128,11 @@
       flex-wrap: wrap;
       gap: 32px;
       box-sizing: border-box;
+      .socialMediaWrapper{
+        .contactUsMobile{
+          margin: auto;
+        }
+      }
       .rightBlock {
         width: 100%;
         height: fit-content;
@@ -156,7 +161,9 @@
           .socialMedia {
             text-align: center;
             width: 100%;
+            
           }
+          
         }
         .subColumn {
         }
