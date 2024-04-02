@@ -52,7 +52,6 @@ const Hero = () => {
             />
             <div className={styles.content}>
               <div
-                style={{ textAlign: "center" }}
                 className={styles.description}
               >
                 <p>Shape Your Health,<br />

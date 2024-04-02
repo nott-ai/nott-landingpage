@@ -5,6 +5,13 @@ interface IContent {
   image?: string;
 }
 
+export const SUPPORT = {
+  SYSTEM_REQUIREMENTS: "systemRequirements",
+  SECTION_SCROLL: "sectionToScrollTo",
+  REGISTER_LOGIN: "registerLogin",
+  IOS : 'ios',
+  CONNECTING_DEVICES: 'connectingDevices1',
+}
 interface MenuItems {
   id: string;
   mainSection?: string;

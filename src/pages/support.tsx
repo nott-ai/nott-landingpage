@@ -1,11 +1,9 @@
-import Feature from "@/components/Support/Feature";
-import Hero from "@/components/Support/Hero";
+import Support from "@/components/Support";
 
 const SupportPage = () => {
   return (
     <>
-      {/* <Hero /> */}
-      <Feature />
+      <Support />
     </>
   );
 };

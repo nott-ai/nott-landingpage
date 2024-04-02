@@ -1,9 +1,9 @@
-import { GUIDELINE } from "@/constants/support";
+import { GUIDELINE, SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Element } from "react-scroll";
 import LayoutSupport from "./LayoutSupport";
 
-const Feature: React.FC = () => {
+const Support: React.FC = () => {
 
   return (
     <LayoutSupport>
@@ -12,7 +12,7 @@ const Feature: React.FC = () => {
         {GUIDELINE.map((content) => (
           <>
             {
-              content.id === "systemRequirements" && (
+              content.id === SUPPORT.SYSTEM_REQUIREMENTS && (
                 <>
                   <Element name={content.id} key={content.id}>
                     <div className={styles.textContent}>
@@ -56,4 +56,4 @@ const Feature: React.FC = () => {
   );
 };
 
-export default Feature;
+export default Support;

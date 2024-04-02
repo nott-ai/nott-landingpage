@@ -41,7 +41,7 @@ const SideMenuDesktop = ({
                 )}
               </div>
               {openDropdown === content
-                .id && content.items && content.items.length >= 1 && (
+                .id && content.items && content.items.length > 0 && (
                   <div
                     className={`${styles.dropdown}`}
                   >

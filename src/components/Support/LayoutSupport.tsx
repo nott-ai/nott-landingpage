@@ -2,9 +2,9 @@ import styles from "@/styles/Support/features.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 import Hero from "./Hero";
-import useDeviceDetect from "../common/DeviceDetect";
 import TopMenuMobile from "./TopMenuMobile";
 import SideMenuDesktop from "./SideMenuDesktop";
+import { SUPPORT } from "@/constants/support";
 
 const scrollConfig: ScrollIntoViewOptions = {
   behavior: "smooth",
@@ -19,12 +19,11 @@ interface Props {
 
 const LayoutSupport = ({ children }: Props) => {
   const [openDropdown, setOpenDropdown] = useState({});
-  const [selectedItem, setSelectedItem] = useState("systemRequirements");
+  const [selectedItem, setSelectedItem] = useState(SUPPORT.SYSTEM_REQUIREMENTS);
   const refSystemRequirements = useRef<any>();
   const refIOS = useRef<any>();
   const refRegisterLogin = useRef<any>();
   const refConnectingDevices1 = useRef<any>();
-  const { isDesktop } = useDeviceDetect();
 
   const toggleDropDown = (id: string) => {
     if (openDropdown === id) {
@@ -37,16 +36,16 @@ const LayoutSupport = ({ children }: Props) => {
   const handleScrollIntoView = (id: string) => {
     setSelectedItem(id);
     switch (id) {
-      case "systemRequirements":
+      case SUPPORT.SYSTEM_REQUIREMENTS:
         refSystemRequirements.current?.scrollIntoView(scrollConfig);
         break;
-      case "iOS":
+      case SUPPORT.IOS:
         refIOS.current?.scrollIntoView(scrollConfig);
         break;
-      case "registerLogin":
+      case SUPPORT.REGISTER_LOGIN:
         refRegisterLogin.current?.scrollIntoView(scrollConfig);
         break;
-      case "connectingDevices1":
+      case SUPPORT.CONNECTING_DEVICES:
         refConnectingDevices1.current?.scrollIntoView(scrollConfig);
         break;
       default:
@@ -55,7 +54,7 @@ const LayoutSupport = ({ children }: Props) => {
   }
 
   useEffect(() => {
-    const sectionToScrollTo = localStorage.getItem("sectionToScrollTo");
+    const sectionToScrollTo = localStorage.getItem(SUPPORT.SECTION_SCROLL);
     if (sectionToScrollTo) {
       scroller.scrollTo(sectionToScrollTo, {
         duration: 1000,
@@ -64,7 +63,7 @@ const LayoutSupport = ({ children }: Props) => {
         smooth: "easeInOutQuart",
       });
 
-      localStorage.removeItem("sectionToScrollTo");
+      localStorage.removeItem(SUPPORT.SECTION_SCROLL);
     }
   }, []);
 
