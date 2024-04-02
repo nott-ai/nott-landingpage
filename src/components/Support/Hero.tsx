@@ -14,7 +14,7 @@ const Hero = () => {
             <img
               className={styles.bannerImage}
               src="/images/banner-support.webp"
-              alt="banner"
+              alt="banner-support"
             />
 
             <div className={styles.content}>
@@ -30,14 +30,14 @@ const Hero = () => {
                   <img
                     className={styles.logo}
                     src="/images/googleplay.webp"
-                    alt="banner"
+                    alt="googleplay"
                   />
                 </a>
                 <a href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/appstore.webp"
-                    alt="banner"
+                    alt="appstore"
                   />
                 </a>
               </div>
@@ -48,7 +48,7 @@ const Hero = () => {
             <img
               className={styles.bannerImage}
               src="/images/banner-support-mobile.webp"
-              alt="banner"
+              alt="banner-support-mobile"
             />
             <div className={styles.content}>
               <div
@@ -65,14 +65,14 @@ const Hero = () => {
                   <img
                     className={styles.logo}
                     src="/images/googleplay.webp"
-                    alt="banner"
+                    alt="googleplay"
                   />
                 </a>
                 <a href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/appstore.webp"
-                    alt="banner"
+                    alt="appstore"
                   />
                 </a>
               </div>

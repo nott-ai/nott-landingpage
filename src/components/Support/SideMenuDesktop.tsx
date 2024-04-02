@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Link as LinkScroll } from "react-scroll";
@@ -6,13 +6,22 @@ import { Link as LinkScroll } from "react-scroll";
 interface Props {
   selectedItem: string;
   setSelectedItem: (value: string) => void;
-  openDropdown: any;
-  toggleDropDown: (id: string) => void;
 }
 
 const SideMenuDesktop = ({
-  selectedItem, setSelectedItem, openDropdown, toggleDropDown
+  selectedItem, setSelectedItem
 }: Props) => {
+
+  const [openDropdown, setOpenDropdown] = useState({});
+
+  const toggleDropDown = (id: string) => {
+    if (openDropdown === id) {
+      setOpenDropdown({});
+    } else {
+      setOpenDropdown(id);
+    }
+  };
+  
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarList}>
