@@ -21,6 +21,19 @@
       background-color: #ffffff;
       overflow-y: auto;
       height: fit-content;
+      .sidebarList {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .mainTitle {
+          color: #1b1b1d;
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 1px;
+          line-height: 16px;
+          font-weight: 500;
+        }
+      }
     }
     .mainTitleWrapper {
       display: flex;
@@ -62,19 +75,8 @@
       overflow: auto;
       transition: height 0.3s ease;
     }
-    .mainTitle {
-      color: #1b1b1d;
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: 1px;
-      line-height: 16px;
-      font-weight: 500;
-    }
-    .sidebarList {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    
+    
     .listContent {
       padding: 12px 16px 12px 25px;
       font-size: 16px;

@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 import { Element } from "react-scroll";
 import Hero from "./Hero";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import TopMenu from "./TopMenu";
+import SideMenu from "./SideMenu";
 
 const scrollConfig: ScrollIntoViewOptions = {
   behavior: "smooth",
@@ -64,7 +64,7 @@ const Feature: React.FC = () => {
 
   return (
     <div className={`${styles.wrapper}`}>
-      <Navbar
+      <TopMenu
         selectedItem={selectedItem}
         handleScrollIntoView={handleScrollIntoView}
         refs={{
@@ -76,7 +76,7 @@ const Feature: React.FC = () => {
       />
       <Hero />
       <div className={styles.container}>
-        <Sidebar
+        <SideMenu
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
           toggleDropDown={toggleDropDown}

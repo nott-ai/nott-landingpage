@@ -11,7 +11,7 @@ interface IProps {
   };
 }
 
-const Navbar = ({ selectedItem, handleScrollIntoView, refs }: IProps) => {
+const TopMenu = ({ selectedItem, handleScrollIntoView, refs }: IProps) => {
   return (
     <div className={styles.containerNav}>
       <div className={styles.navbar}>
@@ -39,4 +39,4 @@ const Navbar = ({ selectedItem, handleScrollIntoView, refs }: IProps) => {
   );
 }
 
-export default Navbar;
+export default TopMenu;

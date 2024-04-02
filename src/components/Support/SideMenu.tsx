@@ -2,13 +2,15 @@ import React from 'react'
 import { SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Link as LinkScroll } from "react-scroll";
+
 interface Props {
   selectedItem: string;
   setSelectedItem: (value: string) => void;
   openDropdown: any;
   toggleDropDown: (id: string) => void;
 }
-const Sidebar = ({
+
+const SideMenu = ({
   selectedItem, setSelectedItem, openDropdown, toggleDropDown
 }: Props) => {
   return (
@@ -72,4 +74,4 @@ const Sidebar = ({
     </div>)
 }
 
-export default Sidebar
+export default SideMenu

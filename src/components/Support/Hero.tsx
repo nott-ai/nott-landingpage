@@ -1,10 +1,9 @@
 import styles from "@/styles/Support/support.module.scss";
 import useDeviceDetect from "@/components/common/DeviceDetect";
-import TypeWriter from "@/components/common/TypeWriter";
 import { SOCIAL_LINK } from "@/constants/social";
 
 const Hero = () => {
-  const { isDesktop, isMobile } = useDeviceDetect();
+  const { isDesktop } = useDeviceDetect();
 
   return (
     <div className={styles.container}>
@@ -14,7 +13,7 @@ const Hero = () => {
           <div className={styles.banner}>
             <img
               className={styles.bannerImage}
-              src="/images/banner-support.png"
+              src="/images/banner-support.webp"
               alt="banner"
             />
 
@@ -30,14 +29,14 @@ const Hero = () => {
                 <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
                   <img
                     className={styles.logo}
-                    src="/images/googleplay.png"
+                    src="/images/googleplay.webp"
                     alt="banner"
                   />
                 </a>
                 <a href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
-                    src="/images/appstore.png"
+                    src="/images/appstore.webp"
                     alt="banner"
                   />
                 </a>
@@ -48,7 +47,7 @@ const Hero = () => {
           <div className={styles.banner}>
             <img
               className={styles.bannerImage}
-              src="/images/banner-support-mobile.png"
+              src="/images/banner-support-mobile.webp"
               alt="banner"
             />
             <div className={styles.content}>
@@ -66,14 +65,14 @@ const Hero = () => {
                 <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
                   <img
                     className={styles.logo}
-                    src="/images/googleplay.png"
+                    src="/images/googleplay.webp"
                     alt="banner"
                   />
                 </a>
                 <a href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
-                    src="/images/appstore.png"
+                    src="/images/appstore.webp"
                     alt="banner"
                   />
                 </a>
