@@ -9,7 +9,7 @@ export const NAVIGATIONS = [
   },
   {
     id: 2,
-    name: "About us",
+    name: "About NOTT",
     link: ROUTERS.ABOUT_US,
   },
   {

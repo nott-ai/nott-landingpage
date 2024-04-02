@@ -1,7 +1,7 @@
 export const ROUTERS = {
   FAQs: "/faqs",
   HOME: "/",
-  ABOUT_US: "/about-us",
+  ABOUT_US: "/about-nott",
   PRODUCTS_AND_SERVICES: "/products-and-services",
   TECHNOLOGY_AND_INNOVATION: "/technology-and-innovation",
   KYC: "/ekyc",
