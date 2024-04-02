@@ -9,11 +9,8 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div
-        className={styles.bannerContainer}
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-      >
-        {isDesktop? (
+        className={styles.bannerContainer}>
+        {isDesktop ? (
           <div className={styles.banner}>
             <img
               className={styles.bannerImage}
@@ -23,17 +20,11 @@ const Hero = () => {
 
             <div className={styles.content}>
               <div className={styles.description}>
-                <TypeWriter
-                  text="Shape Your Health,<br/>
-                   Shape Your Future with NOTT"
-                  speed={40}
-                />
+                <p>Shape Your Health,<br />
+                  Shape Your Future with NOTT</p>
               </div>
               <div className={styles.description2}>
-                <TypeWriter
-                  text="Download NOTT App now for next level of convenience"
-                  speed={40}
-                />
+                <p>Download NOTT App now for next level of convenience</p>
               </div>
               <div className={styles.linkSocialWrapper}>
                 <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
@@ -65,27 +56,21 @@ const Hero = () => {
                 style={{ textAlign: "center" }}
                 className={styles.description}
               >
-                <TypeWriter
-                  text="Shape Your Health,<br/>
-                   Shape Your Future with NOTT"
-                  speed={40}
-                />
+                <p>Shape Your Health,<br />
+                  Shape Your Future with NOTT</p>
               </div>
               <div className={styles.description2}>
-                <TypeWriter
-                  text="Download NOTT App now for next level of convenience"
-                  speed={40}
-                />
+                <p>Download NOTT App now for next level of convenience</p>
               </div>
               <div className={styles.linkSocialWrapper}>
-                <a href="" target="_blank">
+                <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/googleplay.png"
                     alt="banner"
                   />
                 </a>
-                <a href="" target="_blank">
+                <a href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/appstore.png"

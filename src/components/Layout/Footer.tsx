@@ -115,10 +115,9 @@ const Footer = () => {
                     <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
-                    <div>
-                      Help & Support{" "}
-                      <a href="mailto:info@nott.ai" className={styles.email}></a>
-                    </div>
+                    <Link href={ROUTERS.SUPPORT} target="_blank">
+                    Help & Support{" "}
+                    </Link>
                   </>
                 ) : (
                   <div className={styles.subColumn}>
@@ -126,13 +125,13 @@ const Footer = () => {
                       FAQs
                     </a>
 
-                    <a href={INFO.WHITE_PAPER} target="_blank">
+                    <a href={INFO.WHITE_PAPER}>
                       Whitepaper
                     </a>
 
-                    <a href={ROUTERS.SUPPORT}>
+                    <Link href={ROUTERS.SUPPORT}>
                       Help & Support
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>

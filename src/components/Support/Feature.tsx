@@ -1,12 +1,25 @@
 import { GUIDELINE, SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 import { Element } from "react-scroll";
 import Hero from "./Hero";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+
+const scrollConfig = {
+  behavior: "smooth",
+  block: "center",
+  inline: "center",
+};
+
 const Feature: React.FC = () => {
   const [openDropdown, setOpenDropdown] = useState({});
   const [selectedItem, setSelectedItem] = useState("systemRequirements");
+  const refSystemRequirements = useRef<any>();
+  const refIOS = useRef<any>();
+  const refRegisterLogin = useRef<any>();
+  const refConnectingDevices1 = useRef<any>();
 
   const toggleDropDown = (id: string) => {
     if (openDropdown === id) {
@@ -15,6 +28,27 @@ const Feature: React.FC = () => {
       setOpenDropdown(id);
     }
   };
+
+  const handleScrollIntoView = (id: string) => {
+    switch (id) {
+      case "systemRequirements":
+        refSystemRequirements.current.scrollIntoView(scrollConfig);
+        break;
+      case "ios":
+        refIOS.current.scrollIntoView(scrollConfig);
+        break;
+      case "registerLogin":
+        refRegisterLogin.current.scrollIntoView(scrollConfig);
+        break;
+      case "connectingDevices1":
+        refConnectingDevices1.current.scrollIntoView(scrollConfig);
+        break;
+      default:
+        refSystemRequirements.current.scrollIntoView(scrollConfig);
+    }
+    console.log('id',id);
+    console.log('handle',handleScrollIntoView);
+  }
 
   useEffect(() => {
     const sectionToScrollTo = localStorage.getItem("sectionToScrollTo");
@@ -32,89 +66,18 @@ const Feature: React.FC = () => {
 
   return (
     <div className={`${styles.wrapper}`}>
-      <div className={styles.containerNav}>
-        <div className={styles.navbar}>
-          {SIDE_MENU_SUPPORT.map((menuItem) => (
-            <LinkScroll
-              key={menuItem.id}
-              to={menuItem.id}
-              offset={0}
-              smooth={true}
-              delay={-100}
-              duration={1000}
-              spy={true}
-            >
-              <div
-                className={`${styles.navContent} ${selectedItem === menuItem.id ? styles.active : ""}`}
-              >
-                {menuItem.mainTitle}
-              </div>
-            </LinkScroll>
-          ))}
-        </div>
-      </div>
+      <Navbar
+        selectedItem={selectedItem}
+        handleScrollIntoView={handleScrollIntoView}
+      />
       <Hero />
       <div className={styles.container}>
-        <div className={styles.sidebar}>
-          <div className={styles.sidebarList}>
-            {SIDE_MENU_SUPPORT.map((content) => (
-              <div
-                key={content.mainTitle}
-              >
-                <LinkScroll
-                  to={content.id}
-                  offset={-100}
-                  smooth={true}
-                  duration={1000}
-                  spy={true}
-                  onSetActive={() => {
-                    setSelectedItem(content.id);
-                  }}
-                  style={{ background: "transparent" }}
-                   >
-                  <div 
-                  onClick={() => toggleDropDown(content.id)}
-                  className={`${styles.mainTitleWrapper} ${selectedItem === content.id ? styles.active : ""}`}>
-                    <div className={`${styles.mainTitle}`}>
-                      {content.mainTitle}
-                    </div>
-                    {content.items?.length > 0 && (
-                      <img src="/images/drop-down.svg" alt="hero" />
-                    )}
-                  </div>
-                  {openDropdown === content
-                    .id && content.items && content.items.length >= 1 && (
-                      <div
-                        className={`${styles.dropdown}`}
-                      >
-                        {content.items.map((item) => (
-                          <LinkScroll
-                            key={item.id}
-                            to={item.id}
-                            offset={-100}
-                            smooth={true}
-                            duration={1000}
-                            spy={true}
-                            onSetActive={() => {
-                              setSelectedItem(item.id);
-                            }}
-                            style={{ background: "transparent" }}
-                            onClick={() => setSelectedItem(item.id)}
-                          >
-                            <div
-                              className={`${styles.listContent} ${selectedItem === item.id ? styles.active : ""}`}
-                            >
-                              {item.title}
-                            </div>
-                          </LinkScroll>
-                        ))}
-                      </div>
-                    )}
-                </LinkScroll>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Sidebar
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
+          toggleDropDown={toggleDropDown}
+          openDropdown={openDropdown}
+        />
         <div className={styles.rightBlock}>
           <div className={styles.userManual}>User Manual</div>
           <div>
@@ -151,7 +114,7 @@ const Feature: React.FC = () => {
                               {item.description}
                             </div>
                           </div>
-                          {item.image && <img className={styles.image} src={item.image} alt="hero" />}
+                          {item.image && <img className={styles.image} src={item.image} loading="lazy" alt="hero" />}
                         </div>
                       </div>
                     ))}
