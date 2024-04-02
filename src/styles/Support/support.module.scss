@@ -167,6 +167,10 @@
         }
         .linkSocialWrapper {
           width: fit-content;
+          .logo {
+            @include image-fill(cover);
+            cursor: pointer;
+          }
         }
       }
 
