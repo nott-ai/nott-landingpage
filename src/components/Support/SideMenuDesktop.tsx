@@ -10,7 +10,7 @@ interface Props {
   toggleDropDown: (id: string) => void;
 }
 
-const SideMenu = ({
+const SideMenuDesktop = ({
   selectedItem, setSelectedItem, openDropdown, toggleDropDown
 }: Props) => {
   return (
@@ -74,4 +74,4 @@ const SideMenu = ({
     </div>)
 }
 
-export default SideMenu
+export default SideMenuDesktop

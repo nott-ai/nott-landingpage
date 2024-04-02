@@ -1,12 +1,10 @@
-import { GUIDELINE, SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
-import { Element } from "react-scroll";
 import Hero from "./Hero";
-import TopMenu from "./TopMenu";
-import SideMenu from "./SideMenu";
 import useDeviceDetect from "../common/DeviceDetect";
+import TopMenuMobile from "./TopMenuMobile";
+import SideMenuDesktop from "./SideMenuDesktop";
 
 const scrollConfig: ScrollIntoViewOptions = {
   behavior: "smooth",
@@ -72,7 +70,7 @@ const LayoutSupport = ({ children }: Props) => {
 
   return (
     <div className={`${styles.wrapper}`}>
-      <TopMenu
+      <TopMenuMobile
         selectedItem={selectedItem}
         handleScrollIntoView={handleScrollIntoView}
         refs={{
@@ -84,16 +82,12 @@ const LayoutSupport = ({ children }: Props) => {
       />
       <Hero />
       <div className={styles.container}>
-        {isDesktop && (
-          <>
-            <SideMenu
-              selectedItem={selectedItem}
-              setSelectedItem={setSelectedItem}
-              toggleDropDown={toggleDropDown}
-              openDropdown={openDropdown}
-            />
-          </>
-        )}
+        <SideMenuDesktop
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
+          toggleDropDown={toggleDropDown}
+          openDropdown={openDropdown}
+        />
         <div className={styles.rightBlock}>
           {children}
         </div>
