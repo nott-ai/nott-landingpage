@@ -67,7 +67,14 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
 export const GUIDELINE: MenuItems[] = [
   {
     id: "systemRequirements",
-    items: [],
+    mainSection: "1.System Requirements",
+    items: [
+      {
+        id: "systemRequirements",
+        description:
+          "To ensure the optimal performance and high security of the NOTT application, it is necessary to use devices operating on compatible system software. For users with iOS devices, the application requires iOS 16.5 or later. For users with Android devices, the application requires Android 11 or later.",
+      },
+    ],
   },
   {
     id: "ios",

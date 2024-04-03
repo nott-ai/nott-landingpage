@@ -14,7 +14,7 @@
     .sidebar {
       position: sticky;
       padding: 20px 16px;
-      top: 0;
+      top: 10%;
       width: 253px;
       min-width: 253px;
       height: fit-content;
@@ -146,6 +146,9 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: flex-start;
         gap: 29px;
+        .systemItem{
+          width: 900px;
+        }
         .item {
           display: flex;
           flex-direction: column;
@@ -192,11 +195,12 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     .containerNav {
-      height: 70px;
+      height: 40px;
       display: flex;
-      position: sticky;
-      top: 30px;
       background-color: #ffffff;
+      margin-top: 100px;
+      position: sticky;
+      top: 100px;
       .navbar {
         display: flex;
         flex-direction: row;
@@ -264,6 +268,9 @@
         }
         .wrapper {
           grid-template-columns: repeat(1, 1fr);
+          .systemItem{
+            width: 100%;
+          }
           .item {
             display: flex;
             flex-direction: column;
@@ -308,10 +315,11 @@
   .wrapper {
     margin-top: 0px;
     .containerNav {
-      margin-top: 60px;
+      margin-top: 50px;
       height: 50px;
       display: flex;
-      top: 0px;
+      top: 6%;
+      position: sticky;
       .navbar {
         display: flex;
         flex-direction: row;
