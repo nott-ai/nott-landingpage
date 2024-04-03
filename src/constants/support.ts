@@ -52,12 +52,12 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
     items: [
       {
         id: "connectingDevices1",
-        title: "NOTT devices",
+        title: "With NOTT devices",
         description: "",
       },
       {
         id: "connectingDevices2",
-        title: "Third Party application",
+        title: "With Third Party application",
         description: "",
       },
     ],
@@ -131,30 +131,30 @@ export const GUIDELINE: MenuItems[] = [
     items: [
       {
         id: "downloadTestFlight",
-        title: "Step 1: Download TestFlight",
+        title: "Step 1: Download the APK File",
         description:
-          "If you haven't already, download the TestFlight app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
+          "Click Download to download the APK file of the NOTT app.",
         image: "/images/support/support7.webp",
       },
       {
         id: "invitationLink",
-        title: "Step 2: Open the Invitation Link",
+        title: "Step 2: Open the APK File",
         description:
-          "After successfully install TestFlight, open the invitation link you received from the developer. Click Continue to open list of available app for download",
+          "Locate the downloaded APK file. This might be in your device's Downloads folder or wherever you chose to save it.\n Tap on the APK file - which is named nott-release.apk to open it. If you're doing this for the first time, you may be prompted to allow your file manager or browser app to install the APK. Confirm the prompt then click Install for app installation.",
         image: "/images/support/support8.webp",
       },
       {
         id: "installingNott",
         title: "Step 3: Install the NOTT App",
         description:
-          "Click on Install to start downloading the beta version of the app to your device. The process is similar to downloading any app from the App Store.",
+          "After opening the APK file, your device will prompt you with a confirmation to install the app. Review the permissions it requests, then tap Install.",
         image: "/images/support/support9.webp",
       },
       {
         id: "openingNott",
-        title: "Step 4: Open NOTT App",
+        title: "Step 4: Open and Test the App",
         description:
-          "After the app is installed, you can open it directly from your home screen; or click OPEN in TestFlight. And now you are ready to experience NOTT app.",
+          "Once the installation is complete, you can either tap Open directly from the installation screen to launch the app or find the app icon in your device’s app drawer.",
         image: "/images/support/support10.webp",
       },
     ],
@@ -162,7 +162,6 @@ export const GUIDELINE: MenuItems[] = [
   {
     id: "registerLogin",
     mainSection: "3.Register & Login with Passkey",
-    mainTitle: "Register with passkey",
     items: [
       {
         id: "tapToVerify",
@@ -176,7 +175,7 @@ export const GUIDELINE: MenuItems[] = [
         title: "Step 2: Create Your Passkey",
         description:
           "Next, you will be asked to create a passkey. Click “Continue” to create a secure and memorable passkey.",
-        image: "/images/support/support12.webp",
+        image: "/images/support/support1.webp",
       },
       {
         id: "verifyPasskey",
@@ -204,28 +203,28 @@ export const GUIDELINE: MenuItems[] = [
         title: "Step 1: Access the Main Screen",
         description:
           'Open the app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
-        image: "/images/support/support15.webp",
+        image: "/images/support/support14.webp",
       },
       {
         id: "chooseDevice",
         title: "Step 2: Choose the Device",
         description:
-          'On the following screen, you will see a list of compatible apps and devices. Select various options to connect with the "NOTT Devices',
-        image: "/images/support/support16.webp",
+          'On the following screen, you will see a list of compatible apps and devices. Select various options to connect with the "NOTT Devices"',
+        image: "/images/support/support15.webp",
       },
       {
         id: "prepareConnection",
         title: "Step 3: Prepare for Connection",
         description:
           "Ensure your mobile device's Bluetooth is turned on and you have a stable internet connection. Place the NOTT device close to your mobile device and check that the NOTT device is adequately charged. The app will automatically scan for signals from the NOTT device.",
-        image: "/images/support/support17.webp",
+        image: "/images/support/support16.webp",
       },
       {
         id: "authenticatePair",
         title: "Step 4: Authenticate and Pair",
         description:
           "Once successfully pair, click “Complete” to confirm the process.",
-        image: "/images/support/support18.webp",
+        image: "/images/support/support17.webp",
       },
       {
         id: "confirmationConnection",
@@ -244,22 +243,22 @@ export const GUIDELINE: MenuItems[] = [
         id: "selectApp",
         title: "Step 1: Select a Third-Party App",
         description:
-          'In the "Connect Apps & Devices" screen, in Other Apps & Devices, choose the third-party application or device you want to connect with.',
-        image: "/images/support/support20.webp",
+          'In the "Connect Apps & Devices" screen, in "Other Apps & Devices", choose the third-party application or device you want to connect with.',
+        image: "/images/support/support19.webp",
       },
       {
         id: "loginAccount",
         title: "Step 2: Log In to Your Account",
         description:
           "After selecting the desired application, a login screen will appear for you to enter your account details on that third-party application. Log in to authenticate and establish the connection.",
-        image: "/images/support/support21.webp",
+        image: "/images/support/support20.webp",
       },
       {
         id: "confirmationConnection",
         title: "Steps 3: Confirmation of Successful Connection",
         description:
           'Once a third-party application is successfully connected, it will be highlighted on the "Connect Apps & Devices" screen.',
-        image: "/images/support/support22.webp",
+        image: "/images/support/support21.webp",
       },
     ],
   },

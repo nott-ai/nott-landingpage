@@ -28,6 +28,7 @@
         .mainTitle {
           color: #1b1b1d;
           font-size: 16px;
+          font-style: normal;
           letter-spacing: 1px;
           line-height: 16px;
           font-weight: 500;
@@ -74,8 +75,7 @@
       overflow: auto;
       transition: height 0.3s ease;
     }
-    
-    
+
     .listContent {
       padding: 12px 16px 12px 25px;
       font-size: 16px;
@@ -100,8 +100,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .userManual{
-        color : #346af7;
+      .userManual {
+        color: #346af7;
         text-align: center;
         font-size: 20px;
         font-weight: 700;
@@ -117,12 +117,12 @@
       }
       .mainTitle {
         color: #1b1b1d;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 600;
-        line-height: 16px;
-        letter-spacing: 1px;
-        margin: 20px 0px 10px 0px;
+        line-height: 24px;
+        letter-spacing: 0.14px;
+        margin: 0px 0px 10px 0px;
       }
 
       .highlightTitle {
@@ -132,6 +132,7 @@
         font-weight: 600;
         line-height: 16px;
         letter-spacing: 1px;
+        margin: 10px 0px 20px 0px;
       }
       .textContent {
         color: #54545c;
@@ -146,7 +147,7 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: flex-start;
         gap: 29px;
-        .systemItem{
+        .systemItem {
           width: 900px;
         }
         .item {
@@ -155,20 +156,25 @@
           align-items: start;
           gap: 10px;
           width: 433px;
-          height: fit-content;
           max-width: 756px;
+          height: 100%;
           .wrapperGuide {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 16px;
+            flex: 2;
+            .image {
+              width: 268px;
+              height: 553px;
+            }
             .content {
+              flex: 1;
               .textContent {
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
-                min-height: 123px;
                 height: fit-content;
                 letter-spacing: 0.14px;
               }
@@ -242,11 +248,11 @@
 
         .mainTitle {
           color: #1b1b1d;
-          font-size: 18px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 600;
-          line-height: 16px;
-          letter-spacing: 1px;
+          line-height: 24px;
+          letter-spacing: 0.14px;
           margin-bottom: 10px;
         }
 
@@ -268,7 +274,7 @@
         }
         .wrapper {
           grid-template-columns: repeat(1, 1fr);
-          .systemItem{
+          .systemItem {
             width: 100%;
           }
           .item {

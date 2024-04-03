@@ -24,20 +24,12 @@
       @include sizes(479px, 158px);
       color: white;
 
-      .title {
+      .description {
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
         line-height: 140%;
         letter-spacing: 0.44px;
-      }
-
-      .description {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        letter-spacing: 0.4px;
       }
       .description2 {
         font-size: 16px;

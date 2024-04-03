@@ -13,6 +13,7 @@ import styles from "@/styles/Layout/footer.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useDeviceDetect from "../common/DeviceDetect";
+import { Link as LinkScroll } from "react-scroll";
 
 const Footer = () => {
   const trans = useTrans();
@@ -64,7 +65,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className={styles.contactUsMobile}>
-                  Contact us{" "}
+                  Contact Us{" "}
                   <a href="mailto:info@nott.ai" className={styles.email}>
                     info@nott.ai
                   </a>
@@ -110,23 +111,22 @@ const Footer = () => {
 
                 {isMobile ? (
                   <>
-                    <a href={INFO.WHITE_PAPER} target="_blank">
+                    <a href={`${ROUTERS.ABOUT_US}#faq`}>
                       FAQS
                     </a>
                     <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
                     <Link href={ROUTERS.SUPPORT} target="_blank">
-                    Help & Support{" "}
+                      Help & Support{" "}
                     </Link>
                   </>
                 ) : (
                   <div className={styles.subColumn}>
-                    <a href={ROUTERS.ABOUT_US}>
+                    <a href={`${ROUTERS.ABOUT_US}#faq`}>
                       FAQs
                     </a>
-
-                    <a href={INFO.WHITE_PAPER}>
+                    <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
 

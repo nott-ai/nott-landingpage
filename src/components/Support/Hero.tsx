@@ -19,11 +19,11 @@ const Hero = () => {
 
             <div className={styles.content}>
               <div className={styles.description}>
-                <p>Shape Your Health,<br />
-                  Shape Your Future with NOTT</p>
+                Shape Your Health,<br />
+                  Shape Your Future with NOTT
               </div>
               <div className={styles.description2}>
-                <p>Download NOTT App now for next level of convenience</p>
+                Download NOTT App now for next level of convenience
               </div>
               <div className={styles.linkSocialWrapper}>
                 <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
