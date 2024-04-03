@@ -51,7 +51,7 @@ const Faqs = () => {
       </div>
       <img
         className={styles.graphicImage}
-        src="/images/faqs.png"
+        src="/images/faqs.webp"
         alt="faqs"
         loading="lazy"
       />

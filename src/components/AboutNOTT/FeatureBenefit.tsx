@@ -68,8 +68,14 @@ const FeatureBenefit = () => {
             (window.scrollY > startIndex && window.scrollY < nextIndex)
           ) {
             image.style.opacity = "1";
+            if (des) {
+              des.style.backgroundColor = "#ebf0fe";
+            }
           } else {
             image.style.opacity = "0";
+            if (des) {
+              des.style.backgroundColor = "#fff";
+            }
           }
         }
       });
