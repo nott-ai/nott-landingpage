@@ -22,7 +22,7 @@ export const BENEFITS = [
   {
     image: "/images/benefits/engage-daily.png",
     type: "User Benefits",
-    title: "Empowering User-Controlled Data with NOTT",
+    title: "Empowering User-Controlled<br/> Data with NOTT",
     items: [
       "User Data Sovereignty",
       "Anonymous Data Sharing Rewards",
@@ -33,7 +33,7 @@ export const BENEFITS = [
   {
     image: "/images/benefits/sleep-quality.png",
     type: "User Benefits",
-    title: "Comprehensive Sleep Monitoring with NOTT",
+    title: "Comprehensive Sleep Monitoring<br/> with NOTT",
     items: [
       "Advanced Sleep Tracking",
       "Personalized Sleep Insights",
@@ -43,7 +43,7 @@ export const BENEFITS = [
   {
     image: "/images/benefits/heart-rate.png",
     type: "User Benefits",
-    title: "Heart Rate Monitoring for Holistic Wellness",
+    title: "Heart Rate Monitorin<br/> for Holistic Wellness",
     items: [
       "Continuous Heart Rate Tracking",
       "AI-Driven Analysis",
@@ -53,7 +53,7 @@ export const BENEFITS = [
   {
     image: "/images/benefits/stress.png",
     type: "User Benefits",
-    title: "AI-Enhanced Stress Management with NOTT",
+    title: "AI-Enhanced Stress Management<br/> with NOTT",
     items: [
       "Stress Level Detection",
       "Mindfulness and Relaxation Tips",
