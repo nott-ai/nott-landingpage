@@ -39,6 +39,7 @@ const Footer = () => {
                 className={styles.footerLogo}
                 src="/images/footer-logo.svg"
                 alt="logo"
+                loading="lazy"
               />
               <div
                 className={`${styles.subColumn} ${styles.socialMediaWrapper}`}

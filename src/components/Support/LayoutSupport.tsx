@@ -19,8 +19,8 @@ const LayoutSupport = ({ children }: Props) => {
     if (sectionToScrollTo) {
       scroller.scrollTo(sectionToScrollTo, {
         duration: 1000,
-        delay: 0.2,
-        offset: 0,
+        delay: 0,
+        offset: -100,
         smooth: "easeInOutQuart",
       });
 

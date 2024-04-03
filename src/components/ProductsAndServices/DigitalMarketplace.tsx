@@ -2,17 +2,18 @@ import { ArrowDirectionRight } from "@/assets/index";
 import styles from "@/styles/ProductsAndServices/digital-marketplace.module.scss";
 import useDeviceDetect from "../common/DeviceDetect";
 import { INFO } from "@/constants/metas";
+import { createMarkup } from "@/utils";
 const advantages = [
   {
-    title: "Benefits for users and merchants",
+    title: "Benefits for users\n and merchants",
     icon: "/images/marketplace-card-1.png",
   },
   {
-    title: "Open marketplace concept",
+    title: "Open marketplace\nconcept",
     icon: "/images/marketplace-card-2.png",
   },
   {
-    title: "Featured products and services",
+    title: "Featured products\n and services",
     icon: "/images/marketplace-card-3.png",
   },
 ];
@@ -45,7 +46,10 @@ const DigitalMarketplace = () => {
 
             <div className={styles.info}>
               <div className={`${styles.title}`}>
-                <div className={styles.contentTitle}>{advantage.title}</div>
+                <div
+                  className={styles.contentTitle}
+                  dangerouslySetInnerHTML={createMarkup(advantage.title)}
+                />
               </div>
               <a href={INFO.BLOG} target="_blank">
                 <div className={styles.explore}>

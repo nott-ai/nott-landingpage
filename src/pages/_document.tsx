@@ -5,8 +5,9 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link
+          rel="preload"
           href="https://fonts.cdnfonts.com/css/sf-pro-display"
-          rel="stylesheet"
+          as="stylesheet"
         />
       </Head>
       <body>

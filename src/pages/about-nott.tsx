@@ -1,4 +1,4 @@
-import AboutUs from "@/components/AboutUs/index";
+import AboutUs from "@/components/AboutNOTT/index";
 import Head from "next/head";
 import { title } from "process";
 
