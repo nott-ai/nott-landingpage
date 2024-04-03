@@ -31,7 +31,7 @@ const SideMenuDesktop = ({
           >
             <LinkScroll
               to={content.id}
-              offset={-100}
+              offset={-250}
               smooth={true}
               duration={1000}
               spy={true}
@@ -41,7 +41,7 @@ const SideMenuDesktop = ({
             >
               <div
                 onClick={() => toggleDropDown(content.id)}
-                className={`${styles.mainTitleWrapper} ${selectedItem === content.id ? styles.active : ""}`}>
+                className={`${styles.mainTitleWrapper}`}>
                 <div className={`${styles.mainTitle}`}>
                   {content.mainTitle}
                 </div>
