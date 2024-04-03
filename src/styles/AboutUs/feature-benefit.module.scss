@@ -39,7 +39,7 @@
                 text-transform: uppercase;
                 margin-bottom: 15px;
                 text-align: right;
-                margin-right: 100px;
+                margin-right: 90px;
               }
             }
             .frameWrapper {
@@ -81,8 +81,7 @@
             grid-auto-columns: 1fr;
             display: grid;
             position: relative;
-            padding-bottom: 160px;
-            padding-top: 20px;
+            padding-bottom: 140px;
             .stick-list_card_1 {
               transform-origin: 50% 0;
               position: -webkit-sticky;
@@ -166,6 +165,11 @@
               height: auto;
               width: 400px;
               margin: 0 auto;
+              .wrapper {
+                .userBenefit {
+                  margin-right: 70px;
+                }
+              }
               .frameWrapper {
                 justify-content: flex-end;
                 .smartWatch {

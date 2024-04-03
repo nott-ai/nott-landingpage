@@ -10,7 +10,7 @@ const START_BLOCK_INDEX = 1500;
 const START_BLOCK_TABLET = 2200;
 const START_BLOCK_MOBILE = 2500;
 
-const MAX_SCALE_RATIOS = [0.1, 0.05, 0.02];
+const MAX_SCALE_RATIOS = [0.1, 0.05, 0.025];
 
 const FeatureBenefit = () => {
   const { isTablet, isDesktop } = useDeviceDetect();
