@@ -95,6 +95,9 @@
         min-width: 332px;
         height: 357px;
         padding: 10px;
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }
