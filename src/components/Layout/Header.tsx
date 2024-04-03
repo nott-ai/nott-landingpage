@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import TopBar from "./TopBar";
+import { ROUTERS } from "@/constants/routes";
+
 
 const Header = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -44,20 +46,20 @@ const Header = () => {
       if (modalIsOpen) return;
       const st = window.pageYOffset || document.documentElement.scrollTop;
       const wrapper = document.querySelector(`#header`);
-      if (wrapper) {
-        if (st > lastScrollTop) {
-          wrapper.classList.add(styles.hidden);
-        } else {
-          wrapper.classList.remove(styles.hidden);
-        }
+      if (st > lastScrollTop) {
+        wrapper?.classList.add(styles.hidden);
+      } else {
+        wrapper?.classList.remove(styles.hidden);
       }
-
+      if (router.pathname === ROUTERS.SUPPORT) {
+        wrapper?.classList.remove(styles.hidden);
+      }
       lastScrollTop = st <= 0 ? 0 : st;
     };
-
+   
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [modalIsOpen]);
+  }, [modalIsOpen, router.pathname]);
 
   useEffect(() => {
     if (router.pathname.includes("/ekyc")) {
@@ -76,9 +78,8 @@ const Header = () => {
     <>
       <header
         id="header"
-        className={`${styles.wrapper} ${isEkyc ? styles.ekyc : ""} ${
-          isEkyc && modalIsOpen ? styles.ekycOpen : ""
-        }`}
+        className={`${styles.wrapper} ${isEkyc ? styles.ekyc : ""} ${isEkyc && modalIsOpen ? styles.ekycOpen : ""
+          }`}
       >
         {!isEkyc && <TopBar />}
         <div className={styles.container}>
@@ -97,15 +98,14 @@ const Header = () => {
                 {NAVIGATIONS.map((item) => (
                   <div
                     key={item.id}
-                    className={`${
-                      item.isRoot
-                        ? router.pathname.includes(item.rootUrl)
-                          ? styles.active
-                          : ""
-                        : router.pathname === item.link
+                    className={`${item.isRoot
+                      ? router.pathname.includes(item.rootUrl)
                         ? styles.active
                         : ""
-                    }`}
+                      : router.pathname === item.link
+                        ? styles.active
+                        : ""
+                      }`}
                   >
                     {item.isExternal ? (
                       <a href={item.link} target="_blank">
@@ -137,15 +137,14 @@ const Header = () => {
           {NAVIGATIONS.map((item) => (
             <div
               key={item.id}
-              className={`${
-                item.isRoot
-                  ? router.pathname.includes(item.rootUrl)
-                    ? styles.active
-                    : ""
-                  : router.pathname === item.link
+              className={`${item.isRoot
+                ? router.pathname.includes(item.rootUrl)
                   ? styles.active
                   : ""
-              }`}
+                : router.pathname === item.link
+                  ? styles.active
+                  : ""
+                }`}
               onClick={closeModal}
             >
               {item.isExternal ? (

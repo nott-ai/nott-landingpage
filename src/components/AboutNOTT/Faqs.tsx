@@ -7,7 +7,7 @@ const Faqs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="faq">
       <div className={styles.faqs}>
         <div className={`${styles.contentTitle} `}>
           Frequently Asked Questions
