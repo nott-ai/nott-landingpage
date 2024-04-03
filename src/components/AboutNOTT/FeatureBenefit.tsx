@@ -14,12 +14,13 @@ const MAX_SCALE_RATIOS = [0.1, 0.05, 0.02];
 
 const FeatureBenefit = () => {
   const { isTablet, isDesktop } = useDeviceDetect();
-
+  console.log(isTablet, isDesktop);
   const START_BLOCK = isDesktop
     ? START_BLOCK_INDEX
     : isTablet
     ? START_BLOCK_TABLET
     : START_BLOCK_MOBILE;
+  console.log(START_BLOCK);
 
   const DESCRIPTION_BLOCK_HEIGHT = isDesktop
     ? DESCRIPTION_BLOCK_HEIGHT_DESKTOP
@@ -30,7 +31,7 @@ const FeatureBenefit = () => {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [isTablet, isDesktop]);
 
   const onScroll = () => {
     if (window !== undefined) {
@@ -40,7 +41,6 @@ const FeatureBenefit = () => {
         const entrance = START_BLOCK + DESCRIPTION_BLOCK_HEIGHT;
         const startIndex = START_BLOCK + index * DESCRIPTION_BLOCK_HEIGHT;
         const nextIndex = START_BLOCK + (index + 1) * DESCRIPTION_BLOCK_HEIGHT;
-
         if (des && index < BENEFITS.length - 1) {
           if (window.scrollY >= entrance) {
             const scaleRatio =
