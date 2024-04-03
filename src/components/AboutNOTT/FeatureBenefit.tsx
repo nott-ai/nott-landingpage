@@ -4,14 +4,26 @@ import { createMarkup } from "@/utils/index";
 import { useEffect } from "react";
 import useDeviceDetect from "../common/DeviceDetect";
 
-const HEIGHT_DESKTOP = 550;
+const DESCRIPTION_BLOCK_HEIGHT_DESKTOP = 550;
+const DESCRIPTION_BLOCK_HEIGHT_TABLET = 330;
 const START_BLOCK_INDEX = 1500;
 const START_BLOCK_TABLET = 3000;
+const START_BLOCK_MOBILE = 2500;
 
 const MAX_SCALE_RATIOS = [0.1, 0.05, 0.02];
+
 const FeatureBenefit = () => {
-  const { isTablet } = useDeviceDetect();
-  const START_BLOCK = isTablet ? START_BLOCK_TABLET : START_BLOCK_INDEX;
+  const { isTablet, isDesktop } = useDeviceDetect();
+
+  const START_BLOCK = isDesktop
+    ? START_BLOCK_INDEX
+    : isTablet
+    ? START_BLOCK_TABLET
+    : START_BLOCK_MOBILE;
+
+  const DESCRIPTION_BLOCK_HEIGHT = isDesktop
+    ? DESCRIPTION_BLOCK_HEIGHT_DESKTOP
+    : DESCRIPTION_BLOCK_HEIGHT_TABLET;
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -25,15 +37,14 @@ const FeatureBenefit = () => {
       BENEFITS.forEach((_, index) => {
         const des = document.getElementById(`description-${index}`);
         const image = document.getElementById(`image-${index}`);
-        const entrance = START_BLOCK + HEIGHT_DESKTOP;
-        const startIndex = START_BLOCK + index * HEIGHT_DESKTOP;
-
-        const nextIndex = START_BLOCK + (index + 1) * HEIGHT_DESKTOP;
+        const entrance = START_BLOCK + DESCRIPTION_BLOCK_HEIGHT;
+        const startIndex = START_BLOCK + index * DESCRIPTION_BLOCK_HEIGHT;
+        const nextIndex = START_BLOCK + (index + 1) * DESCRIPTION_BLOCK_HEIGHT;
 
         if (des && index < BENEFITS.length - 1) {
           if (window.scrollY >= entrance) {
             const scaleRatio =
-              (((window.scrollY - entrance) / HEIGHT_DESKTOP) * 0.1) /
+              (((window.scrollY - entrance) / DESCRIPTION_BLOCK_HEIGHT) * 0.1) /
               (index + 1);
 
             if (!(scaleRatio > MAX_SCALE_RATIOS[index]))

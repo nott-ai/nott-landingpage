@@ -100,15 +100,8 @@
                 top: 198px;
               }
               .descriptionContainer {
-                // height: 500px;
                 -webkit-text-fill-color: inherit;
                 background-color: #fff;
-                // background-image: linear-gradient(
-                //     rgba(10, 10, 13, 0) 48%,
-                //     rgba(10, 10, 13, 0.01) 56%,
-                //     rgba(10, 10, 13, 0.88)
-                //   ),
-                //   linear-gradient(#16141a, #0f0d13 80%);
                 background-clip: padding-box;
                 border-radius: 4px;
                 flex-direction: column;
@@ -116,7 +109,6 @@
                 align-items: flex-start;
                 padding: 40px;
                 display: flex;
-                // position: relative;
                 box-shadow: 0 1px rgba(0, 0, 0, 0.05),
                   -1px 0 rgba(0, 0, 0, 0.08), 1px 0 rgba(0, 0, 0, 0.08),
                   0 -1px rgba(0, 0, 0, 0.12);
@@ -182,6 +174,8 @@
               gap: 10px;
               .imageContainer {
                 height: auto;
+                width: 400px;
+                margin: 0 auto;
                 .frameWrapper {
                   justify-content: flex-end;
                   .smartWatch {
@@ -201,12 +195,12 @@
               }
               .rightBlock {
                 width: 100%;
-                gap: 10px;
+                gap: 0px;
                 padding-bottom: 60px;
                 .descriptionContainer {
-                  margin: auto;
                   box-sizing: border-box;
                   width: 100%;
+                  padding: 20px;
                 }
               }
             }
