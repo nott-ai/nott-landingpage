@@ -32,6 +32,22 @@ export default function CustomGlobe() {
       //disable zoom
       //@ts-ignore
       globeEl.current.controls().enableZoom = false;
+      const directionalLight = globeEl.current
+        //@ts-ignore
+        .lights()
+        .find((obj3d: any) => obj3d.type === "DirectionalLight");
+      if (directionalLight) {
+        directionalLight.position.set(0, 0, 0); // change light position to see the specularMap's effect
+        directionalLight.color.set("#ffffff");
+      }
+      const ambientLight = globeEl.current
+        //@ts-ignore
+        .lights()
+        .find((obj3d: any) => obj3d.type === "AmbientLight");
+      if (ambientLight) {
+        ambientLight.position.set(0, 10, 0);
+        ambientLight.color.set("#ffffff");
+      }
     }
   }, [globeEl]);
 
@@ -51,7 +67,9 @@ export default function CustomGlobe() {
         }),
       ]}
       labelSize={1}
-      showAtmosphere={false}
+      showAtmosphere={true}
+      atmosphereColor="rgba(0,0,0,0)"
+      atmosphereAltitude={0.07}
       labelText={"label"}
       labelColor={() => DOT_COLOR}
       labelDotRadius={0.7}
