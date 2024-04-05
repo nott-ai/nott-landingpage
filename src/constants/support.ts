@@ -235,7 +235,7 @@ export const GUIDELINE: MenuItems[] = [
     ],
   },
   {
-    id: "connectingDevices",
+    id: "connectingDevices2",
     mainTitle: "Connecting with third party application",
     items: [
       {
