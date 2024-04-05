@@ -76,7 +76,7 @@ const Footer = () => {
               <div className={`${styles.column} ${styles.learn}`}>
                 <p className={styles.title}>Learn</p>
                 <div className={styles.subColumn}>
-                  <Link href={ROUTERS.ABOUT_US}>About us</Link>
+                  <Link href={ROUTERS.ABOUT_US}>About NOTT</Link>
                   <Link href={ROUTERS.PRODUCTS_AND_SERVICES}>
                     Products & Services
                   </Link>
