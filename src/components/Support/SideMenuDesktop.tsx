@@ -58,7 +58,7 @@ const SideMenuDesktop = ({
                       <LinkScroll
                         key={item.id}
                         to={item.id}
-                        offset={-100}
+                        offset={-200}
                         smooth={true}
                         duration={1000}
                         spy={true}
