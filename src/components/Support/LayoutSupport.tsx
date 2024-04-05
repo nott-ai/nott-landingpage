@@ -32,6 +32,7 @@ const LayoutSupport = ({ children }: Props) => {
     <div className={`${styles.wrapper}`}>
       <TopMenuMobile
         selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
       />
       <Hero />
       <div className={styles.container}>
