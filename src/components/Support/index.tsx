@@ -2,6 +2,7 @@ import { GUIDELINE, SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Element } from "react-scroll";
 import LayoutSupport from "./LayoutSupport";
+import React from "react";
 
 const Support: React.FC = () => {
 
@@ -25,7 +26,12 @@ const Support: React.FC = () => {
                           {item.title}
                         </div>
                         <div className={styles.textContent}>
-                          {item.description}
+                          {item.description.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}
                         </div>
                       </div>
                       {item.image && <img className={styles.image} src={item.image} loading="lazy" alt="hero" />}

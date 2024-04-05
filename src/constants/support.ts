@@ -9,9 +9,9 @@ export const SUPPORT = {
   SYSTEM_REQUIREMENTS: "systemRequirements",
   SECTION_SCROLL: "sectionToScrollTo",
   REGISTER_LOGIN: "registerLogin",
-  IOS : 'downloadApp',
-  CONNECTING_DEVICES: 'connectingDevices',
-}
+  IOS: "downloadApp",
+  CONNECTING_DEVICES: "connectingDevices",
+};
 interface MenuItems {
   id: string;
   mainSection?: string;
@@ -72,7 +72,7 @@ export const GUIDELINE: MenuItems[] = [
       {
         id: "systemRequirements",
         description:
-          "To ensure the optimal performance and high security of the NOTT application, it is necessary to use devices operating on compatible system software. For users with iOS devices, the application requires iOS 16.5 or later. For users with Android devices, the application requires Android 11 or later.",
+          "To ensure the optimal performance and high security of the NOTT application, it is necessary to use devices operating on compatible system software.\n•  For users with iOS devices, the application requires iOS 16.5 or later.\n• For users with Android devices, the application requires Android 11 or later.",
       },
     ],
   },
@@ -132,8 +132,7 @@ export const GUIDELINE: MenuItems[] = [
       {
         id: "android",
         title: "Step 1: Download the APK File",
-        description:
-          "Click Download to download the APK file of the NOTT app.",
+        description: "Click Download to download the APK file of the NOTT app.",
         image: "/images/support/support7.webp",
       },
       {
@@ -175,14 +174,14 @@ export const GUIDELINE: MenuItems[] = [
         title: "Step 2: Create Your Passkey",
         description:
           "Next, you will be asked to create a passkey. Click “Continue” to create a secure and memorable passkey.",
-        image: "/images/support/support1.webp",
+        image: "/images/support/support12.webp",
       },
       {
         id: "verifyPasskey",
         title: "Step 3: Verify Passkey",
         description:
           "After setting up your passkey, the app will automatically log you into your new account.",
-        image: "/images/support/support13.webp",
+        image: "/images/support/support22.webp",
       },
       {
         id: "automaticLogin",
