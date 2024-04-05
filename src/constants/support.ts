@@ -26,7 +26,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
     items: [],
   },
   {
-    id: "ios",
+    id: "downloadApp",
     mainTitle: "Download NOTT Application",
     items: [
       {
@@ -47,7 +47,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
     items: [],
   },
   {
-    id: "connectingDevices1",
+    id: "connectingDevices",
     mainTitle: "Connecting Devices",
     items: [
       {
@@ -77,12 +77,12 @@ export const GUIDELINE: MenuItems[] = [
     ],
   },
   {
-    id: "ios",
+    id: "downloadApp",
     mainSection: "2.Download NOTT Application",
     mainTitle: "IOS",
     items: [
       {
-        id: "downloadTestFlight",
+        id: "ios",
         title: "Step 1: Download TestFlight",
         description:
           "If you haven't already, download the TestFlight app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
@@ -130,7 +130,7 @@ export const GUIDELINE: MenuItems[] = [
     mainTitle: "Android",
     items: [
       {
-        id: "downloadTestFlight",
+        id: "android",
         title: "Step 1: Download the APK File",
         description:
           "Click Download to download the APK file of the NOTT app.",
@@ -194,12 +194,12 @@ export const GUIDELINE: MenuItems[] = [
     ],
   },
   {
-    id: "connectingDevices1",
+    id: "connectingDevices",
     mainSection: "4.Connecting Devices",
     mainTitle: "Connecting with NOTT devices",
     items: [
       {
-        id: "accessMainScreen",
+        id: "connectingDevices1",
         title: "Step 1: Access the Main Screen",
         description:
           'Open the app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
@@ -240,7 +240,7 @@ export const GUIDELINE: MenuItems[] = [
     mainTitle: "Connecting with third party application",
     items: [
       {
-        id: "selectApp",
+        id: "connectingDevices2",
         title: "Step 1: Select a Third-Party App",
         description:
           'In the "Connect Apps & Devices" screen, in "Other Apps & Devices", choose the third-party application or device you want to connect with.',

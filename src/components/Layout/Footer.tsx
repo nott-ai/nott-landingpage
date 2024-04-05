@@ -65,7 +65,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className={styles.contactUsMobile}>
-                  Contact Us{" "}
+                  Contact Us:{" "}
                   <a href="mailto:info@nott.ai" className={styles.email}>
                     info@nott.ai
                   </a>

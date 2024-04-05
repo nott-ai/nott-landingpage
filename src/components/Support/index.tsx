@@ -12,7 +12,7 @@ const Support: React.FC = () => {
         {GUIDELINE.map((content) => (
           <>
             <Element name={content.id} key={content.id}>
-              <div id={content.id} key={content.mainTitle} className={styles.mainTitle}>
+              <div id={content.id} key={content.mainTitle} className={styles.mainContent}>
                 {content.mainSection}
               </div>
               {content.mainTitle && <div className={styles.highlightTitle}>&bull; {content.mainTitle}</div>}
