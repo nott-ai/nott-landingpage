@@ -9,8 +9,8 @@ export const SUPPORT = {
   SYSTEM_REQUIREMENTS: "systemRequirements",
   SECTION_SCROLL: "sectionToScrollTo",
   REGISTER_LOGIN: "registerLogin",
-  IOS : 'ios',
-  CONNECTING_DEVICES: 'connectingDevices1',
+  IOS : 'downloadApp',
+  CONNECTING_DEVICES: 'connectingDevices',
 }
 interface MenuItems {
   id: string;
@@ -228,7 +228,7 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "confirmationConnection",
-        title: "Steps 5: Confirmation of Successful Connection",
+        title: "Step 5: Confirmation of Successful Connection",
         description:
           'When successfully connecting with the NOTT devices, it will be highlighted on the "Connect Apps & Devices" screen.',
         image: "/images/support/support18.webp",
@@ -236,7 +236,7 @@ export const GUIDELINE: MenuItems[] = [
     ],
   },
   {
-    id: "connectingDevices2",
+    id: "connectingDevices",
     mainTitle: "Connecting with third party application",
     items: [
       {
@@ -255,7 +255,7 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "confirmationConnection",
-        title: "Steps 3: Confirmation of Successful Connection",
+        title: "Step 3: Confirmation of Successful Connection",
         description:
           'Once a third-party application is successfully connected, it will be highlighted on the "Connect Apps & Devices" screen.',
         image: "/images/support/support21.webp",

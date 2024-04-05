@@ -21,7 +21,7 @@ $mainBgColor: #f2f2f2;
     .sidebar {
       position: sticky;
       padding: 20px 16px;
-      top: 13%;
+      top: 17%;
       width: 253px;
       min-width: 253px;
       height: fit-content;
@@ -370,9 +370,15 @@ $mainBgColor: #f2f2f2;
       .mainTittle {
         display: none;
       }
+      .rightBlock{
+        .mainContent{
+          padding: 20px 0px 10px 0px; 
+        }
+      }
       .rightContent {
         width: 90vw;
         margin: auto;
+       
         .bannerImage {
           display: flex;
           flex-direction: column;
