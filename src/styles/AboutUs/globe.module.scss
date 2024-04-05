@@ -20,64 +20,74 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .globe {
-      height: 568px;
-      width: 568px;
-      object-fit: contain;
-    }
+    overflow: hidden;
+
     .globelMobileWrapper {
       display: none;
     }
     .illustrationBarMobile {
       display: none;
     }
-    .leftInfo {
-      position: absolute;
-      top: 123px;
-      right: 444px;
-      text-align: left;
-      font-size: 18px;
-      letter-spacing: 1px;
-      font-weight: 500;
-      svg {
-        transform: scaleX(-1);
+  }
+  .infoWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .container {
+      max-width: $max-width-container;
+      margin: auto;
+
+      .leftInfo,
+      .rightInfo {
+        .title {
+          color: #1b1b1d;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding-bottom: 12px;
+        }
+        .bottomBlock {
+          margin-top: -40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          .number {
+            color: #346af7;
+          }
+        }
       }
-      .title,
-      .bottomBlock {
-        padding-left: 24px;
-      }
-    }
-    .rightInfo {
-      position: absolute;
-      top: 123px;
-      left: 444px;
-      text-align: right;
-      font-size: 18px;
-      letter-spacing: 1px;
-      font-weight: 500;
-      .title,
-      .bottomBlock {
-        padding-right: 24px;
-      }
-    }
-    .leftInfo,
-    .rightInfo {
-      .title {
-        color: #1b1b1d;
+      .leftInfo {
+        position: absolute;
+        top: 123px;
+        left: calc(50vw - 586px);
+        text-align: left;
         font-size: 18px;
-        font-weight: 700;
-        line-height: 1;
         letter-spacing: 1px;
-        text-transform: uppercase;
-        padding-bottom: 12px;
+        font-weight: 500;
+        svg {
+          transform: scaleX(-1);
+        }
+        .title,
+        .bottomBlock {
+          padding-left: 24px;
+        }
       }
-      .bottomBlock {
-        margin-top: -40px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        .number {
-          color: #346af7;
+      .rightInfo {
+        position: absolute;
+        top: 123px;
+        right: calc(50vw - 586px);
+        text-align: right;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        .title,
+        .bottomBlock {
+          padding-right: 24px;
         }
       }
     }
@@ -169,9 +179,13 @@
           }
         }
       }
-      .leftInfo,
-      .rightInfo {
-        display: none;
+    }
+    .infoWrapper {
+      .container {
+        .leftInfo,
+        .rightInfo {
+          display: none;
+        }
       }
     }
   }

@@ -2,6 +2,7 @@ import { IllustrationBar } from "@/assets/index";
 import styles from "@/styles/AboutUs/globe.module.scss";
 import { BeatLoader } from "react-spinners";
 import useDeviceDetect from "../common/DeviceDetect";
+import CustomGlobe from "./NewGlobe";
 const Globe = () => {
   const { isMobile } = useDeviceDetect();
   const Loading = () => (
@@ -29,14 +30,16 @@ const Globe = () => {
         />
       )}
       <div className={styles.globeWrapper}>
-        <img className={styles.globe} src="/images/earth.png" alt="earth" />
+        {/* <img className={styles.globe} src="/images/earth.png" alt="earth" />
         <div className={styles.globelMobileWrapper}>
           <img
             className={styles.globeMobile}
             src="/images/earth-mobile.png"
             alt="earth"
-          />
-        </div>
+          /> */}
+
+        <CustomGlobe />
+
         <div className={styles.illustrationBarMobile}>
           <div className={styles.illustrationBarWrapper}>
             <img
@@ -91,72 +94,76 @@ const Globe = () => {
             </div>
           </div>
         </div>
-        <div
-          className={styles.leftInfo}
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        >
-          <p
-            className={styles.title}
-            data-aos="fade-up"
+      </div>
+      <div className={styles.infoWrapper}>
+        <div className={styles.container}>
+          <div
+            className={styles.leftInfo}
+            data-aos="fade-left"
             data-aos-duration="1000"
           >
-            Global reach
-          </p>
-          <IllustrationBar />
-          <div className={styles.bottomBlock}>
-            <p data-aos="fade-up" data-aos-duration="1000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              Countries with NOTT users
+            <p
+              className={styles.title}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Global reach
             </p>
-            <p data-aos="fade-up" data-aos-duration="2000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              New accounts in last 7 days
-            </p>
-            <p data-aos="fade-up" data-aos-duration="3000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              Days since launch
-            </p>
+            <IllustrationBar />
+            <div className={styles.bottomBlock}>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                Countries with NOTT users
+              </p>
+              <p data-aos="fade-up" data-aos-duration="2000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                New accounts in last 7 days
+              </p>
+              <p data-aos="fade-up" data-aos-duration="3000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                Days since launch
+              </p>
+            </div>
           </div>
-        </div>
-        <div
-          className={styles.rightInfo}
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          <p
-            className={styles.title}
-            data-aos="fade-up"
+          <div
+            className={styles.rightInfo}
+            data-aos="fade-right"
             data-aos-duration="1000"
           >
-            Financial Momentum
-          </p>
-          <IllustrationBar />
-          <div className={styles.bottomBlock}>
-            <p data-aos="fade-up" data-aos-duration="1000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              Amount of NOTT claimed
+            <p
+              className={styles.title}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Financial Momentum
             </p>
-            <p data-aos="fade-up" data-aos-duration="2000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              Daily wallet transactions
-            </p>
-            <p data-aos="fade-up" data-aos-duration="3000">
-              <span className={styles.number}>
-                <Loading />
-              </span>{" "}
-              Orbs manufactured
-            </p>
+            <IllustrationBar />
+            <div className={styles.bottomBlock}>
+              <p data-aos="fade-up" data-aos-duration="1000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                Amount of NOTT claimed
+              </p>
+              <p data-aos="fade-up" data-aos-duration="2000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                Daily wallet transactions
+              </p>
+              <p data-aos="fade-up" data-aos-duration="3000">
+                <span className={styles.number}>
+                  <Loading />
+                </span>{" "}
+                Orbs manufactured
+              </p>
+            </div>
           </div>
         </div>
       </div>

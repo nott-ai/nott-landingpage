@@ -25,6 +25,7 @@
     "react-collapsed": "^4.1.2",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18",
+    "react-globe.gl": "^2.27.2",
     "react-hook-form": "^7.51.0",
     "react-hot-toast": "^2.4.1",
     "react-modal": "^3.16.1",
