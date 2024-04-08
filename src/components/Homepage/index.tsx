@@ -13,9 +13,8 @@ import { REMOTE_CONFIG_KEYS } from "@/constants/firebase-config";
 import useDeviceDetect from "@/components/common/DeviceDetect";
 
 const HomePage = () => {
-  const { isDesktop, isMobile } = useDeviceDetect();
+  const { isDesktop } = useDeviceDetect();
   const [news, setNews] = useState<INewsCard[]>([]);
-
   const productsAndInnovations: IProductAndInnovationCard[] = [
     {
       id: "smart_band",
@@ -23,8 +22,6 @@ const HomePage = () => {
       description:
         "This stylish tracker goes beyond counting steps, offering rich health insights and guidance to enhance your wellness journey with proactive data analysis.",
       images: ["/images/product-service/product-lineup/sb3.webp"],
-      imageHeight: isMobile ? 100 : 145,
-      imageWidth: isMobile ? 100 : 145,
     },
 
     {
@@ -33,8 +30,6 @@ const HomePage = () => {
       description:
         "A fusion of elegance and functionality, this smartwatch tracks your health, boosts productivity, and integrates seamlessly with your tech ecosystem.",
       images: ["/images/product-service/product-lineup/Watch_1.webp"],
-      imageHeight: isMobile ? 100 : 165,
-      imageWidth: isMobile ? 100 : 165,
     },
     {
       id: "smart_scale",
@@ -42,8 +37,6 @@ const HomePage = () => {
       description:
         "Advanced technology meets health monitoring; get detailed body composition, BMI, and trend analysis, all synced effortlessly with your health apps.",
       images: ["/images/product-service/product-lineup/Smartscale_3.webp"],
-      imageHeight: isMobile ? 120 : 183,
-      imageWidth: isMobile ? 120 : 183,
     },
     {
       id: "smart_pillow",
@@ -51,8 +44,6 @@ const HomePage = () => {
       description:
         "Experience unparalleled comfort and sleep analysis with our smart pillow, featuring non-contact monitoring and AI-powered insights for a better night's rest",
       images: ["/images/smartpillow.webp"],
-      imageHeight: isMobile ? 80 : 127,
-      imageWidth: isMobile ? 136 : 213,
     },
   ];
 
@@ -81,53 +72,22 @@ const HomePage = () => {
           console.error("Error fetching remote config", error);
         });
     }
-  }, [isDesktop]);
-
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.bannerContainer}>
-        {isDesktop ? (
-          <div className={styles.banner}>
-            <img
-              className={styles.bannerImage}
-              src="/images/banner-main.webp"
-              alt="banner"
-            />
-
-            <div className={styles.content}>
-              <b className={styles.title}>Welcome to NOTT!</b>
-              <div className={styles.description}>
-                <p>
-                  An innovative platform at the forefront of digital wellness -
-                  powered by AI and grounded in Decentralized Physical
-                  Infrastructure Network (DePIN) principles.
-                </p>
-              </div>
+        <div className={styles.banner}>
+          <div className={styles.content}>
+            <b className={styles.title}>Welcome to NOTT!</b>
+            <div className={styles.description}>
+              <p>
+                An innovative platform at the forefront of digital wellness -
+                powered by AI and grounded in Decentralized Physical
+                Infrastructure Network (DePIN) principles.
+              </p>
             </div>
           </div>
-        ) : (
-          <div className={styles.banner}>
-            <img
-              className={styles.bannerImage}
-              src="/images/banner-main-mobile.webp"
-              alt="banner"
-            />
-            <div className={styles.content}>
-              <b className={styles.title}>Welcome to NOTT!</b>
-
-              <div
-                style={{ textAlign: "center" }}
-                className={styles.description}
-              >
-                <p>
-                  An innovative platform at the forefront of digital wellness -
-                  powered by AI and grounded in Decentralized Physical
-                  Infrastructure Network (DePIN) principles.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
 
       <div className={styles.latestNews}>
