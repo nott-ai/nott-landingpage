@@ -9,8 +9,6 @@ export interface IProductAndInnovationCard {
   title: string;
   description: string;
   images: string[];
-  imageHeight: number;
-  imageWidth: number;
 }
 
 const ProductAndInnovationCard = ({
@@ -18,8 +16,6 @@ const ProductAndInnovationCard = ({
   title,
   description,
   images,
-  imageHeight,
-  imageWidth,
 }: IProductAndInnovationCard) => {
   const [productInfo, setProductInfo] = useState(PRODUCT_INFO[0]);
   const { modalIsOpen, onOpen, onClose } = useModal();
