@@ -6,7 +6,7 @@ const Banner = () => {
     <div className={style.wrapper}>
       <img
         className={style.bg}
-        src="/images/solutions/bannerSolution.png"
+        src="/images/solutions/bannerSolution.webp"
         alt=""
       />
       <div className={style.container}>
@@ -28,7 +28,7 @@ const Banner = () => {
         </div>
 
         <div className={style.bgNetwork}>
-          <img src="/images/solutions/networks.png" alt="" />
+          <img src="/images/solutions/networks.webp" alt="" />
         </div>
       </div>
     </div>

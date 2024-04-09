@@ -53,7 +53,7 @@ const ListCertificated = () => {
           return (
             <div className={style.item} key={certificate.id}>
               <img
-                src={`/images/solutions/certificate${certificate.id}.png`}
+                src={`/images/solutions/certificate${certificate.id}.webp`}
                 alt=""
               />
               <div className={style.content}>
