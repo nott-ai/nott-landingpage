@@ -18,7 +18,7 @@ const Proof = () => {
           )}
 
           <div className={style.content}>
-            <div className={style.title}>PROOF OF AUTHORITY</div>
+            <div className={style.title}>PROOF OF IDENTITY</div>
             <div className={style.description}>
               A consensus mechanism is used to validate the identity of
               participants within NOTT network
