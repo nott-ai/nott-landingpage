@@ -1,7 +1,10 @@
 import React from "react";
 import style from "@/styles/Solutions/banner.module.scss";
+import { useRouter } from "next/router";
+import { ROUTERS } from "@/constants/routes";
 
 const Banner = () => {
+  const router = useRouter();
   return (
     <div className={style.wrapper}>
       <img
@@ -22,7 +25,10 @@ const Banner = () => {
             Join now, and make your wellness count.
           </div>
 
-          <button className={style.action}>
+          <button
+            className={style.action}
+            onClick={() => router.push(ROUTERS.SUPPORT)}
+          >
             <div className={style.text}>Become a Participant</div>
           </button>
         </div>
