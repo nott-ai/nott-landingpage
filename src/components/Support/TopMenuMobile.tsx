@@ -46,7 +46,7 @@ const TopMenuMobile = ({ selectedItem, setSelectedItem }: IProps) => {
           <LinkScroll
             key={menuItem.id}
             to={menuItem.id}
-            offset={-100}
+            offset={-250}
             smooth={true}
             delay={0}
             duration={1000}

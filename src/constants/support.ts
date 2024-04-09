@@ -26,7 +26,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
     items: [],
   },
   {
-    id: "downloadApp",
+    id: "ios",
     mainTitle: "Download NOTT Application",
     items: [
       {
@@ -47,7 +47,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
     items: [],
   },
   {
-    id: "connectingDevices",
+    id: "connectingDevices1",
     mainTitle: "Connecting Devices",
     items: [
       {
@@ -67,7 +67,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
 export const GUIDELINE: MenuItems[] = [
   {
     id: "systemRequirements",
-    mainSection: "1.System Requirements",
+    mainSection: "1. System Requirements",
     items: [
       {
         id: "systemRequirements",
@@ -78,7 +78,7 @@ export const GUIDELINE: MenuItems[] = [
   },
   {
     id: "downloadApp",
-    mainSection: "2.Download NOTT Application",
+    mainSection: "2. Download NOTT Application",
     mainTitle: "IOS",
     items: [
       {
@@ -160,7 +160,7 @@ export const GUIDELINE: MenuItems[] = [
   },
   {
     id: "registerLogin",
-    mainSection: "3.Register & Login with Passkey",
+    mainSection: "3. Register & Login with Passkey",
     items: [
       {
         id: "tapToVerify",
@@ -194,7 +194,7 @@ export const GUIDELINE: MenuItems[] = [
   },
   {
     id: "connectingDevices",
-    mainSection: "4.Connecting Devices",
+    mainSection: "4. Connecting Devices",
     mainTitle: "Connecting with NOTT devices",
     items: [
       {
