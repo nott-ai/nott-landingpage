@@ -89,7 +89,7 @@ const TechnologyInnovationPage = () => {
               <div key={index} className={style.block}>
                 <div className={style.content}>
                   <img
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                     src={item.image}
                     alt={`banner`}
                   />
@@ -109,7 +109,7 @@ const TechnologyInnovationPage = () => {
               <div key={index} className={style.block}>
                 <div className={style.content}>
                   <img
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                     src={item.image}
                     alt={`banner`}
                   />
