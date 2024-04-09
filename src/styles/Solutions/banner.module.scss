@@ -64,7 +64,21 @@
     }
   }
 }
-
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .container {
+      .bgNetwork {
+        .networkDesktop {
+          display: none;
+        }
+        .networkMobile {
+          display: block;
+          @include image-fill(cover);
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: $sm) {
   .wrapper {
     margin-top: 44px;
@@ -82,15 +96,6 @@
         }
         .description {
           font-size: 14px;
-        }
-      }
-      .bgNetwork {
-        .networkDesktop {
-          display: none;
-        }
-        .networkMobile {
-          display: block;
-          @include image-fill(cover);
         }
       }
     }
