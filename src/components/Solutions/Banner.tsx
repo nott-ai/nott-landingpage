@@ -2,6 +2,8 @@ import React from "react";
 import style from "@/styles/Solutions/banner.module.scss";
 import { useRouter } from "next/router";
 import { ROUTERS } from "@/constants/routes";
+import Network from "./Network";
+import NetworkMobile from "./NetworkMobile";
 
 const Banner = () => {
   const router = useRouter();
@@ -34,7 +36,12 @@ const Banner = () => {
         </div>
 
         <div className={style.bgNetwork}>
-          <img src="/images/solutions/networks.webp" alt="networks" />
+          <div className={style.networkDesktop}>
+            <Network />
+          </div>
+          <div className={style.networkMobile}>
+            <NetworkMobile />
+          </div>
         </div>
       </div>
     </div>
