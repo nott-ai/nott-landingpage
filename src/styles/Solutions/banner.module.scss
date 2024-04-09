@@ -1,0 +1,86 @@
+@import "../variables.scss";
+
+.wrapper {
+  margin: 122px auto 0 auto;
+  position: relative;
+  height: 636px;
+  width: 100%;
+  .bg {
+    @include image-fill(cover);
+  }
+  .container {
+    @include container-styled();
+    @include position(absolute, 0, 0, 0, 0);
+    @include sizes(100%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .content {
+      max-width: 418px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #fff;
+      font-style: normal;
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .description {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.16px;
+      }
+      .action {
+        text-transform: uppercase;
+        padding: 12px calc(16px + 12px);
+        border-radius: 10px;
+        @include sizes(fit-content);
+        background: #346af7;
+        border: 0;
+        cursor: pointer;
+        .text {
+          color: var(--Light, #fff);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px; /* 150% */
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .bgNetwork {
+      img {
+        @include image-fill(cover)
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    margin-top: 44px;
+    height: 826px;
+    .container {
+      flex-direction: column;
+      gap: 60px;
+      justify-content: center;
+      .content {
+        align-items: center;
+        text-align: center;
+        padding-inline: 18px;
+        .title {
+          font-size: 24px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

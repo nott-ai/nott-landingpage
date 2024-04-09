@@ -1,0 +1,84 @@
+@import "../variables.scss";
+
+.wrapper {
+  @include container-styled();
+  .titleMain {
+    color: #1b1b1d;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 88.889% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .descriptionMain {
+    color: #54545c;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.14px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .item {
+      background: #191c26;
+      box-sizing: border-box;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      .content {
+        padding: 24px 30px;
+        .title {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 16px; /* 80% */
+          letter-spacing: 1px;
+          margin-bottom: 18px;
+        }
+        .description {
+          color: #fff;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 114.286% */
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    padding: 0 18px;
+    .titleMain {
+        line-height: 20px;
+    }
+    .layout {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      .item {
+        .content {
+          padding: 12px 8px 24px 16px;
+          .title {
+            font-size: 14px;
+            margin-bottom: 12px;
+          }
+          .description {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

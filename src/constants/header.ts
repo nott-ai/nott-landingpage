@@ -13,6 +13,11 @@ export const NAVIGATIONS = [
     link: ROUTERS.ABOUT_US,
   },
   {
+    id: 7,
+    name: "Solutions",
+    link: ROUTERS.SOLUTIONS,
+  },
+  {
     id: 3,
     name: "Products & Services",
     link: ROUTERS.PRODUCTS_AND_SERVICES,
