@@ -27,7 +27,9 @@ const Banner = () => {
           </button>
         </div>
 
-        <div></div>
+        <div className={style.bgNetwork}>
+          <img src="/images/solutions/networks.png" alt="" />
+        </div>
       </div>
     </div>
   );

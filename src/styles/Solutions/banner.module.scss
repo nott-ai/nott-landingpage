@@ -54,6 +54,11 @@
         }
       }
     }
+    .bgNetwork {
+      img {
+        @include image-fill(cover)
+      }
+    }
   }
 }
 
@@ -63,6 +68,7 @@
     height: 826px;
     .container {
       flex-direction: column;
+      gap: 60px;
       justify-content: center;
       .content {
         align-items: center;
