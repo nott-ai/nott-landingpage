@@ -17,8 +17,8 @@ const Proof = () => {
           <div className={style.content}>
             <div className={style.title}>PROOF OF AUTHORITY</div>
             <div className={style.description}>
-              A mechanism designed to ensure fair and transparent rewards for
-              contributors within a blockchain network.
+              A consensus mechanism is used to validate the identity of
+              participants within NOTT network
             </div>
           </div>
         </div>
@@ -33,8 +33,8 @@ const Proof = () => {
               PROOF OF CONTRIBUTION
             </div>
             <div className={`${style.description} ${style.contentRight}`}>
-              A mechanism designed to ensure fair and transparent rewards for
-              contributors within a blockchain network.
+              A mechanism is designed to ensure fair and transparent rewards for
+              contributors within NOTT network
             </div>
           </div>
         </div>

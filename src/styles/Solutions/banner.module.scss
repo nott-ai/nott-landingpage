@@ -41,6 +41,7 @@
         @include sizes(fit-content);
         background: #346af7;
         border: 0;
+        cursor: pointer;
         .text {
           color: var(--Light, #fff);
           text-align: center;
@@ -58,7 +59,7 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    margin: 44px auto;
+    margin-top: 44px;
     height: 826px;
     .container {
       flex-direction: column;
