@@ -37,7 +37,7 @@ const Campaign = () => {
             {regularCampaigns.map((faq, index) => (
               <div
                 key={index}
-                style={{ background: "#F2F2F2", borderRadius: "10px" }}
+                className={styles.item}
               >
                 <div
                   className={
