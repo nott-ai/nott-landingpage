@@ -6,7 +6,7 @@ import styles from "@/styles/Homepage/cookies-nott.module.scss";
 import ReactModal from "react-modal";
 const customStyles: any = {
   content: {
-    top: "0",
+    top: "10%",
     left: "0",
     right: "auto",
     padding: "0",

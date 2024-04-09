@@ -25,6 +25,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       .card {
+        border-radius: 10px;
         background-color: #fff;
         display: flex;
         flex-direction: row;

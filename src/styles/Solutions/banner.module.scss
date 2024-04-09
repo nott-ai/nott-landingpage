@@ -37,7 +37,7 @@
       .action {
         text-transform: uppercase;
         padding: 12px calc(16px + 12px);
-        border-radius: 10px;
+        border-radius: 8px;
         @include sizes(fit-content);
         background: #346af7;
         border: 0;
@@ -79,6 +79,11 @@
         }
         .description {
           font-size: 14px;
+        }
+        .action {
+          .text {
+            font-size: 14px;
+          }
         }
       }
     }

@@ -35,7 +35,10 @@ const Campaign = () => {
           </div>
           <div className={styles.contentSecond}>
             {regularCampaigns.map((faq, index) => (
-              <div key={index} style={{ background: "#F2F2F2" }}>
+              <div
+                key={index}
+                style={{ background: "#F2F2F2", borderRadius: "10px" }}
+              >
                 <div
                   className={
                     openIndex === index

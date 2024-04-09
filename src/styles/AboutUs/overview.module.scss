@@ -36,6 +36,7 @@
     margin-bottom: 40px;
     .card {
       background: #fff;
+      border-radius: 10px;
       padding: 20px 16px;
       display: flex;
       flex-direction: column;
@@ -83,6 +84,7 @@
       justify-content: center;
       gap: 24px;
       box-sizing: border-box;
+      border-radius: 10px;
       .info {
         max-width: 200px;
         display: flex;

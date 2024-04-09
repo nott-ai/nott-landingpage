@@ -24,6 +24,7 @@
       flex-direction: column;
       gap: 12px;
       .faq {
+        border-radius: 10px;
         &:hover {
           background-color: #f2f2f2;
           transition: background-color 0.3s ease-in-out;
