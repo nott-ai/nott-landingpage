@@ -58,6 +58,7 @@
       cursor: pointer;
       border: none;
       transition: ease 0.3s;
+      border-radius: 8px;
 
       &:hover {
         background-color: #70baff;
@@ -67,6 +68,7 @@
       margin-top: 64px;
       width: 387px;
       height: 56px;
+      border-radius: 8px;
       background: rgba(118, 130, 152, 0.6);
       box-shadow: 0px 4px 8px 0px rgba(82, 127, 244, 0.1);
       position: relative;
@@ -123,6 +125,7 @@
         height: 140px;
         background: #126782;
         display: flex;
+        border-radius: 10px;
         gap: 24px;
         align-items: flex-start;
         justify-content: center;
