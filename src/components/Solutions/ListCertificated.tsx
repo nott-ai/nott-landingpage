@@ -54,7 +54,7 @@ const ListCertificated = () => {
             <div className={style.item} key={certificate.id}>
               <img
                 src={`/images/solutions/certificate${certificate.id}.webp`}
-                alt=""
+                alt={`certificate${certificate.id}`}
               />
               <div className={style.content}>
                 <div className={style.title}>{certificate.title}</div>

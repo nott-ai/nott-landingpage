@@ -10,7 +10,7 @@ const Banner = () => {
       <img
         className={style.bg}
         src="/images/solutions/bannerSolution.webp"
-        alt=""
+        alt="bannerSolution"
       />
       <div className={style.container}>
         <div className={style.content}>
@@ -34,7 +34,7 @@ const Banner = () => {
         </div>
 
         <div className={style.bgNetwork}>
-          <img src="/images/solutions/networks.webp" alt="" />
+          <img src="/images/solutions/networks.webp" alt="networks" />
         </div>
       </div>
     </div>

@@ -9,9 +9,12 @@ const Proof = () => {
       <div className={style.layout}>
         <div className={style.item}>
           {isDesktop ? (
-            <img src="/images/solutions/img_proof_1.webp" alt="" />
+            <img src="/images/solutions/img_proof_1.webp" alt="img_proof_1" />
           ) : (
-            <img src="/images/solutions/img_proof_mb_1.webp" alt="" />
+            <img
+              src="/images/solutions/img_proof_mb_1.webp"
+              alt="img_proof_mb_1"
+            />
           )}
 
           <div className={style.content}>
@@ -24,9 +27,12 @@ const Proof = () => {
         </div>
         <div className={style.item}>
           {isDesktop ? (
-            <img src="/images/solutions/img_proof_2.webp" alt="" />
+            <img src="/images/solutions/img_proof_2.webp" alt="img_proof_2" />
           ) : (
-            <img src="/images/solutions/img_proof_mb_2.webp" alt="" />
+            <img
+              src="/images/solutions/img_proof_mb_2.webp"
+              alt="img_proof_mb_2"
+            />
           )}
           <div className={style.content}>
             <div className={`${style.title} ${style.contentRight}`}>
