@@ -15,6 +15,7 @@
     "@firebase/remote-config": "^0.4.5",
     "@fontsource/inter": "^5.0.16",
     "@fontsource/orbitron": "^5.0.18",
+    "@gsap/react": "^2.1.0",
     "@react-spring/web": "^9.7.3",
     "@types/js-cookie": "^3.0.6",
     "@types/react-collapse": "^5.0.4",

@@ -55,8 +55,11 @@
       }
     }
     .bgNetwork {
-      img {
-        @include image-fill(cover)
+      .networkDesktop {
+        display: block;
+      }
+      .networkMobile {
+        display: none;
       }
     }
   }
@@ -79,6 +82,15 @@
         }
         .description {
           font-size: 14px;
+        }
+      }
+      .bgNetwork {
+        .networkDesktop {
+          display: none;
+        }
+        .networkMobile {
+          display: block;
+          @include image-fill(cover);
         }
       }
     }
