@@ -3,12 +3,12 @@ import style from "@/styles/Solutions/proof.module.scss";
 import useDeviceDetect from "../common/DeviceDetect";
 
 const Proof = () => {
-  const { isDesktop } = useDeviceDetect();
+  const { isMobile } = useDeviceDetect();
   return (
     <div className={style.wrapper}>
       <div className={style.layout}>
         <div className={style.item}>
-          {isDesktop ? (
+          {!isMobile ? (
             <img src="/images/solutions/img_proof_1.webp" alt="img_proof_1" />
           ) : (
             <img
@@ -26,7 +26,7 @@ const Proof = () => {
           </div>
         </div>
         <div className={style.item}>
-          {isDesktop ? (
+          {!isMobile ? (
             <img src="/images/solutions/img_proof_2.webp" alt="img_proof_2" />
           ) : (
             <img

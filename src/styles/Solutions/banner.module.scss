@@ -5,6 +5,8 @@
   position: relative;
   height: 636px;
   width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
   .bg {
     @include image-fill(cover);
   }
@@ -39,7 +41,11 @@
         padding: 12px calc(16px + 12px);
         border-radius: 8px;
         @include sizes(fit-content);
-        background: #346af7;
+        background: $learn-more-text-color;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: lighten($color: $learn-more-text-color, $amount: 10);
+        }
         border: 0;
         cursor: pointer;
         .text {
@@ -67,6 +73,10 @@
 @media screen and (max-width: $lg) {
   .wrapper {
     .container {
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0 18px;
+
       .bgNetwork {
         .networkDesktop {
           display: none;
