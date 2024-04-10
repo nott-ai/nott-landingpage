@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SIDE_MENU_SUPPORT } from "@/constants/support";
 import styles from "@/styles/Support/features.module.scss";
 import { Link as LinkScroll } from "react-scroll";
@@ -12,22 +12,12 @@ const SideMenuDesktop = ({
   selectedItem, setSelectedItem
 }: Props) => {
 
-  const [openDropdown, setOpenDropdown] = useState({});
-
-  const toggleDropDown = (id: string) => {
-    if (openDropdown === id) {
-      setOpenDropdown({});
-    } else {
-      setOpenDropdown(id);
-    }
-  };
-  
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarList}>
         {SIDE_MENU_SUPPORT.map((content) => (
           <div
-            key={content.mainTitle}
+            key={`${content.mainTitle}`}
           >
             <LinkScroll
               to={content.id}
@@ -38,19 +28,20 @@ const SideMenuDesktop = ({
               onSetActive={() => {
                 setSelectedItem(content.id);
               }}
+
             >
               <div
-                onClick={() => toggleDropDown(content.id)}
-                className={`${styles.mainTitleWrapper}`}>
-                <div className={`${styles.mainTitle}`}>
+                className={`${styles.mainTitleWrapper} ${selectedItem === content.id && content.items && content.items.length === 0 ? styles.active : ""}`}
+              >
+                <div className={`${styles.mainTitle} `}>
                   {content.mainTitle}
                 </div>
                 {content.items?.length > 0 && (
                   <img src="/images/drop-down.svg" alt="hero" />
                 )}
               </div>
-              {openDropdown === content
-                .id && content.items && content.items.length > 0 && (
+              {
+                content.items && content.items.length > 0 && (
                   <div
                     className={`${styles.dropdown}`}
                   >
