@@ -45,9 +45,9 @@ $mainBgColor: #f2f2f2;
     }
     .mainTitleWrapper {
       display: flex;
-      cursor: pointer;
       flex-direction: row;
       justify-content: space-between;
+
       .active {
         background-color: $mainBgColor;
         color: #346af7 !important;
@@ -101,7 +101,7 @@ $mainBgColor: #f2f2f2;
     }
     .active {
       background-color: #f2f2f2;
-      color: #346af7;
+      color: #346af7 !important;
       cursor: pointer;
     }
     .rightBlock {

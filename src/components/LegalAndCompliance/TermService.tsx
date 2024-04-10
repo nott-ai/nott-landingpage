@@ -118,7 +118,7 @@ const TermService = () => {
                   diagnose, treat, or cure any condition.
                 </p>
                 <p className={style.descWithoutMargin}>
-                  NOTT Foundation DOES NOT OFFER ANYTHING that can be used to
+                  NOTT Innovative Technology Pte.Ltd DOES NOT OFFER ANYTHING that can be used to
                   diagnose, treat, or prevent any medical, mental, or physical
                   ailment. All of the information provided here is for
                   information and educational purposes only, and it should not
@@ -151,7 +151,7 @@ const TermService = () => {
                     1.1. These terms and conditions (these “Terms” or “Terms and
                     Conditions”) form an agreement between you, either as an
                     individual or as the representative of an entity (“user,”
-                    “customer,” or “You”) and NOTT company. (“NOTT,” “us,” “we,”
+                    “customer,” or “You”) and NOTT Innovative Technology Pte.Ltd. (“NOTT,” “us,” “we,”
                     or “our”). These Terms along with any documents expressly
                     incorporated herein by reference, dictate the conditions
                     under which you may access and utilize the NOTT website,
@@ -171,10 +171,10 @@ const TermService = () => {
                 <p className={style.description}>
                   1.2. In the event of any conflict between these Terms and
                   Conditions and the conditions of any service contract between
-                  you and NOTT, the terms of the service contract will prevail
+                  you and NOTT Innovative Technology Pte.Ltd, the terms of the service contract will prevail
                   concerning the specific services detailed therein. By engaging
                   with the Site, including but not limited to browsing the Site,
-                  using our services, or providing information to NOTT, you
+                  using our services, or providing information to NOTT Innovative Technology Pte.Ltd, you
                   accept and are bound by these Terms and Conditions. If any
                   aspect of these Terms is not acceptable to you, please do not
                   use the Site, because you are not granted permission to access
@@ -371,7 +371,7 @@ const TermService = () => {
 
                 <p className={style.description}>
                   6.1. As a User, you represent and warrant that you are not an
-                  agent or employee of any competitor of NOTT, or any company
+                  agent or employee of any competitor of NOTT Innovative Technology Pte.Ltd, or any company
                   that offers similar services to NOTT. You also affirm that
                   your use of the Site and the Materials is solely for the
                   purpose of enhancing your understanding, participation in
@@ -565,7 +565,7 @@ const TermService = () => {
                 </p>
 
                 <p className={style.description}>
-                  9.1. All contents of the Site are ©2023 NOTT Foundation or
+                  9.1. All contents of the Site are ©2023 NOTT Innovative Technology Pte.Ltd or
                   respective third party owners. All rights are reserved
                   worldwide.
                 </p>
