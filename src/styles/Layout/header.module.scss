@@ -24,7 +24,6 @@
   top: 0;
   transition: transform 0.3s ease-in-out;
   z-index: map-get($map: $z-index, $key: "STICKY");
-  height: 122px;
   &.ekyc {
     height: 76px;
 
@@ -124,9 +123,8 @@
 
 @media screen and (max-width: $lg) {
   .wrapper {
-    height: 56px;
     .container {
-      height: 100%;
+      height: 56px;
       .content {
         padding: 0 18px;
         max-width: 100%;
@@ -155,7 +153,9 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    height: 56px;
+    .container {
+      height: 56px;
+    }
     &.ekyc {
       height: 56px;
     }
@@ -163,7 +163,7 @@
 }
 .navigationMobile {
   position: relative;
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   padding: 0 32px;
   flex-direction: column;

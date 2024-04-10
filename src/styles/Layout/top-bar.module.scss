@@ -19,6 +19,7 @@
       font-size: 12px;
       line-height: 26px;
       letter-spacing: 0.12px;
+      
     }
     .explore {
       display: flex;
@@ -46,6 +47,15 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    display: none;
+    .content {
+      .notification {
+        .text {
+          max-width: 220px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
   }
 }
