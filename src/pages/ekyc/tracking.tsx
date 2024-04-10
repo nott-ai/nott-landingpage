@@ -5,7 +5,7 @@ const TrackingPage = () => {
   return (
     <>
       <Head>
-        <title>Tracking - NOTT Foundation</title>
+        <title>Tracking - NOTT Innovative Technology</title>
         <link rel="preload" href="/images/ekyc-apply-bg.webp" as="image" />
         <link
           rel="preload"

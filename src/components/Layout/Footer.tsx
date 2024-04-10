@@ -142,7 +142,7 @@ const Footer = () => {
           <div className={styles.bottomBlock}>
             <div className={styles.copyRight}>
               <p className={styles.content}>
-                © 2018-2024 NOTT Foundation. All rights reserved
+                © 2018-2024 NOTT INNOVATIVE TECHNOLOGY PTE. LTD. All rights reserved
               </p>
             </div>
           </div>
