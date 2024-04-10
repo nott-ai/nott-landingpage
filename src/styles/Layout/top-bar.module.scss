@@ -47,12 +47,9 @@
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    // display: none;
-    height: 56px;
     .content {
       .notification {
         .text {
-          // flex-grow: 1;
           max-width: 220px;
           text-overflow: ellipsis;
           white-space: nowrap;
