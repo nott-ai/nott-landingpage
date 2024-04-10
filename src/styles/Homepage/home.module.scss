@@ -313,7 +313,7 @@
 
 @media screen and (max-width: $sm) {
   .container {
-    margin: 44px auto;
+    // margin: 0px auto 44px auto;
     gap: 40px;
     display: flex;
     flex-direction: column;
