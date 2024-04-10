@@ -7,14 +7,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>NOTT Foundation</title>
+        <title>NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta
           name="keywords"
-          content="NOTT Foundation, HealthFi, Decentralized Physical Infrastructure Network, DePIN, AI Health Insights, Wellness Platform, Smart Wearables, Smart beds, Health Monitoring, Personalized Health, Health and Wellness Technology, Digital Health Ecosystem"
+          content="NOTT Innovative Technology, HealthFi, Decentralized Physical Infrastructure Network, DePIN, AI Health Insights, Wellness Platform, Smart Wearables, Smart beds, Health Monitoring, Personalized Health, Health and Wellness Technology, Digital Health Ecosystem"
         ></meta>
         <link rel="canonical" href="https://nott.ai"></link>
         <meta

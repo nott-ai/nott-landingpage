@@ -5,18 +5,18 @@ export const dataFaqs = [
       "NOTT is an innovative AI-powered decentralized wellness platform. It integrates health data tracking, AI-driven insights, and a unique dual-token reward system to encourage proactive health management.",
   },
   {
-    question: "How can users participate in the NOTT platform ?",
+    question: "How can users participate in the NOTT platform?",
     answers:
       "To sign up, download the NOTT app, create an account, and follow the onboarding instructions. Users can also connect their health devices for a comprehensive wellness tracking experience.",
   },
   {
     question:
-      "What is NOTT's primary functionality as a decentralized wellness platform ?",
+      "What is NOTT's primary functionality as a decentralized wellness platform?",
     answers:
       "NOTT's decentralized architecture ensures transparency, security, and user ownership over their data. It eliminates central authorities, allowing for peer-to-peer interactions and transactions within the platform.",
   },
   {
-    question: "What are the key features of NOTT ?",
+    question: "What are the key features of NOTT?",
     answers:
       "The NOTT platform features the following characteristics: \n- Integration of DePin the NOTT Ecosystem \n- Open Marketplace \n- Innovative Health Tracking Devices \n- Dual Token System \n- AI-Powered Health Improvement Plans & Coaching",
   },

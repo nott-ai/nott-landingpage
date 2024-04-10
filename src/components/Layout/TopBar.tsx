@@ -6,8 +6,11 @@ const TopBar = () => {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.notification}>
-          <LoudSpeakerIcon /> Deep learning-based model development to predict
-          critical pediatric events in general wards...
+          <LoudSpeakerIcon />
+          <span className={styles.text}>
+            Deep learning-based model development to predict critical pediatric
+            events in general wards...
+          </span>
         </div>
         <a className={styles.explore} target={"_blank"} href={INFO.BLOG}>
           Explore now

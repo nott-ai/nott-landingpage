@@ -5,7 +5,7 @@ const ConfirmationPage = () => {
   return (
     <>
       <Head>
-        <title>Verification - NOTT Foundation</title>
+        <title>Verification - NOTT Innovative Technology</title>
         <link rel="preload" href="/images/ekyc-apply-bg.webp" as="image" />
         <link
           rel="preload"

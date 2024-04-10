@@ -36,8 +36,7 @@ const LegalDisclaimer = () => {
             If you have any medical concerns, please consult with your
             healthcare provider, including but not limited to, before using this
             device. NOTT devices are not intended to serve as a replacement for
-            professional health care, diagnosis, treatment, or advice. NOTT
-            company is not liable for any health issues that may arise as a
+            professional health care, diagnosis, treatment, or advice. NOTT Innovative Technology Pte.Ltd is not liable for any health issues that may arise as a
             result of the recommendations, activities, or other information or
             events you learn or experience as a result of using NOTT devices.
             You should read all product packaging and instructions carefully
@@ -52,7 +51,7 @@ const LegalDisclaimer = () => {
           </div>
 
           <div className={styles.description}>
-            NOTT company DOES NOT OFFER ANYTHING that can be used to diagnose,
+            NOTT Innovative Technology Pte.Ltd DOES NOT OFFER ANYTHING that can be used to diagnose,
             treat, or prevent any medical, mental, or physical ailment. All of
             the information provided here is for information and educational
             purposes only, and it should not be construed as a personal medical
@@ -66,7 +65,7 @@ const LegalDisclaimer = () => {
 
           <div className={styles.description}>
             Certain links in this site connect to other websites maintained by
-            third parties over whom NOTT has no control. NOTT makes no
+            third parties over whom NOTT Innovative Technology Pte.Ltd has no control. NOTT Innovative Technology Pte.Ltd makes no
             representations as to the accuracy or any other aspect of
             information contained in other websites.{" "}
           </div>
