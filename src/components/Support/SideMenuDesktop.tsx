@@ -33,7 +33,7 @@ const SideMenuDesktop = ({
               <div
                 className={`${styles.mainTitleWrapper} ${selectedItem === content.id && content.items && content.items.length === 0 ? styles.active : ""}`}
               >
-                <div className={`${styles.mainTitle} `}>
+                <div className={`${styles.mainTitle} ${selectedItem === content.id && content.items && content.items.length === 0 ? styles.active : ""}`}>
                   {content.mainTitle}
                 </div>
                 {content.items?.length > 0 && (
