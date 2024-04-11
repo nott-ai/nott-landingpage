@@ -5,7 +5,7 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <Head>
-        <title>Privacy Policy - NOTT Foundation</title>
+        <title>Privacy Policy - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Explore NOTT's commitment to privacy, detailing how we protect and use your data."
@@ -13,7 +13,7 @@ const PrivacyPolicyPage = () => {
         {/* Facebook Meta Tags */}
         <meta property="og:url" content="https://nott.ai/privacy-policy/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Privacy Policy - NOTT Foundation" />
+        <meta property="og:title" content="Privacy Policy - NOTT Innovative Technology" />
         <meta
           property="og:description"
           content="Explore NOTT's commitment to privacy, detailing how we protect and use your data."
@@ -29,7 +29,7 @@ const PrivacyPolicyPage = () => {
           property="twitter:url"
           content="https://nott.ai/privacy-policy/"
         />
-        <meta name="twitter:title" content="Privacy Policy - NOTT Foundation" />
+        <meta name="twitter:title" content="Privacy Policy - NOTT Innovative Technology" />
         <meta
           name="twitter:description"
           content="Explore NOTT's commitment to privacy, detailing how we protect and use your data."

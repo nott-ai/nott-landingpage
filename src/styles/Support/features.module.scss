@@ -95,8 +95,6 @@ $mainBgColor: #f2f2f2;
       text-align: left;
     }
     .listContent:hover {
-      background-color: #f2f2f2;
-      color: #346af7;
       cursor: pointer;
     }
     .active {
@@ -131,7 +129,7 @@ $mainBgColor: #f2f2f2;
         line-height: $main-line-height;
         letter-spacing: $main-letter-spacing;
       }
-      .mainContent{
+      .mainContent {
         font-style: normal;
         font-weight: 600;
         line-height: 16px;
@@ -333,12 +331,12 @@ $mainBgColor: #f2f2f2;
 
 @media screen and (max-width: $sm) {
   .wrapper {
-    margin-top: 0px;
+    margin-top: 56px;
     .containerNav {
-      margin-top: 50px;
+      margin-top: 100px;
       height: 50px;
       display: flex;
-      top: 6%;
+      top: 12%;
       position: sticky;
       .navbar {
         display: flex;
@@ -371,15 +369,15 @@ $mainBgColor: #f2f2f2;
       .mainTittle {
         display: none;
       }
-      .rightBlock{
-        .mainContent{
-          padding: 10px 0px 10px 0px; 
+      .rightBlock {
+        .mainContent {
+          padding: 10px 0px 10px 0px;
         }
       }
       .rightContent {
         width: 90vw;
         margin: auto;
-       
+
         .bannerImage {
           display: flex;
           flex-direction: column;

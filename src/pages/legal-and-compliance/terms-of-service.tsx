@@ -5,7 +5,7 @@ const TermServicePage = () => {
   return (
     <>
       <Head>
-        <title> Term & Service - NOTT Foundation</title>
+        <title> Term & Service - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Learn about your rights and obligations when using NOTT's services and technology."
@@ -13,7 +13,7 @@ const TermServicePage = () => {
         {/* Facebook Meta Tags */}
         <meta property="og:url" content="https://nott.ai/terms-of-service/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Term of Service - NOTT Foundation" />
+        <meta property="og:title" content="Term of Service - NOTT Innovative Technology" />
         <meta
           property="og:description"
           content="Learn about your rights and obligations when using NOTT's services and technology."
@@ -31,7 +31,7 @@ const TermServicePage = () => {
         />
         <meta
           name="twitter:title"
-          content="Term of Service - NOTT Foundation"
+          content="Term of Service - NOTT Innovative Technology"
         />
         <meta
           name="twitter:description"

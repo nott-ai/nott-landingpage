@@ -9,10 +9,10 @@ const Proof = () => {
       <div className={style.layout}>
         <div className={style.item}>
           {!isMobile ? (
-            <img src="/images/solutions/img_proof_1.webp" alt="img_proof_1" />
+            <img src="/images/solutions/img_proof_1.png" alt="img_proof_1" />
           ) : (
             <img
-              src="/images/solutions/img_proof_mb_1.webp"
+              src="/images/solutions/img_proof_mb_1.png"
               alt="img_proof_mb_1"
             />
           )}
@@ -27,10 +27,10 @@ const Proof = () => {
         </div>
         <div className={style.item}>
           {!isMobile ? (
-            <img src="/images/solutions/img_proof_2.webp" alt="img_proof_2" />
+            <img src="/images/solutions/img_proof_2.png" alt="img_proof_2" />
           ) : (
             <img
-              src="/images/solutions/img_proof_mb_2.webp"
+              src="/images/solutions/img_proof_mb_2.png"
               alt="img_proof_mb_2"
             />
           )}
