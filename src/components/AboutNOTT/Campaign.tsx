@@ -74,7 +74,7 @@ const Campaign = () => {
           </div>
         </div>
         <div className={styles.rightBlock}>
-          <img src="/images/giffts.webp" alt="campaign" />
+          <img src="/images/giffts.png" alt="campaign" />
         </div>
       </div>
     </div>
