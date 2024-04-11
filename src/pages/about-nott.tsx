@@ -6,7 +6,7 @@ const AboutUsPage = () => {
   return (
     <>
       <Head>
-        <title>About Us - NOTT Innovative Technology</title>
+        <title>About NOTT - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Innovators in Health and Wellness Technology"
@@ -14,7 +14,7 @@ const AboutUsPage = () => {
         {/* Facebook Meta Tags */}
         <meta property="og:url" content="https://nott.ai/about-us/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="About Us - NOTT Innovative Technology" />
+        <meta property="og:title" content="About NOTT - NOTT Innovative Technology" />
         <meta
           property="og:description"
           content="Innovators in Health and Wellness Technology"
@@ -27,7 +27,7 @@ const AboutUsPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nott.ai" />
         <meta property="twitter:url" content="https://nott.ai/about-us/" />
-        <meta name="twitter:title" content="About Us - NOTT Innovative Technology" />
+        <meta name="twitter:title" content="About NOTT - NOTT Innovative Technology" />
         <meta
           name="twitter:description"
           content="Innovators in Health and Wellness Technology"
