@@ -5,7 +5,7 @@ const LegalDisclaimerPage = () => {
   return (
     <>
       <Head>
-        <title>Legal & Compliance - NOTT Foundation</title>
+        <title>Legal & Compliance - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Ensuring Trust and Safety: NOTT's Vigilance in Legal Compliance and Ethical Standards in Health Innovation."
@@ -18,7 +18,7 @@ const LegalDisclaimerPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Legal & Compliance - NOTT Foundation"
+          content="Legal & Compliance - NOTT Innovative Technology"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const LegalDisclaimerPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Legal & Compliance - NOTT Foundation"
+          content="Legal & Compliance - NOTT Innovative Technology"
         />
         <meta
           name="twitter:description"

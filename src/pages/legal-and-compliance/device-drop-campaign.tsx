@@ -5,7 +5,7 @@ const DeviceDropCampaignPage = () => {
   return (
     <>
       <Head>
-        <title>Device Drop Campaign Legal Compliance - NOTT Foundation</title>
+        <title>Device Drop Campaign Legal Compliance - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Learn about your rights and obligations when joining Device Drop Campaign"
@@ -18,7 +18,7 @@ const DeviceDropCampaignPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Device Drop Campaign Legal Compliance - NOTT Foundation"
+          content="Device Drop Campaign Legal Compliance - NOTT Innovative Technology"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const DeviceDropCampaignPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Device Drop Campaign Legal Compliance - NOTT Foundation"
+          content="Device Drop Campaign Legal Compliance - NOTT Innovative Technology"
         />
         <meta
           name="twitter:description"
