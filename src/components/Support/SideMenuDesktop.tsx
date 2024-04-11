@@ -26,7 +26,7 @@ const SideMenuDesktop = ({
               duration={1000}
               spy={true}
               onSetActive={() => {
-                setSelectedItem(content.id);
+                  setSelectedItem(content.id);
               }}
 
             >
@@ -56,7 +56,6 @@ const SideMenuDesktop = ({
                         onSetActive={() => {
                           setSelectedItem(item.id);
                         }}
-                        onClick={() => setSelectedItem(item.id)}
                       >
                         <div
                           className={`${styles.listContent} ${selectedItem === item.id ? styles.active : ""}`}
