@@ -292,7 +292,7 @@ const ApplyKyc = () => {
           </div>
         )}
         <p className={styles.copyRight}>
-          © 2018-2024 NOTT Foundation. All rights reserved
+          © 2018-2024 NOTT Innovative Technology. All rights reserved
         </p>
       </div>
     </div>

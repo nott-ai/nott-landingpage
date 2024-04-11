@@ -115,7 +115,7 @@ const Ekyc = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <div>© 2018-2024 NOTT Foundation. All rights reserved</div>
+        <div>© 2018-2024 NOTT Innovative Technology. All rights reserved</div>
       </div>
     </div>
   );

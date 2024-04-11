@@ -51,7 +51,7 @@ const TermService = () => {
                 <span>
                   website and the NOTT app. Use of this website or the NOTT app
                   indicates acceptance of these “Terms and Conditions” and forms
-                  a binding agreement between you and NOTT Foundation. If you do
+                  a binding agreement between you and NOTT Innovative Technology. If you do
                   not agree to the following terms and conditions, do not use
                   this website or the NOTT app.
                 </span>
@@ -102,7 +102,7 @@ const TermService = () => {
                   provider, including but not limited to, before using this
                   device. NOTT devices are not intended to serve as a
                   replacement for professional health care, diagnosis,
-                  treatment, or advice. NOTT Foundation is not liable for any
+                  treatment, or advice. NOTT Innovative Technology is not liable for any
                   health issues that may arise as a result of the
                   recommendations, activities, or other information or events
                   you learn or experience as a result of using NOTT devices. You
