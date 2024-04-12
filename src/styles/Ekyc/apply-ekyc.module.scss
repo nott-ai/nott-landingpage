@@ -1,0 +1,425 @@
+@import "../variables.scss";
+.wrapper {
+  background-image: url("/images/ekyc-apply-bg.webp");
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 76px;
+  padding-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  &.confirmation {
+    .container {
+      .title {
+        margin-top: 20px;
+      }
+      .description {
+        margin-top: 38px;
+        margin-bottom: 38px;
+        a {
+          text-decoration: none;
+          color: #70baff;
+          font-weight: 600;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .contact {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      .socialNetwork {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+    .footer {
+      color: rgba(196, 207, 237, 0.5);
+      text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &.tracking {
+    .title {
+      margin-top: 20px;
+    }
+    .description {
+      margin-top: 20px;
+    }
+    .email {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      margin-top: 38px;
+    }
+    .status {
+      margin-top: 16px;
+      color: #aeb4c2;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      line-height: 38px;
+      display: flex;
+      align-items: center;
+      .highlight {
+        font-size: 32px;
+        font-weight: 700;
+        margin-right: 16px;
+        &.NOT_FOUND {
+          color: #ff6666;
+        }
+        &.NOT_VERIFIED_EMAIL {
+          color: #ff6e05;
+        }
+        &.PENDING {
+          color: #70baff;
+        }
+        &.APPROVED {
+          color: #34f7eb;
+        }
+        &.SHIPPED {
+          color: #2db162;
+        }
+        &.REJECTED {
+          color: #ff6666;
+        }
+      }
+    }
+    .statusDescription {
+      margin-top: 38px;
+      color: #c4cfed;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      max-width: 458px;
+      text-align: left;
+    }
+  }
+  .container {
+    max-width: $max-width-container;
+    width: 100%;
+    margin: 88px auto 0;
+    .title {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+      max-width: 422px;
+      .highlight {
+        color: #70baff;
+      }
+    }
+    .description {
+      max-width: 422px;
+      color: #c4cfed;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 12px;
+      a {
+        color: #c4cfed;
+      }
+    }
+    .ekycIframe {
+      width: 100%;
+      height: 750px;
+      margin-top: 44px;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+    form {
+      width: 442px;
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .inputWrapper {
+        border-radius: 0;
+
+        input {
+          height: 56px;
+          width: 100%;
+          box-sizing: border-box;
+          padding: 8px 24px;
+          font-size: 16px;
+          font-weight: 500;
+          color: #515151;
+          border: none;
+          border-radius: 8px;
+          &::placeholder {
+            color: rgba(118, 130, 152, 0.6);
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .errorMsg {
+          color: #ff4d4f;
+          font-size: 14px;
+          font-weight: 500;
+          margin-top: 6px;
+        }
+      }
+      .applyEkyc {
+        display: flex;
+        width: 200px;
+        padding: 20px 32px;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        background: #346af7;
+        margin-top: 8px;
+        border: none;
+        cursor: pointer;
+        transition: ease 0.3s;
+        border-radius: 10px;
+        &:hover {
+          background-color: #70baff;
+        }
+        &.disable {
+          opacity: 0.5;
+          cursor: not-allowed;
+          &:hover {
+            background-color: #346af7;
+            opacity: 0.5;
+          }
+        }
+      }
+      .termAndPolicy {
+        display: flex;
+        align-items: flex-start;
+        color: #c4cfed;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 422px;
+        gap: 8px;
+        margin-top: 8px;
+        a {
+          color: #70baff;
+          font-weight: 500;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .checkBoxWrapper {
+          position: relative;
+          min-width: 26px;
+          min-height: 26px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          .inputUnchecked {
+            width: 21px;
+            height: 21px;
+            background-color: #fff;
+            border-radius: 9999px;
+            margin-top: 3px;
+          }
+          input {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            opacity: 0;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      .rows {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+  }
+  .footer {
+    color: #ffffff;
+    max-width: $max-width-container;
+    margin: 0 auto;
+    margin-top: 65px;
+    width: 100%;
+    .copyRight {
+      color: #c4cfed80;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.resendBtn {
+  display: flex;
+  width: 200px;
+  height: 56px;
+  padding: 20px 32px;
+  justify-content: center;
+  align-items: center;
+  background: #346af7;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 30px;
+  border: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    background-color: #70baff;
+  }
+}
+
+.loading {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    padding-top: 56px;
+    min-height: 100vh;
+    .container {
+      max-width: 100%;
+      padding: 0 18px;
+      box-sizing: border-box;
+    }
+    .footer {
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 0 18px;
+      .copyRight {
+        color: rgba(196, 207, 237, 0.5);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 33px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    padding-top: 56px;
+    background-image: url("/images/ekyc-apply-mobile-bg.webp");
+    &.confirmation {
+      align-items: center;
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          font-size: 24px;
+          margin-top: 16px;
+        }
+        .description {
+          max-width: 313px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+      }
+      .footer {
+        text-align: center;
+      }
+    }
+    &.tracking {
+      align-items: center;
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          font-size: 24px;
+          margin-top: 16px;
+          text-align: center;
+        }
+        .description {
+          max-width: 313px;
+          margin-top: 16px;
+          font-weight: 400;
+          text-align: center;
+        }
+        .email {
+          margin-top: 30px;
+        }
+        .statusDescription {
+          text-align: center;
+          font-weight: 400;
+          max-width: 329px;
+          margin: 30px auto 0 auto;
+          font-size: 14px;
+        }
+      }
+      .footer {
+        text-align: center;
+      }
+    }
+    .container {
+      max-width: 100%;
+      padding: 0 18px;
+      box-sizing: border-box;
+      margin: 36px auto 0 auto;
+      .title {
+        max-width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+      }
+      .description {
+        max-width: 100%;
+        margin-top: 16px;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: 17px;
+      }
+      .ekycIframe {
+        width: 100%;
+        height: 100vh;
+      }
+      form {
+        margin-top: 24px;
+        width: 100%;
+        .applyEkyc {
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .footer {
+    }
+  }
+}

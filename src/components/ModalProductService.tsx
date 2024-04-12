@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Modal from "react-modal";
 import styles from "@/styles/ProductsAndServices/product-modal.module.scss";
 import { CloseCookieIcon } from "@/assets/index";
-import { PRODUCT_IMAGES } from "@/constants/products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,6 +15,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
+  autoplay: true,
   appendDots: (dots: any) => (
     <div className={styles.dots}>
       <ul
@@ -43,34 +43,58 @@ interface ProductInfo {
 }
 interface ModalProductServiceProps {
   modalIsOpen: boolean;
-  setModalIsOpen: (isOpen: boolean) => void;
   productInfo: ProductInfo;
+  onClose: () => void;
 }
 
 const ModalProductService: React.FC<ModalProductServiceProps> = ({
   modalIsOpen,
-  setModalIsOpen,
   productInfo,
+  onClose,
 }) => {
+  const modalRef = useRef<any>(null);
+  useEffect(() => {
+    const preventTouchMove = (e: TouchEvent) => {
+      if (
+        modalRef.current &&
+        modalRef.current.contains &&
+        !modalRef.current.contains(e.target)
+      ) {
+        e.preventDefault();
+      }
+    };
+    if (modalIsOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    };
+  }, [modalIsOpen]);
   return (
     <Modal
       isOpen={modalIsOpen}
-      onRequestClose={() => setModalIsOpen(false)}
+      onRequestClose={onClose}
       className={styles.modalContent}
       overlayClassName={styles.overlay}
+      ref={modalRef}
     >
       <div className={styles.topBlock}>
         <div className={styles.header}>
           {/* <div className={styles.price}>
             {productInfo.price || "Coming Soon"}
           </div> */}
-          <CloseCookieIcon
-            className={styles.closeIcon}
-            onClick={() => setModalIsOpen(false)}
-          />
-        </div>
-        <div className={styles.title}>
-          Key Features of the {productInfo.name}
+
+          <div className={styles.title}>
+            Key Features of the {productInfo.name}
+          </div>
+          <CloseCookieIcon className={styles.closeIcon} onClick={onClose} />
         </div>
       </div>
       <div className={styles.slider} id="product-image-slider">

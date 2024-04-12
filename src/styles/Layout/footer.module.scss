@@ -79,11 +79,20 @@
           text-decoration: none;
           color: #54545c;
         }
+        a {
+          &:hover {
+            color: #000;
+          }
+        }
         .email {
           color: #346af7;
           font-weight: 500;
           line-height: 16px;
           text-decoration: none;
+          &:hover {
+            color: #346af7;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -119,6 +128,11 @@
       flex-wrap: wrap;
       gap: 32px;
       box-sizing: border-box;
+      .socialMediaWrapper{
+        .contactUsMobile{
+          margin: auto;
+        }
+      }
       .rightBlock {
         width: 100%;
         height: fit-content;
@@ -147,7 +161,9 @@
           .socialMedia {
             text-align: center;
             width: 100%;
+            
           }
+          
         }
         .subColumn {
         }

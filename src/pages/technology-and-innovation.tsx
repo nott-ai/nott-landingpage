@@ -36,7 +36,7 @@ const TechnologyInnovationPage = () => {
   return (
     <>
       <Head>
-        <title>Technology & Innovation - NOTT Foundation</title>
+        <title>Technology & Innovation - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Revolutionizing Wellness with NOTT: Cutting-Edge Health Technology and Innovation."
@@ -49,7 +49,7 @@ const TechnologyInnovationPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Technology & Innovation - NOTT Foundation"
+          content="Technology & Innovation - NOTT Innovative Technology"
         />
         <meta
           property="og:description"
@@ -68,7 +68,7 @@ const TechnologyInnovationPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Technology & Innovation - NOTT Foundation"
+          content="Technology & Innovation - NOTT Innovative Technology"
         />
         <meta
           name="twitter:description"
@@ -89,7 +89,7 @@ const TechnologyInnovationPage = () => {
               <div key={index} className={style.block}>
                 <div className={style.content}>
                   <img
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                     src={item.image}
                     alt={`banner`}
                   />
@@ -109,7 +109,7 @@ const TechnologyInnovationPage = () => {
               <div key={index} className={style.block}>
                 <div className={style.content}>
                   <img
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                     src={item.image}
                     alt={`banner`}
                   />

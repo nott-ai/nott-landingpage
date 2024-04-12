@@ -1,9 +1,26 @@
-import { useState } from "react";
+import React, { useEffect, useRef } from "react";
 import CookieConsent, { VISIBLE_OPTIONS } from "react-cookie-consent";
 import CookieButton from "./CookieButton";
 import { CloseCookieIcon } from "@/assets";
 import styles from "@/styles/Homepage/cookies-nott.module.scss";
-
+import ReactModal from "react-modal";
+const customStyles: any = {
+  content: {
+    top: "10%",
+    left: "0",
+    right: "auto",
+    padding: "0",
+    bottom: "auto",
+    width: "100vw",
+    height: "100vh",
+    boxSizing: "border-box",
+    borderRadius: "0",
+    border: "none",
+    backgroundSize: "contain",
+    backgroundColor: "rgba(0, 0, 0, 0.15)",
+    zIndex: 130,
+  },
+};
 const cookiesContents = [
   {
     title: "Necessary Cookies:",
@@ -36,45 +53,83 @@ const CookieDetailPopup = ({
   isShow = VISIBLE_OPTIONS.HIDDEN,
   handleCloseCookie,
 }: CookieDetailProps) => {
+  const modalRef = useRef<any>(null);
+  useEffect(() => {
+    const preventTouchMove = (e: TouchEvent) => {
+      if (
+        modalRef.current &&
+        modalRef.current.contains &&
+        !modalRef.current.contains(e.target)
+      ) {
+        e.preventDefault();
+      }
+    };
+    if (isShow !== VISIBLE_OPTIONS.HIDDEN) {
+      document.body.style.overflow = "hidden";
+      document.body.addEventListener("touchmove", preventTouchMove, {
+        passive: false,
+      });
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.removeEventListener("touchmove", preventTouchMove);
+    };
+  }, [isShow]);
   return (
-    <CookieConsent
-      disableStyles={true}
-      enableDeclineButton
-      onAccept={() => {
+    <ReactModal
+      isOpen={isShow === VISIBLE_OPTIONS.HIDDEN ? false : true}
+      onRequestClose={() => {
         handleCloseCookie();
       }}
-      onDecline={() => {
-        handleCloseCookie();
-      }}
-      location="none"
-      visible={isShow}
-      disableButtonStyles
-      containerClasses={styles.cookieBanner}
-      buttonText={<CookieButton type="accept" />}
-      declineButtonText={<CookieButton type="reject" />}
-      buttonClasses={styles.acceptButton}
-      declineButtonClasses={styles.declineButton}
-      buttonWrapperClasses={styles.buttonWrapper}
+      style={customStyles}
+      ref={modalRef}
+      overlayClassName={styles.overlay}
     >
-      <div className={styles.contentWrapper}>
-        <div className={styles.wrapperHeader}>
-          <div className={styles.title}>
-            Cookies and related technologies on this site
+      <CookieConsent
+        disableStyles={true}
+        enableDeclineButton
+        onAccept={() => {
+          handleCloseCookie();
+        }}
+        onDecline={() => {
+          handleCloseCookie();
+        }}
+        location="none"
+        visible={isShow}
+        disableButtonStyles
+        containerClasses={styles.cookieBanner}
+        buttonText={<CookieButton type="accept" />}
+        declineButtonText={<CookieButton type="reject" />}
+        buttonClasses={styles.acceptButton}
+        declineButtonClasses={styles.declineButton}
+        buttonWrapperClasses={styles.buttonWrapper}
+      >
+        <div className={styles.contentWrapper}>
+          <div className={styles.wrapperHeader}>
+            <div className={styles.title}>
+              Cookies and related technologies on this site
+            </div>
+            <div
+              className={styles.closeIcon}
+              onClick={() => handleCloseCookie()}
+            >
+              <CloseCookieIcon />
+            </div>
           </div>
-          <div className={styles.closeIcon} onClick={() => handleCloseCookie()}>
-            <CloseCookieIcon />
-          </div>
+          <div className={styles.line} />
+          {cookiesContents.map((item, index) => (
+            <div key={index} className={styles.wrapperItem}>
+              <div className={styles.title}>{item.title}</div>
+              <div className={styles.content}>{item.content}</div>
+            </div>
+          ))}
+          <div className={styles.line} />
         </div>
-        <div className={styles.line} />
-        {cookiesContents.map((item, index) => (
-          <div key={index} className={styles.wrapperItem}>
-            <div className={styles.title}>{item.title}</div>
-            <div className={styles.content}>{item.content}</div>
-          </div>
-        ))}
-        <div className={styles.line} />
-      </div>
-    </CookieConsent>
+      </CookieConsent>
+    </ReactModal>
   );
 };
 

@@ -8,4 +8,6 @@ export const SOCIAL_LINK = {
   X: "https://twitter.com/nott_depin",
   GMAIL: "info@nott.ai",
   YOUTUBE: "https://www.youtube.com/channel/UCy3BGiLQX-lEr9s26237mTQ",
+  GOOGLE_PLAY: "https://drive.google.com/file/d/1S4XwdrjYcnONTTMA37DKu9eq9-mHMgSF/view",
+  APP_STORE: "https://testflight.apple.com/join/YZtG2TFf",
 };

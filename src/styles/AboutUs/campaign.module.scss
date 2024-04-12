@@ -3,6 +3,7 @@
   height: fit-content;
   position: relative;
   margin: 40px auto 0 auto;
+  overflow-x: hidden;
   .container {
     max-width: $max-width-container;
     margin: auto;
@@ -30,9 +31,9 @@
       .joinCampaign {
         height: 42px;
         width: 169px;
-        border-radius: 0;
         padding: 12px;
         display: flex;
+        border-radius: 10px;
         justify-content: center;
         align-items: center;
         margin-top: 16px;
@@ -47,6 +48,10 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        .item {
+          border-radius: 10px;
+          background-color: #F2F2F2;
+        }
         .question {
           cursor: pointer;
           display: flex;
@@ -87,6 +92,7 @@
       max-width: 487px;
       height: auto;
       img {
+        border-radius: 10px;
         width: 100%;
         height: 100%;
         object-fit: contain;

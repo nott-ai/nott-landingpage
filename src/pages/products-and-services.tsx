@@ -5,7 +5,7 @@ const ProductsAndServicesPage = () => {
   return (
     <>
       <Head>
-        <title>Products and Services - NOTT Foundation</title>
+        <title>Products and Services - NOTT Innovative Technology</title>
         <meta
           name="description"
           content="Explore NOTT's Health Solutions: Products and Services for Your Wellness Journey."
@@ -18,7 +18,7 @@ const ProductsAndServicesPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Products and Services - NOTT Foundation"
+          content="Products and Services - NOTT Innovative Technology"
         />
         <meta
           property="og:description"
@@ -37,7 +37,7 @@ const ProductsAndServicesPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Products and Services - NOTT Foundation"
+          content="Products and Services - NOTT Innovative Technology"
         />
         <meta
           name="twitter:description"
@@ -48,7 +48,7 @@ const ProductsAndServicesPage = () => {
           content="https://nott.ai/images/thumbnail.jpg"
         />
       </Head>
-      <ProductsAndServices />;
+      <ProductsAndServices />
     </>
   );
 };

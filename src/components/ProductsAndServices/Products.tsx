@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/ProductsAndServices/products.module.scss";
 import ModalProductService from "@/components/ModalProductService";
 
 import { PRODUCT_INFO, PRODUCT_LINEUP_DATA } from "@/constants/products";
+import useModal from "@/hooks/useModal";
 
 const Products = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { modalIsOpen, onOpen, onClose } = useModal();
   const [productInfo, setProductInfo] = useState(PRODUCT_INFO[0]);
   const openModal = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -15,26 +16,10 @@ const Products = () => {
     const info = PRODUCT_INFO.find((item) => item.id === infoId);
     if (info) {
       setProductInfo(info);
-      setModalIsOpen(true);
+      onOpen();
     }
-    setModalIsOpen(true);
+    onOpen();
   };
-
-  useEffect(() => {
-    if (modalIsOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
-        passive: false,
-      });
-    } else {
-      document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", (e) => e.preventDefault());
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-      document.body.removeEventListener("touchmove", (e) => e.preventDefault());
-    };
-  }, [modalIsOpen]);
 
   return (
     <div className={styles.wrapper}>
@@ -47,8 +32,8 @@ const Products = () => {
           {PRODUCT_LINEUP_DATA.map((item, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
-                <img src={item.img} alt={item.title} />
-              <div className={styles.divider} />
+                <img className={styles.image} src={item.img} alt={item.title} />
+                <div className={styles.divider} />
               </div>
               <div className={styles.textContent}>
                 <div className={styles.header}>
@@ -70,8 +55,8 @@ const Products = () => {
       </div>
       <ModalProductService
         modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
         productInfo={productInfo}
+        onClose={onClose}
       />
     </div>
   );

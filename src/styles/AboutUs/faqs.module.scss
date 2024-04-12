@@ -2,6 +2,7 @@
 .wrapper {
   position: relative;
   max-width: $max-width-container;
+  overflow-x: hidden;
   margin: 40px auto;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -22,6 +23,17 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      .faq {
+        border-radius: 10px;
+        &:hover {
+          background-color: #f2f2f2;
+          transition: background-color 0.3s ease-in-out;
+          .question {
+            color: #346af7;
+            transition: color 0.3s;
+          }
+        }
+      }
       .question {
         cursor: pointer;
         display: flex;
@@ -44,7 +56,7 @@
     }
   }
   .graphicImage {
-    max-width: 488px;
+    max-width: 368px;
     height: auto;
   }
 }

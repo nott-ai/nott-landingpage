@@ -2,14 +2,13 @@ import styles from "@/styles/Homepage/product-innovation.module.scss";
 import ModalProductService from "../ModalProductService";
 import { useState } from "react";
 import { PRODUCT_INFO } from "@/constants/products";
+import useModal from "@/hooks/useModal";
 
 export interface IProductAndInnovationCard {
   id: string;
   title: string;
   description: string;
   images: string[];
-  imageHeight: number;
-  imageWidth: number;
 }
 
 const ProductAndInnovationCard = ({
@@ -17,30 +16,30 @@ const ProductAndInnovationCard = ({
   title,
   description,
   images,
-  imageHeight,
-  imageWidth,
 }: IProductAndInnovationCard) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [productInfo, setProductInfo] = useState(PRODUCT_INFO[0]);
+  const { modalIsOpen, onOpen, onClose } = useModal();
   const openModal = (e: any, infoId: string) => {
     e.preventDefault();
     const info = PRODUCT_INFO.find((item) => item.id === infoId);
     if (info) {
       setProductInfo(info);
-      setModalIsOpen(true);
+      onOpen();
     }
-    setModalIsOpen(true);
+    onOpen();
   };
 
   return (
     <>
       <div className={styles.container}>
         <div className={styles.leftBlock}>
-          <div
-            className={styles.imageContainer}
-            style={{ height: imageHeight, width: imageWidth }}
-          >
-            <img className={styles.image} src={images[0]} alt="wearable" />
+          <div className={styles.imageContainer}>
+            <img
+              className={styles.image}
+              src={images[0]}
+              alt={title}
+              loading="lazy"
+            />
           </div>
         </div>
         <div className={styles.divider} />
@@ -59,7 +58,7 @@ const ProductAndInnovationCard = ({
       </div>
       <ModalProductService
         modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
+        onClose={onClose}
         productInfo={productInfo}
       />
     </>

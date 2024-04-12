@@ -14,187 +14,131 @@
     .benefits {
       .benefit {
         margin-top: 75px;
-        &::before {
-          content: "";
-          display: block;
-          // total height block * (benefits.length - 1)
-          height: 14632px;
-        }
-        .stickyEl {
-          position: sticky;
-          position: -webkit-sticky;
-          bottom: calc((100vh - 629px) / 2);
-          .titleUserBenefit {
-            font-size: 46px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 20px;
-          }
+        .blockBottom {
+          display: grid;
+          grid-template-columns: 508px 1fr;
+          grid-auto-columns: 1fr;
+          column-gap: 40px;
+          display: grid;
+          position: relative;
           .imageContainer {
             position: relative;
-            width: 546px;
+            width: 508px;
             height: auto;
 
-            .deviceFrame {
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
+            .wrapper {
+              height: fit-content;
+              position: sticky;
+              top: 138px;
+              .userBenefit {
+                color: #1b1b1d;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                text-align: right;
+                margin-right: 90px;
+              }
+            }
+            .frameWrapper {
+              display: flex;
+              align-items: center;
+              .smartWatch {
+                margin-right: -150px;
+                width: 348px;
+                height: 328px;
+                object-fit: contain;
+              }
+              .iphone {
+                width: 293px;
+                object-fit: contain;
+              }
             }
             .imageWrapper {
               position: absolute;
-              top: 29px;
-              right: 38px;
+              top: 60px;
+              right: 40px;
               margin: auto;
-              width: 100%;
-              width: 264px;
+              width: 245px;
               height: auto;
-              transition: opacity 300ms ease-in-out;
+              transition: opacity 300ms;
+              .image {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+              }
             }
           }
           .rightBlock {
+            width: 100%;
+            grid-column-gap: 16px;
+            grid-row-gap: 20px;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-auto-columns: 1fr;
+            display: grid;
             position: relative;
-            flex: 1;
+            padding-bottom: 140px;
+            .stick-list_card_1 {
+              transform-origin: 50% 0;
+              position: -webkit-sticky;
+              position: sticky;
+              top: 338px;
+            }
+            .stick-list_card_2 {
+              margin-top: 6px;
+              position: -webkit-sticky;
+              position: sticky;
+              top: 346px;
+            }
+            .stick-list_card_3 {
+              margin-top: 24px;
+              position: -webkit-sticky;
+              position: sticky;
+              top: 368px;
+            }
+            .stick-list_card_4 {
+              margin-top: 40px;
+              position: -webkit-sticky;
+              position: sticky;
+              top: 368px;
+            }
             .descriptionContainer {
-              position: absolute;
+              border-radius: 10px;
+              border: 1px solid #e7e7e7;
+              background: #fff;
+              background-clip: padding-box;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
+              padding: 24px;
+              display: flex;
+
+              .title {
+                color: #346af7;
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 31px;
+                letter-spacing: 0.22px;
+              }
+
+              .description {
+                padding-left: 16px;
+                margin: 16px 0 0 0;
+                li {
+                  p {
+                    color: #54545c;
+                    line-height: 24px;
+                    letter-spacing: 0.14px;
+                  }
+
+                  margin-bottom: 16px;
+                }
+              }
             }
-          }
-        }
-      }
-    }
-    .blockTop {
-      background-image: url("/images/feature-benefit-bg.svg");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      display: flex;
-      flex-direction: column;
-      min-height: 754px;
-      gap: 60px;
-      justify-content: end;
-
-      .header {
-        display: flex;
-        gap: 12px;
-        align-items: flex-end;
-        height: 110px;
-
-        .title {
-          width: 300px;
-          color: white;
-          font-size: 46px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 120%;
-          letter-spacing: 0.92px;
-        }
-
-        .description {
-          width: 400px;
-          color: white;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 140%;
-          opacity: 0.7;
-        }
-      }
-
-      .featureBenefitContainer {
-        display: flex;
-        gap: 24px;
-        height: 424px;
-        overflow-x: auto;
-
-        .featureBenefit {
-          display: flex;
-          flex-direction: column;
-          gap: 40px;
-          padding: 114px 32px 90px 32px;
-          min-width: 360px;
-
-          .title {
-            color: #ffdc60;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 140%;
-            /* 33.6px */
-            letter-spacing: -1.08px;
-          }
-
-          .description {
-            color: white;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%;
-            /* 25.2px */
-            letter-spacing: -0.81px;
-            width: 248px;
-          }
-        }
-      }
-    }
-
-    .blockBottom {
-      display: flex;
-      gap: 126px;
-      flex-wrap: wrap;
-
-      .imageContainer {
-        .frameWrapper {
-          display: flex;
-          align-items: center;
-          .smartWatch {
-            margin-right: -150px;
-            width: 370px;
-            height: 370px;
-            object-fit: contain;
-          }
-          .iphone {
-            width: 312px;
-            height: 629px;
-            object-fit: contain;
-          }
-        }
-        .image {
-          object-fit: cover;
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      .descriptionContainer {
-        margin: auto;
-
-        .type {
-          color: #1b1b1d;
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 24px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        }
-
-        .title {
-          color: #346af7;
-          font-size: 22px;
-          font-weight: 600;
-          line-height: 30px;
-          letter-spacing: 0.22px;
-        }
-
-        .description {
-          padding-left: 16px;
-          margin-top: 60px;
-
-          li {
-            p {
-              color: #54545c;
-              line-height: 24px;
-              letter-spacing: 0.14px;
-            }
-
-            margin-bottom: 16px;
           }
         }
       }
@@ -213,59 +157,43 @@
       flex-direction: column;
       gap: 100px;
 
-      .blockTop {
-        background: none;
-        display: flex;
-        flex-direction: column;
-        min-height: 754px;
-        gap: 60px;
-        justify-content: end;
-
-        .header {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          align-items: flex-start;
-          height: 125px;
-          padding: 0 16px;
-        }
-      }
       .benefits {
         .benefit {
-          &::before {
-            height: 500vh;
-          }
-          .stickyEl {
-            bottom: 30vh;
-            .blockBottom {
-              gap: 10px;
-              .imageContainer {
-                height: auto;
-                width: 50%;
-                .frameWrapper {
-                  justify-content: flex-end;
-                  .smartWatch {
-                    width: 300px;
-                    height: auto;
-                  }
-                  .iphone {
-                    width: 300px;
-                    height: auto;
-                  }
-                }
-                .imageWrapper {
-                  top: 23px;
-                  width: 251px;
-                  right: 24px;
+          .blockBottom {
+            gap: 10px;
+            grid-template-columns: 400px 1fr;
+            .imageContainer {
+              height: auto;
+              width: 400px;
+              margin: 0 auto;
+              .wrapper {
+                .userBenefit {
+                  margin-right: 70px;
                 }
               }
-              .rightBlock {
-                width: 100%;
-                .descriptionContainer {
-                  margin: auto;
-                  width: 100%;
-                  padding: 0 16px;
+              .frameWrapper {
+                justify-content: flex-end;
+                .smartWatch {
+                  width: 300px;
+                  height: auto;
                 }
+                .iphone {
+                  width: 300px;
+                  height: auto;
+                }
+              }
+              .imageWrapper {
+                width: 251px;
+                right: 24px;
+              }
+            }
+            .rightBlock {
+              width: 100%;
+              padding-bottom: 160px;
+              .descriptionContainer {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 20px;
               }
             }
           }
@@ -286,77 +214,96 @@
       flex-direction: column;
       gap: 100px;
       padding-bottom: 60px;
+      padding-top: 30px;
 
       .benefits {
         .benefit {
           margin-top: 0;
-          &::before {
-            height: calc(800vh - 480px);
-          }
-          .stickyEl {
-            bottom: 30px;
-            .blockBottom {
-              gap: 10px;
-              .imageContainer {
-                width: 100%;
-                height: auto;
-                .frameWrapper {
-                  .smartWatch {
-                    width: 187px;
-                    height: 187px;
-                    position: absolute;
-                    z-index: -1;
-                    left: 10px;
-                  }
-                  .iphone {
-                    width: 242px;
-                    height: 488px;
-                    margin: auto;
-                  }
-                }
-                .imageWrapper {
-                  width: 205px;
-                  height: auto;
-                  top: 23px;
-                  left: 0;
-                  right: 0;
+          .blockBottom {
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            .imageContainer {
+              width: 100%;
+              height: auto;
+              position: sticky;
+              top: 60px;
+              .wrapper {
+                .userBenefit {
+                  text-align: center;
+                  margin-right: 0;
+                  margin-bottom: 0;
                 }
               }
-              .rightBlock {
-                height: 200px;
-                box-sizing: border-box;
-                .descriptionContainer {
+              .frameWrapper {
+                .smartWatch {
+                  width: 187px;
+                  height: 187px;
+                  position: absolute;
+                  z-index: -1;
+                  left: 10px;
+                }
+                .iphone {
+                  width: 242px;
+                  height: 488px;
                   margin: auto;
-                  width: auto;
-                  .type {
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    letter-spacing: -0.63px;
-                  }
+                }
+              }
+              .imageWrapper {
+                width: 205px;
+                height: auto;
+                top: 48px;
+                left: 0;
+                right: 0;
+              }
+            }
+            .rightBlock {
+              box-sizing: border-box;
+              padding-bottom: 0;
+              padding: 0 16px;
+              .stick-list_card_1 {
+                top: 450px;
+              }
+              .stick-list_card_2 {
+                top: 460px;
+              }
+              .stick-list_card_3 {
+                top: 482px;
+              }
+              .stick-list_card_4 {
+                top: 502px;
+              }
+              .descriptionContainer {
+                margin: auto;
+                width: 100%;
+                .type {
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 140%;
+                  letter-spacing: -0.63px;
+                }
 
-                  .title {
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 140%;
-                    letter-spacing: -0.5px;
-                  }
+                .title {
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%;
+                  letter-spacing: -0.5px;
+                }
 
-                  .description {
-                    margin-top: 16px;
+                .description {
+                  margin-top: 16px;
 
-                    li {
-                      p {
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 140%;
-                      }
-
-                      margin-bottom: 16px;
+                  li {
+                    p {
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
                     }
+
+                    margin-bottom: 16px;
                   }
                 }
               }

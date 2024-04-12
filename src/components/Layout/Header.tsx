@@ -6,27 +6,30 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import TopBar from "./TopBar";
+import { ROUTERS } from "@/constants/routes";
 
-const customStyles: any = {
-  content: {
-    top: "56px",
-    left: "0",
-    right: "auto",
-    padding: "0",
-    bottom: "auto",
-    width: "100vw",
-    height: "100vh",
-    boxSizing: "border-box",
-    borderRadius: "0",
-    border: "none",
-    backgroundSize: "contain",
-    backgroundColor: "#F9F9F9",
-  },
-};
 const Header = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const [isEkyc, setIsEkyc] = useState(false);
 
+  const customStyles: any = {
+    content: {
+      top: "56px",
+      left: "0",
+      right: "auto",
+      padding: "0",
+      bottom: "auto",
+      width: "100vw",
+      height: !isEkyc ? "100vh" : "calc(100vh - 56px)",
+      boxSizing: "border-box",
+      borderRadius: "0",
+      border: "none",
+      backgroundSize: "contain",
+      backgroundColor: !isEkyc ? "#F9F9F9" : "#041c28",
+      backdropFilter: isEkyc ? "blur(10px)" : "none",
+    },
+  };
   function openModal() {
     setIsOpen(!modalIsOpen);
   }
@@ -42,30 +45,51 @@ const Header = () => {
       if (modalIsOpen) return;
       const st = window.pageYOffset || document.documentElement.scrollTop;
       const wrapper = document.querySelector(`#header`);
-      if (wrapper) {
-        if (st > lastScrollTop) {
-          wrapper.classList.add(styles.hidden);
-        } else {
-          wrapper.classList.remove(styles.hidden);
-        }
+      if (st > lastScrollTop) {
+        wrapper?.classList.add(styles.hidden);
+      } else {
+        wrapper?.classList.remove(styles.hidden);
       }
-
+      if (router.pathname === ROUTERS.SUPPORT) {
+        wrapper?.classList.remove(styles.hidden);
+      }
       lastScrollTop = st <= 0 ? 0 : st;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [modalIsOpen]);
+  }, [modalIsOpen, router.pathname]);
+
+  useEffect(() => {
+    if (router.pathname.includes("/ekyc")) {
+      setIsEkyc(true);
+      const menuMobile = document.getElementsByClassName("ReactModalPortal");
+      if (menuMobile.length > 0) {
+        //@ts-ignore
+        // menuMobile[0].children[0]?.style.backgroundColor = "transparent";
+      }
+    } else {
+      setIsEkyc(false);
+    }
+  }, [router.pathname]);
 
   return (
     <>
-      <header id="header" className={styles.wrapper}>
-        <TopBar />
+      <header
+        id="header"
+        style={{
+          background: !isEkyc ? "#fff" : "transparent",
+        }}
+        className={`${styles.wrapper} ${isEkyc ? styles.ekyc : ""} ${
+          isEkyc && modalIsOpen ? styles.ekycOpen : ""
+        }`}
+      >
+        {!isEkyc && <TopBar />}
         <div className={styles.container}>
           <div className={styles.content}>
             <img
               className={styles.logo}
-              src="/images/logo.svg"
+              src={isEkyc ? "/images/light-logo.svg" : "/images/logo.svg"}
               alt="logo"
               onClick={() => {
                 window.location.href = "/";
@@ -78,7 +102,13 @@ const Header = () => {
                   <div
                     key={item.id}
                     className={`${
-                      router.pathname === item.link ? styles.active : ""
+                      item.isRoot
+                        ? router.pathname.includes(item.rootUrl)
+                          ? styles.active
+                          : ""
+                        : router.pathname === item.link
+                        ? styles.active
+                        : ""
                     }`}
                   >
                     {item.isExternal ? (
@@ -105,12 +135,20 @@ const Header = () => {
         style={customStyles}
         appElement={typeof window !== "undefined" ? document.body : undefined}
       >
-        <div className={`${styles.navigationMobile}`}>
+        <div
+          className={`${styles.navigationMobile} ${isEkyc ? styles.ekyc : ""} `}
+        >
           {NAVIGATIONS.map((item) => (
             <div
               key={item.id}
               className={`${
-                router.pathname === item.link ? styles.active : ""
+                item.isRoot
+                  ? router.pathname.includes(item.rootUrl)
+                    ? styles.active
+                    : ""
+                  : router.pathname === item.link
+                  ? styles.active
+                  : ""
               }`}
               onClick={closeModal}
             >
@@ -126,7 +164,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <div className={`${styles.contactInfo}`}>
+        <div className={`${styles.contactInfo} ${isEkyc ? styles.ekyc : ""}`}>
           <div className={`${styles.titleContact} `}>Contact Us</div>
           <div className={styles.gmailInfo}>info@nott.ai</div>
         </div>

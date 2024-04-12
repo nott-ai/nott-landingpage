@@ -38,6 +38,7 @@ export default function ProductScreenSection() {
     focusOnSelect: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     appendDots: (dots: any) => <div>{dots}</div>,
@@ -72,7 +73,7 @@ export default function ProductScreenSection() {
           </div>
         </div>
         <div className={styles.slideScreen} id="products-hightlight">
-          <Slider {...settings}>
+          <Slider className={styles.slider} {...settings}>
             {screens.map((screen, index) => (
               <div key={index}>
                 <div className={styles.imageBack}>

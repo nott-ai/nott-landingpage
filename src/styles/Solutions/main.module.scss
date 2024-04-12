@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    margin-top: 56px;
+    gap: 30px;
+  }
+}

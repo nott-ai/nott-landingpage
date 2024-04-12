@@ -35,12 +35,12 @@ $desc-color: #54545c;
       }
       .title {
         color: $title-color;
-        font-size: 18px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
         /* 25.2px */
-        text-transform: capitalize;
+        // text-transform: capitalize;
       }
       .smDesc {
         color: $desc-color;
@@ -97,12 +97,15 @@ $desc-color: #54545c;
       ul li:last-child {
         margin-bottom: 0;
       }
+      .listDesc li {
+        font-size: 14px;
+      }
       .italicDesc {
         color: $desc-color;
         text-align: justify;
         font-size: 14px;
         font-style: italic;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 140%;
         /* 19.6px */
       }
@@ -128,6 +131,9 @@ $desc-color: #54545c;
 }
 
 @media screen and (max-width: $sm) {
+  .descWithoutMargin {
+    text-align: justify;
+  }
   .container {
     .contentContainer {
       .content {

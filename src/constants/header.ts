@@ -9,8 +9,13 @@ export const NAVIGATIONS = [
   },
   {
     id: 2,
-    name: "About us",
+    name: "About NOTT",
     link: ROUTERS.ABOUT_US,
+  },
+  {
+    id: 7,
+    name: "Solutions",
+    link: ROUTERS.SOLUTIONS,
   },
   {
     id: 3,
@@ -25,7 +30,9 @@ export const NAVIGATIONS = [
   {
     id: 5,
     name: "Legal & Compliance",
-    link: ROUTERS.LEGAL_DISCLAIMER,
+    link: ROUTERS.LEGAL_AND_COMPLIANCE.LEGAL_DISCLAIMER,
+    rootUrl: ROUTERS.LEGAL_AND_COMPLIANCE.index,
+    isRoot: true,
   },
   {
     id: 6,

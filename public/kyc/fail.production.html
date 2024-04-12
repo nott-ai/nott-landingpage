@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/fail-icon.svg" alt="mail-alert" class="mail-alert" />
+        <p class="title">eKYC Verification <br /> Unsuccessful
+        </p>
+        <p class="description">
+            We were unable to complete your eKYC verification. This could be due to a mismatch between your face and the
+            photo ID
+            provided, or the documents uploaded may not meet our quality standards. Please ensure your face is clearly
+            visible and
+            that your identification documents are in high resolution, with all details legible, and try again. For
+            further
+            assistance, contact our support team.
+        </p>
+        <button class="retryBtn" onclick="redirect()">Retry eKYC </button>
+
+        <div class="contact">
+            <p class="contact-title">Contact</p>
+            <div class="social-network">
+                <a href="https://github.com/nott-ai" target="_blank">
+                    <img src="./images/github.svg" alt="github" />
+                </a>
+                <a href="https://t.me/nottdepin" target="_blank">
+                    <img src="./images/telegram.svg" alt="linkedin" />
+                </a>
+                <a href="https://discord.com/invite/healthyandhappylife" target="_blank">
+                    <img src="./images/discord.svg" alt="discord" />
+                </a>
+                <!-- <a target="_blank">
+                <img src="/images/linkedin.svg" alt="linkedin" />
+            </a> -->
+                <a href="https://www.facebook.com/Nottdepin" target="_blank">
+                    <img src="./images/facebook.svg" alt="twitter" />
+                </a>
+                <a href="https://twitter.com/nott_depin" target="_blank">
+                    <img src="./images/twitter.svg" alt="twitter" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function redirect() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idToken = urlParams.get('idToken');
+        const kycToken = urlParams.get('kycToken');
+        window.location.href = `https://nott.ai/kyc/index.production.html?idToken=${idToken}&kycToken=${kycToken}`;
+    }
+</script>
+<style>
+    .container {
+        width: 100%;
+        background: transparent;
+        font-family: "SF Pro Display", sans-serif;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 20px;
+        line-height: 38px;
+    }
+
+    .description {
+        margin-top: 38px;
+        color: #c4cfed;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        max-width: 442px;
+
+    }
+
+    .retryBtn {
+        display: flex;
+        width: 200px;
+        padding: 20px 32px;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background: #346AF7;
+        font-family: "SF Pro Display";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 38px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .retryBtn:hover {
+        background: #70BAFF;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .contact-title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+
+    }
+
+    .social-network {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    @media screen and (max-width: 526px) {
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 18px;
+            box-sizing: border-box;
+
+
+        }
+
+        .description {
+            width: 100%;
+        }
+
+        .contact {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+    }
+</style>
+
+</html>

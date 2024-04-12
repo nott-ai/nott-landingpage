@@ -28,6 +28,8 @@
   width: 794px;
   max-height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
 
   .topBlock {
     padding-top: 30px;
@@ -38,8 +40,8 @@
 
     .header {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: space-between;
+      align-items: start;
 
       .price {
         font-size: 16px;
@@ -98,14 +100,18 @@
 
 @media screen and (max-width: $sm) {
   .modalContent {
-    width: 90vw;
+    width: 95vw;
+    top: 45%;
     padding: 0 16px 24px 16px;
     box-sizing: border-box;
 
     .topBlock {
-      padding-top: 24px;
+      padding-top: 16px;
 
       .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .price {
           font-size: 12px;
           line-height: 14px;

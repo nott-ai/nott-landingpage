@@ -3,8 +3,9 @@
   // margin: 122px 0;
   background-color: #fff;
   padding: 40px 0;
+  overflow: hidden;
   .container {
-    max-width: 1200px;
+    max-width: $max-width-container;
     margin: auto;
     .slideScreen {
       width: 100%;
@@ -26,7 +27,6 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         display: flex;
-        font-family: "SF Pro Display";
         color: #1b1b1d;
         text-align: left;
         align-items: center;
@@ -38,7 +38,6 @@
         font-size: 14px;
         letter-spacing: 0.01em;
         line-height: 24px;
-        font-family: "SF Pro Display";
         color: #54545c;
         text-align: left;
         display: flex;
@@ -56,7 +55,6 @@
         font-size: 18px;
         letter-spacing: 1px;
         display: flex;
-        font-family: "SF Pro Display";
         color: #346af7;
         text-align: left;
         align-items: center;
@@ -68,7 +66,6 @@
         font-size: 14px;
         letter-spacing: 0.01em;
         line-height: 24px;
-        font-family: "SF Pro Display";
         color: #54545c;
         text-align: left;
         display: flex;
@@ -130,11 +127,14 @@
         }
       }
       .slideScreen {
-        .imageBack {
-          padding: 12px;
-        }
-        .imageFront {
-          border-radius: 40px;
+        overflow: hidden;
+        .slider {
+          .imageBack {
+            padding: 12px;
+          }
+          .imageFront {
+            border-radius: 40px;
+          }
         }
       }
       .paragraph {

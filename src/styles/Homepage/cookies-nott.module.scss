@@ -1,8 +1,11 @@
 @import "../variables.scss";
+.overlay {
+  z-index: 130;
+}
 
 .cookieGeneral {
   z-index: map-get($map: $z-index, $key: "MODAL");
-  background-color: #FFF !important;
+  background-color: #fff !important;
   display: flex;
   width: 100%;
   padding: 30px;
@@ -14,14 +17,13 @@
   left: 50%;
   transform: translateX(-50%);
   color: #1b1b1d;
-  font-family: 'SF Pro Display';
+  font-family: SF Pro Display, sans-serif;
 
   .contentGeneralWrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
     letter-spacing: 0.01em;
-
 
     .headerGeneral {
       font-size: 18px;
@@ -31,6 +33,7 @@
       display: flex;
       padding: 0 120px;
       height: 26px;
+      font-family: SF Pro Display, sans-serif;
     }
 
     .content {
@@ -38,6 +41,7 @@
       font-size: 14px;
       line-height: 20px;
       color: #54545c;
+      font-family: SF Pro Display, sans-serif;
     }
 
     .functionWrapper {
@@ -58,6 +62,7 @@
           font-weight: 500;
           color: #346af7;
           text-align: left;
+          font-family: SF Pro Display, sans-serif;
         }
       }
 
@@ -76,6 +81,8 @@
           margin: auto;
           font-weight: 600;
           cursor: pointer;
+          border-radius: 8px;
+          font-family: SF Pro Display, sans-serif;
         }
 
         .acceptButton {
@@ -86,13 +93,11 @@
       }
     }
   }
-
-
 }
 
 .cookieBanner {
   z-index: map-get($map: $z-index, $key: "MODAL");
-  background-color: #FFF !important;
+  background-color: #fff !important;
   display: flex;
   width: 764px;
   padding: 30px;
@@ -102,10 +107,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 10px;
   transform: translate(-50%, -50%);
   color: #1b1b1d;
-  font-family: 'SF Pro Display';
-
+  font-family: SF Pro Display, sans-serif;
   .contentWrapper {
     display: flex;
     flex-direction: column;
@@ -130,14 +135,15 @@
       height: 42px;
       background-color: #346af7;
       border: 1px solid #346af7;
+      border-radius: 8px;
     }
 
     .declineButton {
       width: 256px;
       border: 1px solid #54545c;
       height: 42px;
+      border-radius: 8px;
     }
-
 
     .textContainer {
       display: flex;
@@ -148,26 +154,24 @@
       letter-spacing: 1px;
       line-height: 24px;
       font-weight: 600;
-      font-family: 'SF Pro Display';
     }
 
     .accept {
       display: flex;
-      color: #fff
+      color: #fff;
     }
   }
 
   .wrapperHeader {
     display: flex;
     align-items: center;
-    height: 26px;
     justify-content: space-between;
-    line-height: 110%;
-    font-weight: 600;
 
     .title {
       letter-spacing: 0.01em;
       font-size: 18px;
+      line-height: 26px;
+      font-weight: 600;
     }
 
     .closeIcon {
@@ -244,12 +248,9 @@
         padding: 0 12px;
 
         .buttonWrapper {
-          gap: 6px
+          gap: 6px;
         }
       }
-
-
     }
   }
-
 }

@@ -6,19 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { initializeApp } from "@firebase/app";
 import { firebaseConfig } from "@/constants/firebase-config";
 import { getAnalytics } from "@firebase/analytics";
-import {
-  RemoteConfig,
-  getRemoteConfig,
-  getString,
-} from "@firebase/remote-config";
+import { RemoteConfig, getRemoteConfig } from "@firebase/remote-config";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-
-import CookiePopup from "@/components/Cookies/CookiePopup";
-import CookieDetailPopup from "@/components/Cookies/CookieDetailPopup";
-import { useState } from "react";
-import { VISIBLE_OPTIONS } from "react-cookie-consent";
 import CookieRequest from "@/components/Cookies/CookieRequest";
+import { Toaster } from "react-hot-toast";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 let remoteConfig: RemoteConfig;
 const app = initializeApp(firebaseConfig);
@@ -32,6 +27,9 @@ export { remoteConfig };
 export const orbitron = Orbitron({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main>
       <CookieRequest />
@@ -40,6 +38,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </div>
       <Footer />
+      <Toaster
+        toastOptions={{
+          position: "top-right",
+          duration: 4000,
+        }}
+      />
     </main>
   );
 }

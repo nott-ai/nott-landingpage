@@ -1,27 +1,4 @@
 @import "./variables.scss";
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Semibold.otf") format("opentype");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
-  font-weight: 500;
-}
 
 body {
   margin: 0;
@@ -30,12 +7,12 @@ body {
   font-size: 14px;
   color: #1b1b1d;
   background-color: #f9f9f9;
-  font-family: SF Pro Display, sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 .content-body {
   min-height: 100vh;
-  margin-top: 122px;
+  // margin-top: 122px;
 }
 
 main {
@@ -168,9 +145,6 @@ p {
 }
 
 @media screen and (max-width: $sm) {
-  .content-body {
-    margin-top: 56px;
-  }
   #products-showcase {
     .slick-list {
       height: 250px;
