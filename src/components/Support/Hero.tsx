@@ -8,8 +8,7 @@ const Hero = () => {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.bannerContainer}>
+      <div className={styles.bannerContainer}>
         {isDesktop ? (
           <div className={styles.banner}>
             <img
@@ -20,27 +19,12 @@ const Hero = () => {
 
             <div className={styles.content}>
               <div className={styles.description}>
-                Shape Your Health,<br />
-                  Shape Your Future with NOTT
+                Shape Your Health,
+                <br />
+                Shape Your Future with NOTT
               </div>
               <div className={styles.description2}>
                 Download NOTT App now for next level of convenience
-              </div>
-              <div className={styles.linkSocialWrapper}>
-                <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/googleplay.webp"
-                    alt="googleplay"
-                  />
-                </a>
-                <a href={SOCIAL_LINK.APP_STORE} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/appstore.webp"
-                    alt="appstore"
-                  />
-                </a>
               </div>
             </div>
           </div>
@@ -52,30 +36,15 @@ const Hero = () => {
               alt="banner-support-mobile"
             />
             <div className={styles.content}>
-              <div
-                className={styles.description}
-              >
-                <p>Shape Your Health,<br />
-                  Shape Your Future with NOTT</p>
+              <div className={styles.description}>
+                <p>
+                  Shape Your Health,
+                  <br />
+                  Shape Your Future with NOTT
+                </p>
               </div>
               <div className={styles.description2}>
                 <p>Download NOTT App now for next level of convenience</p>
-              </div>
-              <div className={styles.linkSocialWrapper}>
-                <Link href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/googleplay.webp"
-                    alt="googleplay"
-                  />
-                </Link>
-                <Link href={SOCIAL_LINK.APP_STORE} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/appstore.webp"
-                    alt="appstore"
-                  />
-                </Link>
               </div>
             </div>
           </div>
