@@ -1,6 +1,6 @@
 interface IContent {
   id: string;
-  title?: string;
+  title: string;
   description: string;
   image?: string;
 }
@@ -70,20 +70,22 @@ export const GUIDELINE: MenuItems[] = [
     mainSection: "1. System Requirements",
     items: [
       {
+        title: "",
         id: "systemRequirements",
         description:
-          "To ensure the optimal performance and high security of the NOTT application, it is necessary to use devices operating on compatible system software.\n•  For users with iOS devices, the application requires iOS 16.5 or later.\n• For users with Android devices, the application requires Android 11 or later.",
+          "To ensure the optimal performance and high security of the NOTT Beta, it is necessary to use devices operating on compatible system software.\n•  For users with iOS devices, the application requires iOS 16.5 or later.\n• For users with Android devices, the application requires Android 11 or later.",
       },
     ],
   },
   {
     id: "downloadApp",
-    mainSection: "2. Download NOTT Application",
+    mainSection: "2. Download NOTT Beta",
     mainTitle: "IOS",
     items: [
       {
         id: "ios",
-        title: "Step 1: Download TestFlight",
+        title:
+          "Step 1: Download <a target='_blank' href='https://testflight.apple.com/join/YZtG2TFf'>TestFlight</a>",
         description:
           "If you haven't already, download the TestFlight app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
         image: "/images/support/support1.webp",
@@ -97,16 +99,16 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "installingNott",
-        title: "Step 3: Install the NOTT App",
+        title: "Step 3: Install the NOTT Beta",
         description:
           "Click on Install to start downloading the beta version of the app to your device. The process is similar to downloading any app from the App Store.",
         image: "/images/support/support3.webp",
       },
       {
         id: "openingNott",
-        title: "Step 4: Open NOTT App",
+        title: "Step 4: Open NOTT Beta",
         description:
-          "After the app is installed, you can open it directly from your home screen; or click OPEN in TestFlight. And now you are ready to experience NOTT app.",
+          "After the app is installed, you can open it directly from your home screen; or click OPEN in TestFlight. And now you are ready to experience NOTT Beta.",
         image: "/images/support/support4.webp",
       },
       {
@@ -120,7 +122,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "shareFeedback",
         title: "Step 6: Share Feedback",
         description:
-          "Here is the screen for instruction of sharing feedback. Click Start Testing to experience NOTT app.",
+          "Here is the screen for instruction of sharing feedback. Click Start Testing to experience NOTT Beta.",
         image: "/images/support/support6.webp",
       },
     ],
@@ -131,8 +133,10 @@ export const GUIDELINE: MenuItems[] = [
     items: [
       {
         id: "android",
-        title: "Step 1: Download the APK File",
-        description: "Click Download to download the APK file of the NOTT app.",
+        title:
+          "Step 1: Download the <a target='_blank' href='https://drive.google.com/file/d/1S4XwdrjYcnONTTMA37DKu9eq9-mHMgSF/view'>APK File</a>",
+        description:
+          "Click Download to download the <a target='_blank' href='https://drive.google.com/file/d/1S4XwdrjYcnONTTMA37DKu9eq9-mHMgSF/view'>APK File</a> of the NOTT Beta.",
         image: "/images/support/support7.webp",
       },
       {
@@ -144,7 +148,7 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "installingNott",
-        title: "Step 3: Install the NOTT App",
+        title: "Step 3: Install the NOTT Beta",
         description:
           "After opening the APK file, your device will prompt you with a confirmation to install the app. Review the permissions it requests, then tap Install.",
         image: "/images/support/support9.webp",

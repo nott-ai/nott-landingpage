@@ -1,6 +1,7 @@
 import styles from "@/styles/Support/support.module.scss";
 import useDeviceDetect from "@/components/common/DeviceDetect";
 import { SOCIAL_LINK } from "@/constants/social";
+import Link from "next/link";
 
 const Hero = () => {
   const { isDesktop } = useDeviceDetect();
@@ -61,20 +62,20 @@ const Hero = () => {
                 <p>Download NOTT App now for next level of convenience</p>
               </div>
               <div className={styles.linkSocialWrapper}>
-                <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
+                <Link href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/googleplay.webp"
                     alt="googleplay"
                   />
-                </a>
-                <a href={SOCIAL_LINK.APP_STORE} target="_blank">
+                </Link>
+                <Link href={SOCIAL_LINK.APP_STORE} target="_blank">
                   <img
                     className={styles.logo}
                     src="/images/appstore.webp"
                     alt="appstore"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
