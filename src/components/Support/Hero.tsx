@@ -24,7 +24,7 @@ const Hero = () => {
                 Shape Your Future with NOTT
               </div>
               <div className={styles.description2}>
-                Download NOTT App now for next level of convenience
+                Download NOTT Beta now for next level of convenience
               </div>
             </div>
           </div>

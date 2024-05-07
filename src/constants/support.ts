@@ -27,7 +27,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
   },
   {
     id: "ios",
-    mainTitle: "Download NOTT Application",
+    mainTitle: "Download NOTT Beta",
     items: [
       {
         id: "ios",
@@ -150,7 +150,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "installingNott",
         title: "Step 3: Install the NOTT Beta",
         description:
-          "After opening the APK file, your device will prompt you with a confirmation to install the app. Review the permissions it requests, then tap Install.",
+          "After opening the APK file, your device will prompt you with a confirmation to install the beta app. Review the permissions it requests, then tap Install.",
         image: "/images/support/support9.webp",
       },
       {
