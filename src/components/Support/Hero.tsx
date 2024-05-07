@@ -44,7 +44,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className={styles.description2}>
-                <p>Download NOTT App now for next level of convenience</p>
+                <p>Download NOTT Beta now for next level of convenience</p>
               </div>
             </div>
           </div>
