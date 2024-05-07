@@ -155,9 +155,9 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "openingNott",
-        title: "Step 4: Open and Test the App",
+        title: "Step 4: Open and Test the NOTT Beta app",
         description:
-          "Once the installation is complete, you can either tap Open directly from the installation screen to launch the app or find the app icon in your device’s app drawer.",
+          "Once the installation is complete, you can either tap Open directly from the installation screen to launch the beta app or find the app icon in your device’s beta app drawer.",
         image: "/images/support/support10.webp",
       },
     ],
@@ -170,7 +170,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "tapToVerify",
         title: "Step 1: Tap To Verify",
         description:
-          "When open the app, on the “Tap to verify” screen, click on logo to initiate the registration process.",
+          "When open the beta app, on the “Tap to verify” screen, click on logo to initiate the registration process.",
         image: "/images/support/support11.webp",
       },
       {
@@ -184,7 +184,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "verifyPasskey",
         title: "Step 3: Verify Passkey",
         description:
-          "After setting up your passkey, the app will automatically log you into your new account.",
+          "After setting up your passkey, the beta app will automatically log you into your new account.",
         image: "/images/support/support22.webp",
       },
       {
@@ -205,7 +205,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "connectingDevices1",
         title: "Step 1: Access the Main Screen",
         description:
-          'Open the app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
+          'Open the beta app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
         image: "/images/support/support14.webp",
       },
       {
