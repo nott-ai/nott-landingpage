@@ -29,7 +29,6 @@ const Support: React.FC = () => {
                           {item.description.split('\n').map((line, index) => (
                             <React.Fragment key={index}>
                               <div dangerouslySetInnerHTML={{__html: line}}></div>
-                              <br />
                             </React.Fragment>
                           ))}
                         </div>
