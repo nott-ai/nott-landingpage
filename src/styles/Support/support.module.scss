@@ -21,6 +21,7 @@
       @include position(absolute, 60px, 0, 0, 50px);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 16px;
       @include sizes(479px, 158px);
       color: white;
