@@ -1,6 +1,6 @@
 interface IContent {
   id: string;
-  title?: string;
+  title: string;
   description: string;
   image?: string;
 }
@@ -27,7 +27,7 @@ export const SIDE_MENU_SUPPORT: MenuItems[] = [
   },
   {
     id: "ios",
-    mainTitle: "Download NOTT Application",
+    mainTitle: "Download NOTT Beta",
     items: [
       {
         id: "ios",
@@ -70,22 +70,24 @@ export const GUIDELINE: MenuItems[] = [
     mainSection: "1. System Requirements",
     items: [
       {
+        title: "",
         id: "systemRequirements",
         description:
-          "To ensure the optimal performance and high security of the NOTT application, it is necessary to use devices operating on compatible system software.\n•  For users with iOS devices, the application requires iOS 16.5 or later.\n• For users with Android devices, the application requires Android 11 or later.",
+          "To ensure the optimal performance and high security of the NOTT Beta, it is necessary to use devices operating on compatible system software.\n•  For users with iOS devices, the application requires iOS 16.5 or later.\n• For users with Android devices, the application requires Android 11 or later.",
       },
     ],
   },
   {
     id: "downloadApp",
-    mainSection: "2. Download NOTT Application",
+    mainSection: "2. Download NOTT Beta",
     mainTitle: "IOS",
     items: [
       {
         id: "ios",
-        title: "Step 1: Download TestFlight",
+        title:
+          "Step 1: Download <a target='_blank' href='https://testflight.apple.com/join/m4la35rk'>TestFlight</a>",
         description:
-          "If you haven't already, download the TestFlight app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
+          "If you haven't already, download the <a target='_blank' href='https://testflight.apple.com/join/m4la35rk'>TestFlight</a> app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
         image: "/images/support/support1.webp",
       },
       {
@@ -97,16 +99,16 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "installingNott",
-        title: "Step 3: Install the NOTT App",
+        title: "Step 3: Install the NOTT Beta",
         description:
           "Click on Install to start downloading the beta version of the app to your device. The process is similar to downloading any app from the App Store.",
         image: "/images/support/support3.webp",
       },
       {
         id: "openingNott",
-        title: "Step 4: Open NOTT App",
+        title: "Step 4: Open NOTT Beta",
         description:
-          "After the app is installed, you can open it directly from your home screen; or click OPEN in TestFlight. And now you are ready to experience NOTT app.",
+          "After the app is installed, you can open it directly from your home screen; or click OPEN in TestFlight. And now you are ready to experience NOTT Beta.",
         image: "/images/support/support4.webp",
       },
       {
@@ -120,7 +122,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "shareFeedback",
         title: "Step 6: Share Feedback",
         description:
-          "Here is the screen for instruction of sharing feedback. Click Start Testing to experience NOTT app.",
+          "Here is the screen for instruction of sharing feedback. Click Start Testing to experience NOTT Beta.",
         image: "/images/support/support6.webp",
       },
     ],
@@ -131,8 +133,10 @@ export const GUIDELINE: MenuItems[] = [
     items: [
       {
         id: "android",
-        title: "Step 1: Download the APK File",
-        description: "Click Download to download the APK file of the NOTT app.",
+        title:
+          "Step 1: Download the <a target='_blank' href='https://drive.google.com/file/d/1QxckeA3MEeBf7Etc0HfNY7YESREFJW3E/view?usp=sharing'>APK File</a>",
+        description:
+          "Click Download to download the <a target='_blank' href='https://drive.google.com/file/d/1QxckeA3MEeBf7Etc0HfNY7YESREFJW3E/view?usp=sharing'>APK File</a> of the NOTT Beta.",
         image: "/images/support/support7.webp",
       },
       {
@@ -144,16 +148,16 @@ export const GUIDELINE: MenuItems[] = [
       },
       {
         id: "installingNott",
-        title: "Step 3: Install the NOTT App",
+        title: "Step 3: Install the NOTT Beta",
         description:
-          "After opening the APK file, your device will prompt you with a confirmation to install the app. Review the permissions it requests, then tap Install.",
+          "After opening the APK file, your device will prompt you with a confirmation to install the beta app. Review the permissions it requests, then tap Install.",
         image: "/images/support/support9.webp",
       },
       {
         id: "openingNott",
-        title: "Step 4: Open and Test the App",
+        title: "Step 4: Open and Test the NOTT Beta app",
         description:
-          "Once the installation is complete, you can either tap Open directly from the installation screen to launch the app or find the app icon in your device’s app drawer.",
+          "Once the installation is complete, you can either tap Open directly from the installation screen to launch the beta app or find the app icon in your device’s beta app drawer.",
         image: "/images/support/support10.webp",
       },
     ],
@@ -166,7 +170,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "tapToVerify",
         title: "Step 1: Tap To Verify",
         description:
-          "When open the app, on the “Tap to verify” screen, click on logo to initiate the registration process.",
+          "When open the beta app, on the “Tap to verify” screen, click on logo to initiate the registration process.",
         image: "/images/support/support11.webp",
       },
       {
@@ -180,7 +184,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "verifyPasskey",
         title: "Step 3: Verify Passkey",
         description:
-          "After setting up your passkey, the app will automatically log you into your new account.",
+          "After setting up your passkey, the beta app will automatically log you into your new account.",
         image: "/images/support/support22.webp",
       },
       {
@@ -201,7 +205,7 @@ export const GUIDELINE: MenuItems[] = [
         id: "connectingDevices1",
         title: "Step 1: Access the Main Screen",
         description:
-          'Open the app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
+          'Open the beta app, from the main screen, select "Connect Apps & Devices " to begin the connection process.',
         image: "/images/support/support14.webp",
       },
       {

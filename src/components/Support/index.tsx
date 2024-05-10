@@ -22,14 +22,13 @@ const Support: React.FC = () => {
                   <div key={item.id} id={item.id} className={content.id === SUPPORT.SYSTEM_REQUIREMENTS ? styles.systemItem : styles.item}>
                     <div className={styles.wrapperGuide}>
                       <div className={styles.content}>
-                        <div className={styles.mainTitle}>
-                          {item.title}
-                        </div>
+                        <div className={styles.mainTitle} dangerouslySetInnerHTML={{
+                          __html: item.title
+                        }}/>
                         <div className={styles.textContent}>
                           {item.description.split('\n').map((line, index) => (
                             <React.Fragment key={index}>
-                              {line}
-                              <br />
+                              <div dangerouslySetInnerHTML={{__html: line}}></div>
                             </React.Fragment>
                           ))}
                         </div>
