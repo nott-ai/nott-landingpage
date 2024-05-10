@@ -134,9 +134,9 @@ export const GUIDELINE: MenuItems[] = [
       {
         id: "android",
         title:
-          "Step 1: Download the <a target='_blank' href='https://drive.google.com/file/d/18ABgLhgZlZ4TRs3XEbX633LWFtbxgVnt/view?usp=sharing'>APK File</a>",
+          "Step 1: Download the <a target='_blank' href='https://drive.google.com/file/d/1QxckeA3MEeBf7Etc0HfNY7YESREFJW3E/view?usp=sharing'>APK File</a>",
         description:
-          "Click Download to download the <a target='_blank' href='https://drive.google.com/file/d/18ABgLhgZlZ4TRs3XEbX633LWFtbxgVnt/view?usp=sharing'>APK File</a> of the NOTT Beta.",
+          "Click Download to download the <a target='_blank' href='https://drive.google.com/file/d/1QxckeA3MEeBf7Etc0HfNY7YESREFJW3E/view?usp=sharing'>APK File</a> of the NOTT Beta.",
         image: "/images/support/support7.webp",
       },
       {
