@@ -85,9 +85,9 @@ export const GUIDELINE: MenuItems[] = [
       {
         id: "ios",
         title:
-          "Step 1: Download <a target='_blank' href='https://testflight.apple.com/join/YZtG2TFf'>TestFlight</a>",
+          "Step 1: Download <a target='_blank' href='https://testflight.apple.com/join/m4la35rk'>TestFlight</a>",
         description:
-          "If you haven't already, download the <a target='_blank' href='https://testflight.apple.com/join/YZtG2TFf'>TestFlight</a> app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
+          "If you haven't already, download the <a target='_blank' href='https://testflight.apple.com/join/m4la35rk'>TestFlight</a> app from the App Store on your iOS device. Simply open the App Store, search for TestFlight and download the app.",
         image: "/images/support/support1.webp",
       },
       {
