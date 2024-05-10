@@ -25,22 +25,6 @@ const Hero = () => {
               <div className={styles.description2}>
                 Download NOTT App now for next level of convenience
               </div>
-              <div className={styles.linkSocialWrapper}>
-                <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/googleplay.webp"
-                    alt="googleplay"
-                  />
-                </a>
-                <a href={SOCIAL_LINK.APP_STORE} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/appstore.webp"
-                    alt="appstore"
-                  />
-                </a>
-              </div>
             </div>
           </div>
         ) : (
@@ -59,22 +43,6 @@ const Hero = () => {
               </div>
               <div className={styles.description2}>
                 <p>Download NOTT App now for next level of convenience</p>
-              </div>
-              <div className={styles.linkSocialWrapper}>
-                <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/googleplay.webp"
-                    alt="googleplay"
-                  />
-                </a>
-                <a href={SOCIAL_LINK.APP_STORE} target="_blank">
-                  <img
-                    className={styles.logo}
-                    src="/images/appstore.webp"
-                    alt="appstore"
-                  />
-                </a>
               </div>
             </div>
           </div>
