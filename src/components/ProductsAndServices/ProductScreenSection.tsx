@@ -4,7 +4,7 @@ import styles from "@/styles/ProductsAndServices/product-screen-section.module.s
 
 import Slider from "react-slick";
 
-const screens = Array.from({ length: 6 }, (_, index) => index + 1);
+const screens = Array.from({ length: 7 }, (_, index) => index + 1);
 
 export default function ProductScreenSection() {
   var settings = {
@@ -49,18 +49,21 @@ export default function ProductScreenSection() {
         </div>
         <div className={styles.slideScreen} id="products-hightlight">
           <Slider className={styles.slider} {...settings}>
-            {screens.map((screen, index) => (
-              <div key={index}>
-                <div className={styles.imageBack}>
-                  <img
-                    src={`/images/product-service/phone-screen-v2/screen${screen}.png`}
-                    alt={`screen${screen}`}
-                    loading="lazy"
-                    className={styles.imageFront}
-                  />
+            {screens.map((screen, index) => {
+              const origin = `/images/product-service/phone-screen-v2/screen${screen}.png`;
+              return (
+                <div key={index}>
+                  <div className={styles.imageBack}>
+                    <img
+                      src={`/images/product-service/phone-screen-v2/screen${screen}.png`}
+                      alt={`screen${screen}`}
+                      loading="lazy"
+                      className={styles.imageFront}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </Slider>
         </div>
         {/* <div className={styles.paragraph}>
