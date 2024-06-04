@@ -4,32 +4,7 @@ import styles from "@/styles/ProductsAndServices/product-screen-section.module.s
 
 import Slider from "react-slick";
 
-const screens = [
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen1.png",
-  },
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen2.png",
-  },
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen3.png",
-  },
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen4.png",
-  },
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen5.png",
-  },
-  {
-    title: "Wellness",
-    image: "/images/product-service/phone-screen/screen6.png",
-  },
-];
+const screens = Array.from({ length: 6 }, (_, index) => index + 1);
 
 export default function ProductScreenSection() {
   var settings = {
@@ -78,8 +53,8 @@ export default function ProductScreenSection() {
               <div key={index}>
                 <div className={styles.imageBack}>
                   <img
-                    src={screen.image}
-                    alt={screen.title}
+                    src={`/images/product-service/phone-screen-v2/screen${screen}.png`}
+                    alt={`screen${screen}`}
                     loading="lazy"
                     className={styles.imageFront}
                   />
