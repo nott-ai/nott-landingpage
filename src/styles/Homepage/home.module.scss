@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 15vh;
   right: 20px;
+  max-width: 120px;
   &.hiddenButton {
     right: calc(34px - 120px);
   }
@@ -12,7 +13,7 @@
   flex-direction: column;
   gap: 10px;
   img {
-    max-width: 120px;
+    max-width: 100%;
   }
 }
 

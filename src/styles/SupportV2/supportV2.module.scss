@@ -55,8 +55,10 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            img {
-              width: 100%;
+            .imageSteps {
+              img {
+                width: 100%;
+              }
             }
           }
         }
@@ -84,9 +86,12 @@
             grid-template-columns: repeat(1, 1fr);
             gap: 10px;
             .column {
-              align-items: center;
-              img {
+              .imageSteps {
                 max-width: 268px;
+                margin: 0 auto;
+                img {
+                  width: 100%;
+                }
               }
             }
           }
