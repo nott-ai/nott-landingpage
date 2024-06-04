@@ -4,7 +4,7 @@ import styles from "@/styles/ProductsAndServices/product-screen-section.module.s
 
 import Slider from "react-slick";
 
-const screens = Array.from({ length: 7 }, (_, index) => index + 1);
+const screens = Array.from({ length: 6 }, (_, index) => index + 1);
 
 export default function ProductScreenSection() {
   var settings = {
