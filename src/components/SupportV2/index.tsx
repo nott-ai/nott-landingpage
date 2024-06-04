@@ -37,13 +37,13 @@ const SupportV2Page: React.FC = () => {
                 <div>
                   Steps 1: Create Node by Connecting with Phantom Wallet
                 </div>
-                <div>
+                <div className={styles.imageSteps}>
                   <img src="/images/supportV2/steps1.png" alt="steps 1" />
                 </div>
               </div>
               <div className={styles.column}>
                 <div>Steps 2: Verify Passkey to authenticate your identity</div>
-                <div>
+                <div className={styles.imageSteps}>
                   <img src="/images/supportV2/steps2.png" alt="steps 1" />
                 </div>
               </div>
@@ -52,7 +52,7 @@ const SupportV2Page: React.FC = () => {
                   Steps 3: Connect with apps and devices to get rewards and
                   unlock full utilities
                 </div>
-                <div>
+                <div className={styles.imageSteps}>
                   <img src="/images/supportV2/steps3.png" alt="steps 1" />
                 </div>
               </div>
