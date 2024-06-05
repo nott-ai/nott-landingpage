@@ -1,5 +1,22 @@
 @import "../variables.scss";
 
+.linkSocialWrapper {
+  position: fixed;
+  bottom: 15vh;
+  right: 20px;
+  max-width: 120px;
+  &.hiddenButton {
+    right: calc(34px - 120px);
+  }
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  img {
+    max-width: 100%;
+  }
+}
+
 .container {
   margin: 122px auto 80px auto;
   gap: 40px;

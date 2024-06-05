@@ -112,28 +112,22 @@ const Footer = () => {
 
                 {isMobile ? (
                   <>
-                    <a href={`${ROUTERS.ABOUT_US}#faq`}>
-                      FAQS
-                    </a>
+                    <a href={`${ROUTERS.ABOUT_US}#faq`}>FAQS</a>
                     <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
-                    <Link href={ROUTERS.SUPPORT} target="_blank">
+                    <Link href={ROUTERS.SUPPORT_V2} target="_blank">
                       Help & Support{" "}
                     </Link>
                   </>
                 ) : (
                   <div className={styles.subColumn}>
-                    <a href={`${ROUTERS.ABOUT_US}#faq`}>
-                      FAQs
-                    </a>
+                    <a href={`${ROUTERS.ABOUT_US}#faq`}>FAQs</a>
                     <a href={INFO.WHITE_PAPER} target="_blank">
                       Whitepaper
                     </a>
 
-                    <Link href={ROUTERS.SUPPORT}>
-                      Help & Support
-                    </Link>
+                    <Link href={ROUTERS.SUPPORT_V2}>Help & Support</Link>
                   </div>
                 )}
               </div>
@@ -142,7 +136,8 @@ const Footer = () => {
           <div className={styles.bottomBlock}>
             <div className={styles.copyRight}>
               <p className={styles.content}>
-                © 2018-2024 NOTT INNOVATIVE TECHNOLOGY PTE. LTD. All rights reserved
+                © 2018-2024 NOTT INNOVATIVE TECHNOLOGY PTE. LTD. All rights
+                reserved
               </p>
             </div>
           </div>

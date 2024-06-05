@@ -1,6 +1,5 @@
 import styles from "@/styles/Support/support.module.scss";
 import useDeviceDetect from "@/components/common/DeviceDetect";
-import { SOCIAL_LINK } from "@/constants/social";
 
 const Hero = () => {
   const { isDesktop } = useDeviceDetect();
