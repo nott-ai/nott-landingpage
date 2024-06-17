@@ -29,7 +29,7 @@ const Banner = () => {
 
           <button
             className={style.action}
-            onClick={() => router.push(ROUTERS.SUPPORT)}
+            onClick={() => router.push(ROUTERS.SUPPORT_V2)}
           >
             <div className={style.text}>Become a Participant</div>
           </button>
