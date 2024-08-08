@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nott.ai
+
+# Sitemaps
+Sitemap: https://nott.ai/sitemap.xml
