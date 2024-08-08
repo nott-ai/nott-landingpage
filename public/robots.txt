@@ -7,3 +7,4 @@ Host: https://nott.ai
 
 # Sitemaps
 Sitemap: https://nott.ai/sitemap.xml
+Sitemap: https://blog.nott.ai/sitemap.xml
