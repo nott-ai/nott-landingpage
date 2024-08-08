@@ -47,19 +47,11 @@ interface ModalProductServiceProps {
   onClose: () => void;
 }
 
-const ModalProductService: React.FC<ModalProductServiceProps> = ({
-  modalIsOpen,
-  productInfo,
-  onClose,
-}) => {
+const ModalProductService: React.FC<ModalProductServiceProps> = ({ modalIsOpen, productInfo, onClose }) => {
   const modalRef = useRef<any>(null);
   useEffect(() => {
     const preventTouchMove = (e: TouchEvent) => {
-      if (
-        modalRef.current &&
-        modalRef.current.contains &&
-        !modalRef.current.contains(e.target)
-      ) {
+      if (modalRef.current && modalRef.current.contains && !modalRef.current.contains(e.target)) {
         e.preventDefault();
       }
     };
@@ -91,9 +83,7 @@ const ModalProductService: React.FC<ModalProductServiceProps> = ({
             {productInfo.price || "Coming Soon"}
           </div> */}
 
-          <div className={styles.title}>
-            Key Features of the {productInfo.name}
-          </div>
+          <h1 className={styles.title}>Key Features of the {productInfo.name}</h1>
           <CloseCookieIcon className={styles.closeIcon} onClick={onClose} />
         </div>
       </div>

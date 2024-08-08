@@ -51,7 +51,7 @@ const Tracking = () => {
     <div className={`${styles.wrapper} ${styles.tracking}`}>
       <div className={styles.container}>
         <MailAlertIcon />
-        <p className={styles.title}>eKYC Application Status Tracking</p>
+        <h1 className={styles.title}>eKYC Application Status Tracking</h1>
         <p className={styles.description}>
           Stay updated with the progress of your eKYC application for the Device
           Drop Campaign.

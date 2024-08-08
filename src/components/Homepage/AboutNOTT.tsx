@@ -60,7 +60,7 @@ const AboutNOTT = () => {
           <div className={styles.message}>
             <img src="/images/message.png" alt="message" loading="lazy" />
             <div className={styles.messageContent}>
-              <div className={styles.title}>Hi there! 👏</div>
+              <h1 className={styles.title}>Hi there! 👏</h1>
               <div className={styles.content}>
                 Welcome to NOTT, an innovative platform at the forefront of
                 digital wellness. Powered by AI and grounded in Decentralized

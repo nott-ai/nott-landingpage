@@ -59,10 +59,10 @@ const FeaturesAndBenefits = [
 const Overview = () => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.title}>
+      <h1 className={styles.title}>
         Overview of NOTT as an AI-powered
         <br /> Wellness DePIN platform
-      </p>
+      </h1>
       <p className={styles.description}>
         Join us in redefining wellness with technology, where your health
         journey is personalized, secure, and forward-thinking.

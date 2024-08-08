@@ -38,10 +38,10 @@ const Campaign = () => {
           <img src="../images/logo-campaign.png" alt="graphic" loading="lazy" />
         </div>
         <div className={styles.right}>
-          <div className={`${styles.title} ${orbitron.className}`}>
+          <h1 className={`${styles.title} ${orbitron.className}`}>
             NOTT’s <span className={styles.highlightText}>Device Drop</span>{" "}
             Campaigns
-          </div>
+          </h1>
           <div className={styles.description}>
             Discover the ongoing revolution in health tracking through
             NOTT&#39;s Device Drop Campaigns.

@@ -89,7 +89,7 @@ const HomePage = () => {
         <div className={styles.bannerContainer}>
           <div className={styles.banner}>
             <div className={styles.content}>
-              <b className={styles.title}>Welcome to NOTT!</b>
+              <h1 className={styles.title}>Welcome to NOTT!</h1>
               <div className={styles.description}>
                 <p>
                   An innovative platform at the forefront of digital wellness -
@@ -122,7 +122,7 @@ const HomePage = () => {
         </div>
 
         <div className={styles.featuredProductsAndInnovations}>
-          <p className={styles.title}>Featured Products And Innovations</p>
+          <h1 className={styles.title}>Featured Products And Innovations</h1>
           <div className={styles.content}>
             {productsAndInnovations.map(
               (product: IProductAndInnovationCard, index: number) => (
@@ -153,7 +153,7 @@ const HomePage = () => {
               </div>
 
               <div className={styles.textBlock}>
-                <b className={styles.title}>Mission and Vision</b>
+                <h1 className={styles.title}>Mission and Vision</h1>
                 <div className={styles.description}>
                   <QuoteOpenIcon />
                   &nbsp;&nbsp;NOTT’s mission is to empower individuals and
@@ -170,7 +170,7 @@ const HomePage = () => {
         ) : (
           <div className={styles.footer}>
             <div className={styles.textBlock}>
-              <b className={styles.title}>Mission and Vision</b>
+              <h1 className={styles.title}>Mission and Vision</h1>
               <div className={styles.description}>
                 <QuoteOpenIcon />
                 &nbsp;&nbsp;NOTT’s mission is to empower individuals and

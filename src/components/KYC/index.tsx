@@ -61,10 +61,10 @@ const Ekyc = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <p className={styles.title}>
+        <h1 className={styles.title}>
           Join Our <br /> HealthTech Revolution: <br />
           <span className={styles.highlight}> Exclusive Airdrop Inside</span>
-        </p>
+        </h1>
         <p className={styles.description}>
           Explore our exclusive HealthTech Airdrop with over{" "}
           <span className={styles.number}>10,000 devices</span> to revolutionize

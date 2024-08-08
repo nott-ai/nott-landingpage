@@ -11,7 +11,7 @@ const SupportV2Page: React.FC = () => {
         <div className={styles.titleContent}>User Manual</div>
         <div className={styles.content}>
           <div className={styles.section}>
-            <div className={styles.title}>1. System Requirements</div>
+            <h1 className={styles.title}>1. System Requirements</h1>
             <div className={styles.description}>
               To ensure the optimal performance and security of the NOTT
               application, it is necessary to use devices operating on
@@ -29,9 +29,9 @@ const SupportV2Page: React.FC = () => {
             </div>
           </div>
           <div className={styles.sectionStep}>
-            <div className={styles.title}>
+            <h1 className={styles.title}>
               2. Simply become a Notter with 3 steps
-            </div>
+            </h1>
             <div className={styles.rowSteps}>
               <div className={styles.column}>
                 <div>

@@ -39,7 +39,7 @@ export default function ProductScreenSection() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.title}>NOTT Mobile App</div>
+          <h1 className={styles.title}>NOTT Mobile App</h1>
           <div className={styles.content}>
             NOTT Mobile App is a cutting-edge solution for proactive health
             management, seamlessly integrating with various health tracking

@@ -6,9 +6,9 @@ const JoiningTheWaitList = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={`${orbitron.className} ${styles.title}`}>
+          <h1 className={`${orbitron.className} ${styles.title}`}>
             Joining The Waitlist now!
-          </div>
+          </h1>
           <div className={styles.description}>
             Be the first to receive the latest updates on NOTT&#39;s innovative
             products and offerings

@@ -47,7 +47,7 @@ const Globe = () => {
               alt="illustration-bar"
             />
             <div className={styles.leftInfoMobile}>
-              <p className={styles.title}>Global reach</p>
+              <h1 className={styles.title}>Global reach</h1>
               <div className={styles.bottomBlock}>
                 <p>
                   <span className={styles.number}>
@@ -70,7 +70,7 @@ const Globe = () => {
               </div>
             </div>
             <div className={styles.rightInfoMobile}>
-              <p className={styles.title}>Financial Momentum</p>
+              <h1 className={styles.title}>Financial Momentum</h1>
               <div className={styles.bottomBlock}>
                 <p>
                   <span className={styles.number}>
@@ -102,13 +102,13 @@ const Globe = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <p
+            <h1
               className={styles.title}
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Global reach
-            </p>
+            </h1>
             <IllustrationBar />
             <div className={styles.bottomBlock}>
               <p data-aos="fade-up" data-aos-duration="1000">
@@ -136,13 +136,13 @@ const Globe = () => {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <p
+            <h1
               className={styles.title}
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Financial Momentum
-            </p>
+            </h1>
             <IllustrationBar />
             <div className={styles.bottomBlock}>
               <p data-aos="fade-up" data-aos-duration="1000">

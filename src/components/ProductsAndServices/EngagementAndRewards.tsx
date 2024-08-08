@@ -4,7 +4,7 @@ const EngagementAndRewards = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.leftBlock}>
-        <p className={styles.title}>User Engagement and Rewards</p>
+        <h1 className={styles.title}>User Engagement and Rewards</h1>
         <p className={styles.description}>
           NOTT&apos;s Value-Based User Rewards system is the pulse of our
           proactive health mission. It is a finely tuned mechanism designed to

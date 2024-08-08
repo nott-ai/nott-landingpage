@@ -21,9 +21,9 @@ const NOTTMarketplace = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={`${styles.title} ${orbitron.className}`}>
+        <h1 className={`${styles.title} ${orbitron.className}`}>
           NOTT <span>Marketplace</span>
-        </div>
+        </h1>
         <div className={styles.description}>
           {`Explore NOTT's marketplace, connecting users to a wide range of health
           and wellness offerings. Join a dynamic community of health enthusiasts

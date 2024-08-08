@@ -110,10 +110,10 @@ const ApplyKyc = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <p className={styles.title}>
+        <h1 className={styles.title}>
           <span className={styles.highlight}> Quick KYC Process</span> <br />-
           Your Path to Wellness
-        </p>
+        </h1>
         {!authorizationData?.idToken && (
           <p className={styles.description}>
             Complete our quick KYC process to secure your cutting-edge health

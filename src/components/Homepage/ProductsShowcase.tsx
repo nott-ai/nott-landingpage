@@ -15,11 +15,7 @@ const ProductsShowcase = () => {
     },
     {
       name: "Smart Band",
-      images: [
-        "/images/products/smart-band.png",
-        "/images/products/smart-band.png",
-        "/images/products/smart-band.png",
-      ],
+      images: ["/images/products/smart-band.png", "/images/products/smart-band.png", "/images/products/smart-band.png"],
     },
     {
       name: "Smart Watch",
@@ -66,9 +62,9 @@ const ProductsShowcase = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={`${styles.title} ${orbitron.className}`}>
+          <h1 className={`${styles.title} ${orbitron.className}`}>
             <span className={styles.highlight}>Products</span> Showcase
-          </div>
+          </h1>
           <div className={styles.description}>
             {`Discover the innovation of NOTT's smart devices and app,
             
@@ -81,12 +77,7 @@ const ProductsShowcase = () => {
               <div id="products-showcase" className={styles.imageSlider}>
                 <Slider {...settings}>
                   {product.images.map((image, index) => (
-                    <img
-                      key={product.name + index}
-                      src={image}
-                      alt={product.name}
-                      loading="lazy"
-                    />
+                    <img key={product.name + index} src={image} alt={product.name} loading="lazy" />
                   ))}
                 </Slider>
               </div>

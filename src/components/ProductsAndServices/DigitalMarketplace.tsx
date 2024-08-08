@@ -22,7 +22,7 @@ const DigitalMarketplace = () => {
   return (
     <div className={styles.wrapper}>
       <div>
-        <p className={styles.title}>Digital Marketplace</p>
+        <h1 className={styles.title}>Digital Marketplace</h1>
         <p className={styles.description}>
           This digital space allows users to purchase wellness products and
           services, and for merchants to reach a wider audience.{" "}
