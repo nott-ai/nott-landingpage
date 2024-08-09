@@ -10,7 +10,7 @@ export default function Home() {
         <title>NOTT Innovative Technology - AI-Powered Wellness DePIN Platform</title>
         <meta
           name="description"
-          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life. NOTT is a pioneering HealthFi ecosystem, integrating advanced AI, DePIN (Decentralized Physical Infrastructure Network), and a unique rewards system to enhance personal health management and community wellness, supported by a comprehensive marketplace and decentralized governance."
+          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta
           name="keywords"
@@ -23,7 +23,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life. NOTT is a pioneering HealthFi ecosystem, integrating advanced AI, DePIN (Decentralized Physical Infrastructure Network), and a unique rewards system to enhance personal health management and community wellness, supported by a comprehensive marketplace and decentralized governance."
+          content="Join us on a transformative journey to optimal health with NOTT's advanced wellness ecosystem, integrating state-of-the-art healthcare technology and personalized well-being strategies designed for modern life."
         />
         <meta property="og:url" content="https://nott.ai" />
         <meta property="og:image" content="https://nott.ai/images/thumbnail.webp" />
