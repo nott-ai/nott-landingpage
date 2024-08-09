@@ -9,28 +9,20 @@ const Banner = () => {
   const router = useRouter();
   return (
     <div className={style.wrapper}>
-      <img
-        className={style.bg}
-        src="/images/solutions/bannerSolution.webp"
-        alt="bannerSolution"
-      />
+      <img className={style.bg} src="/images/solutions/bannerSolution.webp" alt="bannerSolution" />
       <div className={style.container}>
         <div className={style.content}>
-          <div className={style.title}>
+          <h1 className={style.title}>
             SECURE wellness <br />
             data network <br />
             and mine NOTT token
-          </div>
+          </h1>
           <div className={style.description}>
-            Dive into the NOTT Wellness DePIN Network: mine tokens while
-            enhancing personal health. It’s health empowerment in your hands.
-            Join now, and make your wellness count.
+            Dive into the NOTT Wellness DePIN Network: mine tokens while enhancing personal health. It’s health
+            empowerment in your hands. Join now, and make your wellness count.
           </div>
 
-          <button
-            className={style.action}
-            onClick={() => router.push(ROUTERS.SUPPORT_V2)}
-          >
+          <button className={style.action} onClick={() => router.push(ROUTERS.SUPPORT_V2)}>
             <div className={style.text}>Become a Participant</div>
           </button>
         </div>

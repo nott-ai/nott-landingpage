@@ -1,8 +1,6 @@
 import { ArrowRightIcon, QuoteCloseIcon, QuoteOpenIcon } from "@/assets";
 import NewsCard, { INewsCard } from "@/components/Homepage/NewsCard";
-import ProductAndInnovationCard, {
-  IProductAndInnovationCard,
-} from "@/components/Homepage/ProductAndInnovationCard";
+import ProductAndInnovationCard, { IProductAndInnovationCard } from "@/components/Homepage/ProductAndInnovationCard";
 import styles from "@/styles/Homepage/home.module.scss";
 import { useEffect, useState } from "react";
 import { remoteConfig } from "@/pages/_app";
@@ -89,14 +87,11 @@ const HomePage = () => {
         <div className={styles.bannerContainer}>
           <div className={styles.banner}>
             <div className={styles.content}>
-              <h1 className={styles.title}>Welcome to NOTT!</h1>
-              <div className={styles.description}>
-                <p>
-                  An innovative platform at the forefront of digital wellness -
-                  powered by AI and grounded in Decentralized Physical
-                  Infrastructure Network (DePIN) principles.
-                </p>
-              </div>
+              <div className={styles.title}>Welcome to NOTT!</div>
+              <h1 className={styles.description}>
+                An innovative platform at the forefront of digital wellness - powered by AI and grounded in
+                Decentralized Physical Infrastructure Network (DePIN) principles.
+              </h1>
             </div>
           </div>
         </div>
@@ -105,12 +100,7 @@ const HomePage = () => {
           <div className={styles.titleBlock}>
             <p className={styles.left}>Latest News</p>
 
-            <Link
-              className={styles.right}
-              href={INFO.BLOG}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className={styles.right} href={INFO.BLOG} target="_blank" rel="noopener noreferrer">
               {"View all"} <ArrowRightIcon />
             </Link>
           </div>
@@ -124,11 +114,9 @@ const HomePage = () => {
         <div className={styles.featuredProductsAndInnovations}>
           <h1 className={styles.title}>Featured Products And Innovations</h1>
           <div className={styles.content}>
-            {productsAndInnovations.map(
-              (product: IProductAndInnovationCard, index: number) => (
-                <ProductAndInnovationCard key={index} {...product} />
-              )
-            )}
+            {productsAndInnovations.map((product: IProductAndInnovationCard, index: number) => (
+              <ProductAndInnovationCard key={index} {...product} />
+            ))}
           </div>
         </div>
 
@@ -136,31 +124,19 @@ const HomePage = () => {
           <div className={styles.footer}>
             <div className={styles.content}>
               <div className={styles.imageOneContainer}>
-                <img
-                  className={styles.imageOne}
-                  src="/images/home-footer-1.webp"
-                  alt="footer1"
-                  loading="lazy"
-                />
+                <img className={styles.imageOne} src="/images/home-footer-1.webp" alt="footer1" loading="lazy" />
               </div>
               <div className={styles.imageTwoContainer}>
-                <img
-                  className={styles.imageTwo}
-                  src="/images/home-footer-2.webp"
-                  alt="footer2"
-                  loading="lazy"
-                />
+                <img className={styles.imageTwo} src="/images/home-footer-2.webp" alt="footer2" loading="lazy" />
               </div>
 
               <div className={styles.textBlock}>
                 <h1 className={styles.title}>Mission and Vision</h1>
                 <div className={styles.description}>
                   <QuoteOpenIcon />
-                  &nbsp;&nbsp;NOTT’s mission is to empower individuals and
-                  communities to take control of their health and wellness
-                  through innovative technology. Our vision is to create a world
-                  where health and wellness are accessible to all, driven by the
-                  principles of decentralization, empowerment, and
+                  &nbsp;&nbsp;NOTT’s mission is to empower individuals and communities to take control of their health
+                  and wellness through innovative technology. Our vision is to create a world where health and wellness
+                  are accessible to all, driven by the principles of decentralization, empowerment, and
                   community.&nbsp;&nbsp;
                   <QuoteCloseIcon />
                 </div>
@@ -173,31 +149,21 @@ const HomePage = () => {
               <h1 className={styles.title}>Mission and Vision</h1>
               <div className={styles.description}>
                 <QuoteOpenIcon />
-                &nbsp;&nbsp;NOTT’s mission is to empower individuals and
-                communities to take control of their health and wellness through
-                innovative technology. Our vision is to create a world where
-                health and wellness are accessible to all, driven by the
-                principles of decentralization, empowerment, and
-                community.&nbsp;&nbsp;
+                &nbsp;&nbsp;NOTT’s mission is to empower individuals and communities to take control of their health and
+                wellness through innovative technology. Our vision is to create a world where health and wellness are
+                accessible to all, driven by the principles of decentralization, empowerment, and community.&nbsp;&nbsp;
                 <QuoteCloseIcon />
               </div>
             </div>
 
             <div className={styles.imageTwoContainer}>
-              <img
-                className={styles.imageTwo}
-                src="/images/home-footer-2.webp"
-                alt="footer2"
-                loading="lazy"
-              />
+              <img className={styles.imageTwo} src="/images/home-footer-2.webp" alt="footer2" loading="lazy" />
             </div>
           </div>
         )}
       </div>
       <div
-        className={`${styles.linkSocialWrapper} ${
-          isHiddenDownloadApp ? styles.hiddenButton : ""
-        }`}
+        className={`${styles.linkSocialWrapper} ${isHiddenDownloadApp ? styles.hiddenButton : ""}`}
         onMouseOver={() => setIsHiddenDownloadApp(false)}
         onMouseOut={() => {
           setTimeout(() => {
@@ -206,18 +172,10 @@ const HomePage = () => {
         }}
       >
         <a href={SOCIAL_LINK.GOOGLE_PLAY} target="_blank">
-          <img
-            className={styles.logo}
-            src="/images/googleplay.webp"
-            alt="googleplay"
-          />
+          <img className={styles.logo} src="/images/googleplay.webp" alt="googleplay" />
         </a>
         <a href={SOCIAL_LINK.APP_STORE} target="_blank">
-          <img
-            className={styles.logo}
-            src="/images/appstore.webp"
-            alt="appstore"
-          />
+          <img className={styles.logo} src="/images/appstore.webp" alt="appstore" />
         </a>
       </div>
     </>

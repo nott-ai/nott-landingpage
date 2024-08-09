@@ -23,7 +23,7 @@ const Products = () => {
 
   return (
     <div className={styles.wrapper}>
-      <p className={styles.title}>{`NOTT's Initial Product Lineup`}</p>
+      <h1 className={styles.title}>{`NOTT's Initial Product Lineup`}</h1>
       <p
         className={styles.description}
       >{`Explore NOTT's innovative product range, featuring smartwatch, smartband, smartscale, and smartpillow designed to enhance your health and wellness journey.`}</p>

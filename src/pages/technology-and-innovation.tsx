@@ -81,9 +81,9 @@ const TechnologyInnovationPage = () => {
       </Head>
       <div className={style.wrapper}>
         <div className={style.container}>
-          <div className={style.title}>
+          <h1 className={style.title}>
             AI & DePIN Integration for Enhanced Health Insights
-          </div>
+          </h1>
           <div className={style.containerWrapper}>
             {HealthInsight.map((item, index) => (
               <div key={index} className={style.block}>
@@ -101,9 +101,9 @@ const TechnologyInnovationPage = () => {
           </div>
         </div>
         <div className={style.container}>
-          <div className={style.title}>
+          <h1 className={style.title}>
             HealthFi Protocol Rewarding Health Engagement
-          </div>
+          </h1>
           <div className={style.containerWrapper}>
             {HealthEngage.map((item, index) => (
               <div key={index} className={style.block}>
